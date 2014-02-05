@@ -20,9 +20,10 @@
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
- with_layout :service_template do
-   page "/*"
- end
+
+page "index.html", :layout => :v1_template
+page "/v1/*", :layout => :v1_template
+page "/v2/*", :layout => :v2_template
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
