@@ -20,7 +20,7 @@
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
- with_layout :govuk_template do
+ with_layout :service_template do
    page "/*"
  end
 
