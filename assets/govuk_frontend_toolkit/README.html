@@ -1,0 +1,707 @@
+<h1 id="govuk-frontend-toolkit">GOV.UK Frontend Toolkit</h1>
+
+<p>A collection of Sass and Javascript tools for generating frontend
+code.</p>
+
+<h2 id="installing">Installing</h2>
+
+<h3 id="ruby-on-rails">Ruby on Rails</h3>
+
+<p>We recommend you use the <a href="https://github.com/alphagov/govuk_frontend_toolkit_gem">govuk_frontend_toolkit_gem</a> and
+follow the <a href="https://github.com/alphagov/govuk_frontend_toolkit_gem#readme">installation instructions</a>.</p>
+
+<h3 id="nodejs">Node.js</h3>
+
+<p><a href="https://github.com/alphagov/govuk_frontend_toolkit_npm">govuk_frontend_toolkit_npm</a> is an NPM package that can be
+<a href="https://npmjs.org/package/govuk_frontend_toolkit">installed or included in your package.json</a>.</p>
+
+<h3 id="other-projects">Other projects</h3>
+
+<p>You can include the toolkit as a <a href="https://www.kernel.org/pub/software/scm/git/docs/git-submodule.html">git submodule</a>.</p>
+
+<p>To add the submodule to your project run the following command substituting the path to a subdirectory in your project's assets directory:</p>
+
+<pre><code>$ git submodule add https://github.com/alphagov/govuk_frontend_toolkit.git ./path/to/assets/govuk_toolkit
+</code></pre>
+
+<p>We recommend you use <code>https</code> rather than <code>ssh</code> for submodules as they don't require key exchanges when deploying to remote servers.</p>
+
+<p>If you clone a project with the toolkit submodule installed you will need to initialise the submodule with the following command:</p>
+
+<pre><code>$ git submodule init
+</code></pre>
+
+<p>To update the toolkit to the latest version you can use:</p>
+
+<pre><code>$ git submodule update
+</code></pre>
+
+<h2 id="running-tests">Running tests</h2>
+
+<p>Install Node 0.8 or higher and PhantomJS.</p>
+
+<pre><code>$ npm install
+$ npm test
+</code></pre>
+
+<h2 id="usage">Usage</h2>
+
+<p>At the top of a Sass file in your project you should use an <code>@import</code> rule
+to include the file for the mixins you require, eg if you want the
+conditionals and typography mixins you should add:</p>
+
+<pre><code>@import '_conditionals';
+@import '_typography';
+</code></pre>
+
+<p>You may need to include the relative path to the toolkit if it is installed as a submodule:</p>
+
+<pre><code>@import '../toolkit/_conditionals';
+</code></pre>
+
+<p>If you are compiling Sass from the <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#using_sass">command-line tool</a>, here are some options we recommend.</p>
+
+<p>In development:</p>
+
+<pre><code>sass --style expanded --line-numbers --load-path [path to]/govuk_toolkit/stylesheets input.scss output.css
+</code></pre>
+
+<p>In production:</p>
+
+<pre><code>sass --style compressed --load-path [path to]/govuk_toolkit/stylesheets input.scss output.css
+</code></pre>
+
+<h2 id="mixin-sets">Mixin-sets</h2>
+
+<ul>
+  <li><a href="#colours"><code>_colours.scss</code></a></li>
+  <li><a href="#conditionals"><code>_conditionals.scss</code></a></li>
+  <li><a href="#css3"><code>_css3.scss</code></a></li>
+  <li><a href="#typography"><code>_typography.scss</code></a></li>
+  <li><a href="#buttons"><code>design-patterns/_buttons.scss</code></a></li>
+  <li><a href="#alpha-beta"><code>design-patterns/_alpha-beta.scss</code></a></li>
+</ul>
+
+<h3 id="a-idconditionalsaconditionals"><a id="conditionals"></a>Conditionals</h3>
+
+<p>Media query and IE helpers. These make producing responsive layouts and
+attaching IE specific styles to elements really easy.</p>
+
+<p>To use the IE conditionals you will need to add extra stylesheets for each IE which look like:</p>
+
+<pre><code>// BASE STYLESHEET FOR IE 6 COMPILER
+
+$is-ie: true;
+$ie-version: 6;
+
+@import "application.scss";
+</code></pre>
+
+<p>Where <code>application.scss</code> is the name of your base stylesheet.</p>
+
+<h4 id="media">media</h4>
+
+<h5 id="description">Description</h5>
+
+<p><code>@mixin media($size: false, $max-width: false, $min-width: false)</code></p>
+
+<h5 id="parameters">Parameters</h5>
+
+<p><strong><em>note: the parameters are mutually exclusive and the first one found will be
+used.</em></strong></p>
+
+<p><code>$size</code></p>
+
+<p><code>size</code> can be one of <code>desktop</code>, <code>tablet</code>, <code>mobile</code>. <code>desktop</code> and <code>tablet</code>
+should be used to add styles to a mobile first stylesheet. <code>mobile</code> should be
+used to add styles to a desktop first stylesheet.</p>
+
+<p>It is recommended that you primarily use <code>desktop</code> for new stylesheets to
+enhance mobile first when serving to mobile devices.</p>
+
+<p><code>$min-width</code>
+<code>$max-width</code></p>
+
+<p>These should be set to an absolute pixel value. They will get added directly to
+their respective @media queries.</p>
+
+<p><code>$ignore-for-ie</code></p>
+
+<p>Styles that would normally be wrapped in @media queries by this mixin will be instead
+added to the main block if the <code>$is-ie</code> variable is true.</p>
+
+<p>Setting <code>$ignore-for-ie</code> to <code>true</code> means those styles will not be added.</p>
+
+<h5 id="usage-1">Usage</h5>
+
+<pre><code>div.columns {
+  border: 1px solid;
+
+  @include media(desktop){
+    width: 30%;
+    float: left;
+  }
+  @include media($min-width: 500px){
+    width: 25%;
+  }
+  @include media($max-width: 400px){
+    width: 25%;
+  }
+}
+</code></pre>
+
+<h4 id="ie-lte">ie-lte</h4>
+
+<p>Conditially send CSS to IE browsers less than or equal to the named version.</p>
+
+<h5 id="description-1">Description</h5>
+
+<p><code>@include ie-lte($version)</code></p>
+
+<h5 id="parameters-1">Parameters</h5>
+
+<p><code>$version</code></p>
+
+<p><code>version</code> is an integer value. Possible values are <code>6</code>, <code>7</code>, <code>8</code>.</p>
+
+<h5 id="usage-2">Usage</h5>
+
+<pre><code>div.columns {
+  border: 1px solid;
+
+  @include ie-lte(7){
+    border: 0;
+  }
+}
+</code></pre>
+
+<h4 id="ie">ie</h4>
+
+<p>Send CSS to a named IE version.</p>
+
+<h5 id="description-2">Description</h5>
+
+<p><code>@include ie($version)</code></p>
+
+<h5 id="parameters-2">Parameters</h5>
+
+<p><code>$version</code></p>
+
+<p><code>version</code> is an integer value. Possible values are <code>6</code>, <code>7</code>, <code>8</code>.</p>
+
+<h5 id="usage-3">Usage</h5>
+
+<pre><code>div.columns {
+  border: 1px solid;
+
+  @include ie(6){
+    border: 0;
+  }
+}
+</code></pre>
+
+<h3 id="a-idcoloursacolours"><a id="colours"></a>Colours</h3>
+
+<p>A collection of colour variables.</p>
+
+<h4 id="departmental-colours">Departmental colours</h4>
+
+<ul>
+  <li><code>$treasury</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #af292e"></span></li>
+  <li><code>$cabinet-office</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #005abb"></span></li>
+  <li><code>$department-for-education</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #003a69"></span></li>
+  <li><code>$department-for-transport</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #006c56"></span></li>
+  <li><code>$home-office</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #9325b2"></span></li>
+  <li><code>$department-of-health</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #00ad93"></span></li>
+  <li><code>$ministry-of-justice</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #231f20"></span></li>
+  <li><code>$ministry-of-defence</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #4d2942"></span></li>
+  <li><code>$foreign-and-commonwealth-office</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #003e74"></span></li>
+  <li><code>$department-for-communities-and-local-government</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #00857e"></span></li>
+  <li><code>$department-for-energy-and-climate-change</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #009ddb"></span></li>
+  <li><code>$department-for-culture-media-and-sport</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #d40072"></span></li>
+  <li><code>$department-for-environment-food-and-rural-affairs</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #898700"></span></li>
+  <li><code>$department-for-work-and-pensions</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #00beb7"></span></li>
+  <li><code>$department-for-business-innovation-and-skills</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #003479"></span></li>
+  <li><code>$department-for-international-development</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #002878"></span></li>
+  <li><code>$government-equalities-office</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #9325b2"></span></li>
+  <li><code>$attorney-generals-office</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #9f1888"></span></li>
+  <li><code>$scotland-office</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #002663"></span></li>
+  <li><code>$wales-office</code> <span style="display:inline-block; width: 60px; height: 10px; float: right; background-color: #a33038"></span></li>
+</ul>
+
+<h4 id="standard-palette-colours">Standard palette, colours</h4>
+
+<ul>
+  <li><code>$purple</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #2e358b"></span></li>
+  <li><code>$purple-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #9799c4"></span></li>
+  <li><code>$purple-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #d5d6e7"></span></li>
+  <li><code>$mauve</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #6f72af"></span></li>
+  <li><code>$mauve-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #b7b9d7"></span></li>
+  <li><code>$mauve-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #e2e2ef"></span></li>
+  <li><code>$fuschia</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #912b88"></span></li>
+  <li><code>$fuschia-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #c994c3"></span></li>
+  <li><code>$fuschia-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #e9d4e6"></span></li>
+  <li><code>$pink</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #d53880"></span></li>
+  <li><code>$pink-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #eb9bbe"></span></li>
+  <li><code>$pink-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #f6d7e5"></span></li>
+  <li><code>$baby-pink</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #f499be"></span></li>
+  <li><code>$baby-pink-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #faccdf"></span></li>
+  <li><code>$baby-pink-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #fdebf2"></span></li>
+  <li><code>$red</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #b10e1e"></span></li>
+  <li><code>$red-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #d9888c"></span></li>
+  <li><code>$red-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #efcfd1"></span></li>
+  <li><code>$mellow-red</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #df3034"></span></li>
+  <li><code>$mellow-red-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #ef9998"></span></li>
+  <li><code>$mellow-red-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #f9d6d6"></span></li>
+  <li><code>$orange</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #f47738"></span></li>
+  <li><code>$orange-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #fabb96"></span></li>
+  <li><code>$orange-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #fde4d4"></span></li>
+  <li><code>$brown</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #b58840"></span></li>
+  <li><code>$brown-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #dac39c"></span></li>
+  <li><code>$brown-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #f0e7d7"></span></li>
+  <li><code>$yellow</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #ffbf47"></span></li>
+  <li><code>$yellow-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #ffdf94"></span></li>
+  <li><code>$yellow-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #fff2d3"></span></li>
+  <li><code>$grass-green</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #85994b"></span></li>
+  <li><code>$grass-green-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #c2cca3"></span></li>
+  <li><code>$grass-green-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #e7ebda"></span></li>
+  <li><code>$green</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #006435"></span></li>
+  <li><code>$green-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #7fb299"></span></li>
+  <li><code>$green-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #cce0d6"></span></li>
+  <li><code>$turquoise</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #28a197"></span></li>
+  <li><code>$turquoise-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #95d0cb"></span></li>
+  <li><code>$turquoise-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #d5ecea"></span></li>
+  <li><code>$light-blue</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #2b8cc4"></span></li>
+  <li><code>$light-blue-50</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #96c6e2"></span></li>
+  <li><code>$light-blue-25</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #d5e8f3"></span></li>
+</ul>
+
+<h4 id="standard-palette-greys">Standard palette, greys</h4>
+
+<ul>
+  <li><code>$black</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #0b0c0c"></span></li>
+  <li><code>$grey-1</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #6f777b"></span></li>
+  <li><code>$grey-2</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #bfc1c3"></span></li>
+  <li><code>$grey-3</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #dee0e2"></span></li>
+  <li><code>$grey-4</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #f8f8f8"></span></li>
+  <li><code>$white</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #fff"></span></li>
+</ul>
+
+<h4 id="semantic-colour-names">Semantic colour names</h4>
+
+<ul>
+  <li><code>$link-colour</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #2e3191"></span></li>
+  <li><code>$link-active-colour</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #2e8aca"></span></li>
+  <li><code>$link-hover-colour</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #2e8aca"></span></li>
+  <li><code>$link-visited-colour</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #2e3191"></span></li>
+  <li><code>$text-colour: $black</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #0b0c0c"></span></li>
+  <li><code>$secondary-text-colour</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #6f777b"></span></li>
+  <li><code>$border-colour</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #bfc1c3"></span></li>
+  <li><code>$panel-colour</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #dee0e2"></span></li>
+  <li><code>$canvas-colour</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #f8f8f8"></span></li>
+  <li><code>$highlight-colour</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #f8f8f8"></span></li>
+  <li><code>$page-colour</code> <span style="display: inline-block; width: 60px; height: 10px; float: right; background-color: #fff"></span></li>
+</ul>
+
+<h4 id="usage-4">Usage:</h4>
+
+<pre><code>.column {
+  background: $green;
+}
+</code></pre>
+
+<h3 id="a-idtypographyatypography"><a id="typography"></a>Typography</h3>
+
+<p>A collection of font-mixins. There are two different types of font mixins.</p>
+
+<ol>
+  <li>Heading and Copy styles which are the font with added paddings to ensure a
+consistent baseline vertical grid.</li>
+  <li>Core styles which are base font styles with no extra padding.</li>
+</ol>
+
+<h4 id="heading-and-copy-styles">Heading and Copy styles</h4>
+
+<p>The following heading and copy styles exist:</p>
+
+<ul>
+  <li><code>heading-80</code></li>
+  <li><code>heading-48</code></li>
+  <li><code>heading-36</code></li>
+  <li><code>heading-27</code></li>
+  <li><code>heading-24</code></li>
+  <li><code>copy-19</code></li>
+  <li><code>copy-16</code></li>
+  <li><code>copy-14</code></li>
+</ul>
+
+<h5 id="usage-5">Usage</h5>
+
+<pre><code>h2 {
+  @include heading-27;
+}
+</code></pre>
+
+<h4 id="core-styles">Core styles</h4>
+
+<p>The following core styles exist:</p>
+
+<ul>
+  <li><code>core-80</code></li>
+  <li><code>core-48</code></li>
+  <li><code>core-36</code></li>
+  <li><code>core-27</code></li>
+  <li><code>core-24</code></li>
+  <li><code>core-19</code></li>
+  <li><code>core-16</code></li>
+  <li><code>core-14</code></li>
+</ul>
+
+<h5 id="description-3">Description</h5>
+
+<p><code>@include core-[size]($line-height, $line-height-640)</code></p>
+
+<h5 id="parameters-3">Parameters</h5>
+
+<p><code>$line-height</code> and <code>$line-height-640</code> are both optional. When used it is
+recomended to pass a fraction in for readability.</p>
+
+<h5 id="usage-6">Usage</h5>
+
+<pre><code>h1 {
+  @include core-48;
+}
+h2 {
+  @include core-24($line-height: (50/24), $line-height-640: (18/16));
+}
+</code></pre>
+
+<h4 id="tabular-numbers">Tabular numbers</h4>
+
+<p>Tabular numbers have numerals of a standard fixed width. As all numbers have the same width, sets of numbers may be more easily compared. We recommend using them where different numbers are likely to be compared, or where different numbers should line up with each other, eg in tables.</p>
+
+<p><code>$tabular-numbers</code> is an optional variable that may be passed to the heading, copy and core styles to use (or explicitly not use) tabular numbers. When no variable is passed, the default is non-tabular.</p>
+
+<h5 id="usage-7">Usage</h5>
+
+<pre><code>h1 {
+  @include core-48;
+}
+h2 {
+  @include core-24($tabular-numbers: true);
+}
+</code></pre>
+
+<h4 id="external-links">external links</h4>
+
+<p><code>external-link-default</code> sets up the background image for all external links.
+This should be included on the default link style for a project.</p>
+
+<p>After setting the default, apply includes from the following for different font sizes:</p>
+
+<ul>
+  <li><code>external-link-12</code></li>
+  <li><code>external-link-12-no-hover</code></li>
+  <li><code>external-link-13</code></li>
+  <li><code>external-link-13-no-hover</code></li>
+  <li><code>external-link-14</code></li>
+  <li><code>external-link-14-bold-no-hover</code></li>
+  <li><code>external-link-16</code></li>
+  <li><code>external-link-16-bold-no-hover</code></li>
+  <li><code>external-link-19</code></li>
+  <li><code>external-link-19-no-hover</code></li>
+</ul>
+
+<p><code>external-link-heading</code> is a unique style a background image for headings to groups of external links.</p>
+
+<h4 id="description-4">Description</h4>
+
+<p>For a set style:</p>
+
+<p><code>@include external-link-[style]</code></p>
+
+<p>For a specific font size:</p>
+
+<p><code>@include external-link-[size]-[weight]-[no-hover]</code></p>
+
+<h4 id="usage-8">Usage</h4>
+
+<pre><code>/* Default link style */
+a[rel="external"] {
+  @include external-link-default;
+  @include external-link-19;
+}
+
+th.external-link {
+  @include external-link-heading;
+}
+
+.inner a[rel="external"] {
+  @include external-link-16;
+}
+
+.departments a[rel="external"] {
+ @include external-link-16-bold-no-hover;
+}
+</code></pre>
+
+<h3 id="a-idcss3acss3"><a id="css3"></a>css3</h3>
+
+<p>CSS3 helpers to abstract vendor prefixes.</p>
+
+<h4 id="border-radius">border-radius</h4>
+
+<h5 id="description-5">Description</h5>
+
+<p><code>@mixin border-radius($radius)</code></p>
+
+<h5 id="parameters-4">Parameters</h5>
+
+<p><code>$radius</code> a pixel value.</p>
+
+<h5 id="usage-9">Usage</h5>
+
+<pre><code>.column {
+  @include border-radius(5px);
+}
+</code></pre>
+
+<h4 id="box-shadow">box-shadow</h4>
+
+<h5 id="description-6">Description</h5>
+
+<p><code>@mixin box-shadow($shadow)</code></p>
+
+<h5 id="parameters-5">Parameters</h5>
+
+<p><code>$shadow</code> a value set to pass into <a href="https://developer.mozilla.org/en-US/docs/CSS/box-shadow"><code>box-shadow</code></a>.</p>
+
+<h5 id="usage-10">Usage</h5>
+
+<pre><code>.column {
+  @include box-shadow(0 0 5px black);
+}
+</code></pre>
+
+<h4 id="translate">translate</h4>
+
+<h5 id="description-7">Description</h5>
+
+<p><code>@mixin translate($x, $y)</code></p>
+
+<h5 id="parameters-6">Parameters</h5>
+
+<p><code>$x</code> and <code>$y</code> are css values.</p>
+
+<h5 id="usage-11">Usage</h5>
+
+<pre><code>.column {
+  @include translate(2px, 3px);
+}
+</code></pre>
+
+<h4 id="gradient">gradient</h4>
+
+<p>This can currently only handle linear top to bottom gradients.</p>
+
+<h5 id="description-8">Description</h5>
+
+<p><code>@mixin gradient($from, $to)</code></p>
+
+<h5 id="parameters-7">Parameters</h5>
+
+<p><code>$from</code> and <code>$to</code> are colour values.</p>
+
+<h5 id="usage-12">Usage</h5>
+
+<pre><code>.column {
+  @include gradient(#000, #fff);
+}
+</code></pre>
+
+<h4 id="transition">transition</h4>
+
+<h5 id="description-9">Description</h5>
+
+<p><code>@mixin transition($property, $duration, $function, $delay:0s)</code></p>
+
+<h5 id="parameters-8">Parameters</h5>
+
+<p>Match up with the respective properties from <a href="https://developer.mozilla.org/en-US/docs/CSS/transition"><code>transition</code></a>.</p>
+
+<h5 id="usage-13">Usage</h5>
+
+<pre><code>.column {
+  @include transition(left, 3s, ease);
+}
+</code></pre>
+
+<h4 id="box-sizing">box-sizing</h4>
+
+<h5 id="description-10">Description</h5>
+
+<p><code>@mixin box-sizing($type)</code></p>
+
+<h5 id="parameters-9">Parameters</h5>
+
+<p><code>$type</code> is one of <code>border-box</code>, <code>content-box</code> and <code>padding-box</code>.</p>
+
+<h5 id="usage-14">Usage</h5>
+
+<pre><code>.column {
+  @include box-sizing(border-box);
+}
+</code></pre>
+
+<h4 id="calc">calc</h4>
+
+<h5 id="description-11">Description</h5>
+
+<p><code>@mixin calc($property, $calc)</code></p>
+
+<h5 id="parameters-10">Parameters</h5>
+
+<p><code>$property</code> the property to apply the calc to.
+<code>$calc</code> the calculation to.</p>
+
+<h5 id="usage-15">Usage</h5>
+
+<pre><code>.column {
+  @include calc(width, "300% - 20px");
+}
+</code></pre>
+
+<h3 id="a-idbuttonsabuttons"><a id="buttons"></a>Buttons</h3>
+
+<p>A mixin for creating buttons in the GOV.UK style.</p>
+
+<h5 id="description-12">Description</h5>
+
+<p><code>@mixin button($colour)</code></p>
+
+<h5 id="parameters-11">Parameters</h5>
+
+<p><code>$colour</code> the background colour of the button (default is <code>$green</code>).</p>
+
+<h5 id="usage-16">Usage</h5>
+
+<pre><code>.button{
+  @include button;
+}
+.button-secondary{
+  @include button($grey-3);
+}
+.button-warning{
+  @include button($red);
+}
+</code></pre>
+
+<h5 id="notes">Notes</h5>
+
+<p>The button text colour is set by the mixin to either light or dark, depending on the button background colour.</p>
+
+<p>If you're applying these styles to non form elements, adding a class of 'disabled' to the element will emulate the disabled button style.</p>
+
+<h3 id="a-idalpha-betaaalphabeta"><a id="alpha-beta"></a>Alpha/Beta</h3>
+
+<p>Mixins for creating alpha/beta banners and tags for services on GOV.UK</p>
+
+<h5 id="description-13">Description</h5>
+
+<p><code>@mixin phase-banner($state)</code>
+<code>@mixin phase-tag($state)</code></p>
+
+<h5 id="parameters-12">Parameters</h5>
+
+<p><code>$state</code> either <code>alpha</code> or <code>beta</code>. This will set the background colour of the element to the appropriate colour.</p>
+
+<h5 id="usage-17">Usage</h5>
+
+<pre><code>.alpha-banner  {
+  @include phase-banner(alpha);
+}
+.beta-banner {
+  @include phase-banner(beta);
+}
+.beta-tag{
+  @include phase-tag(beta);
+}
+</code></pre>
+
+<h2 id="javascript">JavaScript</h2>
+
+<p>The gem also includes some JavaScript which by itself will have no effect on a
+page. It can be included with the asset_pipeline by adding the line:</p>
+
+<pre><code>//=require govuk_toolkit
+</code></pre>
+
+<h2 id="media-player">Media player</h2>
+
+<p>There is a forked version of the Nomensa video player included and custom
+GOV.UK styles to be used with it. To use it you will need to include the script
+on your page and include the styles nested under an appropriate selector. For
+example:</p>
+
+<pre><code>@import "design-patterns/media-player";
+
+.media-player {
+  @include media-player;
+}
+</code></pre>
+
+<p>You will also need to create your own initalizer to target the links you want
+to turn into videoss. There are examples of how this works in the <a href="https://github.com/nomensa/Accessible-Media-Player/tree/master/example">Nomensa
+Accesible Media Player</a> repository.</p>
+
+<h2 id="multivariate-test-framework">Multivariate test framework</h2>
+
+<p><code>GOVUK.MultiVariateTest</code> runs split tests to display different content, layouts etc to users.</p>
+
+<p>It randomly assigns a user a cohort on first execution by setting a cookie, and on every execution sets a session level custom variable on Google Analytics to mark which cohort a user is in. This can be used to segment users in GA.</p>
+
+<p>A simple content replacement test can be done by defining a set of cohorts with content. E.g.:</p>
+
+<p><code>javascript
+var test = new GOVUK.MultivariateTest({
+  el: '.car-tax-button',
+  name: 'car_tax_button_text',
+  customVarIndex: 555,
+  cohorts: {
+    pay_your_car_tax: {html: "Pay Your Car Tax"},
+    give_us_money: {html: "Give Us Money Or We Will Crush Your Car"},
+  }
+});
+</code></p>
+
+<p>A more complex test can be done by defining callbacks for what to do
+when a user is in each cohort:</p>
+
+<p><code>javascript
+var test = new GOVUK.MultivariateTest({
+  name: 'car_tax_button_text',
+  customVarIndex: 555,
+  cohorts: {
+    pay_your_car_tax: {callback: function() { ... }},
+    give_us_money: {callback: function() { ... }},
+  }
+});
+</code></p>
+
+<p>If you have a complex test, it may be worth extending MultivariateTest with 
+your own. Callbacks can be strings which will call a method of that name
+on the current object.</p>
+
+<p>Takes these options:
+ - <code>el</code>: Element to run this test on (optional)
+ - <code>name</code>: The name of the text (alphanumeric and underscores)
+ - <code>customVarIndex</code>: The index of the custom variable in Google Analytics. GA only gives 50 integer slots to each account, and it is important that a unique integer is assigned to each test. Current contact for assigning a custom var slot for GOV.UK is: Ashraf Chohan <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#097;&#115;&#104;&#114;&#097;&#102;&#046;&#099;&#104;&#111;&#104;&#097;&#110;&#064;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#046;&#099;&#097;&#098;&#105;&#110;&#101;&#116;&#045;&#111;&#102;&#102;&#105;&#099;&#101;&#046;&#103;&#111;&#118;&#046;&#117;&#107;">&#097;&#115;&#104;&#114;&#097;&#102;&#046;&#099;&#104;&#111;&#104;&#097;&#110;&#064;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#046;&#099;&#097;&#098;&#105;&#110;&#101;&#116;&#045;&#111;&#102;&#102;&#105;&#099;&#101;&#046;&#103;&#111;&#118;&#046;&#117;&#107;</a>
+ - <code>cohorts</code>: An object that maps cohort name to an object that defines the cohort. Name must be same format as test name. Object contains keys (both optional):
+   - <code>html</code>: HTML to fill element with when this cohort is picked.
+   - <code>callback</code>: Function to call when this cohort is chosen. If it is a string, that method on the test object is called.</p>
+
+<p>Full documentation on how to design multivariate tests, use the data in GA and construct hypothesis tests is on its way soon.</p>
+
+<h2 id="licence">Licence</h2>
+
+<p>Released under the MIT Licence, a copy of which can be found in the file <code>LICENCE</code>.</p>

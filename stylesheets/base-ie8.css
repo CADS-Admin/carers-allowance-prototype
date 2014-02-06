@@ -1,0 +1,93 @@
+/*
+Syntax error: File to import not found or unreadable: base.scss.
+              Load paths:
+                /Users/timpaul/code/gds/carers-allowance-prototype/source
+                /Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/blueprint/stylesheets
+                /Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets
+                Compass::SpriteImporter
+        on line 6 of /Users/timpaul/code/gds/carers-allowance-prototype/source/stylesheets/base-ie8.css.scss
+
+1: // BASE STYLESHEET FOR IE 8 COMPILER
+2: 
+3: $is-ie: true;
+4: $ie-version: 8;
+5: 
+6: @import "base.scss";
+
+Backtrace:
+/Users/timpaul/code/gds/carers-allowance-prototype/source/stylesheets/base-ie8.css.scss:6
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:45:in `import'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/root_node.rb:20:in `render'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/renderers/sass.rb:66:in `evaluate'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/tilt-1.4.1/lib/tilt/template.rb:103:in `render'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/rendering.rb:280:in `render_individual_file'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/rendering.rb:157:in `render_template'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/sitemap/resource.rb:143:in `block in render'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.16/lib/active_support/notifications.rb:125:in `instrument'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/util.rb:42:in `instrument'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/application.rb:215:in `instrument'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/sitemap/resource.rb:16:in `instrument'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/sitemap/resource.rb:114:in `render'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/request.rb:256:in `process_request'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/request.rb:206:in `block in call!'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/request.rb:205:in `catch'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/request.rb:205:in `call!'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/request.rb:191:in `call'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/urlmap.rb:65:in `block in call'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `each'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `call'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/lint.rb:49:in `_call'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/lint.rb:37:in `call'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-test-0.6.2/lib/rack/mock_session.rb:30:in `request'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-test-0.6.2/lib/rack/test.rb:230:in `process_request'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-test-0.6.2/lib/rack/test.rb:57:in `get'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:251:in `render_to_file'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:214:in `block in execute!'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:211:in `each'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:211:in `execute!'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:126:in `invoke!'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/actions.rb:95:in `action'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:68:in `build'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli.rb:77:in `method_missing'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/command.rb:29:in `run'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/command.rb:128:in `run'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli.rb:22:in `start'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/bin/middleman:18:in `<top (required)>'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/bin/middleman:23:in `load'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/bin/middleman:23:in `<main>'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: base.scss.\A               Load paths:\A                 /Users/timpaul/code/gds/carers-allowance-prototype/source\A                 /Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets\A                 Compass::SpriteImporter\A         on line 6 of /Users/timpaul/code/gds/carers-allowance-prototype/source/stylesheets/base-ie8.css.scss\A \A 1: // BASE STYLESHEET FOR IE 8 COMPILER\A 2: \A 3: $is-ie: true;\A 4: $ie-version: 8;\A 5: \A 6: @import \"base.scss\";"; }

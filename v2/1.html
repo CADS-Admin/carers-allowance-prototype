@@ -65,7 +65,7 @@
   
   </head>
 
-  <body class="v1">
+  <body class="v2">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     <div id="skiplink-container">
@@ -88,12 +88,8 @@
         
     <div class="header-proposition">
   <div class="content">
-    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
     <nav id="proposition-menu">
       <a href="https://www.gov.uk/carers-allowance" id="proposition-name">Apply for Carer's Allowance <span id="phase-tag">beta</span></a>
-      <ul id="proposition-links">
-        <li><a href="#help-feedback" class="js-help-toggle">Help and feedback</a></li>
-      </ul>
     </nav>
   </div>
 </div>
@@ -127,64 +123,179 @@
 
   <main class="main gov-uk grid-wrapper">
 
-  <div id="help-feedback" class="js-hidden">
-	<h2>Help and feedback</h2>
 
-	<p><a href="">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
-
-	<p>Alternatively, you can call us on 0845 601 8040. Opening hours are Monday to Friday 08:00 am – 09:00 pm. Weekends: 09:00am – 04:00pm. Closed on all public and bank holidays. <a href="">Find out about call charges</a>.</p>
-
-	<p>You can also <a href="">contact us by email</a>.</p>
-
-	<p><strong><a href="#progress-steps" class="js-help-toggle">Close</a></strong></p>
-	
-</div>
-
-<div class="progress-steps" id="progress-steps">		    
-    <ol>
-        <li class="complete">
-            <span><a href="/1eligibility/q1.html">Eligibility</a></span>
-        </li>
-        <li class="active">
-            <span>About you</span>
-        </li>
-        <li>
-            <span>Partner</span>
-        </li>
-        <li>
-            <span>Care</span>
-        </li>
-        <li>
-            <span>Time abroad</span>
-        </li>
-        <li>
-            <span>Education</span>
-        </li>
-        <li>
-            <span>Employment</span>
-        </li>
-        <li>
-            <span>Other money</span>
-        </li>
-        <li>
-            <span>Pay details</span>
-        </li>
-        <li>
-            <span>Declaration</span>
-        </li>
-    </ol>
-</div> 
-
-    <div id="section-content" class="grid">
+    <div id="section-nav" class="grid grid-1-3">
       <div class="inner-block">
-        <h1>Carer's Allowance prototypes</h1>
+        <h2>Your application</h2>
+        <nav role="navigation" class="vertical progress-indicator">
+  <ol>
+    <li class="active"><a href="">About you <span>(0/10)</span></a></li>
+    <li><a href="">The person you care for <span>(0/10)</span></a></li>
+    <li><a href="">The care you provide <span>(0/6)</span></a></li>
+    <li><a href="">Your payment details <span>(0/3)</span></a></li>
+  </ol>
+  <p><a href="#" class="disabled button">Submit application</a></p>
+</nav>
 
+<!--
+        <h2>Get help</h2>
+        <ul>
+          <li><a href="">Read the guide</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+      -->
+      </div>
+    </div>
 
+    <div id="section-content" class="grid grid-2-3">
+      <div class="inner-block">
+        <h1><span>Section 1</span> About you</h1>
 
-<ul>
-	<li><a href="v1/1.html">Version 1 (horizontal progress bar)</a></li>
-	<li><a href="v2/1.html">Version 2 (vertical progress bar)</a></li>
-</ul>
+<form class="form">
+
+	<fieldset>
+		<legend>Your personal details</legend>
+		<div class="control">
+			<label for="fullName">Full name</label>
+			<p class="hint">Use the name shown on your birth certificate or passport</p>
+			<input type="text" id="fullName">
+		</div>
+		<div class="control">
+			<label for="other-name">Any other names</label>
+			<p class="hint">Your maiden name for example</p>
+			<input type="text" id="other-name">
+		</div>
+		<div class="control">
+			<label for="dateOfBirth">Date of birth</label>
+			<p class="hint">For example: '6 Jan 1957'</p>
+			<input type="text" id="dateOfBirth">
+		</div>
+		<div class="control">
+			<label for="NINumber">National Insurance number</label>
+			<p class="hint">For example: 'VO 12 34 56 D'. You'll find it on your National Insurance card, a benefit letter, payslip or a P60</p>
+			<input type="text" id="NINumber">
+		</div>	
+		<div class="control">
+			<label for="nationality">Nationality</label>
+			<p class="hint">For example: 'British'. If you have a current passport, please give your nationality as shown on your passport</p>
+			<input type="text" id="nationality">
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Your address</legend>
+		<div class="control">
+	  		<label for="street">Street address</label>
+	  		<input type="text" id="street">
+		</div>
+		<div class="control">
+	  		<label for="street2" class="visuallyhidden">Street address line 2</label>
+	  		<input type="text" id="street2">
+		</div>
+		<div class="control">
+	  		<label for="town">Town or City</label>
+	  		<input type="text" id="town">
+		</div>
+		<div class="control">
+	  		<label for="county">County (optional)</label>
+	  		<input type="text" id="county">
+		</div>
+		<div class="control">
+	  		<label for="postcode">Postcode</label>
+	  		<input type="text" id="postcode" class="postcode">
+		</div>
+		<div class="control">
+	  		<label for="country">Country</label>
+	  		<input type="text" id="country">
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Have you always lived in the United Kingdom?</legend>
+
+		<div class="horizontal radios">
+			<div class="control">
+		  		<input type="radio" id="UKYes" name="ukAlways">
+		  		<label for="UKYes">Yes</label>
+			</div>
+
+			<div class="control">
+		  		<input type="radio" id="UKNo" name="ukAlways">
+		  		<label for="UKNo" name="partner">No</label>
+			</div>
+		</div>
+	</fieldset>
+
+	<!--
+
+	<fieldset>
+		<legend>Do you have a partner?</legend>
+
+		<div class="radios">
+			<div class="control">
+		  		<input type="radio" id="partnerNo" name="partner">
+		  		<label for="partnerNo">No</label>
+			</div>
+
+			<div class="control">
+		  		<input type="radio" id="partnerYesCaree" name="partner">
+		  		<label for="partnerYesCaree" name="partner">Yes, it's the person I care for</label>
+			</div>
+
+			<div class="control">
+		  		<input type="radio" id="partnerYes" name="partner">
+		  		<label for="partnerYes" name="partner">Yes, but it's not the person I care for</label>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Your partner's details</legend>
+		<div class="control">
+			<label for="partnerFullName">Full name</label>
+			<input type="text" id="partnerFullName">
+		</div>
+		<div class="control">
+			<label for="partnerDateOfBirth">Date of birth <span class="hint">(eg. 6 Jan 1957)</span></label>
+			<input type="text" id="partnerDateOfBirth">
+		</div>
+		<div class="control">
+			<label for="partnerNINumber">National Insurance number</label>
+			<input type="text" id="partnerNINumber">
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Your partner's address</legend>
+		<div class="control">
+	  		<label for="partnerStreet">Street address</label>
+	  		<input type="text" id="partnerStreet">
+		</div>
+		<div class="control">
+	  		<label for="partnerStreet2" class="visuallyhidden">Street address line 2</label>
+	  		<input type="text" id="partnerStreet2">
+		</div>
+		<div class="control">
+	  		<label for="partnerTown">Town or City</label>
+	  		<input type="text" id="partnerTown">
+		</div>
+		<div class="control">
+	  		<label for="partnerCounty">County (optional)</label>
+	  		<input type="text" id="partnerCounty">
+		</div>
+		<div class="control">
+	  		<label for="postcode">Postcode</label>
+	  		<input type="text" id="postcode" class="postcode">
+		</div>
+		<div class="control">
+	  		<label for="country">Country</label>
+	  		<input type="text" id="country">
+		</div>
+	</fieldset>
+
+-->
+
+</form>
       </div>
     </div>
 
