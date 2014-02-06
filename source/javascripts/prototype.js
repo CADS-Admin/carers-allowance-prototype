@@ -22,8 +22,10 @@ $(document).ready(function(){
   });
 
 
+  // TOGGLE HELP PANEL
+
   $(".js-help-toggle").click(function( event ) {
-    $('#help-feedback').slideToggle(50);
+    $('#help-feedback').toggle();
     return false;
   });
 
