@@ -12,18 +12,16 @@ The prototype uses:
 * [Ruby](https://www.ruby-lang.org/en/)
 * the [Middleman](http://middlemanapp.com) static site generator
 * the [Sass](http://sass-lang.com/) CSS extension language
-* the [ERB](http://middlemanapp.com/basics/templates/) templateing language
+* the [ERB](http://middlemanapp.com/basics/templates/) templating language
 * the [GOV.UK Frontend Toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
 
-If you want to easily host the prototype on GitHub you'll also need [Rake](http://rake.rubyforge.org/)
+If you want to easily publish the prototype to GitHub pages you'll also need [Rake](http://rake.rubyforge.org/)
 
 ## Getting started
 
 ### 1. Clone this repository
 
-Once you've cloned the repository you'll need to initialise the GOV.UK Frontent Toolkit, which is included as a submodule.
-
-Run the following terminal commands from the project folder:
+Once you've cloned or forked the repository you'll need to initialise the GOV.UK Frontent Toolkit, which is included as a submodule. Run the following terminal commands from the project folder:
 
 	git submodule init
 	git submodule update
@@ -41,9 +39,7 @@ You can create and edit files in the source folder and see the changes reflected
 
 ## 3. Building the static site
 
-If you want to publish the prototype on the internet you'll need to build it first. Type:
+If you want to publish the prototype to GitHub Pages, there's a Rake task for that. Just type:
 
-	middleman build
-
-Everything will be compiled into the `build` folder.
+	rake publish
 
