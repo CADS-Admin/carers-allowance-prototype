@@ -1,0 +1,65 @@
+// Service specific styles
+
+
+
+// Phase banner and tag
+
+#phase-banner{
+  @include phase-banner(beta);
+  max-width: 960px;
+  margin: 0 auto;
+  text-indent: -999px;
+  height: 10px;
+  padding: 0;
+}
+
+#phase-tag{
+  @include phase-tag(beta)
+}
+
+// Adjust grid padding to align with service header
+
+.v2 #section-content .inner-block{
+  padding-left: 15px;
+}
+
+#section-nav h2{
+  border-top: 5px solid $black;
+  padding-top: $gutter-third;
+  margin-top: $gutter;
+}
+
+// Link style
+
+%link-style,
+.link-style {
+    display: inline;
+    color: $link-colour;
+    -webkit-appearance:none;
+    background: none;
+    border: none;
+    text-decoration: underline;
+  &:hover {
+    color: $link-hover-colour;
+    cursor: pointer;
+  }
+}
+
+// Help / Feedback drop-down panel
+
+#help-feedback{
+  background: $highlight-colour;
+  h2{
+    margin-top: 0;
+    padding-top: 20px;
+  }
+  margin: 0 $gutter;
+  border: 10px solid $beta-colour;
+  border-top: 0;
+  //margin-top: -5px;
+  padding: 0 20px;
+}
+
+.js-enabled .js-hidden{
+  display: none;
+}
