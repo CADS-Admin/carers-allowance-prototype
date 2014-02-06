@@ -2,6 +2,8 @@
 
 A front-end prototype for the 'Apply for Carer's Allowance service on GOV.UK.
 
+You can [view the prototype](http://alphagov.github.io/carers-allowance-prototype/) on GitHub.
+
 
 ## Dependencies
 
@@ -12,6 +14,8 @@ The prototype uses:
 * the [Sass](http://sass-lang.com/) CSS extension language
 * the [ERB](http://middlemanapp.com/basics/templates/) templateing language
 * the [GOV.UK Frontend Toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
+
+If you want to easily host the prototype on GitHub you'll also need [Rake](http://rake.rubyforge.org/)
 
 ## Getting started
 
