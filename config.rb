@@ -46,7 +46,8 @@ page "/v2/*", :layout => :v2_template
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+#set :css_dir, 'stylesheets'
+set :css_dir, '.'
 
 set :js_dir, 'javascripts'
 
