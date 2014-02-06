@@ -37,7 +37,7 @@ This will start a local web server running at: `http://localhost:4567/`
 
 You can create and edit files in the source folder and see the changes reflected on the preview web-server. Sass files will be automatically compiled as well.
 
-## 3. Building the static site
+### 3. Publish the static site
 
 If you want to publish the prototype to GitHub Pages, there's a Rake task for that. Just type:
 
