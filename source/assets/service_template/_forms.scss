@@ -68,18 +68,20 @@
     }
     input{
       position: absolute;
-      top: 16px;
+      top: 18px;
       left: 10px;
     }
     label{
       display: inline-block;
-      //width: 75%;
-      border: 1px solid $border-colour;
+      background-color: $panel-colour;
+      border: 1px solid $panel-colour;
+      //border: 1px solid $border-colour;
       padding: 7px 15px 5px;
       padding-left: 40px;
       margin: -1px 0 0;
       &:hover{
         background-color: $highlight-colour;
+        border-color: $highlight-colour;
         cursor: pointer;
       }
     }
@@ -95,7 +97,8 @@
 
   input[type="radio"]:checked + label,
   input[type="checkbox"]:checked + label{
-    background-color: $highlight-colour;
+    background-color: $white;
+    border: 1px solid $black;
   }
 
   input[type="radio"]:focus,
