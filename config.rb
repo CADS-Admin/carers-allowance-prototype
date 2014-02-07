@@ -18,10 +18,8 @@
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
 
-page "index.html", :layout => :v1_template
+page "index.html", :layout => :blank_template
 page "/v1/*", :layout => :v1_template
 page "/v2/*", :layout => :v2_template
 
