@@ -17,10 +17,8 @@
   @include phase-tag(beta)
 }
 
-// Adjust grid padding to align with service header
-
-.v2 #section-content .inner-block{
-  padding-left: 15px;
+.button{
+  @include button()
 }
 
 #section-nav h2{
@@ -48,12 +46,11 @@
 // Help / Feedback drop-down panel
 
 #help-feedback{
-  background: $highlight-colour;
   h2{
     margin-top: 0;
     padding-top: 20px;
   }
-  margin: 0 $gutter;
+  margin: 0 $gutter-half;
   border: 10px solid $beta-colour;
   border-top: 0;
   //margin-top: -5px;

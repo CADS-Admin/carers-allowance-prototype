@@ -25,14 +25,17 @@
     <%= partial "partials/template-beta-banner" %>
   <% end %>
 
-  <main class="main gov-uk grid-wrapper">
+  <main class="main gov-uk">
+    <div class="grid-wrapper">
 
-  <%= partial "partials/v1-progress-bar/1-about-you" %> 
+      <%= partial "partials/v1-progress-bar/1-about-you" %> 
 
-    <div id="section-content" class="grid">
-      <div class="inner-block">
-        <%= yield %>
+      <div id="section-content" class="grid">
+        <div class="inner-block">
+          <%= yield %>
+        </div>
       </div>
+
     </div>
 
   </main>

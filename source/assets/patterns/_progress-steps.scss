@@ -1,7 +1,7 @@
 /* progress steps */
 
    .progress-steps {
-    margin: 0 $gutter;
+    margin: 0 $gutter-half;
      padding-bottom: .5em;
      @media print {
        display: none;

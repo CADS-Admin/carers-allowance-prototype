@@ -25,21 +25,21 @@
     <%= partial "partials/template-beta-banner" %>
   <% end %>
 
-  <main class="main gov-uk grid-wrapper">
+  <main class="main gov-uk">
+    <div class="grid-wrapper">
 
 
     <div id="section-nav" class="grid grid-1-3">
       <div class="inner-block">
-        <h2>Your application</h2>
+        <h2 class="heading-24">Your application</h2>
         <%= partial "partials/nav-about-you" %>
 
-<!--
-        <h2>Get help</h2>
+
+        <h2 class="heading-24">Get help</h2>
         <ul>
           <li><a href="">Read the guide</a></li>
           <li><a href="">Contact us</a></li>
         </ul>
-      -->
       </div>
     </div>
 
@@ -48,6 +48,8 @@
         <%= yield %>
       </div>
     </div>
+
+  </div>
 
   </main>
 
