@@ -17,6 +17,11 @@ input {
     line-height: normal;
 }
 
+
+legend{
+  padding-left: 0;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="date"],
@@ -72,6 +77,6 @@ textarea {
 .hint{
   display: block;
   color: $secondary-text-colour;
-  @include core-16;
   margin-top: 8px;
+  margin-bottom: 5px;
 }

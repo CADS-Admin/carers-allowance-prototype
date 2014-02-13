@@ -23,7 +23,7 @@
 
 #section-nav h2{
   border-top: 5px solid $black;
-  padding-top: $gutter-third;
+  padding-top: $gutter-one-third;
   margin-top: $gutter;
 }
 
@@ -84,4 +84,90 @@ table.review-answers{
   td + td {
     padding-left: $gutter;
   }
+}
+
+// Forms
+
+// Default text field width
+.form-control[type="text"]{
+  width: 66%;
+}
+
+
+
+//
+
+.form{ 
+
+  .NINumber{
+    width: 250px;
+  }
+  .postcode{
+    width: 150px;
+  }
+
+  // Give radios and checkboxes visible active areas
+
+  .radios,
+  .checkboxes{
+    margin: $gutter 0;
+    .form-group{
+      position: relative;
+    }
+    input{
+      position: absolute;
+      top: 18px;
+      left: 10px;
+    }
+    label{
+      display: inline-block;
+      background-color: $panel-colour;
+      border: 1px solid $panel-colour;
+      //border: 1px solid $border-colour;
+      padding: 7px 15px 5px;
+      padding-left: 40px;
+      margin: -1px 0 0;
+      &:hover{
+        background-color: $highlight-colour;
+        border-color: $highlight-colour;
+        cursor: pointer;
+      }
+    }
+    &.horizontal{
+      @extend %contain-floats;
+      .form-group{
+        float: left;
+        margin-right: 10px;
+      }
+
+    }
+  }
+
+  input[type="radio"]:checked + label,
+  input[type="checkbox"]:checked + label{
+    background-color: $white;
+    border: 1px solid $black;
+  }
+
+  input[type="radio"]:focus,
+  input[type="checkbox"]:focus {
+    outline: none;
+  }
+  input[type="radio"]:focus + label,
+  input[type="checkbox"]:focus + label{
+    outline: 3px solid #FFBF47;
+    outline-offset: -2px;
+  }
+
+  // Select boxes
+
+  select{
+    font-size: 19px;
+    margin-left: 0;
+  }
+
+  select[size]{
+    padding: 10px;
+  }
+
 }

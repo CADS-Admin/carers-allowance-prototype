@@ -7,11 +7,14 @@ You can [view the prototype](http://alphagov.github.io/carers-allowance-prototyp
 
 ## Dependencies
 
-The prototype uses:
+The prototype requires:
 
 * [Ruby](https://www.ruby-lang.org/en/)
 * the [Middleman](http://middlemanapp.com) static site generator
 * the [Sass](http://sass-lang.com/) CSS extension language
+
+It also uses:
+
 * the [ERB](http://middlemanapp.com/basics/templates/) templating language
 * the [GOV.UK Frontend Toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
 
