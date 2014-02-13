@@ -69,24 +69,19 @@
 
 // Review page
 
-dl.review-answers{
+table.review-answers{
+  width: 100%;
   border-top: 1px solid $border-colour;
+  border-collapse: collapse;
   margin-top: $gutter;
   font-size: 19px;
-  zoom: 1;
-  overflow: hidden;
-  dt,dd{
-    display: block;
-    float: left;
+  td{
     padding: 13px 0 10px 0;
     border-bottom: 1px solid $border-colour;
+    width: 50%; 
+    vertical-align: top;
   }
-  dt{
-    width: 30%;
-
+  td + td {
+    padding-left: $gutter;
   }
-  dd{
-    width: 70%;
-    margin: 0;
-  }
-}  
+}
