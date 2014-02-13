@@ -22,16 +22,18 @@
 @import "../assets/service_template/template";
 
 // Import forms styles
-@import "../assets/service_template/forms";
+//@import "../assets/service_template/forms";
 
 // Import service-specific styles
 @import "../assets/service_template/service";
 
-// design-patterns
+// GOV.UK helper styles
+@import "../assets/govuk-helper/forms";
 
+// Design-patterns
 @import "../assets/patterns/progress-indicator";
-
 @import "../assets/patterns/progress-steps";
+@import "../assets/patterns/date-of-birth";
 
 
 

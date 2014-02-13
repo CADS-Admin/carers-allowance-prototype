@@ -25,7 +25,7 @@ $(document).ready(function(){
   // TOGGLE HELP PANEL
 
   $(".js-help-toggle").click(function( event ) {
-    $('#help-feedback').toggle();
+    $('#help-feedback').toggleClass('js-hidden');
     return false;
   });
 

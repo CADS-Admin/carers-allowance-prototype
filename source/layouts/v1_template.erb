@@ -21,13 +21,10 @@
     <%= partial "partials/v1-proposition-header" %>
   <% end %>
 
-  <% content_for :after_header do %>
-    <%= partial "partials/template-beta-banner" %>
-  <% end %>
-
   <main class="main gov-uk">
     <div class="grid-wrapper">
 
+      <%= partial "partials/v1-help-feedback" %> 
       <%= partial "partials/v1-progress-bar/1-about-you" %> 
 
       <div id="section-content" class="grid">

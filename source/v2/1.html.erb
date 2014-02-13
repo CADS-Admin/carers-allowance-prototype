@@ -4,27 +4,42 @@
 
 	<fieldset>
 		<legend>Your personal details</legend>
-		<div class="control">
+		<div class="form-group">
 			<label for="fullName">Full name</label>
 			<p class="hint">Use the name shown on your birth certificate or passport</p>
 			<input type="text" id="fullName">
 		</div>
-		<div class="control">
-			<label for="other-name">Any other names</label>
-			<p class="hint">Your maiden name for example</p>
+		<div class="form-group">
+			<label for="other-name">Any other last names</label>
+			<p class="hint">Maiden name for example</p>
 			<input type="text" id="other-name">
 		</div>
-		<div class="control">
+		<div class="form-group">
 			<label for="dateOfBirth">Date of birth</label>
 			<p class="hint">For example: '6 Jan 1957'</p>
 			<input type="text" id="dateOfBirth">
 		</div>
-		<div class="control">
+		<fieldset class="date-of-birth">
+	      <legend>Date of birth <p class="hint">Example: 21 03 1976</p></legend>
+	      <div class="form-group">
+	        <label for="day">Day</label>
+	        <input type="text" pattern="[0-9]*" id="day" class="form-control">
+	      </div>
+	      <div class="form-group">
+	        <label for="month">Month</label>
+	        <input type="text" id="month" class="form-control">
+	      </div>
+	      <div class="form-group form-group-year">
+	        <label for="year">Year</label>
+	        <input type="text" pattern="[0-9]*" id="year" class="form-control">
+	      </div>
+	    </fieldset>
+		<div class="form-group">
 			<label for="NINumber">National Insurance number</label>
 			<p class="hint">For example: 'VO 12 34 56 D'. You'll find it on your National Insurance card, a benefit letter, payslip or a P60</p>
 			<input type="text" id="NINumber">
 		</div>	
-		<div class="control">
+		<div class="form-group">
 			<label for="nationality">Nationality</label>
 			<p class="hint">For example: 'British'. If you have a current passport, please give your nationality as shown on your passport</p>
 			<input type="text" id="nationality">
@@ -33,27 +48,27 @@
 
 	<fieldset>
 		<legend>Your address</legend>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="street">Street address</label>
 	  		<input type="text" id="street">
 		</div>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="street2" class="visuallyhidden">Street address line 2</label>
 	  		<input type="text" id="street2">
 		</div>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="town">Town or City</label>
 	  		<input type="text" id="town">
 		</div>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="county">County (optional)</label>
 	  		<input type="text" id="county">
 		</div>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="postcode">Postcode</label>
 	  		<input type="text" id="postcode" class="postcode">
 		</div>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="country">Country</label>
 	  		<input type="text" id="country">
 		</div>
@@ -63,12 +78,12 @@
 		<legend>Do you normally live in England, Scotland or Wales?</legend>
 
 		<div class="horizontal radios">
-			<div class="control">
+			<div class="form-group">
 		  		<input type="radio" id="UKYes" name="ukAlways">
 		  		<label for="UKYes">Yes</label>
 			</div>
 
-			<div class="control">
+			<div class="form-group">
 		  		<input type="radio" id="UKNo" name="ukAlways">
 		  		<label for="UKNo" name="partner">No</label>
 			</div>
@@ -82,17 +97,17 @@
 		<legend>Do you have a partner?</legend>
 
 		<div class="radios">
-			<div class="control">
+			<div class="form-group">
 		  		<input type="radio" id="partnerNo" name="partner">
 		  		<label for="partnerNo">No</label>
 			</div>
 
-			<div class="control">
+			<div class="form-group">
 		  		<input type="radio" id="partnerYesCaree" name="partner">
 		  		<label for="partnerYesCaree" name="partner">Yes, it's the person I care for</label>
 			</div>
 
-			<div class="control">
+			<div class="form-group">
 		  		<input type="radio" id="partnerYes" name="partner">
 		  		<label for="partnerYes" name="partner">Yes, but it's not the person I care for</label>
 			</div>
@@ -101,15 +116,15 @@
 
 	<fieldset>
 		<legend>Your partner's details</legend>
-		<div class="control">
+		<div class="form-group">
 			<label for="partnerFullName">Full name</label>
 			<input type="text" id="partnerFullName">
 		</div>
-		<div class="control">
+		<div class="form-group">
 			<label for="partnerDateOfBirth">Date of birth <span class="hint">(eg. 6 Jan 1957)</span></label>
 			<input type="text" id="partnerDateOfBirth">
 		</div>
-		<div class="control">
+		<div class="form-group">
 			<label for="partnerNINumber">National Insurance number</label>
 			<input type="text" id="partnerNINumber">
 		</div>
@@ -117,27 +132,27 @@
 
 	<fieldset>
 		<legend>Your partner's address</legend>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="partnerStreet">Street address</label>
 	  		<input type="text" id="partnerStreet">
 		</div>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="partnerStreet2" class="visuallyhidden">Street address line 2</label>
 	  		<input type="text" id="partnerStreet2">
 		</div>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="partnerTown">Town or City</label>
 	  		<input type="text" id="partnerTown">
 		</div>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="partnerCounty">County (optional)</label>
 	  		<input type="text" id="partnerCounty">
 		</div>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="postcode">Postcode</label>
 	  		<input type="text" id="postcode" class="postcode">
 		</div>
-		<div class="control">
+		<div class="form-group">
 	  		<label for="country">Country</label>
 	  		<input type="text" id="country">
 		</div>
