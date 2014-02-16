@@ -14,6 +14,12 @@
   <script src="<%= asset_path(:js, "/javascripts/jquery.min.js") %>"></script>
   <script src="<%= asset_path(:js, "/javascripts/prototype.js") %>"></script>
 
+  <!--<link href="<%= asset_path(:css, "/javascripts/vendor/select2-3.4.5/select2.css") %>" rel="stylesheet"/>-->
+    <script src="<%= asset_path(:js, "/javascripts/vendor/select2-3.4.5/select2.js") %>"></script>
+    <script>
+        $(document).ready(function() { $("#addressCountry").select2(); });
+    </script>
+
   <% end %>
 
   <% content_for :header_class do %> class="with-proposition"<% end %>

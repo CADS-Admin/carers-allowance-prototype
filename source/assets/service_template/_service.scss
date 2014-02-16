@@ -94,42 +94,58 @@ table.review-answers{
 }
 
 
-
-//
-
 .form{ 
 
-  .NINumber{
-    width: 250px;
+  // Custom form control styles
+  .form-control{
+    &.NINumber{
+      width: 150px;
+    }
+    &.postcode{
+      width: 100px;
+    }
+    &.telNo{
+      width: 250px;
+    }
+    &.town{
+      width: 250px;
+    }
+    &.county{
+      width: 250px;
+    }
+    &.country{
+      width: 250px;
+    }
   }
-  .postcode{
-    width: 150px;
+
+  .form-group-tight{
+    margin-bottom: $gutter-half;
   }
 
   // Give radios and checkboxes visible active areas
 
   .radios,
   .checkboxes{
-    margin: $gutter 0;
+    margin: 0;
+    padding-top: $gutter-half;
+    padding-bottom: $gutter-half;
     .form-group{
       position: relative;
     }
     input{
       position: absolute;
-      top: 18px;
+      top: 10px;
       left: 10px;
     }
     label{
       display: inline-block;
       background-color: $panel-colour;
       border: 1px solid $panel-colour;
-      //border: 1px solid $border-colour;
       padding: 7px 15px 5px;
       padding-left: 40px;
       margin: -1px 0 0;
       &:hover{
-        background-color: $highlight-colour;
-        border-color: $highlight-colour;
+        border-color: $black;
         cursor: pointer;
       }
     }
@@ -168,6 +184,10 @@ table.review-answers{
 
   select[size]{
     padding: 10px;
+  }
+
+  legend.heading-36{
+    padding-top: $gutter;
   }
 
 }

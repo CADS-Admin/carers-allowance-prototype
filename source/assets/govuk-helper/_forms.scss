@@ -48,6 +48,7 @@ textarea {
   border-radius: 0;
 }
 
+
 textarea {
   overflow: auto;
   vertical-align: top;
@@ -62,21 +63,28 @@ textarea {
   }
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-control {
+.form-control{
   width: 96%;
   @include media(tablet) {
     width: 350px;
   }
 }
 
-.hint{
+.form-group label {
   display: block;
+  margin-bottom: 5px;
+}
+
+.hint{
   color: $secondary-text-colour;
   margin-top: 8px;
   margin-bottom: 5px;
+  clear: left;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+  margin-right: 5px;
+  vertical-align: 2px;
+  width: auto;
 }
