@@ -5,22 +5,9 @@
 
 $(document).ready(function(){
 
-  // CONDITIONAL PAGE FLOW
+  $("#addressCountry").select2();
 
-  $( ".form" ).submit(function( event ) {
-    var page = $(this).find('input[name="page"]:checked').val();
-    window.location.href = page;
-    event.preventDefault();
-  });
-
-
-  // BACK BUTTON
-
-  $(".back").click(function( event ) {
-    history.back();
-    return false;
-  });
-
+  GOVUK.toggle.init();
 
   // TOGGLE HELP PANEL
 

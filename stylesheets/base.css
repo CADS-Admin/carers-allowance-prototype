@@ -35,7 +35,8 @@
 
 */
 /* line 49, assets/govuk_frontend_toolkit/stylesheets/_shims.scss */
-.grid-wrapper:after, .cf:after, .progress-indicator.vertical ol:after, .progress-indicator.vertical ul:after {
+.grid-wrapper:after, .cf:after, .form .radios.horizontal:after,
+.form .checkboxes.horizontal:after, .progress-indicator.vertical ol:after, .progress-indicator.vertical ul:after {
   content: "";
   display: block;
   clear: both; }
@@ -87,7 +88,8 @@
 
 */
 /* line 49, assets/govuk_frontend_toolkit/stylesheets/_shims.scss */
-.grid-wrapper:after, .cf:after, .progress-indicator.vertical ol:after, .progress-indicator.vertical ul:after {
+.grid-wrapper:after, .cf:after, .form .radios.horizontal:after,
+.form .checkboxes.horizontal:after, .progress-indicator.vertical ol:after, .progress-indicator.vertical ul:after {
   content: "";
   display: block;
   clear: both; }
@@ -119,7 +121,8 @@
 
 */
 /* line 49, assets/govuk_frontend_toolkit/stylesheets/_shims.scss */
-.grid-wrapper:after, .cf:after, .progress-indicator.vertical ol:after, .progress-indicator.vertical ul:after {
+.grid-wrapper:after, .cf:after, .form .radios.horizontal:after,
+.form .checkboxes.horizontal:after, .progress-indicator.vertical ol:after, .progress-indicator.vertical ul:after {
   content: "";
   display: block;
   clear: both; }
@@ -355,144 +358,80 @@ Example usage:
   .gov-uk ul li,
   .gov-uk ol li {
     margin-bottom: 5px; }
-  /* line 133, assets/service_template/_template.scss */
-  .gov-uk form {
-    margin: 0; }
-  /* line 140, assets/service_template/_template.scss */
-  .gov-uk button,
-  .gov-uk input,
-  .gov-uk select,
-  .gov-uk textarea {
-    font-size: 100%;
-    margin: 0;
-    vertical-align: baseline;
-    *vertical-align: middle; }
-  /* line 148, assets/service_template/_template.scss */
-  .gov-uk button,
-  .gov-uk input {
-    line-height: normal; }
-  /* line 152, assets/service_template/_template.scss */
-  .gov-uk textarea {
-    overflow: auto;
-    vertical-align: top; }
-  /* line 171, assets/service_template/_template.scss */
-  .gov-uk input[type="text"],
-  .gov-uk input[type="email"],
-  .gov-uk input[type="date"],
-  .gov-uk input[type="datetime"],
-  .gov-uk input[type="datetime-local"],
-  .gov-uk input[type="email"],
-  .gov-uk input[type="month"],
-  .gov-uk input[type="number"],
-  .gov-uk input[type="search"],
-  .gov-uk input[type="tel"],
-  .gov-uk input[type="time"],
-  .gov-uk input[type="url"],
-  .gov-uk input[type="week"],
-  .gov-uk select[size],
-  .gov-uk textarea {
-    padding: 2px 4px;
-    background-color: #FFFFFF;
-    border: 2px inset;
-    font-size: 1em;
-    -webkit-appearance: none;
-    border-radius: 0; }
-  /* line 185, assets/service_template/_template.scss */
-  .gov-uk textarea {
-    min-height: 10em;
-    height: auto; }
-  /* line 190, assets/service_template/_template.scss */
-  .gov-uk .form-control {
-    min-width: 96%; }
-    @media (min-width: 641px) {
-      /* line 190, assets/service_template/_template.scss */
-      .gov-uk .form-control {
-        min-width: 18em; } }
-  /* line 197, assets/service_template/_template.scss */
-  .gov-uk .form-group {
-    margin-bottom: 15px; }
-    @media (min-width: 641px) {
-      /* line 197, assets/service_template/_template.scss */
-      .gov-uk .form-group {
-        margin-bottom: 30px; } }
-  /* line 204, assets/service_template/_template.scss */
-  .gov-uk .form-group label {
-    display: block;
-    margin-bottom: 5px; }
 
-/* line 217, assets/service_template/_template.scss */
+/* line 136, assets/service_template/_template.scss */
 .main {
   max-width: 1020px;
   width: auto;
   margin: 0 auto 90px; }
 
-/* line 225, assets/service_template/_template.scss */
+/* line 144, assets/service_template/_template.scss */
 .grid-wrapper {
   padding: 0 15px; }
   @media (min-width: 641px) {
-    /* line 225, assets/service_template/_template.scss */
+    /* line 144, assets/service_template/_template.scss */
     .grid-wrapper {
       padding: 0 15px; } }
 
-/* line 234, assets/service_template/_template.scss */
+/* line 153, assets/service_template/_template.scss */
 .grid {
   float: left;
   width: 100%; }
 
 @media (min-width: 641px) {
-  /* line 239, assets/service_template/_template.scss */
+  /* line 158, assets/service_template/_template.scss */
   .grid .inner-block {
     padding: 0 15px; } }
 
-/* line 246, assets/service_template/_template.scss */
+/* line 165, assets/service_template/_template.scss */
 .grid-1-4 {
   width: 100%; }
   @media (min-width: 641px) {
-    /* line 246, assets/service_template/_template.scss */
+    /* line 165, assets/service_template/_template.scss */
     .grid-1-4 {
       width: 25%; } }
 
-/* line 253, assets/service_template/_template.scss */
+/* line 172, assets/service_template/_template.scss */
 .grid-1-3 {
   width: 100%; }
   @media (min-width: 641px) {
-    /* line 253, assets/service_template/_template.scss */
+    /* line 172, assets/service_template/_template.scss */
     .grid-1-3 {
       width: 33.333333333%; } }
 
-/* line 260, assets/service_template/_template.scss */
+/* line 179, assets/service_template/_template.scss */
 .grid-1-2 {
   width: 100%; }
   @media (min-width: 641px) {
-    /* line 260, assets/service_template/_template.scss */
+    /* line 179, assets/service_template/_template.scss */
     .grid-1-2 {
       width: 50%; } }
 
-/* line 267, assets/service_template/_template.scss */
+/* line 186, assets/service_template/_template.scss */
 .grid-2-3 {
   width: 100%; }
   @media (min-width: 641px) {
-    /* line 267, assets/service_template/_template.scss */
+    /* line 186, assets/service_template/_template.scss */
     .grid-2-3 {
       width: 66.666666667%; } }
 
-/* line 274, assets/service_template/_template.scss */
+/* line 193, assets/service_template/_template.scss */
 .grid-3-4 {
   width: 100%; }
   @media (min-width: 641px) {
-    /* line 274, assets/service_template/_template.scss */
+    /* line 193, assets/service_template/_template.scss */
     .grid-3-4 {
       width: 75%; } }
 
-/* line 286, assets/service_template/_template.scss */
+/* line 205, assets/service_template/_template.scss */
 .text-secondary {
   color: #6f777b; }
 
-/* line 295, assets/service_template/_template.scss */
+/* line 214, assets/service_template/_template.scss */
 .is-space {
   margin-bottom: 30px; }
 
-/* line 299, assets/service_template/_template.scss */
+/* line 218, assets/service_template/_template.scss */
 .is-double-space {
   margin-bottom: 60px; }
 
@@ -632,7 +571,7 @@ Example usage:
 /* line 33, assets/service_template/_service.scss */
 .link-style {
   display: inline;
-  color: #2e3191;
+  color: #005ea5;
   -webkit-appearance: none;
   background: none;
   border: none;
@@ -681,6 +620,95 @@ table.review-answers {
   table.review-answers td + td {
     padding-left: 30px; }
 
+/* line 92, assets/service_template/_service.scss */
+.form-control[type="text"] {
+  width: 66%; }
+
+/* line 101, assets/service_template/_service.scss */
+.form .form-control.NINumber {
+  width: 150px; }
+/* line 104, assets/service_template/_service.scss */
+.form .form-control.postcode {
+  width: 100px; }
+/* line 107, assets/service_template/_service.scss */
+.form .form-control.telNo {
+  width: 250px; }
+/* line 110, assets/service_template/_service.scss */
+.form .form-control.town {
+  width: 250px; }
+/* line 113, assets/service_template/_service.scss */
+.form .form-control.county {
+  width: 250px; }
+/* line 116, assets/service_template/_service.scss */
+.form .form-control.country {
+  width: 250px; }
+/* line 121, assets/service_template/_service.scss */
+.form .form-group-tight {
+  margin-bottom: 15px; }
+/* line 128, assets/service_template/_service.scss */
+.form .radios,
+.form .checkboxes {
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  /* line 132, assets/service_template/_service.scss */
+  .form .radios .form-group,
+  .form .checkboxes .form-group {
+    position: relative; }
+  /* line 135, assets/service_template/_service.scss */
+  .form .radios input,
+  .form .checkboxes input {
+    position: absolute;
+    top: 10px;
+    left: 10px; }
+  /* line 140, assets/service_template/_service.scss */
+  .form .radios label,
+  .form .checkboxes label {
+    display: inline-block;
+    background-color: #dee0e2;
+    border: 1px solid #dee0e2;
+    padding: 7px 15px 5px;
+    padding-left: 40px;
+    margin: -1px 0 0; }
+    /* line 147, assets/service_template/_service.scss */
+    .form .radios label:hover,
+    .form .checkboxes label:hover {
+      border-color: #0b0c0c;
+      cursor: pointer; }
+  /* line 154, assets/service_template/_service.scss */
+  .form .radios.horizontal .form-group,
+  .form .checkboxes.horizontal .form-group {
+    float: left;
+    margin-right: 10px; }
+/* line 163, assets/service_template/_service.scss */
+.form input[type="radio"]:checked + label,
+.form input[type="checkbox"]:checked + label {
+  background-color: white;
+  border: 1px solid #0b0c0c; }
+/* line 169, assets/service_template/_service.scss */
+.form input[type="radio"]:focus,
+.form input[type="checkbox"]:focus {
+  outline: none; }
+/* line 173, assets/service_template/_service.scss */
+.form input[type="radio"]:focus + label,
+.form input[type="checkbox"]:focus + label {
+  outline: 3px solid #FFBF47;
+  outline-offset: -2px; }
+/* line 180, assets/service_template/_service.scss */
+.form select {
+  font-size: 19px;
+  margin-left: 0; }
+/* line 185, assets/service_template/_service.scss */
+.form select[size] {
+  padding: 10px; }
+/* line 189, assets/service_template/_service.scss */
+.form legend.heading-36 {
+  padding-top: 30px; }
+
+/* line 195, assets/service_template/_service.scss */
+.js-enabled .js-hidden {
+  display: none; }
+
 /* line 1, assets/govuk-helper/_forms.scss */
 form {
   margin: 0; }
@@ -700,7 +728,11 @@ button,
 input {
   line-height: normal; }
 
-/* line 34, assets/govuk-helper/_forms.scss */
+/* line 21, assets/govuk-helper/_forms.scss */
+legend {
+  padding-left: 0; }
+
+/* line 39, assets/govuk-helper/_forms.scss */
 input[type="text"],
 input[type="email"],
 input[type="date"],
@@ -723,49 +755,47 @@ textarea {
   -webkit-appearance: none;
   border-radius: 0; }
 
-/* line 46, assets/govuk-helper/_forms.scss */
+/* line 52, assets/govuk-helper/_forms.scss */
 textarea {
   overflow: auto;
   vertical-align: top;
   min-height: 190px;
   height: auto; }
 
-/* line 53, assets/govuk-helper/_forms.scss */
+/* line 59, assets/govuk-helper/_forms.scss */
 .form-group {
   margin-bottom: 15px; }
   @media (min-width: 641px) {
-    /* line 53, assets/govuk-helper/_forms.scss */
+    /* line 59, assets/govuk-helper/_forms.scss */
     .form-group {
       margin-bottom: 30px; } }
 
-/* line 60, assets/govuk-helper/_forms.scss */
+/* line 66, assets/govuk-helper/_forms.scss */
+.form-control {
+  width: 96%; }
+  @media (min-width: 641px) {
+    /* line 66, assets/govuk-helper/_forms.scss */
+    .form-control {
+      width: 350px; } }
+
+/* line 73, assets/govuk-helper/_forms.scss */
 .form-group label {
   display: block;
   margin-bottom: 5px; }
 
-/* line 65, assets/govuk-helper/_forms.scss */
-.form-control {
-  width: 96%; }
-  @media (min-width: 641px) {
-    /* line 65, assets/govuk-helper/_forms.scss */
-    .form-control {
-      width: 350px; } }
-
-/* line 72, assets/govuk-helper/_forms.scss */
+/* line 78, assets/govuk-helper/_forms.scss */
 .hint {
-  display: block;
   color: #6f777b;
-  font-family: "nta", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 300;
-  text-transform: none;
-  margin-top: 8px; }
-  @media (max-width: 640px) {
-    /* line 72, assets/govuk-helper/_forms.scss */
-    .hint {
-      font-size: 14px;
-      line-height: 1.14286; } }
+  margin-top: 8px;
+  margin-bottom: 5px;
+  clear: left; }
+
+/* line 86, assets/govuk-helper/_forms.scss */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: 2px;
+  width: auto; }
 
 /* line 5, assets/patterns/_progress-indicator.scss */
 .progress-indicator.vertical {
@@ -806,7 +836,7 @@ textarea {
       text-decoration: none; }
       /* line 32, assets/patterns/_progress-indicator.scss */
       .progress-indicator.vertical li a:hover {
-        color: #2e3191;
+        color: #005ea5;
         text-decoration: underline; }
     /* line 37, assets/patterns/_progress-indicator.scss */
     .progress-indicator.vertical li.active {
@@ -1073,7 +1103,7 @@ textarea {
 
 /* line 3, assets/patterns/_date-of-birth.scss */
 .date-of-birth legend {
-  margin-bottom: 15px; }
+  margin-bottom: 5px; }
 /* line 7, assets/patterns/_date-of-birth.scss */
 .date-of-birth .form-group {
   width: 40px;
@@ -1089,3 +1119,511 @@ textarea {
 /* line 20, assets/patterns/_date-of-birth.scss */
 .date-of-birth .form-control {
   width: 100%; }
+/* line 24, assets/patterns/_date-of-birth.scss */
+.date-of-birth label {
+  color: #6f777b; }
+
+/*
+Version: 3.4.5 Timestamp: Mon Nov  4 08:22:42 PST 2013
+*/
+/* line 4, assets/patterns/_select2-3.4.5.scss */
+.select2-container {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  /* inline-block for ie7 */
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle; }
+
+/* line 17, assets/patterns/_select2-3.4.5.scss */
+.select2-container,
+.select2-drop,
+.select2-search,
+.select2-search input {
+  /*
+    Force border-box so that % widths fit the parent
+    container without overlap because of margin/padding.
+
+    More Info : http://www.quirksmode.org/css/box.html
+  */
+  -webkit-box-sizing: border-box;
+  /* webkit */
+  -moz-box-sizing: border-box;
+  /* firefox */
+  box-sizing: border-box;
+  /* css3 */ }
+
+/* line 29, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice {
+  display: block;
+  min-height: 26px;
+  padding: 4px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #bfc1c3;
+  white-space: nowrap;
+  color: #0b0c0c;
+  text-decoration: none;
+  cursor: text;
+  background-clip: padding-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: white; }
+
+/* line 53, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-drop-above .select2-choice {
+  border-bottom-color: #bfc1c3; }
+
+/* line 57, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-allowclear .select2-choice .select2-chosen {
+  margin-right: 42px; }
+
+/* line 61, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice > .select2-chosen {
+  margin-right: 26px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-top: 3px; }
+
+/* line 74, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice abbr {
+  display: none; }
+
+/* line 78, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-allowclear .select2-choice abbr {
+  display: inline-block; }
+
+/* line 82, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice abbr:hover {
+  background-position: right -11px;
+  cursor: pointer; }
+
+/* line 87, assets/patterns/_select2-3.4.5.scss */
+.select2-drop-mask {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  width: auto;
+  opacity: 0;
+  z-index: 9998;
+  /* styles required for IE to work */
+  background-color: #fff;
+  filter: alpha(opacity=0); }
+
+/* line 105, assets/patterns/_select2-3.4.5.scss */
+.select2-drop {
+  width: 100%;
+  margin-top: -1px;
+  position: absolute;
+  z-index: 9999;
+  top: 100%;
+  background: #fff;
+  color: #000;
+  border: 1px solid #bfc1c3;
+  border-top: 0; }
+
+/* line 118, assets/patterns/_select2-3.4.5.scss */
+.select2-drop-auto-width {
+  border-top: 1px solid #bfc1c3;
+  width: auto; }
+
+/* line 123, assets/patterns/_select2-3.4.5.scss */
+.select2-drop-auto-width .select2-search {
+  padding-top: 4px; }
+
+/* line 127, assets/patterns/_select2-3.4.5.scss */
+.select2-drop.select2-drop-above {
+  margin-top: 1px;
+  border-top: 1px solid #bfc1c3;
+  border-bottom: 0;
+  padding-top: 0; }
+
+/* line 134, assets/patterns/_select2-3.4.5.scss */
+.select2-drop-active {
+  outline: 3px solid #FFBF47;
+  outline-offset: -2px;
+  border-top: none;
+  padding-top: 6px; }
+
+/* line 142, assets/patterns/_select2-3.4.5.scss */
+.select2-drop.select2-drop-above.select2-drop-active {
+  border-top: 3px solid #FFBF47; }
+
+/* line 147, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice .select2-arrow {
+  display: none; }
+
+/* line 151, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice .select2-arrow b {
+  display: none; }
+
+/* line 155, assets/patterns/_select2-3.4.5.scss */
+.select2-search {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  position: relative;
+  z-index: 10000;
+  white-space: nowrap; }
+
+/* line 168, assets/patterns/_select2-3.4.5.scss */
+.select2-search input {
+  width: 100%;
+  height: auto !important;
+  min-height: 26px;
+  padding: 4px 20px 4px 5px;
+  margin: 0;
+  outline: 0;
+  border: 1px solid #bfc1c3;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* line 184, assets/patterns/_select2-3.4.5.scss */
+.select2-drop.select2-drop-above .select2-search input {
+  margin-top: 4px; }
+
+/* line 188, assets/patterns/_select2-3.4.5.scss */
+.select2-search input.select2-active {
+  background: white url("select2-spinner.gif") no-repeat 100%;
+  background: url("select2-spinner.gif") no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
+  background: url("select2-spinner.gif") no-repeat 100%, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: url("select2-spinner.gif") no-repeat 100%, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: url("select2-spinner.gif") no-repeat 100%, linear-gradient(top, #ffffff 85%, #eeeeee 99%); }
+
+/* line 197, assets/patterns/_select2-3.4.5.scss */
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+  outline: 3px solid #FFBF47;
+  outline-offset: -2px; }
+
+/* line 203, assets/patterns/_select2-3.4.5.scss */
+.select2-dropdown-open .select2-choice {
+  border-bottom-color: transparent;
+  background-color: white; }
+
+/* line 210, assets/patterns/_select2-3.4.5.scss */
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+  border: 3px solid #FFBF47;
+  border-top-color: transparent; }
+
+/* line 215, assets/patterns/_select2-3.4.5.scss */
+.select2-dropdown-open .select2-choice .select2-arrow {
+  background: transparent;
+  border-left: none;
+  filter: none; }
+
+/* line 220, assets/patterns/_select2-3.4.5.scss */
+.select2-dropdown-open .select2-choice .select2-arrow b {
+  background-position: -18px 1px; }
+
+/* results */
+/* line 225, assets/patterns/_select2-3.4.5.scss */
+.select2-results {
+  max-height: 200px;
+  padding: 0 0 0 4px;
+  margin: 4px 4px 4px 0;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* line 235, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub {
+  margin: 0;
+  padding-left: 0; }
+
+/* line 240, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub > li .select2-result-label {
+  padding-left: 20px; }
+
+/* line 241, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 40px; }
+
+/* line 242, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 60px; }
+
+/* line 243, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 80px; }
+
+/* line 244, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 100px; }
+
+/* line 245, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 110px; }
+
+/* line 246, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 120px; }
+
+/* line 248, assets/patterns/_select2-3.4.5.scss */
+.select2-results li {
+  list-style: none;
+  display: list-item;
+  background-image: none; }
+
+/* line 254, assets/patterns/_select2-3.4.5.scss */
+.select2-results li.select2-result-with-children > .select2-result-label {
+  font-weight: bold; }
+
+/* line 258, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-result-label {
+  padding: 3px 7px 4px;
+  margin: 0;
+  cursor: pointer;
+  min-height: 1em;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 272, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-highlighted {
+  background: #3875d7;
+  color: #fff; }
+
+/* line 277, assets/patterns/_select2-3.4.5.scss */
+.select2-results li em {
+  font-style: normal; }
+
+/* line 281, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-highlighted em {
+  background: transparent; }
+
+/* line 285, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-highlighted ul {
+  background: #fff;
+  color: #000; }
+
+/* line 293, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-no-results,
+.select2-results .select2-searching,
+.select2-results .select2-selection-limit {
+  background: #f4f4f4;
+  display: list-item; }
+
+/*
+disabled look for disabled choices in the results dropdown
+*/
+/* line 301, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-disabled.select2-highlighted {
+  color: #666;
+  background: #f4f4f4;
+  display: list-item;
+  cursor: default; }
+
+/* line 307, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-disabled {
+  background: #f4f4f4;
+  display: list-item;
+  cursor: default; }
+
+/* line 313, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-selected {
+  display: none; }
+
+/* line 317, assets/patterns/_select2-3.4.5.scss */
+.select2-more-results.select2-active {
+  background: #f4f4f4 url("select2-spinner.gif") no-repeat 100%; }
+
+/* line 321, assets/patterns/_select2-3.4.5.scss */
+.select2-more-results {
+  background: #f4f4f4;
+  display: list-item; }
+
+/* disabled styles */
+/* line 328, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-container-disabled .select2-choice {
+  background-color: #f4f4f4;
+  background-image: none;
+  border: 1px solid #ddd;
+  cursor: default; }
+
+/* line 335, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-container-disabled .select2-choice .select2-arrow {
+  background-color: #f4f4f4;
+  background-image: none;
+  border-left: 0; }
+
+/* line 341, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-container-disabled .select2-choice abbr {
+  display: none; }
+
+/* multiselect */
+/* line 348, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices {
+  height: auto !important;
+  height: 1%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border: 1px solid #bfc1c3;
+  cursor: text;
+  overflow: hidden;
+  background-color: #fff; }
+
+/* line 362, assets/patterns/_select2-3.4.5.scss */
+.select2-locked {
+  padding: 3px 5px 3px 5px !important; }
+
+/* line 366, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices {
+  min-height: 26px; }
+
+/* line 370, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi.select2-container-active .select2-choices {
+  border: 3px solid #FFBF47;
+  outline: none; }
+
+/* line 374, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices li {
+  float: left;
+  list-style: none; }
+
+/* line 378, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-field {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap; }
+
+/* line 384, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-field input {
+  padding: 5px;
+  margin: 1px 0;
+  /*font-family: sans-serif;*/
+  font-size: 100%;
+  color: #6f777b;
+  outline: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent !important; }
+
+/* line 398, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-field input.select2-active {
+  background: white url("select2-spinner.gif") no-repeat 100% !important; }
+
+/* line 402, assets/patterns/_select2-3.4.5.scss */
+.select2-default {
+  color: #999 !important; }
+
+/* line 406, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-choice {
+  padding: 3px 5px 3px 18px;
+  margin: 3px 0 3px 5px;
+  position: relative;
+  line-height: 13px;
+  color: #333;
+  cursor: default;
+  border: 1px solid #aaaaaa;
+  background-clip: padding-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 424, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-choice .select2-chosen {
+  cursor: default; }
+
+/* line 430, assets/patterns/_select2-3.4.5.scss */
+.select2-search-choice-close {
+  display: none; }
+
+/* line 434, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-search-choice-close {
+  left: 3px; }
+
+/* line 438, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close:hover {
+  background-position: right -11px; }
+
+/* line 441, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-choice-focus .select2-search-choice-close {
+  background-position: right -11px; }
+
+/* disabled styles */
+/* line 446, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi.select2-container-disabled .select2-choices {
+  background-color: #f4f4f4;
+  background-image: none;
+  border: 1px solid #ddd;
+  cursor: default; }
+
+/* line 453, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice {
+  padding: 3px 5px 3px 5px;
+  border: 1px solid #ddd;
+  background-image: none; }
+
+/* line 459, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice .select2-search-choice-close {
+  display: none;
+  background: none; }
+
+/* end multiselect */
+/* line 466, assets/patterns/_select2-3.4.5.scss */
+.select2-result-selectable .select2-match,
+.select2-result-unselectable .select2-match {
+  text-decoration: underline; }
+
+/* line 470, assets/patterns/_select2-3.4.5.scss */
+.select2-offscreen, .select2-offscreen:focus {
+  clip: rect(0 0 0 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  outline: 0 !important;
+  left: 0px !important;
+  top: 0px !important; }
+
+/* line 484, assets/patterns/_select2-3.4.5.scss */
+.select2-display-none {
+  display: none; }
+
+/* line 488, assets/patterns/_select2-3.4.5.scss */
+.select2-measure-scrollbar {
+  position: absolute;
+  top: -10000px;
+  left: -10000px;
+  width: 100px;
+  height: 100px;
+  overflow: scroll; }
+
+/* Retina-ize icons */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  /* line 499, assets/patterns/_select2-3.4.5.scss */
+  .select2-search input, .select2-search-choice-close, .select2-container .select2-choice abbr, .select2-container .select2-choice .select2-arrow b {
+    background-image: url("select2x2.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: 60px 40px !important; }
+
+  /* line 504, assets/patterns/_select2-3.4.5.scss */
+  .select2-search input {
+    background-position: 100% -21px !important; } }

@@ -1,93 +1,1593 @@
-/*
-Syntax error: File to import not found or unreadable: base.scss.
-              Load paths:
-                /Users/timpaul/code/gds/carers-allowance-prototype/source
-                /Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/blueprint/stylesheets
-                /Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets
-                Compass::SpriteImporter
-        on line 6 of /Users/timpaul/code/gds/carers-allowance-prototype/source/stylesheets/base-ie7.css.scss
+@-ms-viewport {
+  width: device-width; }
 
-1: // BASE STYLESHEET FOR IE 8 COMPILER
-2: 
-3: $is-ie: true;
-4: $ie-version: 7;
-5: 
-6: @import "base.scss";
+@-o-viewport {
+  width: device-width; }
 
-Backtrace:
-/Users/timpaul/code/gds/carers-allowance-prototype/source/stylesheets/base-ie7.css.scss:6
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:45:in `import'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/root_node.rb:20:in `render'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/renderers/sass.rb:66:in `evaluate'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/tilt-1.4.1/lib/tilt/template.rb:103:in `render'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/rendering.rb:280:in `render_individual_file'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/rendering.rb:157:in `render_template'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/sitemap/resource.rb:143:in `block in render'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.16/lib/active_support/notifications.rb:125:in `instrument'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/util.rb:42:in `instrument'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/application.rb:215:in `instrument'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/sitemap/resource.rb:16:in `instrument'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/sitemap/resource.rb:114:in `render'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/request.rb:256:in `process_request'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/request.rb:206:in `block in call!'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/request.rb:205:in `catch'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/request.rb:205:in `call!'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/core_extensions/request.rb:191:in `call'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/urlmap.rb:65:in `block in call'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `each'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `call'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/lint.rb:49:in `_call'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/lint.rb:37:in `call'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-test-0.6.2/lib/rack/mock_session.rb:30:in `request'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-test-0.6.2/lib/rack/test.rb:230:in `process_request'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/rack-test-0.6.2/lib/rack/test.rb:57:in `get'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:251:in `render_to_file'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:214:in `block in execute!'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:211:in `each'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:211:in `execute!'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:126:in `invoke!'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/actions.rb:95:in `action'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli/build.rb:68:in `build'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli.rb:77:in `method_missing'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/command.rb:29:in `run'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/command.rb:128:in `run'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/lib/middleman-core/cli.rb:22:in `start'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/middleman-core-3.2.2/bin/middleman:18:in `<top (required)>'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/bin/middleman:23:in `load'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/bin/middleman:23:in `<main>'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/bin/ruby_noexec_wrapper:14:in `eval'
-/Users/timpaul/.rvm/gems/ruby-1.9.3-p194/bin/ruby_noexec_wrapper:14:in `<main>'
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: base.scss.\A               Load paths:\A                 /Users/timpaul/code/gds/carers-allowance-prototype/source\A                 /Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /Users/timpaul/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets\A                 Compass::SpriteImporter\A         on line 6 of /Users/timpaul/code/gds/carers-allowance-prototype/source/stylesheets/base-ie7.css.scss\A \A 1: // BASE STYLESHEET FOR IE 8 COMPILER\A 2: \A 3: $is-ie: true;\A 4: $ie-version: 7;\A 5: \A 6: @import \"base.scss\";"; }
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 48, assets/govuk_frontend_toolkit/stylesheets/_shims.scss */
+.grid-wrapper, .cf, .form .radios.horizontal,
+.form .checkboxes.horizontal, .progress-indicator.vertical ol, .progress-indicator.vertical ul {
+  zoom: 1; }
+  /* line 49, assets/govuk_frontend_toolkit/stylesheets/_shims.scss */
+  .grid-wrapper:after, .cf:after, .form .radios.horizontal:after,
+  .form .checkboxes.horizontal:after, .progress-indicator.vertical ol:after, .progress-indicator.vertical ul:after {
+    content: "";
+    display: block;
+    clear: both; }
+
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 48, assets/govuk_frontend_toolkit/stylesheets/_shims.scss */
+.grid-wrapper, .cf, .form .radios.horizontal,
+.form .checkboxes.horizontal, .progress-indicator.vertical ol, .progress-indicator.vertical ul {
+  zoom: 1; }
+  /* line 49, assets/govuk_frontend_toolkit/stylesheets/_shims.scss */
+  .grid-wrapper:after, .cf:after, .form .radios.horizontal:after,
+  .form .checkboxes.horizontal:after, .progress-indicator.vertical ol:after, .progress-indicator.vertical ul:after {
+    content: "";
+    display: block;
+    clear: both; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 48, assets/govuk_frontend_toolkit/stylesheets/_shims.scss */
+.grid-wrapper, .cf, .form .radios.horizontal,
+.form .checkboxes.horizontal, .progress-indicator.vertical ol, .progress-indicator.vertical ul {
+  zoom: 1; }
+  /* line 49, assets/govuk_frontend_toolkit/stylesheets/_shims.scss */
+  .grid-wrapper:after, .cf:after, .form .radios.horizontal:after,
+  .form .checkboxes.horizontal:after, .progress-indicator.vertical ol:after, .progress-indicator.vertical ul:after {
+    content: "";
+    display: block;
+    clear: both; }
+
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/*
+
+Mixin and defaults for making buttons on GOV.UK services.
+
+For guidance, see: https://www.gov.uk/service-manual/design-and-content/resources/buttons.html
+
+Example usage:
+
+.button{
+  @include button;
+}
+.button-secondary{
+  @include button($grey-3);
+}
+.button-warning{
+  @include button($red);
+}
+
+*/
+/* line 2, assets/service_template/_template.scss */
+.gov-uk {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased; }
+  @media (max-width: 640px) {
+    /* line 2, assets/service_template/_template.scss */
+    .gov-uk {
+      font-size: 16px;
+      line-height: 1.25; } }
+  /* line 10, assets/service_template/_template.scss */
+  .gov-uk .text {
+    max-width: 30em; }
+  /* line 19, assets/service_template/_template.scss */
+  .gov-uk h1,
+  .gov-uk .heading-48 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 48px;
+    line-height: 1.04167;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 60px; }
+    @media (max-width: 640px) {
+      /* line 19, assets/service_template/_template.scss */
+      .gov-uk h1,
+      .gov-uk .heading-48 {
+        font-size: 32px;
+        line-height: 1.09375; } }
+    /* line 28, assets/service_template/_template.scss */
+    .gov-uk h1 span,
+    .gov-uk h1 .document-type,
+    .gov-uk .heading-48 span,
+    .gov-uk .heading-48 .document-type {
+      display: block;
+      font-family: "nta", Arial, sans-serif;
+      font-size: 27px;
+      line-height: 1.11111;
+      font-weight: 400;
+      text-transform: none;
+      color: #6f777b; }
+      @media (max-width: 640px) {
+        /* line 28, assets/service_template/_template.scss */
+        .gov-uk h1 span,
+        .gov-uk h1 .document-type,
+        .gov-uk .heading-48 span,
+        .gov-uk .heading-48 .document-type {
+          font-size: 18px;
+          line-height: 1.11111; } }
+  /* line 36, assets/service_template/_template.scss */
+  .gov-uk h2,
+  .gov-uk .heading-36 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 36px;
+    line-height: 1.11111;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-top: 45px;
+    margin-bottom: 20px; }
+    @media (max-width: 640px) {
+      /* line 36, assets/service_template/_template.scss */
+      .gov-uk h2,
+      .gov-uk .heading-36 {
+        font-size: 24px;
+        line-height: 1.04167; } }
+  /* line 47, assets/service_template/_template.scss */
+  .gov-uk h3,
+  .gov-uk .heading-24 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-top: 45px;
+    margin-bottom: 20px; }
+    @media (max-width: 640px) {
+      /* line 47, assets/service_template/_template.scss */
+      .gov-uk h3,
+      .gov-uk .heading-24 {
+        font-size: 20px;
+        line-height: 1.2; } }
+  /* line 58, assets/service_template/_template.scss */
+  .gov-uk h4,
+  .gov-uk .heading-19 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    line-height: 1.31579;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-top: 20px; }
+    @media (max-width: 640px) {
+      /* line 58, assets/service_template/_template.scss */
+      .gov-uk h4,
+      .gov-uk .heading-19 {
+        font-size: 16px;
+        line-height: 1.25; } }
+  /* line 68, assets/service_template/_template.scss */
+  .gov-uk p,
+  .gov-uk pre {
+    margin-top: 5px;
+    margin-bottom: 20px; }
+  /* line 73, assets/service_template/_template.scss */
+  .gov-uk .intro {
+    margin-bottom: 30px; }
+  /* line 78, assets/service_template/_template.scss */
+  .gov-uk .data-80 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 80px;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: 700;
+    line-height: 0.4; }
+    @media (max-width: 640px) {
+      /* line 78, assets/service_template/_template.scss */
+      .gov-uk .data-80 {
+        font-size: 53px;
+        line-height: 1.03774; } }
+  /* line 83, assets/service_template/_template.scss */
+  .gov-uk .data-48 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 48px;
+    line-height: 1.04167;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: 700;
+    line-height: 0.2; }
+    @media (max-width: 640px) {
+      /* line 83, assets/service_template/_template.scss */
+      .gov-uk .data-48 {
+        font-size: 32px;
+        line-height: 1.09375; } }
+  /* line 88, assets/service_template/_template.scss */
+  .gov-uk .data p {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+    font-weight: 700; }
+    @media (max-width: 640px) {
+      /* line 88, assets/service_template/_template.scss */
+      .gov-uk .data p {
+        font-size: 14px;
+        line-height: 1.14286; } }
+  /* line 100, assets/service_template/_template.scss */
+  .gov-uk dl,
+  .gov-uk menu,
+  .gov-uk ol,
+  .gov-uk ul {
+    margin: 0; }
+  /* line 104, assets/service_template/_template.scss */
+  .gov-uk dd {
+    margin-left: 0; }
+  /* line 110, assets/service_template/_template.scss */
+  .gov-uk menu,
+  .gov-uk ol,
+  .gov-uk ul {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 0 0 0 20px; }
+  /* line 116, assets/service_template/_template.scss */
+  .gov-uk ul {
+    list-style-type: disc; }
+  /* line 119, assets/service_template/_template.scss */
+  .gov-uk ol {
+    list-style-type: decimal; }
+  /* line 124, assets/service_template/_template.scss */
+  .gov-uk ul li,
+  .gov-uk ol li {
+    margin-bottom: 5px; }
+
+/* line 136, assets/service_template/_template.scss */
+.main {
+  max-width: 1020px;
+  width: auto;
+  margin: 0 auto 90px; }
+
+/* line 144, assets/service_template/_template.scss */
+.grid-wrapper {
+  padding: 0 15px;
+  padding: 0 15px; }
+
+/* line 153, assets/service_template/_template.scss */
+.grid {
+  float: left;
+  width: 100%; }
+
+/* line 158, assets/service_template/_template.scss */
+.grid .inner-block {
+  padding: 0 15px; }
+
+/* line 165, assets/service_template/_template.scss */
+.grid-1-4 {
+  width: 100%;
+  width: 25%; }
+
+/* line 172, assets/service_template/_template.scss */
+.grid-1-3 {
+  width: 100%;
+  width: 33.333333333%; }
+
+/* line 179, assets/service_template/_template.scss */
+.grid-1-2 {
+  width: 100%;
+  width: 50%; }
+
+/* line 186, assets/service_template/_template.scss */
+.grid-2-3 {
+  width: 100%;
+  width: 66.666666667%; }
+
+/* line 193, assets/service_template/_template.scss */
+.grid-3-4 {
+  width: 100%;
+  width: 75%; }
+
+/* line 205, assets/service_template/_template.scss */
+.text-secondary {
+  color: #6f777b; }
+
+/* line 214, assets/service_template/_template.scss */
+.is-space {
+  margin-bottom: 30px; }
+
+/* line 218, assets/service_template/_template.scss */
+.is-double-space {
+  margin-bottom: 60px; }
+
+/* line 7, assets/service_template/_service.scss */
+#phase-banner {
+  padding: 8px 0;
+  background-color: #f47738;
+  max-width: 960px;
+  margin: 0 auto;
+  text-indent: -999px;
+  height: 10px;
+  padding: 0; }
+  /* line 14, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_alpha-beta.scss */
+  #phase-banner p {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+    color: #0b0c0c;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      /* line 14, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_alpha-beta.scss */
+      #phase-banner p {
+        font-size: 14px;
+        line-height: 1.14286; } }
+  /* line 23, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_alpha-beta.scss */
+  #phase-banner a, #phase-banner a:link, #phase-banner a:visited, #phase-banner a:active {
+    color: #0b0c0c; }
+  /* line 27, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_alpha-beta.scss */
+  #phase-banner a:hover {
+    color: #0b0c0c; }
+
+/* line 16, assets/service_template/_service.scss */
+#phase-tag {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+  background-color: #f47738;
+  color: #fff;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin: 3px 10px 0 5px;
+  padding: 2px 5px 0; }
+  @media (max-width: 640px) {
+    /* line 16, assets/service_template/_service.scss */
+    #phase-tag {
+      font-size: 14px;
+      line-height: 1.14286; } }
+
+/* line 20, assets/service_template/_service.scss */
+.button {
+  background-color: #00823b;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #003518;
+  -moz-box-shadow: 0 2px 0 #003518;
+  box-shadow: 0 2px 0 #003518;
+  border-bottom: 2px solid #003518;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 51, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+  .button:visited {
+    background-color: #00823b; }
+  /* line 55, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .button:focus {
+    background-color: #00692f; }
+  /* line 58, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+  .button:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #00823b;
+    -moz-box-shadow: 0 0 0 #00823b;
+    box-shadow: 0 0 0 #00823b; }
+  /* line 66, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+  .button.disabled, .button[disabled="disabled"], .button[disabled] {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5; }
+    /* line 68, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+      cursor: default;
+      background-color: #00823b; }
+    /* line 72, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #003518;
+      -moz-box-shadow: 0 2px 0 #003518;
+      box-shadow: 0 2px 0 #003518;
+      border-bottom: 2px solid #003518; }
+  /* line 86, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .button:focus, .button:visited {
+    color: white; }
+  /* line 100, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+  .button:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 110, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+  .button:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 123, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+  .button[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+  /* line 134, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+  .button[type="submit"], .button[type="reset"], .button[type="button"] {
+    filter: chroma(color=black); }
+  /* line 138, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss */
+  .button[type=submit].button {
+    filter: none; }
+
+/* line 24, assets/service_template/_service.scss */
+#section-nav h2 {
+  border-top: 5px solid #0b0c0c;
+  padding-top: 10px;
+  margin-top: 30px; }
+
+/* line 33, assets/service_template/_service.scss */
+.link-style {
+  display: inline;
+  color: #005ea5;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  text-decoration: underline; }
+  /* line 40, assets/service_template/_service.scss */
+  .link-style:hover {
+    color: #2e8aca;
+    cursor: pointer; }
+
+/* line 48, assets/service_template/_service.scss */
+#help-feedback {
+  margin: 0 -30px;
+  border-color: #f47738;
+  border-style: solid;
+  border-width: 10px;
+  padding: 0 20px;
+  margin: 0 10px; }
+  /* line 57, assets/service_template/_service.scss */
+  #help-feedback h2 {
+    margin-top: 0;
+    padding-top: 20px; }
+  /* line 61, assets/service_template/_service.scss */
+  #help-feedback.js-hidden {
+    text-indent: -9999px;
+    padding: 0;
+    height: 0;
+    border-width: 10px 0 0 0; }
+
+/* line 72, assets/service_template/_service.scss */
+table.review-answers {
+  width: 100%;
+  border-top: 1px solid #bfc1c3;
+  border-collapse: collapse;
+  margin-top: 30px;
+  font-size: 19px; }
+  /* line 78, assets/service_template/_service.scss */
+  table.review-answers td {
+    padding: 13px 0 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+    width: 50%;
+    vertical-align: top; }
+  /* line 84, assets/service_template/_service.scss */
+  table.review-answers td + td {
+    padding-left: 30px; }
+
+/* line 92, assets/service_template/_service.scss */
+.form-control[type="text"] {
+  width: 66%; }
+
+/* line 101, assets/service_template/_service.scss */
+.form .form-control.NINumber {
+  width: 150px; }
+/* line 104, assets/service_template/_service.scss */
+.form .form-control.postcode {
+  width: 100px; }
+/* line 107, assets/service_template/_service.scss */
+.form .form-control.telNo {
+  width: 250px; }
+/* line 110, assets/service_template/_service.scss */
+.form .form-control.town {
+  width: 250px; }
+/* line 113, assets/service_template/_service.scss */
+.form .form-control.county {
+  width: 250px; }
+/* line 116, assets/service_template/_service.scss */
+.form .form-control.country {
+  width: 250px; }
+/* line 121, assets/service_template/_service.scss */
+.form .form-group-tight {
+  margin-bottom: 15px; }
+/* line 128, assets/service_template/_service.scss */
+.form .radios,
+.form .checkboxes {
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  /* line 132, assets/service_template/_service.scss */
+  .form .radios .form-group,
+  .form .checkboxes .form-group {
+    position: relative; }
+  /* line 135, assets/service_template/_service.scss */
+  .form .radios input,
+  .form .checkboxes input {
+    position: absolute;
+    top: 10px;
+    left: 10px; }
+  /* line 140, assets/service_template/_service.scss */
+  .form .radios label,
+  .form .checkboxes label {
+    display: inline-block;
+    background-color: #dee0e2;
+    border: 1px solid #dee0e2;
+    padding: 7px 15px 5px;
+    padding-left: 40px;
+    margin: -1px 0 0; }
+    /* line 147, assets/service_template/_service.scss */
+    .form .radios label:hover,
+    .form .checkboxes label:hover {
+      border-color: #0b0c0c;
+      cursor: pointer; }
+  /* line 154, assets/service_template/_service.scss */
+  .form .radios.horizontal .form-group,
+  .form .checkboxes.horizontal .form-group {
+    float: left;
+    margin-right: 10px; }
+/* line 163, assets/service_template/_service.scss */
+.form input[type="radio"]:checked + label,
+.form input[type="checkbox"]:checked + label {
+  background-color: white;
+  border: 1px solid #0b0c0c; }
+/* line 169, assets/service_template/_service.scss */
+.form input[type="radio"]:focus,
+.form input[type="checkbox"]:focus {
+  outline: none; }
+/* line 173, assets/service_template/_service.scss */
+.form input[type="radio"]:focus + label,
+.form input[type="checkbox"]:focus + label {
+  outline: 3px solid #FFBF47;
+  outline-offset: -2px; }
+/* line 180, assets/service_template/_service.scss */
+.form select {
+  font-size: 19px;
+  margin-left: 0; }
+/* line 185, assets/service_template/_service.scss */
+.form select[size] {
+  padding: 10px; }
+/* line 189, assets/service_template/_service.scss */
+.form legend.heading-36 {
+  padding-top: 30px; }
+
+/* line 195, assets/service_template/_service.scss */
+.js-enabled .js-hidden {
+  display: none; }
+
+/* line 1, assets/govuk-helper/_forms.scss */
+form {
+  margin: 0; }
+
+/* line 8, assets/govuk-helper/_forms.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+/* line 16, assets/govuk-helper/_forms.scss */
+button,
+input {
+  line-height: normal; }
+
+/* line 21, assets/govuk-helper/_forms.scss */
+legend {
+  padding-left: 0; }
+
+/* line 39, assets/govuk-helper/_forms.scss */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select[size],
+textarea {
+  font-size: 1em;
+  padding: 4px;
+  background-color: white;
+  border: 1px solid #bfc1c3;
+  -webkit-appearance: none;
+  border-radius: 0; }
+
+/* line 52, assets/govuk-helper/_forms.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  min-height: 190px;
+  height: auto; }
+
+/* line 59, assets/govuk-helper/_forms.scss */
+.form-group {
+  margin-bottom: 15px;
+  margin-bottom: 30px; }
+
+/* line 66, assets/govuk-helper/_forms.scss */
+.form-control {
+  width: 96%;
+  width: 350px; }
+
+/* line 73, assets/govuk-helper/_forms.scss */
+.form-group label {
+  display: block;
+  margin-bottom: 5px; }
+
+/* line 78, assets/govuk-helper/_forms.scss */
+.hint {
+  color: #6f777b;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  clear: left; }
+
+/* line 86, assets/govuk-helper/_forms.scss */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: 2px;
+  width: auto; }
+
+/* line 5, assets/patterns/_progress-indicator.scss */
+.progress-indicator.vertical {
+  margin-bottom: 30px;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    /* line 5, assets/patterns/_progress-indicator.scss */
+    .progress-indicator.vertical {
+      font-size: 16px;
+      line-height: 1.25; } }
+  /* line 11, assets/patterns/_progress-indicator.scss */
+  .progress-indicator.vertical ol, .progress-indicator.vertical ul {
+    border-color: #bfc1c3;
+    padding: 0; }
+  /* line 22, assets/patterns/_progress-indicator.scss */
+  .progress-indicator.vertical li {
+    list-style-type: decimal;
+    float: left;
+    margin: 0 20px 0 27px;
+    padding: 10px 0 5px 0;
+    color: #6f777b;
+    border-bottom: 5px solid transparent; }
+    /* line 29, assets/patterns/_progress-indicator.scss */
+    .progress-indicator.vertical li a {
+      display: block;
+      text-decoration: none; }
+      /* line 32, assets/patterns/_progress-indicator.scss */
+      .progress-indicator.vertical li a:hover {
+        color: #005ea5;
+        text-decoration: underline; }
+    /* line 37, assets/patterns/_progress-indicator.scss */
+    .progress-indicator.vertical li.active {
+      /*
+              font-weight: bold;
+              color: $text-colour;
+              a{
+                color: $text-colour;
+              }
+              */ }
+    /* line 46, assets/patterns/_progress-indicator.scss */
+    .progress-indicator.vertical li span {
+      float: right;
+      font-family: "nta", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.31579;
+      font-weight: 300;
+      text-transform: none;
+      visibility: hidden; }
+      @media (max-width: 640px) {
+        /* line 46, assets/patterns/_progress-indicator.scss */
+        .progress-indicator.vertical li span {
+          font-size: 14px;
+          line-height: 1.14286; } }
+    /* line 56, assets/patterns/_progress-indicator.scss */
+    .progress-indicator.vertical li.done span {
+      visibility: visible;
+      text-indent: -9999px;
+      margin-right: 5px;
+      margin-left: -16px;
+      width: 5px;
+      margin-top: -23px;
+      height: 10px;
+      border-right: 3px solid;
+      border-bottom: 3px solid;
+      border-color: #006435;
+      -webkit-transform: rotate(45deg);
+      position: absolute; }
+/* line 74, assets/patterns/_progress-indicator.scss */
+.progress-indicator.vertical li {
+  float: none;
+  margin-right: 0; }
+  /* line 78, assets/patterns/_progress-indicator.scss */
+  .progress-indicator.vertical li.done span {
+    position: relative;
+    margin-top: 3px; }
+
+/* progress steps */
+/* line 3, assets/patterns/_progress-steps.scss */
+.progress-steps {
+  margin: 0 15px;
+  padding-bottom: .5em; }
+  @media print {
+    /* line 3, assets/patterns/_progress-steps.scss */
+    .progress-steps {
+      display: none; } }
+  /* line 9, assets/patterns/_progress-steps.scss */
+  .progress-steps ol {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 1.8em 0 0.3em 0; }
+    @media screen and (max-width: 760px) {
+      /* line 9, assets/patterns/_progress-steps.scss */
+      .progress-steps ol {
+        padding-top: 2em; } }
+    /* line 16, assets/patterns/_progress-steps.scss */
+    .ie6 .progress-steps ol, .ie7 .progress-steps ol, .ie8 .progress-steps ol {
+      padding-bottom: 0;
+      background: url("images/nav-line.png") 0 56px repeat-x;
+      margin-bottom: -12px;
+      zoom: 1; }
+    /* line 22, assets/patterns/_progress-steps.scss */
+    .ie8 .progress-steps ol {
+      background: none; }
+    @media screen and (max-width: 760px) {
+      /* line 9, assets/patterns/_progress-steps.scss */
+      .progress-steps ol {
+        padding-bottom: 0; } }
+    /* line 28, assets/patterns/_progress-steps.scss */
+    .progress-steps ol:after {
+      content: "";
+      display: block;
+      height: 10px;
+      border-bottom: 1px solid #bfc1c3;
+      margin-top: 6px; }
+      @media screen and (max-width: 500px) {
+        /* line 28, assets/patterns/_progress-steps.scss */
+        .progress-steps ol:after {
+          display: none; } }
+    /* line 38, assets/patterns/_progress-steps.scss */
+    .progress-steps ol li {
+      float: left;
+      width: 10%;
+      position: relative;
+      text-align: center;
+      padding: 35px 0 0 0;
+      line-height: 1em; }
+      /* line 45, assets/patterns/_progress-steps.scss */
+      .ie6 .progress-steps ol li, .ie7 .progress-steps ol li, .ie8 .progress-steps ol li {
+        background: url("images/nav-default.png") center 0 no-repeat;
+        padding-bottom: 5px; }
+      /* line 49, assets/patterns/_progress-steps.scss */
+      .ie6 .progress-steps ol li {
+        padding-bottom: 20px; }
+      @media screen and (max-width: 760px) {
+        /* line 38, assets/patterns/_progress-steps.scss */
+        .progress-steps ol li {
+          text-indent: -9999px;
+          padding: 15px 0 0 0; }
+          /* line 55, assets/patterns/_progress-steps.scss */
+          .progress-steps ol li span {
+            text-indent: 0; } }
+      @media screen and (max-width: 480px) {
+        /* line 38, assets/patterns/_progress-steps.scss */
+        .progress-steps ol li {
+          width: 30px;
+          margin-left: 4px; }
+          /* line 62, assets/patterns/_progress-steps.scss */
+          .progress-steps ol li:first-child {
+            margin-left: 0; } }
+      @media screen and (max-width: 330px) {
+        /* line 38, assets/patterns/_progress-steps.scss */
+        .progress-steps ol li {
+          width: 26px; } }
+      /* line 69, assets/patterns/_progress-steps.scss */
+      .progress-steps ol li span {
+        font-size: 1.3rem; }
+        @media screen and (max-width: 770px) {
+          /* line 69, assets/patterns/_progress-steps.scss */
+          .progress-steps ol li span {
+            font-size: 10px; } }
+        /* line 74, assets/patterns/_progress-steps.scss */
+        .ie .progress-steps ol li span {
+          font-size: 13px; }
+        /* line 77, assets/patterns/_progress-steps.scss */
+        .progress-steps ol li span:before {
+          position: absolute;
+          content: "\203a";
+          top: 0;
+          left: 50%;
+          width: 30px;
+          height: 25px;
+          border-radius: 100px;
+          margin: 0 0 0 -15px;
+          background: #afafaf;
+          color: #fff;
+          font-weight: 300;
+          font-size: 2rem;
+          text-align: center;
+          display: block;
+          line-height: 1em;
+          padding: 5px 0 0 0; }
+          /* line 90, assets/patterns/_progress-steps.scss */
+          .ie .progress-steps ol li span:before {
+            font-size: 20px; }
+          @media screen and (max-width: 330px) {
+            /* line 77, assets/patterns/_progress-steps.scss */
+            .progress-steps ol li span:before {
+              width: 26px;
+              height: 23px;
+              margin-left: -13px;
+              padding-top: 3px; } }
+          /* line 103, assets/patterns/_progress-steps.scss */
+          .ie8 .progress-steps ol li span:before {
+            display: none; }
+      /* line 111, assets/patterns/_progress-steps.scss */
+      .ie6 .progress-steps ol li.active, .ie7 .progress-steps ol li.active, .ie8 .progress-steps ol li.active {
+        background: url("images/nav-active.png") center 0 no-repeat;
+        top: -8px;
+        padding-top: 55px; }
+      @media screen and (max-width: 760px) {
+        /* line 109, assets/patterns/_progress-steps.scss */
+        .progress-steps ol li.active {
+          padding: 0; } }
+      /* line 119, assets/patterns/_progress-steps.scss */
+      .progress-steps ol li.active span {
+        font-weight: 700; }
+        /* line 121, assets/patterns/_progress-steps.scss */
+        .progress-steps ol li.active span:before {
+          background: #000;
+          /*
+          padding: 0;
+          height: 39px;
+          width: 50px;
+          margin: -8px 0 0 -25px;
+          font-weight: 300;
+          padding-top: 11px;
+          font-size: 2.6rem;
+          .ie & {
+            font-size: 26px;
+          }
+          */ }
+          @media screen and (max-width: 760px) {
+            /* line 121, assets/patterns/_progress-steps.scss */
+            .progress-steps ol li.active span:before {
+              width: 30px;
+              height: 29px;
+              margin: 0 0 0 -15px;
+              padding: 1px 0 0 0; } }
+          @media screen and (max-width: 330px) {
+            /* line 121, assets/patterns/_progress-steps.scss */
+            .progress-steps ol li.active span:before {
+              height: 26px;
+              width: 26px;
+              padding-top: 0;
+              margin-left: -13px; } }
+          /* line 147, assets/patterns/_progress-steps.scss */
+          .ie8 .progress-steps ol li.active span:before {
+            display: none; }
+      /* line 155, assets/patterns/_progress-steps.scss */
+      .ie6 .progress-steps ol li.complete, .ie7 .progress-steps ol li.complete, .ie8 .progress-steps ol li.complete {
+        background: url("images/nav-complete.png") center 0 no-repeat; }
+      /* line 159, assets/patterns/_progress-steps.scss */
+      .progress-steps ol li.complete span:before {
+        background: #006435;
+        content: "\203a";
+        padding-left: 0;
+        width: 30px; }
+        @media screen and (max-width: 330px) {
+          /* line 159, assets/patterns/_progress-steps.scss */
+          .progress-steps ol li.complete span:before {
+            width: 26px; } }
+        /* line 167, assets/patterns/_progress-steps.scss */
+        .ie8 .progress-steps ol li.complete span:before {
+          display: none; }
+
+@media screen and (max-width: 500px) {
+  /* line 181, assets/patterns/_progress-steps.scss */
+  .short-steps ol:after {
+    display: block; } }
+/* line 186, assets/patterns/_progress-steps.scss */
+.short-steps ol li {
+  width: 25%; }
+  @media screen and (max-width: 760px) {
+    /* line 186, assets/patterns/_progress-steps.scss */
+    .short-steps ol li {
+      text-indent: -9999px;
+      padding: 35px 0 0 0; }
+      /* line 191, assets/patterns/_progress-steps.scss */
+      .short-steps ol li span {
+        text-indent: 0; } }
+  @media screen and (max-width: 480px) {
+    /* line 186, assets/patterns/_progress-steps.scss */
+    .short-steps ol li {
+      width: 25%;
+      margin-left: 0; }
+      /* line 198, assets/patterns/_progress-steps.scss */
+      .short-steps ol li:first-child {
+        margin-left: 0; } }
+  @media screen and (max-width: 330px) {
+    /* line 186, assets/patterns/_progress-steps.scss */
+    .short-steps ol li {
+      width: 25%; } }
+  @media screen and (max-width: 770px) {
+    /* line 205, assets/patterns/_progress-steps.scss */
+    .short-steps ol li span {
+      font-size: 13px; } }
+
+/* line 3, assets/patterns/_date-of-birth.scss */
+.date-of-birth legend {
+  margin-bottom: 5px; }
+/* line 7, assets/patterns/_date-of-birth.scss */
+.date-of-birth .form-group {
+  width: 40px;
+  float: left;
+  margin-right: 15px;
+  margin-right: 30px; }
+/* line 16, assets/patterns/_date-of-birth.scss */
+.date-of-birth .form-group-year {
+  width: 60px; }
+/* line 20, assets/patterns/_date-of-birth.scss */
+.date-of-birth .form-control {
+  width: 100%; }
+/* line 24, assets/patterns/_date-of-birth.scss */
+.date-of-birth label {
+  color: #6f777b; }
+
+/*
+Version: 3.4.5 Timestamp: Mon Nov  4 08:22:42 PST 2013
+*/
+/* line 4, assets/patterns/_select2-3.4.5.scss */
+.select2-container {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  /* inline-block for ie7 */
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle; }
+
+/* line 17, assets/patterns/_select2-3.4.5.scss */
+.select2-container,
+.select2-drop,
+.select2-search,
+.select2-search input {
+  /*
+    Force border-box so that % widths fit the parent
+    container without overlap because of margin/padding.
+
+    More Info : http://www.quirksmode.org/css/box.html
+  */
+  -webkit-box-sizing: border-box;
+  /* webkit */
+  -moz-box-sizing: border-box;
+  /* firefox */
+  box-sizing: border-box;
+  /* css3 */ }
+
+/* line 29, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice {
+  display: block;
+  min-height: 26px;
+  padding: 4px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #bfc1c3;
+  white-space: nowrap;
+  color: #0b0c0c;
+  text-decoration: none;
+  cursor: text;
+  background-clip: padding-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: white; }
+
+/* line 53, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-drop-above .select2-choice {
+  border-bottom-color: #bfc1c3; }
+
+/* line 57, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-allowclear .select2-choice .select2-chosen {
+  margin-right: 42px; }
+
+/* line 61, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice > .select2-chosen {
+  margin-right: 26px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-top: 3px; }
+
+/* line 74, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice abbr {
+  display: none; }
+
+/* line 78, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-allowclear .select2-choice abbr {
+  display: inline-block; }
+
+/* line 82, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice abbr:hover {
+  background-position: right -11px;
+  cursor: pointer; }
+
+/* line 87, assets/patterns/_select2-3.4.5.scss */
+.select2-drop-mask {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  width: auto;
+  opacity: 0;
+  z-index: 9998;
+  /* styles required for IE to work */
+  background-color: #fff;
+  filter: alpha(opacity=0); }
+
+/* line 105, assets/patterns/_select2-3.4.5.scss */
+.select2-drop {
+  width: 100%;
+  margin-top: -1px;
+  position: absolute;
+  z-index: 9999;
+  top: 100%;
+  background: #fff;
+  color: #000;
+  border: 1px solid #bfc1c3;
+  border-top: 0; }
+
+/* line 118, assets/patterns/_select2-3.4.5.scss */
+.select2-drop-auto-width {
+  border-top: 1px solid #bfc1c3;
+  width: auto; }
+
+/* line 123, assets/patterns/_select2-3.4.5.scss */
+.select2-drop-auto-width .select2-search {
+  padding-top: 4px; }
+
+/* line 127, assets/patterns/_select2-3.4.5.scss */
+.select2-drop.select2-drop-above {
+  margin-top: 1px;
+  border-top: 1px solid #bfc1c3;
+  border-bottom: 0;
+  padding-top: 0; }
+
+/* line 134, assets/patterns/_select2-3.4.5.scss */
+.select2-drop-active {
+  outline: 3px solid #FFBF47;
+  outline-offset: -2px;
+  border-top: none;
+  padding-top: 6px; }
+
+/* line 142, assets/patterns/_select2-3.4.5.scss */
+.select2-drop.select2-drop-above.select2-drop-active {
+  border-top: 3px solid #FFBF47; }
+
+/* line 147, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice .select2-arrow {
+  display: none; }
+
+/* line 151, assets/patterns/_select2-3.4.5.scss */
+.select2-container .select2-choice .select2-arrow b {
+  display: none; }
+
+/* line 155, assets/patterns/_select2-3.4.5.scss */
+.select2-search {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  position: relative;
+  z-index: 10000;
+  white-space: nowrap; }
+
+/* line 168, assets/patterns/_select2-3.4.5.scss */
+.select2-search input {
+  width: 100%;
+  height: auto !important;
+  min-height: 26px;
+  padding: 4px 20px 4px 5px;
+  margin: 0;
+  outline: 0;
+  border: 1px solid #bfc1c3;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* line 184, assets/patterns/_select2-3.4.5.scss */
+.select2-drop.select2-drop-above .select2-search input {
+  margin-top: 4px; }
+
+/* line 188, assets/patterns/_select2-3.4.5.scss */
+.select2-search input.select2-active {
+  background: white url("select2-spinner.gif") no-repeat 100%;
+  background: url("select2-spinner.gif") no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
+  background: url("select2-spinner.gif") no-repeat 100%, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: url("select2-spinner.gif") no-repeat 100%, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: url("select2-spinner.gif") no-repeat 100%, linear-gradient(top, #ffffff 85%, #eeeeee 99%); }
+
+/* line 197, assets/patterns/_select2-3.4.5.scss */
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+  outline: 3px solid #FFBF47;
+  outline-offset: -2px; }
+
+/* line 203, assets/patterns/_select2-3.4.5.scss */
+.select2-dropdown-open .select2-choice {
+  border-bottom-color: transparent;
+  background-color: white; }
+
+/* line 210, assets/patterns/_select2-3.4.5.scss */
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+  border: 3px solid #FFBF47;
+  border-top-color: transparent; }
+
+/* line 215, assets/patterns/_select2-3.4.5.scss */
+.select2-dropdown-open .select2-choice .select2-arrow {
+  background: transparent;
+  border-left: none;
+  filter: none; }
+
+/* line 220, assets/patterns/_select2-3.4.5.scss */
+.select2-dropdown-open .select2-choice .select2-arrow b {
+  background-position: -18px 1px; }
+
+/* results */
+/* line 225, assets/patterns/_select2-3.4.5.scss */
+.select2-results {
+  max-height: 200px;
+  padding: 0 0 0 4px;
+  margin: 4px 4px 4px 0;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* line 235, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub {
+  margin: 0;
+  padding-left: 0; }
+
+/* line 240, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub > li .select2-result-label {
+  padding-left: 20px; }
+
+/* line 241, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 40px; }
+
+/* line 242, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 60px; }
+
+/* line 243, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 80px; }
+
+/* line 244, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 100px; }
+
+/* line 245, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 110px; }
+
+/* line 246, assets/patterns/_select2-3.4.5.scss */
+.select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+  padding-left: 120px; }
+
+/* line 248, assets/patterns/_select2-3.4.5.scss */
+.select2-results li {
+  list-style: none;
+  display: list-item;
+  background-image: none; }
+
+/* line 254, assets/patterns/_select2-3.4.5.scss */
+.select2-results li.select2-result-with-children > .select2-result-label {
+  font-weight: bold; }
+
+/* line 258, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-result-label {
+  padding: 3px 7px 4px;
+  margin: 0;
+  cursor: pointer;
+  min-height: 1em;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 272, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-highlighted {
+  background: #3875d7;
+  color: #fff; }
+
+/* line 277, assets/patterns/_select2-3.4.5.scss */
+.select2-results li em {
+  font-style: normal; }
+
+/* line 281, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-highlighted em {
+  background: transparent; }
+
+/* line 285, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-highlighted ul {
+  background: #fff;
+  color: #000; }
+
+/* line 293, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-no-results,
+.select2-results .select2-searching,
+.select2-results .select2-selection-limit {
+  background: #f4f4f4;
+  display: list-item; }
+
+/*
+disabled look for disabled choices in the results dropdown
+*/
+/* line 301, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-disabled.select2-highlighted {
+  color: #666;
+  background: #f4f4f4;
+  display: list-item;
+  cursor: default; }
+
+/* line 307, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-disabled {
+  background: #f4f4f4;
+  display: list-item;
+  cursor: default; }
+
+/* line 313, assets/patterns/_select2-3.4.5.scss */
+.select2-results .select2-selected {
+  display: none; }
+
+/* line 317, assets/patterns/_select2-3.4.5.scss */
+.select2-more-results.select2-active {
+  background: #f4f4f4 url("select2-spinner.gif") no-repeat 100%; }
+
+/* line 321, assets/patterns/_select2-3.4.5.scss */
+.select2-more-results {
+  background: #f4f4f4;
+  display: list-item; }
+
+/* disabled styles */
+/* line 328, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-container-disabled .select2-choice {
+  background-color: #f4f4f4;
+  background-image: none;
+  border: 1px solid #ddd;
+  cursor: default; }
+
+/* line 335, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-container-disabled .select2-choice .select2-arrow {
+  background-color: #f4f4f4;
+  background-image: none;
+  border-left: 0; }
+
+/* line 341, assets/patterns/_select2-3.4.5.scss */
+.select2-container.select2-container-disabled .select2-choice abbr {
+  display: none; }
+
+/* multiselect */
+/* line 348, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices {
+  height: auto !important;
+  height: 1%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border: 1px solid #bfc1c3;
+  cursor: text;
+  overflow: hidden;
+  background-color: #fff; }
+
+/* line 362, assets/patterns/_select2-3.4.5.scss */
+.select2-locked {
+  padding: 3px 5px 3px 5px !important; }
+
+/* line 366, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices {
+  min-height: 26px; }
+
+/* line 370, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi.select2-container-active .select2-choices {
+  border: 3px solid #FFBF47;
+  outline: none; }
+
+/* line 374, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices li {
+  float: left;
+  list-style: none; }
+
+/* line 378, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-field {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap; }
+
+/* line 384, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-field input {
+  padding: 5px;
+  margin: 1px 0;
+  /*font-family: sans-serif;*/
+  font-size: 100%;
+  color: #6f777b;
+  outline: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent !important; }
+
+/* line 398, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-field input.select2-active {
+  background: white url("select2-spinner.gif") no-repeat 100% !important; }
+
+/* line 402, assets/patterns/_select2-3.4.5.scss */
+.select2-default {
+  color: #999 !important; }
+
+/* line 406, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-choice {
+  padding: 3px 5px 3px 18px;
+  margin: 3px 0 3px 5px;
+  position: relative;
+  line-height: 13px;
+  color: #333;
+  cursor: default;
+  border: 1px solid #aaaaaa;
+  background-clip: padding-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 424, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-choice .select2-chosen {
+  cursor: default; }
+
+/* line 430, assets/patterns/_select2-3.4.5.scss */
+.select2-search-choice-close {
+  display: none; }
+
+/* line 434, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-search-choice-close {
+  left: 3px; }
+
+/* line 438, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close:hover {
+  background-position: right -11px; }
+
+/* line 441, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi .select2-choices .select2-search-choice-focus .select2-search-choice-close {
+  background-position: right -11px; }
+
+/* disabled styles */
+/* line 446, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi.select2-container-disabled .select2-choices {
+  background-color: #f4f4f4;
+  background-image: none;
+  border: 1px solid #ddd;
+  cursor: default; }
+
+/* line 453, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice {
+  padding: 3px 5px 3px 5px;
+  border: 1px solid #ddd;
+  background-image: none; }
+
+/* line 459, assets/patterns/_select2-3.4.5.scss */
+.select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice .select2-search-choice-close {
+  display: none;
+  background: none; }
+
+/* end multiselect */
+/* line 466, assets/patterns/_select2-3.4.5.scss */
+.select2-result-selectable .select2-match,
+.select2-result-unselectable .select2-match {
+  text-decoration: underline; }
+
+/* line 470, assets/patterns/_select2-3.4.5.scss */
+.select2-offscreen, .select2-offscreen:focus {
+  clip: rect(0 0 0 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  outline: 0 !important;
+  left: 0px !important;
+  top: 0px !important; }
+
+/* line 484, assets/patterns/_select2-3.4.5.scss */
+.select2-display-none {
+  display: none; }
+
+/* line 488, assets/patterns/_select2-3.4.5.scss */
+.select2-measure-scrollbar {
+  position: absolute;
+  top: -10000px;
+  left: -10000px;
+  width: 100px;
+  height: 100px;
+  overflow: scroll; }
+
+/* Retina-ize icons */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  /* line 499, assets/patterns/_select2-3.4.5.scss */
+  .select2-search input, .select2-search-choice-close, .select2-container .select2-choice abbr, .select2-container .select2-choice .select2-arrow b {
+    background-image: url("select2x2.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: 60px 40px !important; }
+
+  /* line 504, assets/patterns/_select2-3.4.5.scss */
+  .select2-search input {
+    background-position: 100% -21px !important; } }
