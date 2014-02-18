@@ -11,15 +11,6 @@
   <!--[if IE 7]><link href="<%= asset_path(:css, "/stylesheets/base-ie7.css") %>" rel="stylesheet" type="text/css" /><![endif]-->
   <!--[if IE 8]><link href="<%= asset_path(:css, "/stylesheets/base-ie8.css") %>" rel="stylesheet" type="text/css" /><![endif]-->
 
-  <script src="<%= asset_path(:js, "/javascripts/jquery.min.js") %>"></script>
-  <script src="<%= asset_path(:js, "/javascripts/prototype.js") %>"></script>
-
-  <!--<link href="<%= asset_path(:css, "/javascripts/vendor/select2-3.4.5/select2.css") %>" rel="stylesheet"/>-->
-    <script src="<%= asset_path(:js, "/javascripts/vendor/select2-3.4.5/select2.js") %>"></script>
-    <script>
-        $(document).ready(function() { $("#addressCountry").select2(); });
-    </script>
-
   <% end %>
 
   <% content_for :header_class do %> class="with-proposition"<% end %>
@@ -58,5 +49,12 @@
   </div>
 
   </main>
+
+  <% content_for :body_end do %>  
+    <script src="<%= asset_path(:js, "/javascripts/jquery.min.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/vendor/select2-3.4.5/select2.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/toggle.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/prototype.js") %>"></script>
+  <% end %>
 
 <% end %>

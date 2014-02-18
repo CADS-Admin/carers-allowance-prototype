@@ -15,7 +15,7 @@
 		<legend class="heading-36">Your personal details</legend>
 		<div class="form-group">
 			<label for="fullName">Full name</label>
-			<div class="hint">As shown on birth certificate or passport</div>
+			<div class="hint">As shown on your birth certificate or passport</div>
 			<input type="text" class="form-control" id="fullName">
 		</div>
 		<div class="form-group">
@@ -130,24 +130,24 @@
 				<p>Answer 'Yes' below if any of the following statements are true.</p>
 				<p>You or a member of your family:</p>
 				<ul>
+					<li>currently works or pays insurance outside the United Kingdom</li>
 					<li>currently receives a benefit or pension outside the United Kingdom</li>
 					<li>has claimed for a benefit or pension outside the United Kingdom</li>
-					<li>currently works or pays insurance outside the United Kingdom</li>
 				</ul>
 			</legend>
 			<div class="horizontal radios">
 				<div class="form-group">
-			  		<input type="radio" id="EEAYes" name="EEA1">
+			  		<input type="radio" id="EEAYes" name="EEA1" class="js-toggle" data-show="#jsToggleEEAYes">
 			  		<label for="EEAYes">Yes</label>
 				</div>
 
 				<div class="form-group">
-			  		<input type="radio" id="EEANo" name="EEA1">
+			  		<input type="radio" id="EEANo" name="EEA1" class="js-toggle" data-hide="#jsToggleEEAYes">
 			  		<label for="EEANo" name="partner">No</label>
 				</div>
 			</div>
 		</fieldset>
-		<fieldset>
+		<fieldset class="js-hidden" id="jsToggleEEAYes">
 			<legend>
 				<p>Is it from one of these countries?</p>
 				<p class="hint">Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden or Switzerland.</p>
@@ -164,6 +164,9 @@
 				</div>
 			</div>
 		</fieldset>
+
+
+		<%= partial "partials/questions/state-pension" %>
 
 	</fieldset>
 
@@ -184,142 +187,101 @@
 	        <label for="year">Year</label>
 	        <input type="text" class="form-control" pattern="[0-9]*" id="year" class="form-control">
 	      </div>
-		<div class="hint">Please note that claims can only be back-dated up to three months from the date you submit this application.</div>
+		<div class="hint">Please note that claims can only be back-dated up to 3 months from the date you submit this application.</div>
 	    </fieldset>
+	</fieldset>
 
+	<fieldset>
+		<legend class="heading-36">Your marital status</legend>
 		<fieldset>
-			<legend style="padding-top: 30px;">Have you had a partner living with you at any time since this date?</legend>
-			<!--<legend style="padding-top: 30px;">Have you lived with a partner at any time in the last 3 months?</legend>-->
+			<!--<legend style="padding-top: 30px;">Have you had a partner living with you at any time since this date?</legend>-->
+			<legend style="padding-top: 30px;">Have you lived with a partner at any time in the last 3 months?</legend>
 			<div class="horizontal radios">
 				<div class="form-group">
-			  		<input type="radio" id="partnerYes" name="partnerPast">
-			  		<label for="partnerYes">Yes</label>
+			  		<input type="radio" id="partnerPastYes" name="partnerPast" class="js-toggle" data-show="#hadPartner">
+			  		<label for="partnerPastYes">Yes</label>
 				</div>
 				<div class="form-group">
-			  		<input type="radio" id="partnerNo" name="partnerPast">
-			  		<label for="partnerNo" name="partner">No</label>
+			  		<input type="radio" id="partnerPastNo" name="partnerPast" class="js-toggle" data-hide="#hadPartner">
+			  		<label for="partnerPastNo">No</label>
 				</div>
 			</div>
 		</fieldset>
 
-		<fieldset>
-			<legend>Are you living with a partner now?</legend>
-			<div class="horizontal radios">
-				<div class="form-group">
-			  		<input type="radio" id="partnerYes" name="partnerPresent">
-			  		<label for="partnerYes">Yes</label>
+		<div class="js-hidden" id="hadPartner">
+			<fieldset id="partnerPresent">
+				<legend>Are you living with a partner now?</legend>
+				<div class="horizontal radios">
+					<div class="form-group">
+				  		<input type="radio" id="partnerPresentYes" name="partnerPresent" class="js-toggle" data-show="#careForPartner">
+				  		<label for="partnerPresentYes">Yes</label>
+					</div>
+
+					<div class="form-group">
+				  		<input type="radio" id="partnerPresentNo" name="partnerPresent" class="js-toggle" data-hide="#careForPartner">
+				  		<label for="partnerPresentNo">No</label>
+					</div>
 				</div>
+			</fieldset>
 
-				<div class="form-group">
-			  		<input type="radio" id="partnerNo" name="partnerPresent">
-			  		<label for="partnerNo" name="partner">No</label>
+			<fieldset class="js-hidden" id="careForPartner">
+				<legend>Is your partner the person you're caring for?</legend>
+				<div class="horizontal radios">
+					<div class="form-group">
+				  		<input type="radio" id="careForPartnerYes" name="careForPartner" class="js-toggle" data-hide="#partnerDetails">
+				  		<label for="careForPartnerYes">Yes</label>
+					</div>
+
+					<div class="form-group">
+				  		<input type="radio" id="careForPartnerNo" name="careForPartner" class="js-toggle" data-show="#partnerDetails">
+				  		<label for="careForPartnerNo">No</label>
+					</div>
 				</div>
-			</div>
-		</fieldset>
+			</fieldset>
 
-		<fieldset>
-			<legend>Is your partner the person you're caring for?</legend>
-			<div class="horizontal radios">
+			<fieldset class="js-hidden" id="partnerDetails">
+				<legend class="heading-36">Your partner's details</legend>
 				<div class="form-group">
-			  		<input type="radio" id="partnerYes" name="careForPartner">
-			  		<label for="partnerYes">Yes</label>
+					<label for="partnerFullName">Full name</label>
+					<div class="hint">As shown on their birth certificate or passport</div>
+					<input type="text" class="form-control" id="partnerFullName">
 				</div>
-
 				<div class="form-group">
-			  		<input type="radio" id="partnerNo" name="careForPartner">
-			  		<label for="partnerNo" name="partner">No</label>
+					<label for="partnerOther-name">Any other last names</label>
+					<input type="text" class="form-control" id="partnerOther-name">
+					<div class="hint">Eg. their maiden name</div>
 				</div>
-			</div>
-		</fieldset>
-
+				<fieldset class="date-of-birth">
+			      <legend>Date of birth</legend>
+			      <div class="form-group">
+			        <label for="partnerDay">Day</label>
+			        <input type="text" class="form-control" pattern="[0-9]*" id="partnerDay" class="form-control">
+			      </div>
+			      <div class="form-group">
+			        <label for="partnerMonth">Month</label>
+			        <input type="text" class="form-control" id="partnerMonth" class="form-control">
+			      </div>
+			      <div class="form-group form-group-year">
+			        <label for="partnerYear">Year</label>
+			        <input type="text" class="form-control" pattern="[0-9]*" id="partnerYear" class="form-control">
+			      </div>
+			    </fieldset>
+				<div class="form-group">
+					<label for="partnerNINumber">National Insurance number</label>
+					<div class="hint">As shown on their National Insurance card, benefit letter, payslip or P60</div>
+					<input type="text" class="form-control NINumber" id="partnerNINumber">
+					<div class="hint">Eg. 'VO 12 34 56 D'</div>
+				</div>	
+				<div class="form-group">
+					<label for="partnerNationality">Nationality (optional)</label>
+					<div class="hint">As shown on their current passport</div>
+					<input type="text" class="form-control" id="partnerNationality">
+					<div class="hint">Eg. 'British'</div>
+				</div>
+			</fieldset>
+		</div>
 
 
 	</fieldset>
-
-	<fieldset>
-		<legend>Do you get state pension?</legend>
-		<div class="horizontal radios">
-			<div class="form-group">
-		  		<input type="radio" id="pensionYes" name="pension">
-		  		<label for="pensionYes">Yes</label>
-			</div>
-			<div class="form-group">
-		  		<input type="radio" id="pensionNo" name="partner">
-		  		<label for="pensionNo" name="partner">No</label>
-			</div>
-		</div>
-	</fieldset>
-
-
-
-
-	<!--
-
-	<fieldset>
-		<legend>Do you have a partner?</legend>
-
-		<div class="radios">
-			<div class="form-group">
-		  		<input type="radio" id="partnerNo" name="partner">
-		  		<label for="partnerNo">No</label>
-			</div>
-
-			<div class="form-group">
-		  		<input type="radio" id="partnerYesCaree" name="partner">
-		  		<label for="partnerYesCaree" name="partner">Yes, it's the person I care for</label>
-			</div>
-
-			<div class="form-group">
-		  		<input type="radio" id="partnerYes" name="partner">
-		  		<label for="partnerYes" name="partner">Yes, but it's not the person I care for</label>
-			</div>
-		</div>
-	</fieldset>
-
-	<fieldset>
-		<legend>Your partner's details</legend>
-		<div class="form-group">
-			<label for="partnerFullName">Full name</label>
-			<input type="text" class="form-control" id="partnerFullName">
-		</div>
-		<div class="form-group">
-			<label for="partnerDateOfBirth">Date of birth <span class="hint">(eg. 6 Jan 1957)</span></label>
-			<input type="text" class="form-control" id="partnerDateOfBirth">
-		</div>
-		<div class="form-group">
-			<label for="partnerNINumber">National Insurance number</label>
-			<input type="text" class="form-control" id="partnerNINumber">
-		</div>
-	</fieldset>
-
-	<fieldset>
-		<legend>Your partner's address</legend>
-		<div class="form-group">
-	  		<label for="partnerStreet">Street address</label>
-	  		<input type="text" class="form-control" id="partnerStreet">
-		</div>
-		<div class="form-group">
-	  		<label for="partnerStreet2" class="visuallyhidden">Street address line 2</label>
-	  		<input type="text" class="form-control" id="partnerStreet2">
-		</div>
-		<div class="form-group">
-	  		<label for="partnerTown">Town or City</label>
-	  		<input type="text" class="form-control" id="partnerTown">
-		</div>
-		<div class="form-group">
-	  		<label for="partnerCounty">County (optional)</label>
-	  		<input type="text" class="form-control" id="partnerCounty">
-		</div>
-		<div class="form-group">
-	  		<label for="postcode">Postcode</label>
-	  		<input type="text" class="form-control" id="postcode" class="postcode">
-		</div>
-		<div class="form-group">
-	  		<label for="country">Country</label>
-	  		<input type="text" class="form-control" id="country">
-		</div>
-	</fieldset>
-
--->
 
 </form>
