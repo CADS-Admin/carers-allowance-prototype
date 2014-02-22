@@ -1,0 +1,80 @@
+<h1>About you - the Carer</h1>
+
+<div class="completed">
+	<ul aria-label="Completed questions">
+		<li><h3>Your details</h3><a href="/2About/about1.html">Change these answers</a></li>      
+		<li><h3>Your contact details</h3><a href="/2About/about2.html">Change these answers</a></li> 
+		<li><h3>Your claim date: <!--#include virtual="../public/_includes/ui/claim-date.shtml" --></h3> <a href="/2About/about3.html">Change this answer</a></li>
+		<li><h3>Your nationality and residency</h3> <a href="/2About/about4.html">Change these answers</a></li>       
+    </ul>
+ </div>
+
+<fieldset class="form-elements">
+<legend>Time outside of England, Scotland or Wales</legend>
+	
+<!-- Prototype only
+<p>We understand if you don't have exact details for each period spent abroad, but please add as much information as possible as it will help us process your claim.</p> -->
+			
+<ul class="group">
+	<li>
+		<label for="791ffa687e713e5e37c2f76a626591c5">Which country did you go to?</label>
+		<input type="text" autocomplete="off" maxlength="35" value="" name="791ffa687e713e5e37c2f76a626591c5" id="791ffa687e713e5e37c2f76a626591c5">
+	</li>
+	<li>
+		<p>Date you left? <em>(optional)</em></p>
+		<!--#include virtual="../public/_includes/ui/date.shtml" -->
+	</li>
+
+	<li>
+		<p>Date you returned? <em>(optional)</em></p>
+		<!--#include virtual="../public/_includes/ui/date.shtml" -->
+	</li>
+	<li>
+		<label for="reason-for-being-there">Reason for being there? <em>(optional)</em></label>
+		<select selectwithother="true" name="reason-for-being-there" id="reason-for-being-there">
+			<option value="">Please select</option>
+			<option value="Home">Home</option>
+			<option value="Holiday">Holiday</option>
+			<option value="Work">Work</option>
+			<option value="other">Other</option>
+		</select>
+	</li>
+	<li style="display: none;" class="other-detail">
+		<!--<label for="1636b11acf749ab1dd09d9c90cdffc84067e22d399db39adc0112c4b46dde89f">Reason for being there <em>(optional)</em></label>-->
+		<textarea autocomplete="off" maxlength="60" placeholder="Please specify..." name="a3e3e88439222ec8f8d8844f818b1d0c067e22d399db39adc0112c4b46dde89f" id="1636b11acf749ab1dd09d9c90cdffc84067e22d399db39adc0112c4b46dde89f"></textarea>
+		<!--<p class="helper right">60 characters left</p>-->
+	</li>
+	<li>
+		<p>Was the person you care for with you?</p>
+		<ul id="7f3fe5e437e7de35be942a06d3a6fd26" class="radio">
+			<li>
+				<input type="radio" value="yes"  name="7f3fe5e437e7de35be942a06d3a6fd26" id="a1ff2d4f13aea67ba8fb0e98dc2b59d94fba59135a0c9715a3a441c94cd2552a">
+				<label for="a1ff2d4f13aea67ba8fb0e98dc2b59d94fba59135a0c9715a3a441c94cd2552a">Yes</label>
+			</li>
+			<li>
+				<input type="radio" value="no"  name="7f3fe5e437e7de35be942a06d3a6fd26" id="b32123a0129f8a0e8e034551960f888b067e22d399db39adc0112c4b46dde89f">
+				<label for="b32123a0129f8a0e8e034551960f888b067e22d399db39adc0112c4b46dde89f">No</label>
+			</li>
+		</ul>
+	</li>
+</ul>
+</fieldset>
+
+<div class="form-steps">
+	<a href="about5.html" class="button secondary">Back</a>
+	<a href="about6.html" class="button">Next</a>
+</div><!-- / form steps -->
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+	$('#reason-for-being-there').change(function(){
+		if ($(this).val() == 'other') {
+			$(this).parents().next('.other-detail').show('medium');	
+		}
+	});
+});
+
+</script> 

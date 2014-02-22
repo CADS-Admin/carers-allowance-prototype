@@ -1,0 +1,79 @@
+<h1>About self-employed</h1>
+
+<div class="completed">
+    <ul aria-label="Completed questions"> 
+        <li>
+            <h3>Your job</h3>
+            <a href="self-employment1.html">Change these answers</a>
+        </li>	                        
+        <li>
+            <h3>Your accounts</h3>
+            <a href="self-employment2.html">Change these answers</a>
+        </li>        
+        <li>
+            <h3>Pensions and expenses</h3>
+            <a href="self-employment3.html">Change these answers</a>
+        </li>    
+    </ul>
+</div>
+
+        <fieldset class="form-elements">
+        <legend>Childcare expenses while you are at work</legend>
+
+         <ul>
+			<li>
+				<label for="name">Name of the person/organisation who looks after your child/children</label>
+			 	<input type="text" maxlength="60" autocomplete="off" value="" name="name" id="name">
+			</li>
+			
+ 			<li class="currency"> 
+				<label for="how-much-child-care">How much do you pay them?</label>
+				<input type="tel" autocomplete="off" maxlength="60" value="" title="how-much-child-care" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much-child-care" id="how-much-child-care">
+			</li>
+			<li>
+				<label for="how-often-pay-child-care">How often do you pay them?</label>
+    			<select name="how-often-pay-child-care" id="how-often-pay-child-care">
+		            <option value="">Please select</option>
+		            <option value="02">Weekly</option> 
+		            <option value="03">Fortnightly</option>
+		            <option value="04">Four-weekly</option>
+		            <option value="05">Monthly</option>
+		            <option value="other">Other</option>
+    			</select>
+    		</li>
+    		<li style="display: none;" class="other-detail">
+    			<textarea autocomplete="off" maxlength="60" placeholder="Please specify..." name="how-often-pay-child-care-other" id="how-often-pay-child-care-other"></textarea>
+    		</li>
+			<li>
+				<label for="what-relation-you">What relation, if any, is this person/organisation to you?</label>
+				<input type="text" id="what-relation-you">
+			</li>	
+		<!--<li>
+				<label for="1dc1a9e7bc37f38c09bcd8645e55eab78f057e36db53cbb8c4cc2da2c0119bc1">What relation, if any, is the person/organisation to your Partner/Spouse?</label>
+			    <input type="text">
+			</li>-->
+			<li>
+				<label for="what-relation-person-care-for">What relation, if any, is this person/organisation to the person you care for?</label>
+			     <input type="text" id="what-relation-person-care-for">
+			</li>        
+			</ul>
+    </fieldset>
+
+	<div class="form-steps">
+		<a href="self-employment3.html" class="button secondary">Back</a>
+		<a href="/8Other-Money/other-money1.html" class="button">Next</a>
+	</div>	
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+	$('#how-often-pay-child-care').change(function(){
+		if ($(this).val() == 'other') {
+			$(this).parents().next('.other-detail').show('medium');	
+		}
+	});
+});
+
+</script>

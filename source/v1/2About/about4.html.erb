@@ -1,0 +1,62 @@
+<h1>About you - the Carer</h1>
+
+<div class="completed">
+<ul aria-label="Completed questions">
+	<li><h3>Your details</h3><a href="/2About/about1.html">Change these answers</a></li>      
+	<li><h3>Your contact details</h3><a href="/2About/about2.html">Change these answers</a></li> 
+	<li><h3>Your claim date: <!--#include virtual="../public/_includes/ui/claim-date.shtml" --></h3> <a href="/2About/about3.html">Change this answer</a></li>      
+</ul>
+</div>
+
+<fieldset class="form-elements">
+
+<legend>Your nationality and residency</legend>
+<ul>	
+<li>
+	<label for="nationality">Nationality</label>
+	<p class="helper">If you have a current passport, please give your nationality as shown on your passport</p>
+	<!--#include virtual="../public/_includes/ui/nationality.shtml" -->
+</li>	
+<li>	
+	<p>Do you normally live in England, Scotland or Wales?</p>
+	<ul id="normally-live" class="radio">
+        <li>
+            <input type="radio" value="yes"  name="normally-live" id="normally-live-yes">
+            <label for="normally-live-yes">Yes</label>
+        </li>
+        <li>
+            <input type="radio" value="no" name="normally-live" id="normally-live-no">
+            <label for="normally-live-no">No</label>
+        </li>
+	</ul>	
+</li>
+<li style="display: none;" class="other-detail">
+    <ul>
+		<li>
+			<label for="normally-live-details">Which country do you normally live in?</label>
+		    <input type="text" autocomplete="off" maxlength="35" value="" name="normally-live-details" id="normally-live-details">
+		</li>
+    </ul>
+</li>
+</ul>
+
+</fieldset><!-- / form elements -->
+
+<div class="form-steps">
+<a href="about3.html" class="button secondary">Back</a>
+<a href="about5.html" class="button">Next</a>
+</div><!-- / form steps -->
+
+<script>
+
+// Show & Hide Fields
+$(document).ready(function() {  
+	$('#normally-live-no').click(function(){
+		$(this).parents('ul li').next('.other-detail').show('medium');
+	});
+	$('#normally-live-yes').click(function(){
+		$(this).parents('ul li').next('.other-detail').hide('medium');
+	});
+});
+
+</script>

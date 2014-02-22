@@ -1,0 +1,73 @@
+<h1>About self-employed</h1>
+
+<fieldset class="form-elements">
+
+<legend>Your job</legend>
+
+<ul>
+	<li>	
+		<p>Are you self-employed now?</p>		
+		<ul id="self-employed-now" class="radio">
+	        <li>
+	            <input type="radio" value="yes" name="self-employed-now" id="self-employed-now-yes">
+	            <label for="self-employed-now-yes">Yes</label>
+	        </li>   
+	        <li>
+	            <input type="radio" value="no" name="self-employed-now" id="self-employed-now-no">
+	            <label for="self-employed-now-no">No</label>
+	        </li>
+		</ul>
+	</li>	
+	<li>
+		<p>When did you start this self employed work?</p>			
+		<!--#include virtual="../public/_includes/ui/date.shtml" -->
+		<p class="helper">e.g. 03 05 2013</p>
+	</li>              
+	<li style="display: none;" class="other-detail">
+		<ul>
+			<li>
+				<p>When did you finish this self employed work?</p>
+				<!--#include virtual="../public/_includes/ui/date.shtml" -->
+				<p class="helper">e.g. 01 02 2014</p>					           
+			</li>                
+			<li>
+				<p>Has your business ceased trading? <em>(optional)</em></p>
+				<ul id="f0a91a55e7721cc8b43b5f58f7f5db0ffd97fef32d82cc816e9098ade048a22a" class="radio">	    
+			        <li>
+			            <input type="radio" value="yes"  name="f0a91a55e7721cc8b43b5f58f7f5db0ffd97fef32d82cc816e9098ade048a22a" id="f0a91a55e7721cc8b43b5f58f7f5db0fac6ef4499aa3353874efc52c5d65466b">
+			            <label for="f0a91a55e7721cc8b43b5f58f7f5db0fac6ef4499aa3353874efc52c5d65466b">Yes</label>
+			        </li>   
+			        <li>
+			            <input type="radio" value="no"  name="f0a91a55e7721cc8b43b5f58f7f5db0ffd97fef32d82cc816e9098ade048a22a" id="f0a91a55e7721cc8b43b5f58f7f5db0f4e2bd43941f4010eaf03e59371678b2c">
+			            <label for="f0a91a55e7721cc8b43b5f58f7f5db0f4e2bd43941f4010eaf03e59371678b2c">No</label>
+			        </li>
+				</ul>
+			</li>
+		 </ul>
+	</li>
+	<li>
+		<label for="819a9061fb5fe0d7957705f5514f38cb088431fd8c8afc437b2464469ebf9dc8">What type of business is your self employed work?</label>
+		<input type="text" autocomplete="off" maxlength="60" value="" name="819a9061fb5fe0d7957705f5514f38cb088431fd8c8afc437b2464469ebf9dc8" id="819a9061fb5fe0d7957705f5514f38cb088431fd8c8afc437b2464469ebf9dc8">
+	</li>	
+</ul>
+</fieldset>
+			
+<div class="form-steps">
+	<a href="employment-guard.html" class="button secondary">Back</a>
+	<a href="self-employment2.html" class="button">Next</a>
+</div><!-- / form steps -->
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+	$('#self-employed-now-no').click(function(){
+		$('.other-detail').show('medium');
+	});
+	$('#self-employed-now-yes').click(function(){
+		$('.other-detail').hide('medium');
+	});
+});
+
+</script>

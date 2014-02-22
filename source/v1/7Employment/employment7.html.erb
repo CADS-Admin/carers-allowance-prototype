@@ -1,0 +1,86 @@
+<h1>About your employment</h1>
+
+<div class="completed">
+    <ul aria-label="Completed questions">     
+        <li>
+            <h3>Your job</h3>
+            <a href="employment1.html">Change these answers</a>
+        </li>
+       <!-- <li>
+            <h3>Employer's contact details</h3>
+            <a href="employment2.html">Change these answers</a>
+        </li>-->
+        <li>
+            <h3>Your last wage</h3>
+            <a href="employment3.html">Change these answers</a>
+        </li>   
+        <li>
+            <h3>Pension schemes</h3>
+            <a href="employment4.html">Change these answers</a>
+        </li>
+        <li>
+            <h3>About expenses to do with your employment</h3>
+            <a href="employment5.html">Change these answers</a>
+        </li>
+        <li>
+            <h3>Childcare expenses while you are at work</h3>
+            <a href="employment6.html">Change these answers</a>
+        </li>
+    </ul>
+</div>	
+
+<fieldset class="form-elements">
+	<legend>Expenses related to the person you care for, while you are at work</legend>
+	<ul>
+		<li>
+			<label for="3ef4367a2d170c9abf61c41af1744de4">Name of the person/organisation you do pay</label>
+			<input type="text" maxlength="60" autocomplete="off" value="" name="3ef4367a2d170c9abf61c41af1744de4" id="3ef4367a2d170c9abf61c41af1744de4">
+		</li>
+		<li class="currency"> 
+			<label for="2513cc99a1af42ce9bf4b21d910a0a29">How much do you pay them?</label>
+		    <input type="tel" autocomplete="off" maxlength="60" value="" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="2513cc99a1af42ce9bf4b21d910a0a29" id="2513cc99a1af42ce9bf4b21d910a0a29">
+		</li>
+		<li>
+			<label for="how-often-pay-care">How often did you pay them?</label>
+		    <select selectwithother="true" name="how-often-pay-care" id="how-often-pay-care">
+		            <option value="">Please select</option>
+		            <option value="02">Weekly</option>
+		            <option value="03">Fortnightly</option>
+		            <option value="04">Four-weekly</option>
+		            <option value="05">Monthly</option>
+		            <option value="other">Other</option>
+		    </select>
+		</li>
+		<li style="display: none;" class="other-detail">
+			<!--<label for="how-often-pay-care-other">How often did you pay them?</label>-->
+			<textarea autocomplete="off" maxlength="60" placeholder="Please specify..." name="how-often-pay-care-other" id="how-often-pay-care-other"></textarea> 
+			<!--<p class="helper right">60 characters left</p>-->        
+		</li>
+		<li>
+			<label for="f2ca4054d2f3ef555ab14dd4f577f1f2">What relation, if any, is the person/organisation to you?</label>
+			<!--#include virtual="../public/_includes/ui/relationship.shtml" -->
+		</li>
+		<li>
+			<label for="c40724f335c804a6490299e854877dc278d760f8dd022a8d72afa67483273d36">What relation, if any, is this person/organisation to the person you care for?</label>
+			<!--#include virtual="../public/_includes/ui/relationship.shtml" -->
+		</li>
+	</ul>
+</fieldset><!-- / form elements -->			
+<div class="form-steps">
+	<a href="employment6.html" class="button secondary">Back</a>
+	<a href="/8Other-Money/other-money1.html" class="button">Next</a>
+</div><!-- / form steps -->
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+	$('#how-often-pay-care').change(function(){
+		if ($(this).val() == 'other') {
+			$(this).parents().next('.other-detail').show('medium');	
+		}
+	});
+});
+
+</script>

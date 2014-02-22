@@ -1,0 +1,43 @@
+<h1>About the care you provide</h1>
+
+<div class="completed">
+<ul aria-label="Completed questions">
+	<li>
+		<h3>Details of the person you care for</h3>
+		<a aria-label="Change these answers - this is an optional link relating to a previous question section" href="care1.html">Change these answers</a>
+	</li>
+	<!--<li>
+	<h3>Contact details of the person you care for</h3>
+	<a aria-label="Change these answers - this is an optional link relating to a previous question section" href="/care-you-provide/their-contact-details">Change these answers</a>
+	</li>-->
+</ul>
+</div>
+
+<fieldset class="form-elements">
+<legend>Relationship and other claims</legend>
+
+<ul>
+	<li>
+		<label for="relationship">What's their relationship to you?</label>
+		<!--#include virtual="../public/_includes/ui/relationship.shtml" -->
+	</li>
+	<li>
+		<p>Does this person get Armed Forces Independence Payment (AFIP)?</p>
+		<ul id="armed-forces" class="radio">
+			<li>
+				<input type="radio" value="yes" name="armed-forces" id="armed-forces-yes">
+				<label for="armed-forces-yes">Yes</label>
+			</li>
+			<li>
+				<input type="radio" value="no" name="armed-forces" id="armed-forces-no">
+				<label for="armed-forces-no">No</label>
+			</li>
+		</ul>
+	</li>
+</ul>
+</fieldset>
+
+<div class="form-steps">
+	<a href="/4Care/care1.html" class="button secondary">Back</a>
+	<a href="/4Care/care3.html" class="button">Next</a>
+</div><!-- / form steps -->

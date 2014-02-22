@@ -1,0 +1,139 @@
+<!--#set var="title" value="(About)" -->
+<!--#include virtual="../public/_includes/_global/header.shtml" -->  
+<main role="main" id="main">
+<div class="carers-allowance">
+<div class="progress-steps">
+    <!--#include virtual="../public/_includes/_global/telephone.shtml" -->
+    <!--#include virtual="../public/_includes/Progress-bar/about-you.shtml" -->
+</div>
+<section>
+    
+<h1>About you - the Carer</h1>
+    
+<p class="security-message">Your claim date is <strong style="text-decoration: none;"><!--#include virtual="../public/_includes/ui/claim-date.shtml" --></strong>.</p>
+    
+<div class="completed">
+	<ul aria-label="Completed questions">
+    	<li><h3>Your details</h3><a href="/2About/about1.html">Change these answers</a></li>      
+    	<li><h3>Your contact details</h3><a href="/2About/about2.html">Change these answers</a></li> 
+    	<li><h3>Your claim date: <!--#include virtual="../public/_includes/ui/claim-date.shtml" --></h3> <a href="/2About/about3.html">Change this answer</a></li>
+    	<li><h3>Your nationality and residency</h3> <a href="/2About/about4.html">Change these answers</a></li>
+    	<li><h3>Time outside of England, Scotland or Wales</h3> <a href="/2About/about5.html">Change these answers</a></li> 
+    	<li><h3>Other European Economic Area (EEA) states or Switzerland</h3> <a href="/2About/about6.html">Change these answers</a></li> 
+   	</ul>
+ </div>         
+        
+<fieldset class="form-elements">
+<legend>What is your marital status?</legend>
+
+	<ul>
+		<li>			
+			<!--<p>What is your marital status?</p>-->
+			<ul class="radio-block" id="marital-status">
+		    	<li>
+		    		<input type="radio" value="marital-status-s" name="marital-status" id="marital-status-s">
+		    		<label for="marital-status-s">Single</label>
+		    	</li>	
+				<li>
+					<input type="radio" value="marital-status-m" name="marital-status" id="marital-status-m">
+					<label for="marital-status-m">Married or civil partner</label>
+				</li>			    
+				<li>
+					<input type="radio" value="marital-status-p" name="marital-status" id="marital-status-p">
+					<label for="marital-status-p">Living with partner</label>
+				</li>
+				<li>
+					<input type="radio" value="marital-status-d" name="marital-status" id="marital-status-d">
+					<label for="marital-status-d">Divorced or civil partnership dissolved</label>
+				</li>	
+				<li>
+					<input type="radio" value="marital-status-w" name="marital-status" id="marital-status-w">
+					<label for="marital-status-w">Widowed or surviving civil partner</label>
+				</li>	
+				<li>
+					<input type="radio" value="marital-status-n" name="marital-status" id="marital-status-n">
+					<label for="marital-status-n">Separated</label>
+				</li>	
+			</ul>
+		</li>
+	
+		<li class="spouse_living_with_you q1 grouped" style="display: none;">
+			<p>Have you had a partner or spouse living with you at any time since your claim date?</p>
+
+			<ul class="radio" id="spouse_living_with_you_since_your_claim_date">
+				<li><input id="spouse_yes" name="spouse_living_with_you_since_your_claim_date" type="radio" value="yes"> <label for="spouse_yes">Yes</label></li>
+				<li><input id="spouse_no" name="spouse_living_with_you_since_your_claim_date" type="radio" value="no"> <label for="spouse_no">No</label></li>
+			</ul>
+			<!--<p class="helper">If you have separated since the date you want to claim please select 'Yes'</p>-->
+		</li>				
+		<li class="spouse_living_with_you q2 grouped" style="display: none;">
+			<p>Have you lived with this person since your claim date?</p>
+			<p class="helper">If you have separated since the date you want to claim please select 'Yes'</p>
+			<ul class="radio" id="spouse_living_with_you_since_your_claim_date">
+				<li>
+					<input id="spouse_q2_yes" name="spouse_living_with_you_since_your_claim_date" type="radio" value="yes"> 
+					<label for="spouse_q2_yes">Yes</label>
+				</li>
+				<li>
+					<input id="spouse_q2_no" name="spouse_living_with_you_since_your_claim_date" type="radio" value="no"> 
+					<label for="spouse_q2_no">No</label>
+				</li>
+			</ul>
+		</li>	
+	</ul>
+<fieldset>
+		
+<fieldset class="form-elements">
+<legend>More about you</legend>
+	<ul>
+		<li>
+			<p>Do you get State Pension?</p>
+			<ul class="radio" id="do_you_get_state_pension">
+				<li><input id="pension_yes" name="do_you_get_state_pension" type="radio" value="yes"><label for="pension_yes">Yes</label></li>
+				<li><input id="pension_no" name="do_you_get_state_pension" type="radio" value="no"><label for="pension_no">No</label></li>
+			</ul>
+		</li>
+	</ul>		
+</fieldset><!-- / form elements -->		
+			
+<div class="form-steps">
+	<a href="about6.html" class="button secondary">Back</a>
+	<a href="/3Partner/partner1.html" class="button" id="continue">Next</a>
+</div><!-- / form steps -->
+
+</section>
+</div>
+</main>
+<!--#include virtual="../public/_includes/_global/footer.shtml" -->
+
+<script>
+	$(document).ready(function() {    
+		$('#marital-status-s').click(function(){
+			$('.spouse_living_with_you').hide();
+			$('.spouse_living_with_you.q1').show('medium');
+		});
+		$('#marital-status-m').click(function(){
+			$('.spouse_living_with_you').hide();
+			$('.spouse_living_with_you.q2').show('medium');
+		});
+		$('#marital-status-p').click(function(){
+			$('.spouse_living_with_you').hide('medium');
+			$('#continue').attr('href','/3Partner/partner1.html');
+		});
+		$('#marital-status-d').click(function(){
+			$('.spouse_living_with_you').hide();
+			$('.spouse_living_with_you.q1').show('medium');
+		});
+		$('#marital-status-w').click(function(){
+			$('.spouse_living_with_you').hide();
+			$('.spouse_living_with_you.q1').show('medium');
+		});
+		$('#marital-status-n').click(function(){
+			$('.spouse_living_with_you').hide();
+			$('.spouse_living_with_you.q1').show('medium');
+		});  
+		$('#spouse_no, #spouse_q2_no').click(function(){
+			$('#continue').attr('href','/4Care/care1.html');
+		});
+	}); 
+</script>
