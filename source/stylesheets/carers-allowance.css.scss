@@ -18,8 +18,7 @@ main {
 	padding: 0 .7em;
 }
 
-
-
+/*
 header {
 	div {
 		padding: 1.2em 0;
@@ -88,6 +87,7 @@ header {
 		}
 	}
 }
+*/
 
 .feedback-container {
 	display: none;
@@ -853,7 +853,8 @@ header {
    	   
    	   /* form list start */
 	   ul {
-		   margin-top: 0;
+		  margin-top: 0;
+		  padding: 0; /* added BH */
 		   zoom: 1;
 		   
 		   &.extra-group {
@@ -1086,6 +1087,7 @@ header {
 				   font-weight: 400;
 				   line-height: 1.3em;
 				   padding-bottom: .3em;
+				   margin: 0; /* added BH */
 				   @media screen and (max-width: 600px) {line-height: 1.2em;}
 				   .ie & {
 					   font-size: 19px;
@@ -2231,7 +2233,7 @@ header {
 
 
 /* Header - Global Overrides - inc !important overrides */
-html {background: #dee0e2!important;}
+// html {background: #dee0e2!important;}
 #global-header .header-wrapper {padding: 0.5em 1px!important;}
 
 .carers-allowance-footer {padding-top: 30px!important; padding-bottom: 30px!important;}
@@ -2242,3 +2244,79 @@ html {background: #dee0e2!important;}
 		text-align: center;
 		}
 }
+
+
+/* -------- additional prototype styles - BH -------- */
+
+.carers-allowance .form-elements label + p.helper,
+.carers-allowance .form-elements p + p.helper {
+	color: #6f777b; 
+	font-size: 1.9rem;
+	margin: 0 0 10px 0 
+}
+.carers-allowance .form-elements ul li.grouped {
+	border-left: 4px solid #ccc;
+	padding: 15px 0 30px 25px
+}
+ .carers-allowance .form-elements ul.radio-block {
+ 	margin: 5px 0 0 1px;
+ 	padding: 0;
+ 	position: relative;
+ 	width: 300px;
+ }
+ .carers-allowance .form-elements ul.radio-block li {
+    margin: 0 0 5px 0;
+    padding: 0;
+    position: relative;
+    width: 370px;
+ }
+ .carers-allowance .form-elements ul.radio-block li input[type="radio"] {
+    cursor: pointer;
+    left: 14px;
+    line-height: 1em;
+    margin: 0;
+    position: absolute;
+    top: 13px;
+ }
+ .radio-block input[type="radio"] {
+    left: 12px !important;
+    top: 14px !important;
+ }
+ .carers-allowance .form-elements ul.radio-block li label {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1em;
+    padding: 12px 14px 10px 34px;    
+ }
+ .carers-allowance .form-elements ul.radio-block li input[type="radio"]:checked + label {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #A2A2A2;
+    transition: all 200ms ease-in 0s;
+ }
+ 
+ .carers-allowance .form-elements ul li .helper-more {
+ 	margin: 0.6em 0;
+ }
+ .carers-allowance .prompt.helper-prompt p,
+ .carers-allowance .prompt.helper-prompt ul li {
+ 	font-size: 1.9rem;
+ }
+ .carers-allowance .form-elements ul li .helper-info ul {
+     list-style: disc outside none;
+     margin: .2em 0;
+     padding-left: 1.4em;
+ }
+ .carers-allowance .form-elements ul li .helper-info li {
+ 	font-size: 1.6rem;	
+ 	display: list-item;
+ 	line-height: 1.3em;
+ 	padding: 0 0 0.3em;
+ 	margin: 0;
+ }
+ .carers-allowance .form-elements ul li .helper-info {
+ 	padding: 1em .7em .7em;
+ }

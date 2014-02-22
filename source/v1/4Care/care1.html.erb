@@ -7,21 +7,20 @@
 <ul>
 	<li>
 		<label for="title">Title</label>
-		<!--#include virtual="../public/_includes/ui/title.shtml" -->
+		<%= partial "partials/ui-title" %>
 	</li>
-	<!--//#include virtual="../public/_includes/ui/name.shtml" -->
 	<li>
 		<label for="fullname">Full name</label>
 		<input type="text"
 	</li>
 	<li>
 		<p>National Insurance number <em>(optional)</em></p>
-		<!--#include virtual="../public/_includes/ui/nino.shtml" -->	
+		<%= partial "partials/ui-nino" %>	
 	</li>
 	<li>
 		<p>Date of birth</p>
 		<p class="helper">e.g. 03 05 1979</p>
-		<!--#include virtual="../public/_includes/ui/date.shtml" -->
+		<%= partial "partials/ui-date" %>
 		<p>&nbsp;</p>
 	</li>
 	
@@ -44,7 +43,7 @@
 		<input type="text" maxlength="60" autocomplete="off" class="postcode" value="" name="postcode" id="postcode">
 	</li>-->
 
-	<!--#include virtual="../public/_includes/ui/address-multiple.shtml"-->
+	<%= partial "partials/ui-address-multiple" %>
 	<li>
 		<label for="phone">Phone number <em>(optional)</em></label>
 		<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="phone" id="phone">
@@ -54,6 +53,6 @@
 </fieldset>
 
 <div class="form-steps">
-	<a href="/3Partner/partner1.html" class="button secondary">Back</a>
-	<a href="/4Care/care2.html" class="button">Next</a>
+	<a href="/v1/3Partner/partner1.html" class="button secondary">Back</a>
+	<a href="care2.html" class="button">Next</a>
 </div><!-- / form steps -->

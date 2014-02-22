@@ -19,17 +19,17 @@
 	</li>
 	<li>
 		<p>National Insurance number <em>(optional)</em></p>
-		<!--#include virtual="../public/_includes/ui/nino.shtml" -->
+		<%= partial "partials/ui-nino" %>
 	</li>
 	<li>
 		<label for="nationality">Nationality</label>
 		<p style="color: #6f777b; margin: 0 0 10px 0; font-size: 19px;">If they have a current passport, please give their nationality as shown on their passport</p>
-		<!--#include virtual="../public/_includes/ui/nationality.shtml" -->
+		<%= partial "partials/ui-nationality" %>
 	</li>
 	<li>
 		<p>Date of birth</p>
 		<p class="helper">e.g. 03 05 1979</p>
-		<!--#include virtual="../public/_includes/ui/date.shtml" -->
+		<%= partial "partials/ui-date" %>
 		<p>&nbsp;</p>
 	</li>
 	<li>
@@ -62,6 +62,6 @@
 </fieldset><!-- / form elements -->
 
 <div class="form-steps">
-	<a href="/2About/about7.html" class="button secondary">Back</a>
-	<a href="/4Care/care1.html" class="button">Next</a>
+	<a href="/v1/2About/about7.html" class="button secondary">Back</a>
+	<a href="/v1/4Care/care1.html" class="button">Next</a>
 </div><!-- / form steps --> 

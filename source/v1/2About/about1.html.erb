@@ -7,17 +7,17 @@
 		
 		<li>
 			<label for="title">Title</label>
-			<!--#include virtual="../public/_includes/ui/title.shtml" -->
+			<%= partial "partials/ui-title" %>
 		</li>
-		<!--#include virtual="../public/_includes/ui/name.shtml" -->
+			<%= partial "partials/ui-name" %>
 		<li>
 			<label for="nino">National Insurance number</label>
-			<!--#include virtual="../public/_includes/ui/nino.shtml" -->				
+			<%= partial "partials/ui-nino" %>				
 		</li> 
 		<li>
 			<p>Date of birth</p>
 			<p class="helper">e.g. 03 05 1979</p>
-			<!--#include virtual="../public/_includes/ui/date.shtml" -->
+			<%= partial "partials/ui-date" %>
 			<p style="padding:0;">&nbsp;</p>
 		</li>	
 	</ul>
@@ -25,9 +25,8 @@
 </fieldset>
 <!-- / form elements -->
 
-
 <div class="form-steps">
-	<a href="/1eligibility/carers-response.html" class="button secondary">Back</a>
+	<a href="/v1/1eligibility/carers-response.html" class="button secondary">Back</a>
 	<a href="about2.html" class="button">Next</a>
 </div>
 <!-- / form steps -->
