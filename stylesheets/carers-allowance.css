@@ -1,0 +1,2167 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("fonts/fontawesome-webfont.eot?v=3.2.1");
+  src: url("fonts/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("fonts/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 14, stylesheets/carers-allowance.css.scss */
+main {
+  background: #fff;
+  border-bottom: 10px solid #f47738;
+  display: block;
+  padding: 0 .7em; }
+
+/* line 24, stylesheets/carers-allowance.css.scss */
+header div {
+  padding: 1.2em 0;
+  margin: 0 auto;
+  max-width: 980px; }
+  /* line 28, stylesheets/carers-allowance.css.scss */
+  header div #logo {
+    top: 3px; }
+    @media screen and (max-width: 1024px) {
+      /* line 28, stylesheets/carers-allowance.css.scss */
+      header div #logo {
+        left: 1em; } }
+  /* line 34, stylesheets/carers-allowance.css.scss */
+  header div section {
+    float: left;
+    padding: 0 0 0 9em;
+    width: auto; }
+    @media screen and (max-width: 700px) {
+      /* line 34, stylesheets/carers-allowance.css.scss */
+      header div section {
+        float: none;
+        padding: 1em 0 0 1em;
+        clear: both; } }
+    /* line 43, stylesheets/carers-allowance.css.scss */
+    header div section h1 {
+      color: #fff;
+      font-size: 24px; }
+      @media screen and (max-width: 500px) {
+        /* line 43, stylesheets/carers-allowance.css.scss */
+        header div section h1 {
+          font-size: 20px; } }
+      /* line 49, stylesheets/carers-allowance.css.scss */
+      header div section h1 span {
+        width: auto;
+        margin-left: .3em;
+        letter-spacing: 0.14em;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 5px 6px 2px 6px;
+        position: relative;
+        top: 0px; }
+        @media screen and (max-width: 500px) {
+          /* line 49, stylesheets/carers-allowance.css.scss */
+          header div section h1 span {
+            font-size: 14px; } }
+      /* line 64, stylesheets/carers-allowance.css.scss */
+      header div section h1.beta span {
+        background: #f47738; }
+    /* line 70, stylesheets/carers-allowance.css.scss */
+    header div section ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      /* line 74, stylesheets/carers-allowance.css.scss */
+      header div section ul li {
+        line-height: 1em;
+        display: inline-block; }
+        /* line 77, stylesheets/carers-allowance.css.scss */
+        header div section ul li a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 600; }
+          /* line 81, stylesheets/carers-allowance.css.scss */
+          header div section ul li a:hover {
+            color: #fff;
+            text-decoration: underline; }
+
+/* line 92, stylesheets/carers-allowance.css.scss */
+.feedback-container {
+  display: none;
+  border: 10px solid #f47738;
+  border-top: 0;
+  background: #fff;
+  padding: 1.5em; }
+  @media screen and (max-width: 500px) {
+    /* line 92, stylesheets/carers-allowance.css.scss */
+    .feedback-container {
+      padding: 1em; } }
+  /* line 101, stylesheets/carers-allowance.css.scss */
+  .feedback-container p {
+    margin: 0;
+    padding-top: 1em;
+    font-size: 17px; }
+  /* line 106, stylesheets/carers-allowance.css.scss */
+  .feedback-container .feed-close {
+    margin-top: 1em;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 600; }
+    /* line 111, stylesheets/carers-allowance.css.scss */
+    .feedback-container .feed-close:before {
+      content: "\00d7";
+      font-size: 26px;
+      top: 3px;
+      position: relative;
+      margin-right: 4px; }
+
+/* line 123, stylesheets/carers-allowance.css.scss */
+.carers-allowance {
+  border-top: 10px solid #f47738;
+  background: #fff;
+  padding: 0 0 4em 0;
+  margin: 0 auto;
+  max-width: 980px;
+  /* progress steps */
+  /* section */
+  /* completed questions */
+  /* Validation panel */
+  /* form elements */
+  /* prompt panel */
+  /* button panel */
+  /* button styling */ }
+  /* line 129, stylesheets/carers-allowance.css.scss */
+  .ie6 .carers-allowance {
+    width: 980px; }
+  /* line 135, stylesheets/carers-allowance.css.scss */
+  .carers-allowance .prototype {
+    background: #f47738;
+    overflow: hidden;
+    zoom: 1;
+    padding: 0 1em 0.7em 1em; }
+    /* line 141, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prototype p {
+      margin: 0;
+      padding: 0;
+      line-height: 1.2em;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.5rem; }
+      /* line 148, stylesheets/carers-allowance.css.scss */
+      .ie .carers-allowance .prototype p {
+        font-size: 15px; }
+      /* line 151, stylesheets/carers-allowance.css.scss */
+      .ie7 .carers-allowance .prototype p {
+        font-size: 13px; }
+      /* line 154, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prototype p strong {
+        font-size: 1.5rem; }
+        /* line 156, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .prototype p strong {
+          font-size: 15px; }
+      /* line 160, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prototype p a {
+        color: #fff;
+        margin-left: .25em; }
+        /* line 163, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .prototype p a:hover {
+          color: #000; }
+  /* line 176, stylesheets/carers-allowance.css.scss */
+  .carers-allowance .progress-steps {
+    padding-bottom: .5em; }
+    @media print {
+      /* line 176, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .progress-steps {
+        display: none; } }
+    /* line 181, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .progress-steps ol {
+      list-style: none;
+      margin: 0;
+      overflow: hidden;
+      padding: 2.5em 0 0.3em 0; }
+      @media screen and (max-width: 760px) {
+        /* line 181, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .progress-steps ol {
+          padding-top: 2em; } }
+      /* line 188, stylesheets/carers-allowance.css.scss */
+      .ie6 .carers-allowance .progress-steps ol, .ie7 .carers-allowance .progress-steps ol, .ie8 .carers-allowance .progress-steps ol {
+        padding-bottom: 0;
+        background: url("images/nav-line.png") 0 56px repeat-x;
+        margin-bottom: -12px;
+        zoom: 1; }
+      /* line 194, stylesheets/carers-allowance.css.scss */
+      .ie7 .carers-allowance .progress-steps ol {
+        background-position: 0 44px; }
+      /* line 197, stylesheets/carers-allowance.css.scss */
+      .ie8 .carers-allowance .progress-steps ol {
+        background: none; }
+      @media screen and (max-width: 760px) {
+        /* line 181, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .progress-steps ol {
+          padding-bottom: 0; } }
+      /* line 203, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .progress-steps ol:after {
+        content: "";
+        display: block;
+        height: 10px;
+        border-bottom: 1px dotted #afafaf;
+        margin-top: 6px; }
+        @media screen and (max-width: 500px) {
+          /* line 203, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .progress-steps ol:after {
+            display: none; } }
+      /* line 213, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .progress-steps ol li {
+        float: left;
+        width: 11%;
+        position: relative;
+        text-align: center;
+        padding: 35px 0 0 0;
+        line-height: 1em; }
+        /* line 220, stylesheets/carers-allowance.css.scss */
+        .ie6 .carers-allowance .progress-steps ol li, .ie7 .carers-allowance .progress-steps ol li, .ie8 .carers-allowance .progress-steps ol li {
+          background: url("images/nav-default.png") center 0 no-repeat;
+          padding-bottom: 5px; }
+        /* line 224, stylesheets/carers-allowance.css.scss */
+        .ie6 .carers-allowance .progress-steps ol li {
+          padding-bottom: 20px; }
+        @media screen and (max-width: 760px) {
+          /* line 213, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .progress-steps ol li {
+            text-indent: -9999px;
+            padding: 15px 0 0 0; }
+            /* line 230, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .progress-steps ol li span {
+              text-indent: 0; } }
+        @media screen and (max-width: 480px) {
+          /* line 213, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .progress-steps ol li {
+            width: 30px;
+            margin-left: 7px; }
+            /* line 237, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .progress-steps ol li:first-child {
+              margin-left: 0; } }
+        @media screen and (max-width: 330px) {
+          /* line 213, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .progress-steps ol li {
+            width: 26px; } }
+        /* line 244, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .progress-steps ol li span {
+          font-size: 1.3rem; }
+          @media screen and (max-width: 770px) {
+            /* line 244, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .progress-steps ol li span {
+              font-size: 12px; } }
+          /* line 249, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .progress-steps ol li span {
+            font-size: 13px; }
+          /* line 252, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .progress-steps ol li span:before {
+            position: absolute;
+            content: "\203a";
+            top: 0;
+            left: 50%;
+            width: 30px;
+            height: 25px;
+            border-radius: 100px;
+            margin: 0 0 0 -15px;
+            background: #afafaf;
+            color: #fff;
+            font-weight: 300;
+            font-size: 2rem;
+            text-align: center;
+            display: block;
+            line-height: 1em;
+            padding: 5px 0 0 0; }
+            /* line 265, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .progress-steps ol li span:before {
+              font-size: 20px; }
+            @media screen and (max-width: 330px) {
+              /* line 252, stylesheets/carers-allowance.css.scss */
+              .carers-allowance .progress-steps ol li span:before {
+                width: 26px;
+                height: 23px;
+                margin-left: -13px;
+                padding-top: 3px; } }
+            /* line 278, stylesheets/carers-allowance.css.scss */
+            .ie8 .carers-allowance .progress-steps ol li span:before {
+              display: none; }
+        /* line 284, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .progress-steps ol li.active {
+          padding-top: 48px; }
+          /* line 286, stylesheets/carers-allowance.css.scss */
+          .ie6 .carers-allowance .progress-steps ol li.active, .ie7 .carers-allowance .progress-steps ol li.active, .ie8 .carers-allowance .progress-steps ol li.active {
+            background: url("images/nav-active.png") center 0 no-repeat;
+            top: -8px;
+            padding-top: 55px; }
+          @media screen and (max-width: 760px) {
+            /* line 284, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .progress-steps ol li.active {
+              padding: 0; } }
+          /* line 294, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .progress-steps ol li.active span {
+            font-weight: 700; }
+            /* line 296, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .progress-steps ol li.active span:before {
+              background: #000;
+              padding: 0;
+              height: 39px;
+              width: 50px;
+              margin: -8px 0 0 -25px;
+              font-weight: 300;
+              padding-top: 11px;
+              font-size: 2.6rem; }
+              /* line 305, stylesheets/carers-allowance.css.scss */
+              .ie .carers-allowance .progress-steps ol li.active span:before {
+                font-size: 26px; }
+              @media screen and (max-width: 760px) {
+                /* line 296, stylesheets/carers-allowance.css.scss */
+                .carers-allowance .progress-steps ol li.active span:before {
+                  width: 30px;
+                  height: 29px;
+                  margin: 0 0 0 -15px;
+                  padding: 1px 0 0 0; } }
+              @media screen and (max-width: 330px) {
+                /* line 296, stylesheets/carers-allowance.css.scss */
+                .carers-allowance .progress-steps ol li.active span:before {
+                  height: 26px;
+                  width: 26px;
+                  padding-top: 0;
+                  margin-left: -13px; } }
+              /* line 320, stylesheets/carers-allowance.css.scss */
+              .ie8 .carers-allowance .progress-steps ol li.active span:before {
+                display: none; }
+        /* line 328, stylesheets/carers-allowance.css.scss */
+        .ie6 .carers-allowance .progress-steps ol li.complete, .ie7 .carers-allowance .progress-steps ol li.complete, .ie8 .carers-allowance .progress-steps ol li.complete {
+          background: url("images/nav-complete.png") center 0 no-repeat; }
+        /* line 332, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .progress-steps ol li.complete span:before {
+          background: #006435;
+          content: "\203a";
+          padding-left: 0;
+          width: 30px; }
+          @media screen and (max-width: 330px) {
+            /* line 332, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .progress-steps ol li.complete span:before {
+              width: 26px; } }
+          /* line 340, stylesheets/carers-allowance.css.scss */
+          .ie8 .carers-allowance .progress-steps ol li.complete span:before {
+            display: none; }
+  @media screen and (max-width: 500px) {
+    /* line 354, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .short-steps ol:after {
+      display: block; } }
+  /* line 359, stylesheets/carers-allowance.css.scss */
+  .carers-allowance .short-steps ol li {
+    width: 25%; }
+    @media screen and (max-width: 760px) {
+      /* line 359, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .short-steps ol li {
+        text-indent: -9999px;
+        padding: 35px 0 0 0; }
+        /* line 364, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .short-steps ol li span {
+          text-indent: 0; } }
+    @media screen and (max-width: 480px) {
+      /* line 359, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .short-steps ol li {
+        width: 25%;
+        margin-left: 0; }
+        /* line 371, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .short-steps ol li:first-child {
+          margin-left: 0; } }
+    @media screen and (max-width: 330px) {
+      /* line 359, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .short-steps ol li {
+        width: 25%; } }
+    @media screen and (max-width: 770px) {
+      /* line 378, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .short-steps ol li span {
+        font-size: 13px; } }
+  /* line 391, stylesheets/carers-allowance.css.scss */
+  .carers-allowance section {
+    background: #fff;
+    position: relative;
+    padding: 1.6em 0 0 1em;
+    /* section header */ }
+    @media screen and (max-width: 640px) {
+      /* line 391, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section {
+        padding-left: 0;
+        padding-right: 0;
+        border: 0; } }
+    /* line 398, stylesheets/carers-allowance.css.scss */
+    .carers-allowance section.error-statement {
+      margin: 0;
+      padding: 5em 0 5em 1em; }
+      @media screen and (max-width: 640px) {
+        /* line 398, stylesheets/carers-allowance.css.scss */
+        .carers-allowance section.error-statement {
+          padding-left: 0;
+          padding-right: 0; } }
+      /* line 403, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.error-statement p {
+        margin: 2em 40% 0 0; }
+        @media screen and (max-width: 700px) {
+          /* line 403, stylesheets/carers-allowance.css.scss */
+          .carers-allowance section.error-statement p {
+            margin-right: 0; } }
+      /* line 408, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.error-statement h1 {
+        font-size: 5rem; }
+        @media screen and (max-width: 480px) {
+          /* line 408, stylesheets/carers-allowance.css.scss */
+          .carers-allowance section.error-statement h1 {
+            font-size: 30px; } }
+        /* line 412, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance section.error-statement h1 {
+          font-size: 50px; }
+    /* line 422, stylesheets/carers-allowance.css.scss */
+    .carers-allowance section.finish-statement article {
+      margin-top: 1.5em; }
+      /* line 424, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.finish-statement article.finish-next {
+        margin-top: 1.4em;
+        margin-right: 1em; }
+        @media screen and (max-width: 640px) {
+          /* line 424, stylesheets/carers-allowance.css.scss */
+          .carers-allowance section.finish-statement article.finish-next {
+            margin-right: 0; } }
+      /* line 431, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.finish-statement article li {
+        font-size: 1.7rem;
+        margin-top: 0.7em !important; }
+        /* line 433, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance section.finish-statement article li {
+          font-size: 17px; }
+      /* line 438, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.finish-statement article p {
+        font-size: 1.7rem;
+        margin-top: .5em; }
+        /* line 440, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance section.finish-statement article p {
+          font-size: 17px; }
+    /* line 448, stylesheets/carers-allowance.css.scss */
+    .carers-allowance section.finish-statement .app-complete {
+      text-align: center;
+      background: #28a197;
+      padding: 2em 1em;
+      margin-right: 1em; }
+      /* line 449, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.finish-statement .app-complete h1 {
+        color: #fff;
+        margin-right: 0;
+        margin-bottom: 0;
+        padding-right: 0; }
+        /* line 454, stylesheets/carers-allowance.css.scss */
+        .carers-allowance section.finish-statement .app-complete h1 span {
+          display: inline-block;
+          background: url("images/white-tick.png") 0 6px no-repeat;
+          padding-left: 44px; }
+      /* line 460, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.finish-statement .app-complete h2 {
+        color: #fff; }
+      /* line 463, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.finish-statement .app-complete p {
+        color: #fff; }
+        /* line 465, stylesheets/carers-allowance.css.scss */
+        .carers-allowance section.finish-statement .app-complete p.nino-title {
+          margin-top: 1em; }
+      @media screen and (max-width: 640px) {
+        /* line 448, stylesheets/carers-allowance.css.scss */
+        .carers-allowance section.finish-statement .app-complete {
+          margin-right: 0; } }
+    /* line 481, stylesheets/carers-allowance.css.scss */
+    .carers-allowance section h1 {
+      font-size: 3.6rem;
+      font-weight: 700;
+      line-height: 1.2em;
+      margin-bottom: .25em;
+      margin-right: 20%;
+      margin-left: -2px; }
+      @media screen and (max-width: 700px) {
+        /* line 481, stylesheets/carers-allowance.css.scss */
+        .carers-allowance section h1 {
+          margin-right: 0; } }
+      /* line 490, stylesheets/carers-allowance.css.scss */
+      .ie .carers-allowance section h1 {
+        font-size: 36px; }
+      @media screen and (max-width: 500px) {
+        /* line 481, stylesheets/carers-allowance.css.scss */
+        .carers-allowance section h1 {
+          font-size: 3rem; }
+          /* line 494, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance section h1 {
+            font-size: 30px; } }
+    /* line 505, stylesheets/carers-allowance.css.scss */
+    .carers-allowance section.response h1 {
+      margin-right: 0; }
+    /* line 508, stylesheets/carers-allowance.css.scss */
+    .carers-allowance section.response article {
+      margin: 2em 0;
+      background-image: url("images/response-trio-xl.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      padding: 0 0 0 8em;
+      min-height: 100px; }
+      @media screen and (max-width: 500px) {
+        /* line 508, stylesheets/carers-allowance.css.scss */
+        .carers-allowance section.response article {
+          padding: 7em 0 0 0;
+          background-position: center 0; } }
+      /* line 519, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.response article h2 {
+        font-size: 2.4rem;
+        line-height: 1.3em;
+        padding-top: .3em; }
+        /* line 523, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance section.response article h2 {
+          font-size: 24px; }
+      /* line 527, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.response article p {
+        margin-top: .25em; }
+      /* line 530, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.response article.earnings {
+        background-position: 0 -756px; }
+        @media screen and (max-width: 500px) {
+          /* line 530, stylesheets/carers-allowance.css.scss */
+          .carers-allowance section.response article.earnings {
+            background-position: center -756px; } }
+      /* line 536, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section.response article.education {
+        background-position: 0 -1500px; }
+        @media screen and (max-width: 500px) {
+          /* line 536, stylesheets/carers-allowance.css.scss */
+          .carers-allowance section.response article.education {
+            background-position: center -1500px; } }
+    /* line 544, stylesheets/carers-allowance.css.scss */
+    .ie7 .carers-allowance section.response {
+      zoom: 1; }
+    /* line 550, stylesheets/carers-allowance.css.scss */
+    .carers-allowance section p {
+      margin: 0;
+      font-size: 1.9rem;
+      font-weight: 400;
+      line-height: 1.4em; }
+      /* line 555, stylesheets/carers-allowance.css.scss */
+      .ie .carers-allowance section p {
+        font-size: 19px; }
+      /* line 558, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section p.mandatory {
+        margin-top: 1.6em;
+        font-size: 1.6rem; }
+        /* line 561, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance section p.mandatory {
+          font-size: 16px; }
+        /* line 564, stylesheets/carers-allowance.css.scss */
+        .carers-allowance section p.mandatory em {
+          font-style: normal;
+          font-size: 1.9rem; }
+          /* line 567, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance section p.mandatory em {
+            font-size: 19px; }
+      /* line 572, stylesheets/carers-allowance.css.scss */
+      .carers-allowance section p.security-message {
+        margin-bottom: 1em;
+        font-size: 1.6rem; }
+        /* line 575, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance section p.security-message {
+          font-size: 16px; }
+        /* line 578, stylesheets/carers-allowance.css.scss */
+        .carers-allowance section p.security-message strong {
+          font-weight: 600;
+          text-decoration: underline; }
+    /* line 584, stylesheets/carers-allowance.css.scss */
+    .carers-allowance section ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+  /* line 595, stylesheets/carers-allowance.css.scss */
+  .carers-allowance .completed {
+    margin-top: 1.4em;
+    margin-left: -1em; }
+    @media screen and (max-width: 640px) {
+      /* line 595, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .completed {
+        margin-left: 0; } }
+    /* line 599, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .completed .start-again {
+      text-align: right; }
+      /* line 601, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .completed .start-again a {
+        display: inline-block;
+        background: #006435;
+        font-size: 1.9rem;
+        padding: .7em 1.75em;
+        color: #fff;
+        line-height: 1em;
+        text-decoration: none; }
+        /* line 609, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .completed .start-again a {
+          font-size: 19px; }
+        /* line 612, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .completed .start-again a:hover {
+          background: #004b27; }
+    /* line 618, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .completed ul li {
+      background: #e6eff5 url("images/tick.png") 1.1em 1.3em no-repeat;
+      border-bottom: 1px solid #cdd7dc;
+      padding: 1em 11em 1em 2.9em;
+      position: relative; }
+      @media screen and (max-width: 760px) {
+        /* line 618, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .completed ul li {
+          padding-right: 1em; } }
+      /* line 624, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .completed ul li h3 {
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.25; }
+        /* line 628, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .completed ul li h3 {
+          font-size: 16px; }
+      /* line 632, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .completed ul li p {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: #000;
+        line-height: 1em;
+        margin-top: .4em; }
+        /* line 638, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .completed ul li p {
+          font-size: 16px; }
+      /* line 642, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .completed ul li a {
+        position: absolute;
+        right: 1.2em;
+        top: 1.95em;
+        margin-top: -10px;
+        color: inherit;
+        font-size: 1.4rem;
+        font-weight: 300; }
+        /* line 650, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .completed ul li a {
+          font-size: 14px; }
+        /* line 653, stylesheets/carers-allowance.css.scss */
+        .ie6 .carers-allowance .completed ul li a {
+          right: auto;
+          top: auto;
+          position: relative;
+          margin-top: 10px;
+          display: inline-block; }
+        /* line 660, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .completed ul li a:hover {
+          color: #444; }
+        @media screen and (max-width: 760px) {
+          /* line 642, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .completed ul li a {
+            position: relative;
+            right: auto;
+            top: auto;
+            margin-top: 1em;
+            display: inline-block; } }
+    /* line 668, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .completed.eligibility-completed li {
+      background-color: #D5ECEA; }
+  /* line 678, stylesheets/carers-allowance.css.scss */
+  .carers-allowance .validation-summary {
+    background: #fef7f7;
+    border: 3px solid #df3034;
+    padding: 1em .7em;
+    margin: 1em 18% 1em -1em; }
+    @media screen and (max-width: 640px) {
+      /* line 678, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .validation-summary {
+        margin-left: 0; } }
+    @media screen and (max-width: 780px) {
+      /* line 678, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .validation-summary {
+        margin-right: 0; } }
+    /* line 685, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .validation-summary h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.2em; }
+      /* line 689, stylesheets/carers-allowance.css.scss */
+      .ie .carers-allowance .validation-summary h2 {
+        font-size: 24px; }
+      @media screen and (max-width: 500px) {
+        /* line 685, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .validation-summary h2 {
+          font-size: 2rem; }
+          /* line 693, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .validation-summary h2 {
+            font-size: 20px; } }
+    /* line 698, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .validation-summary p {
+      margin-top: .75em; }
+    /* line 701, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .validation-summary ol {
+      list-style: disc;
+      padding-left: 1.25em;
+      margin: .75em 0 0 0;
+      color: #df3034; }
+      /* line 706, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .validation-summary ol a {
+        color: #df3034;
+        text-decoration: none; }
+        /* line 709, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .validation-summary ol a:hover {
+          text-decoration: underline; }
+  /* line 720, stylesheets/carers-allowance.css.scss */
+  .carers-allowance .form-elements {
+    margin: 2em 18% 1em 0;
+    /* Nested fieldset */
+    /* form list start */
+    /* info panel */
+    /* declaration */
+    /* table styling */ }
+    @media screen and (max-width: 780px) {
+      /* line 720, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements {
+        margin-right: 0; } }
+    @media screen and (max-width: 500px) {
+      /* line 720, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements {
+        padding-left: 0; } }
+    /* line 726, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements.form-eligibility {
+      padding-left: 1.9em; }
+      @media screen and (max-width: 640px) {
+        /* line 726, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements.form-eligibility {
+          padding-left: 2.6em; } }
+      /* line 729, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements.form-eligibility legend {
+        padding: .12em 0 1em 1.56em;
+        margin-left: -1.64em;
+        color: inherit; }
+        /* line 733, stylesheets/carers-allowance.css.scss */
+        .ie7 .carers-allowance .form-elements.form-eligibility legend {
+          display: block;
+          line-height: 1.1em;
+          margin-left: -48px; }
+        /* line 738, stylesheets/carers-allowance.css.scss */
+        .ie6 .carers-allowance .form-elements.form-eligibility legend {
+          padding-left: 40px;
+          margin-left: -50px; }
+      /* line 743, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements.form-eligibility li.validation {
+        margin-top: 1em; }
+    /* line 748, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements.nested-fieldset {
+      margin-top: 1em; }
+    /* line 752, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements.q1 p {
+      padding-right: 2em; }
+      @media screen and (max-width: 750px) {
+        /* line 752, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements.q1 p {
+          padding-right: 0; } }
+      /* line 755, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements.q1 p.helper-message {
+        margin: 0 0 1em 0; }
+    /* line 760, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements.results-detail {
+      margin-right: 0;
+      padding-left: 0;
+      position: relative; }
+      /* line 764, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements.results-detail legend {
+        padding-bottom: .8em; }
+      @media screen and (max-width: 750px) {
+        /* line 760, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements.results-detail {
+          margin-right: 0; } }
+    /* line 769, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements legend {
+      font-weight: 600;
+      font-size: 2.4rem;
+      padding: .12em 0 .5em 0;
+      position: relative;
+      line-height: 1.2em;
+      color: #333399; }
+      /* line 776, stylesheets/carers-allowance.css.scss */
+      .ie .carers-allowance .form-elements legend {
+        font-size: 24px; }
+      /* line 779, stylesheets/carers-allowance.css.scss */
+      .ie7 .carers-allowance .form-elements legend {
+        margin-left: -10px; }
+      /* line 782, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements legend span {
+        background: #000;
+        display: block;
+        border-radius: 100px;
+        width: 30px;
+        height: 22px;
+        color: #fff;
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 8px;
+        line-height: 1em;
+        position: absolute;
+        top: 1px;
+        left: 1px; }
+        /* line 796, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .form-elements legend span {
+          font-size: 15px; }
+      /* line 800, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements legend div {
+        width: 100%; }
+    /* line 804, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements h2, .carers-allowance .form-elements p.title {
+      font-size: 1.9rem;
+      font-weight: 600;
+      line-height: 1.4em;
+      padding-top: 1em; }
+      /* line 809, stylesheets/carers-allowance.css.scss */
+      .ie .carers-allowance .form-elements h2, .ie .carers-allowance .form-elements p.title {
+        font-size: 19px; }
+      /* line 812, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements h2:first-child, .carers-allowance .form-elements p.title:first-child {
+        padding-top: 0; }
+    /* line 821, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements .question-group {
+      margin-top: 0;
+      margin-bottom: 0; }
+      /* line 824, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements .question-group legend {
+        font-size: 1.9rem;
+        font-weight: 400;
+        color: #000;
+        padding-bottom: .34em; }
+        /* line 829, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .form-elements .question-group legend {
+          font-size: 19px; }
+        /* line 832, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements .question-group legend em {
+          display: inline;
+          font-size: 1.8rem;
+          margin-right: .4rem;
+          font-style: normal; }
+          /* line 837, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements .question-group legend em {
+            font-size: 18px;
+            margin-right: 4px; }
+      /* line 844, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements .question-group ul li {
+        padding-top: 0; }
+    /* line 855, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements ul {
+      margin-top: 0;
+      zoom: 1;
+      /* radio list - includes hit areas */
+      /* Address stack */
+      /* list display - fully inline with label */
+      /* list display - stacked list with label inline */
+      /* list display - date format layout */
+      /* sort code */
+      /* list display - inline with labels stripped */
+      /* list display - national insurance number */ }
+      /* line 859, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.extra-group {
+        border-left: 3px solid #a2a2a2;
+        padding-left: .8em;
+        margin-top: 1em; }
+      /* line 865, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.circs-group {
+        margin-top: 1em; }
+      /* line 870, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul li {
+        display: block;
+        margin-top: .4rem;
+        padding: .8em 0;
+        position: relative; }
+        /* line 875, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li:first-child {
+          margin: 0; }
+        /* line 878, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .form-elements ul li {
+          margin-top: 4px; }
+        /* line 882, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li.other-detail {
+          margin: 0;
+          padding-top: 0; }
+          /* line 885, stylesheets/carers-allowance.css.scss */
+          .ie7 .carers-allowance .form-elements ul li.other-detail {
+            zoom: 1; }
+          /* line 888, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li.other-detail .strip {
+            position: absolute;
+            left: -9999px; }
+        /* line 894, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li.c-help {
+          padding-top: 0;
+          margin-top: 0; }
+        /* line 900, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li.validation {
+          background: #fef7f7;
+          padding: .7em;
+          margin-left: -1.5rem;
+          border-left: 3px solid #df3034;
+          position: relative;
+          overflow: hidden; }
+          /* line 907, stylesheets/carers-allowance.css.scss */
+          .ie7 .carers-allowance .form-elements ul li.validation, .ie8 .carers-allowance .form-elements ul li.validation {
+            margin-left: -15px; }
+          /* line 910, stylesheets/carers-allowance.css.scss */
+          .ie6 .carers-allowance .form-elements ul li.validation {
+            zoom: 1; }
+          @media screen and (max-width: 640px) {
+            /* line 900, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements ul li.validation {
+              margin-left: 0;
+              padding-top: 1em;
+              padding-bottom: 1em;
+              width: auto; } }
+          /* line 915, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li.validation .error {
+            color: #de3134;
+            font-weight: 300;
+            font-size: 1.6rem;
+            padding-bottom: .6em; }
+            /* line 920, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .form-elements ul li.validation .error {
+              font-size: 16px; }
+            /* line 923, stylesheets/carers-allowance.css.scss */
+            .ie6 .carers-allowance .form-elements ul li.validation .error {
+              background: transparent; }
+          /* line 928, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li.validation .inline-stack {
+            border-left: none;
+            padding-left: 0; }
+        /* line 934, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li.date-time {
+          padding-top: 0;
+          padding-bottom: 0; }
+        /* line 941, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li.short-field input[type="text"], .carers-allowance .form-elements ul li.short-field input[type="tel"] {
+          width: 13rem; }
+          /* line 943, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements ul li.short-field input[type="text"], .ie .carers-allowance .form-elements ul li.short-field input[type="tel"] {
+            width: 130px; }
+          @media screen and (max-width: 500px) {
+            /* line 941, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements ul li.short-field input[type="text"], .carers-allowance .form-elements ul li.short-field input[type="tel"] {
+              width: 12.8rem; }
+              /* line 948, stylesheets/carers-allowance.css.scss */
+              .ie .carers-allowance .form-elements ul li.short-field input[type="text"], .ie .carers-allowance .form-elements ul li.short-field input[type="tel"] {
+                width: 128px; } }
+        /* line 956, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li.date-picker input[type="tel"] {
+          cursor: pointer;
+          position: relative; }
+          /* line 959, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li.date-picker input[type="tel"]:before {
+            content: "\f073";
+            font-size: 16px;
+            position: absolute;
+            top: 5px;
+            right: 6px;
+            font-family: 'FontAwesome';
+            font-weight: normal;
+            font-style: normal;
+            text-decoration: inherit;
+            -webkit-font-smoothing: antialiased; }
+          /* line 971, stylesheets/carers-allowance.css.scss */
+          .ie7 .carers-allowance .form-elements ul li.date-picker input[type="tel"] {
+            background: url("../images/date.png") 97% center no-repeat; }
+        /* line 977, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li.currency {
+          position: relative; }
+          /* line 979, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li.currency input[type="text"], .carers-allowance .form-elements ul li.currency input[type="tel"] {
+            width: 11.8rem;
+            position: relative; }
+            /* line 982, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .form-elements ul li.currency input[type="text"], .ie .carers-allowance .form-elements ul li.currency input[type="tel"] {
+              width: 118px; }
+            @media screen and (max-width: 500px) {
+              /* line 979, stylesheets/carers-allowance.css.scss */
+              .carers-allowance .form-elements ul li.currency input[type="text"], .carers-allowance .form-elements ul li.currency input[type="tel"] {
+                width: 11.6rem; }
+                /* line 987, stylesheets/carers-allowance.css.scss */
+                .ie .carers-allowance .form-elements ul li.currency input[type="text"], .ie .carers-allowance .form-elements ul li.currency input[type="tel"] {
+                  width: 116px; } }
+        /* line 995, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li.validation:before {
+          left: 18px;
+          bottom: 19px; }
+        /* line 1001, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li .helper {
+          font-size: 1.6rem;
+          margin-top: .5em;
+          font-weight: 300; }
+          /* line 1005, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements ul li .helper {
+            font-size: 16px; }
+          /* line 1008, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li .helper.above {
+            margin-top: 0; }
+        /* line 1012, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li .specific-help {
+          display: none; }
+          /* line 1014, stylesheets/carers-allowance.css.scss */
+          .ie7 .carers-allowance .form-elements ul li .specific-help {
+            display: block; }
+        /* line 1018, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li .helper-more {
+          cursor: pointer;
+          font-size: 1.6rem;
+          margin: .6em 0 0 0;
+          font-weight: 500;
+          overflow: hidden;
+          line-height: 1em;
+          padding: .5em .7em .45em .7em;
+          border-left: 5px solid #333;
+          color: #000; }
+        /* line 1030, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li .helper-info {
+          display: none;
+          padding: 1.3em 1em 1em .8em;
+          background: #f9f9f9;
+          border-left: 5px solid #333; }
+          /* line 1035, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li .helper-info h3 {
+            font-size: 1.6rem; }
+            /* line 1037, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .form-elements ul li .helper-info h3 {
+              font-size: 16px; }
+          /* line 1041, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li .helper-info p {
+            font-size: 1.6rem;
+            margin-top: 1em;
+            color: #515151;
+            line-height: 1.4em; }
+            /* line 1046, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .form-elements ul li .helper-info p {
+              font-size: 16px; }
+            /* line 1049, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements ul li .helper-info p:first-child {
+              margin: 0; }
+            /* line 1052, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements ul li .helper-info p em, .carers-allowance .form-elements ul li .helper-info p i {
+              font-size: 1.6rem;
+              margin: 0;
+              font-style: italic; }
+              /* line 1056, stylesheets/carers-allowance.css.scss */
+              .ie .carers-allowance .form-elements ul li .helper-info p em, .ie .carers-allowance .form-elements ul li .helper-info p i {
+                font-size: 16px; }
+          /* line 1061, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li .helper-info a {
+            color: #2e3191;
+            text-decoration: underline;
+            font-size: 1.6rem; }
+            /* line 1065, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements ul li .helper-info a:hover {
+              color: #2e8aca; }
+          /* line 1070, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li .helper-info ul li {
+            margin: 0;
+            padding: .65em 0;
+            font-size: 1.6rem;
+            border-top: 1px dotted #e8e8e8;
+            color: #626262; }
+            /* line 1076, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements ul li .helper-info ul li:first-child {
+              border: 0; }
+        /* line 1083, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li label, .carers-allowance .form-elements ul li p {
+          display: block;
+          font-size: 1.9rem;
+          font-weight: 400;
+          line-height: 1.3em;
+          padding-bottom: .3em; }
+          @media screen and (max-width: 600px) {
+            /* line 1083, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements ul li label, .carers-allowance .form-elements ul li p {
+              line-height: 1.2em; } }
+          /* line 1090, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements ul li label, .ie .carers-allowance .form-elements ul li p {
+            font-size: 19px; }
+          /* line 1093, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li label em, .carers-allowance .form-elements ul li p em {
+            display: inline;
+            font-size: 1.8rem;
+            margin-right: .4rem;
+            font-style: normal; }
+            /* line 1098, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .form-elements ul li label em, .ie .carers-allowance .form-elements ul li p em {
+              font-size: 18px;
+              margin-right: 4px; }
+        /* line 1106, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li input[type="text"], .carers-allowance .form-elements ul li input[type="number"], .carers-allowance .form-elements ul li input[type="tel"], .carers-allowance .form-elements ul li textarea {
+          background: #f9f9f9;
+          border: 1px solid #a2a2a2;
+          font-size: 1.9rem;
+          line-height: 1.31579;
+          font-weight: 400;
+          text-transform: none;
+          padding: 0.25em 0 0.1em 0.4em;
+          width: 28.3rem; }
+          @media screen and (max-width: 500px) {
+            /* line 1106, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements ul li input[type="text"], .carers-allowance .form-elements ul li input[type="number"], .carers-allowance .form-elements ul li input[type="tel"], .carers-allowance .form-elements ul li textarea {
+              width: 96%; } }
+          /* line 1116, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements ul li input[type="text"], .ie .carers-allowance .form-elements ul li input[type="number"], .ie .carers-allowance .form-elements ul li input[type="tel"], .ie .carers-allowance .form-elements ul li textarea {
+            font-size: 19px;
+            width: 283px; }
+          /* line 1120, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li input[type="text"].postcode, .carers-allowance .form-elements ul li input[type="number"].postcode, .carers-allowance .form-elements ul li input[type="tel"].postcode, .carers-allowance .form-elements ul li textarea.postcode {
+            text-transform: uppercase; }
+          /* line 1123, stylesheets/carers-allowance.css.scss */
+          .ie7 .carers-allowance .form-elements ul li input[type="text"], .ie8 .carers-allowance .form-elements ul li input[type="text"], .ie7 .carers-allowance .form-elements ul li input[type="number"], .ie8 .carers-allowance .form-elements ul li input[type="number"], .ie7 .carers-allowance .form-elements ul li input[type="tel"], .ie8 .carers-allowance .form-elements ul li input[type="tel"], .ie7 .carers-allowance .form-elements ul li textarea, .ie8 .carers-allowance .form-elements ul li textarea {
+            padding: 0.2em 0 0.4em 0.4em; }
+          /* line 1126, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li input[type="text"].datepicker, .carers-allowance .form-elements ul li input[type="number"].datepicker, .carers-allowance .form-elements ul li input[type="tel"].datepicker, .carers-allowance .form-elements ul li textarea.datepicker {
+            cursor: pointer;
+            background: #f9f9f9 url("images/calendar-icon.png") 97% 50% no-repeat;
+            position: relative;
+            z-index: 20; }
+            /* line 1131, stylesheets/carers-allowance.css.scss */
+            .ie7 .carers-allowance .form-elements ul li input[type="text"].datepicker, .ie7 .carers-allowance .form-elements ul li input[type="number"].datepicker, .ie7 .carers-allowance .form-elements ul li input[type="tel"].datepicker, .ie7 .carers-allowance .form-elements ul li textarea.datepicker {
+              cursor: auto;
+              background: #f9f9f9; }
+        /* line 1137, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li input[type="radio"] {
+          width: auto;
+          vertical-align: top; }
+          /* line 1140, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul li input[type="radio"][type=radio]:checked + label {
+            color: #0b0c0c; }
+          /* line 1141, stylesheets/carers-allowance.css.scss */
+          .ie7 .carers-allowance .form-elements ul li input[type="radio"] {
+            margin-top: 0; }
+          /* line 1144, stylesheets/carers-allowance.css.scss */
+          .ie8 .carers-allowance .form-elements ul li input[type="radio"] {
+            margin-top: 1px; }
+        /* line 1148, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li textarea {
+          height: 6em;
+          width: 56.6rem;
+          background: #f9f9f9; }
+          @media screen and (max-width: 620px) {
+            /* line 1148, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements ul li textarea {
+              width: 96%; } }
+          /* line 1153, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements ul li textarea {
+            width: 566px; }
+        /* line 1157, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li select {
+          padding: 2px;
+          min-width: 15rem;
+          max-width: 29.3rem;
+          position: relative;
+          font-size: 13px;
+          height: 30px;
+          top: 2px;
+          background: #fafafa;
+          border: 1px solid #a2a2a2; }
+          /* line 1167, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements ul li select {
+            min-width: 150px;
+            max-width: 293px;
+            height: auto;
+            padding: 5px; }
+          /* line 1173, stylesheets/carers-allowance.css.scss */
+          .ie8 .carers-allowance .form-elements ul li select {
+            min-width: 0; }
+        /* line 1177, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li .warning-text {
+          color: #df3034; }
+        /* line 1180, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul li .stacked {
+          margin: 0;
+          padding: 0;
+          font-size: 1.6rem; }
+          /* line 1184, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements ul li .stacked {
+            font-size: 16px; }
+      /* line 1194, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.radio {
+        margin-top: 3px;
+        overflow: hidden; }
+        /* line 1197, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.radio li {
+          position: relative;
+          float: left;
+          margin: 0 0 0 1px;
+          padding: 0; }
+          /* line 1202, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul.radio li:first-child {
+            margin-left: 0; }
+          /* line 1205, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul.radio li input[type="radio"] {
+            position: absolute;
+            top: 13px;
+            left: 14px;
+            margin: 0;
+            cursor: pointer;
+            line-height: 1em; }
+            /* line 1213, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .form-elements ul.radio li input[type="radio"] {
+              top: 10px;
+              left: 10px; }
+            /* line 1218, stylesheets/carers-allowance.css.scss */
+            .ie10 .carers-allowance .form-elements ul.radio li input[type="radio"] {
+              top: 10px;
+              left: 10px; }
+            /* line 1223, stylesheets/carers-allowance.css.scss */
+            .ie8 .carers-allowance .form-elements ul.radio li input[type="radio"] {
+              top: 11px; }
+            /* line 1227, stylesheets/carers-allowance.css.scss */
+            .ie6 .carers-allowance .form-elements ul.radio li input[type="radio"] {
+              position: relative;
+              top: auto;
+              left: auto;
+              display: inline; }
+          /* line 1236, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul.radio li label {
+            display: block;
+            background: #e8e8e8;
+            padding: 12px 14px 10px 34px;
+            font-size: 1.7rem;
+            cursor: pointer;
+            line-height: 1em;
+            border: 1px solid #fff;
+            font-weight: 500; }
+            /* line 1245, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .form-elements ul.radio li label {
+              font-size: 17px; }
+            /* line 1249, stylesheets/carers-allowance.css.scss */
+            .ie7 .carers-allowance .form-elements ul.radio li label:hover, .ie8 .carers-allowance .form-elements ul.radio li label:hover {
+              background: #fff;
+              border: 1px solid #a2a2a2; }
+            /* line 1254, stylesheets/carers-allowance.css.scss */
+            .ie6 .carers-allowance .form-elements ul.radio li label {
+              display: inline;
+              padding-left: 0;
+              background: transparent; }
+          /* line 1260, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul.radio li input[type="radio"]:checked + label {
+            background: #fff;
+            -webkit-transition: all 200ms ease-in;
+            -moz-transition: all 200ms ease-in;
+            -ms-transition: all 200ms ease-in;
+            -o-transition: all 200ms ease-in;
+            transition: all 200ms ease-in;
+            border: 1px solid #a2a2a2; }
+        /* line 1271, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.radio.radio-stack li {
+          float: none;
+          margin: 4px 0 0 0; }
+          /* line 1274, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul.radio.radio-stack li:first-child {
+            margin-top: 0; }
+          /* line 1277, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul.radio.radio-stack li label {
+            display: inline-block; }
+            @media screen and (max-width: 480px) {
+              /* line 1277, stylesheets/carers-allowance.css.scss */
+              .carers-allowance .form-elements ul.radio.radio-stack li label {
+                display: block; } }
+      /* line 1292, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.address-stack label {
+        position: absolute;
+        left: -9999px; }
+      /* line 1296, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.address-stack li {
+        margin-top: .4em;
+        padding: 0 0 0 0; }
+        /* line 1299, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.address-stack li:first-child {
+          margin: 0; }
+      /* line 1310, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.inline li {
+        display: inline;
+        margin: 0 0 0 1.2em; }
+        /* line 1313, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.inline li:first-child {
+          margin-left: 0; }
+        /* line 1314, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.inline li label {
+          padding-left: 0.25em;
+          display: inline-block;
+          line-height: 1.2em;
+          font-size: 1.7rem;
+          color: #555; }
+          /* line 1320, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul.inline li label:hover {
+            color: #0b0c0c; }
+          /* line 1323, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements ul.inline li label {
+            font-size: 17px; }
+        /* line 1327, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.inline li select {
+          top: -3px; }
+      /* line 1337, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.inline-stack {
+        border-left: 5px solid #eee;
+        padding-left: .5em;
+        margin-bottom: .75em; }
+        /* line 1341, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.inline-stack li {
+          display: block;
+          margin: 0;
+          padding: .4em 0; }
+          /* line 1345, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul.inline-stack li input {
+            width: auto;
+            vertical-align: top;
+            margin-top: .38rem; }
+            /* line 1349, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .form-elements ul.inline-stack li input {
+              margin-top: 0; }
+            /* line 1352, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements ul.inline-stack li input[type=checkbox]:checked + label, .carers-allowance .form-elements ul.inline-stack li input[type=radio]:checked + label {
+              color: #000; }
+          /* line 1354, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul.inline-stack li label {
+            width: auto;
+            max-width: 90%;
+            margin-left: .25em;
+            line-height: 1.2em;
+            padding: 0;
+            font-size: 1.7rem;
+            color: #555;
+            cursor: pointer; }
+            /* line 1363, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .form-elements ul.inline-stack li label {
+              font-size: 17px;
+              width: 90%; }
+      /* line 1376, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.year li {
+        margin-left: .5em; }
+        /* line 1378, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.year li:first-child {
+          margin-left: 0; }
+        /* line 1381, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.year li label {
+          position: absolute;
+          left: -9999px; }
+        /* line 1385, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.year li select {
+          margin: 0;
+          min-width: 8.6rem;
+          top: -2px; }
+          @media screen and (max-width: 500px) {
+            /* line 1385, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements ul.year li select {
+              width: auto;
+              min-width: 1rem; } }
+          /* line 1390, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements ul.year li select {
+            width: 86px;
+            min-width: 86px;
+            top: 2px; }
+        /* line 1396, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.year li input {
+          width: 7.6rem;
+          background: #f9f9f9;
+          position: relative; }
+          /* line 1400, stylesheets/carers-allowance.css.scss */
+          .ie9 .carers-allowance .form-elements ul.year li input {
+            width: 76px;
+            top: 3px; }
+          /* line 1404, stylesheets/carers-allowance.css.scss */
+          .ie8 .carers-allowance .form-elements ul.year li input, .ie7 .carers-allowance .form-elements ul.year li input {
+            top: 3px;
+            width: 60px;
+            font-size: 14px;
+            padding: 5px 8px; }
+      /* line 1419, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.sort-code li {
+        margin-left: .5em; }
+        /* line 1421, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.sort-code li:first-child {
+          margin-left: 0; }
+      /* line 1425, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.sort-code label {
+        position: absolute;
+        left: -9999px; }
+      /* line 1429, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.sort-code input[type="tel"], .carers-allowance .form-elements ul.sort-code input[type="text"] {
+        width: 8.1rem; }
+        /* line 1431, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .form-elements ul.sort-code input[type="tel"], .ie .carers-allowance .form-elements ul.sort-code input[type="text"] {
+          width: 81px; }
+      /* line 1441, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.label-strip li {
+        margin-left: .5em; }
+        /* line 1443, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.label-strip li:first-child {
+          margin-left: 0; }
+      /* line 1447, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.label-strip label {
+        position: absolute;
+        left: -9999px; }
+      /* line 1458, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.ni-number li {
+        margin-left: .5em; }
+        /* line 1460, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.ni-number li:first-child {
+          margin-left: 0; }
+        /* line 1463, stylesheets/carers-allowance.css.scss */
+        .ie7 .carers-allowance .form-elements ul.ni-number li {
+          margin-left: 0.15em; }
+      /* line 1467, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.ni-number label {
+        position: absolute;
+        left: -9999px; }
+      /* line 1471, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements ul.ni-number input[type="text"], .carers-allowance .form-elements ul.ni-number input[type="tel"] {
+        width: 4.4rem;
+        text-transform: uppercase; }
+        /* line 1474, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .form-elements ul.ni-number input[type="text"], .ie .carers-allowance .form-elements ul.ni-number input[type="tel"] {
+          width: 44px; }
+        /* line 1477, stylesheets/carers-allowance.css.scss */
+        .ie7 .carers-allowance .form-elements ul.ni-number input[type="text"], .ie7 .carers-allowance .form-elements ul.ni-number input[type="tel"] {
+          width: 43px; }
+        /* line 1480, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements ul.ni-number input[type="text"].single, .carers-allowance .form-elements ul.ni-number input[type="tel"].single {
+          width: 2.7rem; }
+          /* line 1482, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements ul.ni-number input[type="text"].single, .ie .carers-allowance .form-elements ul.ni-number input[type="tel"].single {
+            width: 27px; }
+        @media screen and (max-width: 750px) {
+          /* line 1471, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements ul.ni-number input[type="text"], .carers-allowance .form-elements ul.ni-number input[type="tel"] {
+            width: 4.2rem; }
+            /* line 1487, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .form-elements ul.ni-number input[type="text"], .ie .carers-allowance .form-elements ul.ni-number input[type="tel"] {
+              width: 42px; } }
+    /* line 1500, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements .info {
+      background: #fff;
+      border: 1px solid #a2a2a2;
+      padding: 1em 1.25em;
+      margin-top: 1.2em; }
+      /* line 1505, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements .info p {
+        font-size: 1.6rem;
+        margin-top: 1em; }
+        /* line 1508, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements .info p:first-child {
+          margin: 0; }
+        /* line 1511, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .form-elements .info p {
+          font-size: 16px; }
+    /* line 1519, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements .declaration {
+      border: 1px solid #a2a2a2;
+      padding: 1em 1.5em 1em 1em; }
+      /* line 1522, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements .declaration p {
+        font-size: 1.7rem;
+        line-height: 1.25em;
+        margin-top: 1em; }
+        /* line 1526, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements .declaration p:first-child {
+          margin-top: 0; }
+        /* line 1529, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .form-elements .declaration p {
+          font-size: 16px; }
+    /* line 1534, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements article {
+      margin-top: 2em;
+      line-height: 1em; }
+      /* line 1537, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements article p, .carers-allowance .form-elements article h3 {
+        display: inline;
+        font-size: 1.9rem;
+        line-height: 1.25em; }
+        /* line 1541, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .form-elements article p, .ie .carers-allowance .form-elements article h3 {
+          font-size: 19px; }
+      /* line 1546, stylesheets/carers-allowance.css.scss */
+      .ie .carers-allowance .form-elements article h3 {
+        margin-right: .25em; }
+    /* line 1551, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements .declare {
+      margin-top: 2em;
+      clear: both;
+      position: relative; }
+      @media print {
+        /* line 1551, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements .declare {
+          display: none; } }
+      /* line 1558, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements .declare label {
+        display: block;
+        padding: 1.5em 1em 1.5em 2.3em;
+        background: #fff;
+        font-size: 1.7rem;
+        line-height: 1.25em;
+        cursor: pointer;
+        border: 1px solid #ddd; }
+      /* line 1567, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements .declare input {
+        position: absolute;
+        top: 24px;
+        left: 1.1em; }
+        /* line 1571, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements .declare input[type=checkbox]:checked + label {
+          background: #fff;
+          -webkit-transition: all 200ms ease-in;
+          -moz-transition: all 200ms ease-in;
+          -ms-transition: all 200ms ease-in;
+          -o-transition: all 200ms ease-in;
+          transition: all 200ms ease-in;
+          border: 1px solid #a2a2a2; }
+      /* line 1581, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements .declare.secondary {
+        margin-top: 1em; }
+      /* line 1584, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements .declare.validation-check {
+        border-left: 3px solid #df3034;
+        background: #fef7f7; }
+        /* line 1587, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements .declare.validation-check label {
+          border: 0;
+          background: #fef7f7;
+          padding-top: 0; }
+        /* line 1592, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements .declare.validation-check input {
+          top: 45px; }
+          /* line 1594, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .form-elements .declare.validation-check input[type=checkbox]:checked + label {
+            background: #fef7f7; }
+        /* line 1598, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements .declare.validation-check .error {
+          font-size: 1.6rem;
+          color: #df3034;
+          padding: 1em 0 .5em .8em; }
+          /* line 1602, stylesheets/carers-allowance.css.scss */
+          .ie .carers-allowance .form-elements .declare.validation-check .error {
+            font-size: 16px; }
+    /* line 1610, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements .dec ul {
+      margin: 2em 2.5em 0 2.65em;
+      list-style: disc; }
+      /* line 1613, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements .dec ul li {
+        line-height: 1.4em;
+        padding: 0;
+        margin: 1.4em 0 0 0;
+        font-size: 1.7rem;
+        display: list-item; }
+        /* line 1619, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements .dec ul li:first-child {
+          margin-top: 1em; }
+    /* line 1628, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-elements table {
+      text-align: left;
+      border-collapse: collapse;
+      width: 98%; }
+      @media screen and (max-width: 640px) {
+        /* line 1628, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements table {
+          width: 100%; } }
+      /* line 1633, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements table thead {
+        border: 1px solid #bfc1c3; }
+      /* line 1636, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements table tbody {
+        border: 1px dotted #bfc1c3; }
+      /* line 1639, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements table tr {
+        border-top: 1px dotted #bfc1c3; }
+        /* line 1641, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements table tr:first-child {
+          border-top: 0; }
+        /* line 1644, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements table tr:nth-child(odd) {
+          background: #f8f8f8; }
+      /* line 1648, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements table th {
+        font-size: 1.6rem;
+        font-weight: 600;
+        background: #dee0e2;
+        padding: .8em;
+        vertical-align: middle;
+        border-left: 1px solid #bfc1c3;
+        line-height: 1.4em; }
+        /* line 1656, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements table th:first-child {
+          width: 18%;
+          border-left: 0;
+          text-align: center; }
+          @media screen and (max-width: 600px) {
+            /* line 1656, stylesheets/carers-allowance.css.scss */
+            .carers-allowance .form-elements table th:first-child {
+              width: auto; } }
+        /* line 1664, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .form-elements table th {
+          font-size: 16px; }
+        /* line 1667, stylesheets/carers-allowance.css.scss */
+        .ie7 .carers-allowance .form-elements table th {
+          border-top: 1px solid #bfc1c3;
+          border-bottom: 1px solid #bfc1c3;
+          border-left: 0;
+          border-right: 1px solid #bec0c2; }
+          /* line 1672, stylesheets/carers-allowance.css.scss */
+          .ie7 .carers-allowance .form-elements table th:first-child {
+            border-left: 1px solid #bec0c2; }
+      /* line 1677, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements table td {
+        font-size: 1.6rem;
+        padding: .8em;
+        border-left: 1px dotted #bfc1c3;
+        line-height: 1em; }
+        /* line 1682, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements table td span {
+          display: block;
+          padding: .35em 0; }
+        /* line 1686, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements table td:first-child {
+          border-left: 0;
+          text-align: center; }
+        /* line 1690, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .form-elements table td {
+          font-size: 16px; }
+        /* line 1693, stylesheets/carers-allowance.css.scss */
+        .ie7 .carers-allowance .form-elements table td {
+          border-left: 0;
+          border-bottom: 1px dotted #bfc1c3;
+          border-right: 1px dotted #bfc1c3; }
+          /* line 1697, stylesheets/carers-allowance.css.scss */
+          .ie7 .carers-allowance .form-elements table td:first-child {
+            border-left: 1px dotted #bfc1c3; }
+      @media screen and (max-width: 660px) {
+        /* line 1702, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements table .desc {
+          display: none; } }
+      /* line 1707, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements table caption {
+        text-indent: -9999px;
+        font-size: 0; }
+      /* line 1712, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-elements table.employment th, .carers-allowance .form-elements table.employment td {
+        text-align: left; }
+        /* line 1714, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements table.employment th:first-child, .carers-allowance .form-elements table.employment td:first-child {
+          width: 65%; }
+        /* line 1717, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .form-elements table.employment th.desc, .carers-allowance .form-elements table.employment td.desc {
+          width: 40%; }
+  /* line 1730, stylesheets/carers-allowance.css.scss */
+  .carers-allowance .prompt {
+    background: #d5e8f3;
+    padding: 1.4em 1em;
+    margin: 1em 0 0 -1em; }
+    @media screen and (max-width: 640px) {
+      /* line 1730, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prompt {
+        margin-left: 0; } }
+    /* line 1735, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prompt p {
+      margin-top: .25em; }
+      /* line 1737, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prompt p:first-child {
+        margin-top: 0; }
+    /* line 1741, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prompt.error {
+      background: #f2f2f2; }
+    /* line 1744, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prompt.submitting {
+      position: relative; }
+      @media screen and (max-width: 660px) {
+        /* line 1744, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .prompt.submitting {
+          padding-right: 4em; } }
+      /* line 1749, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prompt.submitting p {
+        margin: .5em 0 0 0;
+        font-weight: 600;
+        font-size: 1.7rem; }
+        /* line 1753, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .prompt.submitting p:first-child {
+          margin: 0; }
+        @media screen and (max-width: 660px) {
+          /* line 1749, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .prompt.submitting p {
+            margin-top: 1em; } }
+      /* line 1760, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prompt.submitting span {
+        position: absolute;
+        top: 1.4em;
+        right: .8em;
+        width: 36px;
+        height: 36px;
+        margin-top: -18px;
+        border-radius: 100px;
+        background: #008bc2;
+        color: #fff;
+        text-align: center;
+        font-size: 2.6rem;
+        font-weight: 700; }
+        /* line 1773, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .prompt.submitting span {
+          font-size: 26px; }
+        @media screen and (max-width: 660px) {
+          /* line 1760, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .prompt.submitting span {
+            width: 50px;
+            height: 50px;
+            font-size: 3.8rem;
+            top: 1em;
+            right: .5em; }
+            /* line 1777, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .prompt.submitting span {
+              font-size: 38px; } }
+    /* line 1784, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prompt.entitlement {
+      background: #fff;
+      border: 1px solid #a2a2a2;
+      margin-top: 1.5em; }
+      /* line 1787, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prompt.entitlement p {
+        font-weight: 600; }
+    /* line 1792, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prompt.entitlement-error {
+      margin-top: 1.5em;
+      background: #fef7f7;
+      border: 3px solid #df3034; }
+    /* line 1798, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prompt.breaks-prompt {
+      background: #fef7f7;
+      border: 3px solid #df3034;
+      position: relative;
+      display: none; }
+      /* line 1803, stylesheets/carers-allowance.css.scss */
+      .ie7 .carers-allowance .prompt.breaks-prompt {
+        overflow: hidden; }
+      /* line 1806, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prompt.breaks-prompt p {
+        padding-right: 5em;
+        margin-bottom: .35em; }
+        @media screen and (max-width: 500px) {
+          /* line 1806, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .prompt.breaks-prompt p {
+            line-height: 1.2em; } }
+      /* line 1811, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prompt.breaks-prompt span {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        width: 36px;
+        height: 36px;
+        margin-top: -18px;
+        border-radius: 100px;
+        background: #990c1a;
+        color: #fff;
+        text-align: center;
+        font-size: 2.6rem;
+        font-weight: 700; }
+        /* line 1824, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .prompt.breaks-prompt span {
+          font-size: 26px; }
+        @media screen and (max-width: 660px) {
+          /* line 1811, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .prompt.breaks-prompt span {
+            width: 50px;
+            height: 50px;
+            margin-top: -25px;
+            font-size: 3.8rem; }
+            /* line 1828, stylesheets/carers-allowance.css.scss */
+            .ie .carers-allowance .prompt.breaks-prompt span {
+              font-size: 38px; } }
+    /* line 1834, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prompt.breaks-error-prompt {
+      margin: 0; }
+    /* line 1837, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prompt.table-helper {
+      margin: 1em 1.15em 0 0;
+      border: 1px dotted #bfc1c3;
+      background: #f8f8f8; }
+      @media screen and (max-width: 640px) {
+        /* line 1837, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .prompt.table-helper {
+          margin-right: 0; } }
+      /* line 1844, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prompt.table-helper p {
+        font-size: 1.6rem; }
+        /* line 1846, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .prompt.table-helper p {
+          font-size: 16px; }
+    /* line 1851, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prompt.eligibility-prompt {
+      margin-left: 0; }
+      /* line 1853, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prompt.eligibility-prompt p {
+        font-size: 1.6rem;
+        margin: .75em 0 0 0; }
+        /* line 1856, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .prompt.eligibility-prompt p:first-child {
+          margin: 0; }
+        /* line 1859, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .prompt.eligibility-prompt p {
+          font-size: 16px; }
+      @media screen and (max-width: 480px) {
+        /* line 1851, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .prompt.eligibility-prompt {
+          margin-left: -2.5em; }
+          /* line 1865, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .prompt.eligibility-prompt span {
+            display: none; }
+          /* line 1868, stylesheets/carers-allowance.css.scss */
+          .carers-allowance .prompt.eligibility-prompt p {
+            padding-right: 0;
+            margin-top: 20px; } }
+    /* line 1874, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prompt.question-prompt {
+      margin: .5em 0 0 0;
+      border: 1px solid #a2a2a2;
+      background: #fff; }
+    /* line 1879, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .prompt.helper-prompt {
+      margin: .5em 0 1em 0;
+      border: 1px solid #a2a2a2;
+      background: #fff; }
+      /* line 1883, stylesheets/carers-allowance.css.scss */
+      .ie7 .carers-allowance .prompt.helper-prompt {
+        zoom: 1; }
+      /* line 1886, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prompt.helper-prompt p {
+        font-size: 1.6rem;
+        margin-top: 1em; }
+        /* line 1889, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .prompt.helper-prompt p:first-child {
+          margin: 0; }
+        /* line 1892, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .prompt.helper-prompt p.intro {
+          font-weight: 600; }
+        /* line 1895, stylesheets/carers-allowance.css.scss */
+        .ie .carers-allowance .prompt.helper-prompt p {
+          font-size: 16px; }
+      /* line 1899, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .prompt.helper-prompt ul {
+        margin-top: 1em;
+        padding-left: 1.4em;
+        list-style: disc; }
+        /* line 1903, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .prompt.helper-prompt ul li {
+          display: list-item;
+          padding: 0;
+          margin: 0; }
+  /* line 1916, stylesheets/carers-allowance.css.scss */
+  .carers-allowance .form-steps {
+    margin-top: 1.2em;
+    clear: both; }
+    @media screen and (max-width: 500px) {
+      /* line 1916, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-steps {
+        padding-left: 0; } }
+    /* line 1920, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-steps p {
+      padding-bottom: 0.2em;
+      clear: both; }
+    /* line 1924, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-steps a {
+      font-weight: 500; }
+      /* line 1926, stylesheets/carers-allowance.css.scss */
+      .ie7 .carers-allowance .form-steps a {
+        width: auto;
+        display: block;
+        padding: .4em 1em; }
+    /* line 1932, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .form-steps li {
+      margin-top: 1.6em; }
+      /* line 1934, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .form-steps li:first-child {
+        margin-top: 0; }
+  /* line 1942, stylesheets/carers-allowance.css.scss */
+  .carers-allowance .button {
+    font-size: 1.9rem;
+    line-height: 1em;
+    color: #fff;
+    box-shadow: 0 3px 0 #000;
+    border: 0;
+    padding: 0.4em 1em 0.25em 1em;
+    cursor: pointer;
+    -webkit-appearance: none;
+    display: inline-block;
+    margin: .8em .25em 0 0;
+    background: #006435;
+    font-weight: 500;
+    text-decoration: none;
+    top: 0;
+    position: relative;
+    overflow: visible; }
+    /* line 1959, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .button:focus {
+      outline: 3px solid #ffbf47; }
+    /* line 1962, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .button:before {
+      content: "";
+      background: transparent;
+      width: 100%;
+      height: 40px;
+      display: block;
+      position: absolute;
+      top: -3px;
+      left: 0; }
+    /* line 1972, stylesheets/carers-allowance.css.scss */
+    .ie .carers-allowance .button {
+      font-size: 19px; }
+    /* line 1975, stylesheets/carers-allowance.css.scss */
+    .ie7 .carers-allowance .button {
+      padding: .2em 1em;
+      float: left; }
+    /* line 1979, stylesheets/carers-allowance.css.scss */
+    .ie8 .carers-allowance .button {
+      padding: .4em 1em; }
+    /* line 1982, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .button:hover {
+      background: #004b27; }
+    /* line 1985, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .button:active {
+      top: 3px;
+      background: #004b27;
+      box-shadow: 0 0 0 transparent; }
+      /* line 1989, stylesheets/carers-allowance.css.scss */
+      .ie7 .carers-allowance .button:active, .ie8 .carers-allowance .button:active {
+        top: 0; }
+    /* line 1993, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .button.secondary {
+      background: #dee0e2;
+      color: #0b0c0c; }
+      /* line 1996, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .button.secondary:hover {
+        background: #d0d3d6; }
+    /* line 2000, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .button.warning {
+      background: #b10e1e; }
+      /* line 2002, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .button.warning:hover {
+        background: #990c1a; }
+    /* line 2006, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .button.disabled {
+      opacity: .3; }
+    /* line 2009, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .button.row {
+      font-size: 1.6rem;
+      margin: 0; }
+      /* line 2012, stylesheets/carers-allowance.css.scss */
+      .ie .carers-allowance .button.row {
+        font-size: 16px; }
+      @media screen and (max-width: 350px) {
+        /* line 2009, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .button.row {
+          font-size: 14px;
+          padding-left: .75em;
+          padding-right: .75em; } }
+  /* line 2026, stylesheets/carers-allowance.css.scss */
+  .carers-allowance .send-info {
+    margin: 2em 0 0 -1em;
+    padding: 1em;
+    border: 1px solid #a2a2a2; }
+    @media screen and (max-width: 640px) {
+      /* line 2026, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .send-info {
+        margin-left: 0; } }
+    /* line 2033, stylesheets/carers-allowance.css.scss */
+    .carers-allowance .send-info article {
+      margin-top: 1.25em; }
+      /* line 2035, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .send-info article:first-child {
+        margin: 0; }
+      /* line 2038, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .send-info article p {
+        font-size: 1.7rem; }
+      /* line 2041, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .send-info article h2 {
+        line-height: 1.2em; }
+      /* line 2044, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .send-info article ul {
+        margin-top: .35em; }
+        /* line 2046, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .send-info article ul li {
+          color: #555;
+          padding: 0 0 2px 20px;
+          line-height: 1.4em;
+          font-size: 1.7rem;
+          background: url("images/progress-tick.png") 0 3px no-repeat; }
+      /* line 2054, stylesheets/carers-allowance.css.scss */
+      .carers-allowance .send-info article.address {
+        margin-top: 1.25em; }
+        /* line 2056, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .send-info article.address span {
+          display: block;
+          font-size: 1.7rem;
+          color: #555; }
+        /* line 2061, stylesheets/carers-allowance.css.scss */
+        .carers-allowance .send-info article.address p {
+          margin-top: 1.25em; }
+
+/* line 2072, stylesheets/carers-allowance.css.scss */
+.content-panel {
+  margin-top: 2em; }
+
+/* line 2079, stylesheets/carers-allowance.css.scss */
+.coc-layout li label {
+  padding-right: 12em; }
+  @media screen and (max-width: 760px) {
+    /* line 2079, stylesheets/carers-allowance.css.scss */
+    .coc-layout li label {
+      padding-right: 0; } }
+
+/* line 2094, stylesheets/carers-allowance.css.scss */
+.assistive-info {
+  padding: 2em;
+  background: #333; }
+  /* line 2097, stylesheets/carers-allowance.css.scss */
+  .assistive-info a {
+    color: white !important;
+    /* temp */ }
+    /* line 2099, stylesheets/carers-allowance.css.scss */
+    .assistive-info a:hover {
+      color: #cccccc !important;
+      /* temp */ }
+  /* line 2103, stylesheets/carers-allowance.css.scss */
+  .assistive-info h1 {
+    color: #fff;
+    display: block;
+    line-height: 1.4em; }
+  /* line 2108, stylesheets/carers-allowance.css.scss */
+  .assistive-info p {
+    color: #ccc; }
+  /* line 2111, stylesheets/carers-allowance.css.scss */
+  .assistive-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0 3em 0; }
+    /* line 2115, stylesheets/carers-allowance.css.scss */
+    .assistive-info table caption {
+      text-align: left;
+      font-size: 20px;
+      font-weight: 600;
+      padding-bottom: 1em;
+      color: #fff; }
+    /* line 2122, stylesheets/carers-allowance.css.scss */
+    .assistive-info table th {
+      text-align: left;
+      padding: .5em .6em;
+      color: #eee; }
+    /* line 2129, stylesheets/carers-allowance.css.scss */
+    .assistive-info table td {
+      border: 1px solid #666;
+      background: #fff;
+      padding: .8em .6em;
+      -webkit-transition: all .5s ease-out;
+      -moz-transition: all .5s ease;
+      -o-transition: all .5s ease; }
+      /* line 2136, stylesheets/carers-allowance.css.scss */
+      .assistive-info table td:nth-child(even) {
+        background: #f3f3f3; }
+      /* line 2139, stylesheets/carers-allowance.css.scss */
+      .assistive-info table td:hover {
+        background: #ddd; }
+      /* line 2142, stylesheets/carers-allowance.css.scss */
+      .assistive-info table td span {
+        text-indent: -9999px;
+        display: inline-block;
+        font-size: 0; }
+
+/* line 2153, stylesheets/carers-allowance.css.scss */
+.review {
+  padding-bottom: 3em; }
+  /* line 2155, stylesheets/carers-allowance.css.scss */
+  .review .intro {
+    margin-top: 1.6em;
+    padding-right: 18em; }
+    @media screen and (max-width: 800px) {
+      /* line 2155, stylesheets/carers-allowance.css.scss */
+      .review .intro {
+        padding-right: 0; } }
+  /* line 2162, stylesheets/carers-allowance.css.scss */
+  .review h2 {
+    margin-top: 1.8em; }
+  /* line 2165, stylesheets/carers-allowance.css.scss */
+  .review dl {
+    border-bottom: 1px solid #ccc; }
+    /* line 2167, stylesheets/carers-allowance.css.scss */
+    .review dl dt, .review dl dd {
+      display: inline-block;
+      width: 25%;
+      margin: 0;
+      padding: 8px 0 6px 0;
+      border-top: 1px solid #ccc;
+      font-size: 18px;
+      vertical-align: top;
+      line-height: 1.2em; }
+      @media screen and (max-width: 640px) {
+        /* line 2167, stylesheets/carers-allowance.css.scss */
+        .review dl dt, .review dl dd {
+          float: none;
+          display: block;
+          width: 100%;
+          font-weight: 800;
+          padding: 8px 0 0 0; } }
+    /* line 2184, stylesheets/carers-allowance.css.scss */
+    .review dl dd {
+      width: 72%;
+      padding-left: 3%;
+      margin-left: -4px; }
+      @media screen and (max-width: 640px) {
+        /* line 2184, stylesheets/carers-allowance.css.scss */
+        .review dl dd {
+          width: 100%;
+          font-weight: 300;
+          border-top: none;
+          padding: 0 0 6px 0;
+          padding-left: 0;
+          margin-left: 0; } }
+
+/* ==========================================================================
+   clearfix
+   ========================================================================== */
+/* line 2211, stylesheets/carers-allowance.css.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+/* line 2216, stylesheets/carers-allowance.css.scss */
+.clearfix:after {
+  clear: both; }
+
+/* firefix radio fix */
+@-moz-document url-prefix() {
+  /* line 2224, stylesheets/carers-allowance.css.scss */
+  .radio input[type="radio"] {
+    top: 15px !important;
+    /* temp */
+    left: 12px !important;
+    /* temp */ } }
+
+/* Header - Global Overrides - inc !important overrides */
+/* line 2234, stylesheets/carers-allowance.css.scss */
+html {
+  background: #dee0e2 !important; }
+
+/* line 2235, stylesheets/carers-allowance.css.scss */
+#global-header .header-wrapper {
+  padding: 0.5em 1px !important; }
+
+/* line 2237, stylesheets/carers-allowance.css.scss */
+.carers-allowance-footer {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important; }
+
+/* line 2238, stylesheets/carers-allowance.css.scss */
+.carers-allowance-footer .footer-meta {
+  border-top: none !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important; }
+
+/* line 2239, stylesheets/carers-allowance.css.scss */
+.carers-allowance-footer .footer-meta .copyright {
+  position: relative;
+  top: 2px; }
+
+@media screen and (max-width: 640px) {
+  /* line 2240, stylesheets/carers-allowance.css.scss */
+  #footer .footer-meta nav {
+    text-align: center; } }

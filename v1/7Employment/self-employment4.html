@@ -176,86 +176,85 @@
 
       <div id="section-content" class="grid">
         <div class="inner-block">
-          
-<h1>Review your application</h1>
+          <h1>About self-employed</h1>
 
-<p class="intro text">Before submitting your application please check what you've told us below. If you see any mistakes you can <a href="#">go back and correct them</a>.</p>
+<div class="completed">
+    <ul aria-label="Completed questions"> 
+        <li>
+            <h3>Your job</h3>
+            <a href="self-employment1.html">Change these answers</a>
+        </li>	                        
+        <li>
+            <h3>Your accounts</h3>
+            <a href="self-employment2.html">Change these answers</a>
+        </li>        
+        <li>
+            <h3>Pensions and expenses</h3>
+            <a href="self-employment3.html">Change these answers</a>
+        </li>    
+    </ul>
+</div>
 
-<h2>About you</h2>
-<table class="review-answers">
-	<tr><td>Name</td>
-	<td>Mr Christopher Howard Dennett</td></tr>
-	<!--
-	<tr><td>Other surname or maiden name</dt>
-	<td>Smith</td></tr>
-	-->
-	<tr><td>National Insurance number</dt>
-	<td>JW 55 55 55 A</td></tr>
-	<tr><td>Date of birth</dt>
-	<td>26 June 1978</td></tr>
-	<tr><td>Address</dt>
-	<td>10 Redhill Drive, Kew, Southport PR8 6XX</td></tr>
-	<tr><td>Mobile number</dt>
-	<td>07737 777777</td></tr>
-	<!--
-	<tr><td>If you have speech or hearing difficulties, would you like us to contact you by textphone?</dt>
-	<td>Yes</td></tr>-->
-	<tr><td>Start date of claim</dt>
-	<td>22 July 2014</td></tr>
-	<tr><td>Nationality</dt>
-	<td>British</td></tr>
-	<!--
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>-->
-	<!--
-	<tr><td>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</dt>
-	<td>No</td></tr>
-	-->
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>
-	<tr><td>Time spent outside of England, Scotland or Wales?</dt>
-	<td>No</td></tr>
-	<tr><td>Do you, or any member of your family, receive any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Have you, or a member of your family, made a claim for any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Are you, or a member of your family, working in or paying insurance to, another EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-</table>
+        <fieldset class="form-elements">
+        <legend>Childcare expenses while you are at work</legend>
 
-	
-<h2>About your partner</h2>
+         <ul>
+			<li>
+				<label for="name">Name of the person/organisation who looks after your child/children</label>
+			 	<input type="text" maxlength="60" autocomplete="off" value="" name="name" id="name">
+			</li>
+			
+ 			<li class="currency"> 
+				<label for="how-much-child-care">How much do you pay them?</label>
+				<input type="tel" autocomplete="off" maxlength="60" value="" title="how-much-child-care" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much-child-care" id="how-much-child-care">
+			</li>
+			<li>
+				<label for="how-often-pay-child-care">How often do you pay them?</label>
+    			<select name="how-often-pay-child-care" id="how-often-pay-child-care">
+		            <option value="">Please select</option>
+		            <option value="02">Weekly</option> 
+		            <option value="03">Fortnightly</option>
+		            <option value="04">Four-weekly</option>
+		            <option value="05">Monthly</option>
+		            <option value="other">Other</option>
+    			</select>
+    		</li>
+    		<li style="display: none;" class="other-detail">
+    			<textarea autocomplete="off" maxlength="60" placeholder="Please specify..." name="how-often-pay-child-care-other" id="how-often-pay-child-care-other"></textarea>
+    		</li>
+			<li>
+				<label for="what-relation-you">What relation, if any, is this person/organisation to you?</label>
+				<input type="text" id="what-relation-you">
+			</li>	
+		<!--<li>
+				<label for="1dc1a9e7bc37f38c09bcd8645e55eab78f057e36db53cbb8c4cc2da2c0119bc1">What relation, if any, is the person/organisation to your Partner/Spouse?</label>
+			    <input type="text">
+			</li>-->
+			<li>
+				<label for="what-relation-person-care-for">What relation, if any, is this person/organisation to the person you care for?</label>
+			     <input type="text" id="what-relation-person-care-for">
+			</li>        
+			</ul>
+    </fieldset>
 
-<table class="review-answers">
-	<tr>
-	<td>Name</td>
-	<td>Mrs Karen Jane Dennett</td>
-	</tr>
-	<tr>
-	<td>Other surname or maiden name</td>
-	<td>Smith</td>
-	</tr>
-	<tr>
-	<td>National Insurance number</td>
-	<td>JW 55 55 55 A</td>
-	</tr>
-	<tr>
-	<td>Date of birth</td>
-	<td>26 June 1978</td>
-	</tr>
-	<tr>
-		<td>Have you separated from your partner since your claim date?</td>
-		<td>No</td>
-	</tr>
-</table>
+	<div class="form-steps">
+		<a href="self-employment3.html" class="button secondary">Back</a>
+		<a href="/8Other-Money/other-money1.html" class="button">Next</a>
+	</div>	
 
-<br><br><br><br><br><p>[MORE SECTIONS GO HERE]</p>
+<script>
 
-<h2>Is the above information correct?</h2>
+// Show & Hide Fields
 
-<p><a href="" class="button">Yes, submit my application</a></p>
-<p><a href="">No, I need to go back and correct something</a>.</p>
+$(document).ready(function() {  
+	$('#how-often-pay-child-care').change(function(){
+		if ($(this).val() == 'other') {
+			$(this).parents().next('.other-detail').show('medium');	
+		}
+	});
+});
 
+</script>
         </div>
       </div>
 

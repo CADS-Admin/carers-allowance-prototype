@@ -176,86 +176,86 @@
 
       <div id="section-content" class="grid">
         <div class="inner-block">
-          
-<h1>Review your application</h1>
+          <h1>About you - the Carer</h1>
 
-<p class="intro text">Before submitting your application please check what you've told us below. If you see any mistakes you can <a href="#">go back and correct them</a>.</p>
+<div class="completed">
+	<ul aria-label="Completed questions">
+		<li><h3>Your details</h3><a href="/2About/about1.html">Change these answers</a></li>      
+		<li><h3>Your contact details</h3><a href="/2About/about2.html">Change these answers</a></li> 
+		<li><h3>Your claim date: <!--#include virtual="../public/_includes/ui/claim-date.shtml" --></h3> <a href="/2About/about3.html">Change this answer</a></li>
+		<li><h3>Your nationality and residency</h3> <a href="/2About/about4.html">Change these answers</a></li>       
+    </ul>
+ </div>
 
-<h2>About you</h2>
-<table class="review-answers">
-	<tr><td>Name</td>
-	<td>Mr Christopher Howard Dennett</td></tr>
-	<!--
-	<tr><td>Other surname or maiden name</dt>
-	<td>Smith</td></tr>
-	-->
-	<tr><td>National Insurance number</dt>
-	<td>JW 55 55 55 A</td></tr>
-	<tr><td>Date of birth</dt>
-	<td>26 June 1978</td></tr>
-	<tr><td>Address</dt>
-	<td>10 Redhill Drive, Kew, Southport PR8 6XX</td></tr>
-	<tr><td>Mobile number</dt>
-	<td>07737 777777</td></tr>
-	<!--
-	<tr><td>If you have speech or hearing difficulties, would you like us to contact you by textphone?</dt>
-	<td>Yes</td></tr>-->
-	<tr><td>Start date of claim</dt>
-	<td>22 July 2014</td></tr>
-	<tr><td>Nationality</dt>
-	<td>British</td></tr>
-	<!--
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>-->
-	<!--
-	<tr><td>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</dt>
-	<td>No</td></tr>
-	-->
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>
-	<tr><td>Time spent outside of England, Scotland or Wales?</dt>
-	<td>No</td></tr>
-	<tr><td>Do you, or any member of your family, receive any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Have you, or a member of your family, made a claim for any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Are you, or a member of your family, working in or paying insurance to, another EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-</table>
-
+<fieldset class="form-elements">
+<legend>Time outside of England, Scotland or Wales</legend>
 	
-<h2>About your partner</h2>
+<!-- Prototype only
+<p>We understand if you don't have exact details for each period spent abroad, but please add as much information as possible as it will help us process your claim.</p> -->
+			
+<ul class="group">
+	<li>
+		<label for="791ffa687e713e5e37c2f76a626591c5">Which country did you go to?</label>
+		<input type="text" autocomplete="off" maxlength="35" value="" name="791ffa687e713e5e37c2f76a626591c5" id="791ffa687e713e5e37c2f76a626591c5">
+	</li>
+	<li>
+		<p>Date you left? <em>(optional)</em></p>
+		<!--#include virtual="../public/_includes/ui/date.shtml" -->
+	</li>
 
-<table class="review-answers">
-	<tr>
-	<td>Name</td>
-	<td>Mrs Karen Jane Dennett</td>
-	</tr>
-	<tr>
-	<td>Other surname or maiden name</td>
-	<td>Smith</td>
-	</tr>
-	<tr>
-	<td>National Insurance number</td>
-	<td>JW 55 55 55 A</td>
-	</tr>
-	<tr>
-	<td>Date of birth</td>
-	<td>26 June 1978</td>
-	</tr>
-	<tr>
-		<td>Have you separated from your partner since your claim date?</td>
-		<td>No</td>
-	</tr>
-</table>
+	<li>
+		<p>Date you returned? <em>(optional)</em></p>
+		<!--#include virtual="../public/_includes/ui/date.shtml" -->
+	</li>
+	<li>
+		<label for="reason-for-being-there">Reason for being there? <em>(optional)</em></label>
+		<select selectwithother="true" name="reason-for-being-there" id="reason-for-being-there">
+			<option value="">Please select</option>
+			<option value="Home">Home</option>
+			<option value="Holiday">Holiday</option>
+			<option value="Work">Work</option>
+			<option value="other">Other</option>
+		</select>
+	</li>
+	<li style="display: none;" class="other-detail">
+		<!--<label for="1636b11acf749ab1dd09d9c90cdffc84067e22d399db39adc0112c4b46dde89f">Reason for being there <em>(optional)</em></label>-->
+		<textarea autocomplete="off" maxlength="60" placeholder="Please specify..." name="a3e3e88439222ec8f8d8844f818b1d0c067e22d399db39adc0112c4b46dde89f" id="1636b11acf749ab1dd09d9c90cdffc84067e22d399db39adc0112c4b46dde89f"></textarea>
+		<!--<p class="helper right">60 characters left</p>-->
+	</li>
+	<li>
+		<p>Was the person you care for with you?</p>
+		<ul id="7f3fe5e437e7de35be942a06d3a6fd26" class="radio">
+			<li>
+				<input type="radio" value="yes"  name="7f3fe5e437e7de35be942a06d3a6fd26" id="a1ff2d4f13aea67ba8fb0e98dc2b59d94fba59135a0c9715a3a441c94cd2552a">
+				<label for="a1ff2d4f13aea67ba8fb0e98dc2b59d94fba59135a0c9715a3a441c94cd2552a">Yes</label>
+			</li>
+			<li>
+				<input type="radio" value="no"  name="7f3fe5e437e7de35be942a06d3a6fd26" id="b32123a0129f8a0e8e034551960f888b067e22d399db39adc0112c4b46dde89f">
+				<label for="b32123a0129f8a0e8e034551960f888b067e22d399db39adc0112c4b46dde89f">No</label>
+			</li>
+		</ul>
+	</li>
+</ul>
+</fieldset>
 
-<br><br><br><br><br><p>[MORE SECTIONS GO HERE]</p>
+<div class="form-steps">
+	<a href="about5.html" class="button secondary">Back</a>
+	<a href="about6.html" class="button">Next</a>
+</div><!-- / form steps -->
 
-<h2>Is the above information correct?</h2>
+<script>
 
-<p><a href="" class="button">Yes, submit my application</a></p>
-<p><a href="">No, I need to go back and correct something</a>.</p>
+// Show & Hide Fields
 
+$(document).ready(function() {  
+	$('#reason-for-being-there').change(function(){
+		if ($(this).val() == 'other') {
+			$(this).parents().next('.other-detail').show('medium');	
+		}
+	});
+});
+
+</script> 
         </div>
       </div>
 

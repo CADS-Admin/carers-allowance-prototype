@@ -176,86 +176,65 @@
 
       <div id="section-content" class="grid">
         <div class="inner-block">
-          
-<h1>Review your application</h1>
+          <h1>About the care you provide</h1>
 
-<p class="intro text">Before submitting your application please check what you've told us below. If you see any mistakes you can <a href="#">go back and correct them</a>.</p>
+<fieldset class="form-elements">
 
-<h2>About you</h2>
-<table class="review-answers">
-	<tr><td>Name</td>
-	<td>Mr Christopher Howard Dennett</td></tr>
-	<!--
-	<tr><td>Other surname or maiden name</dt>
-	<td>Smith</td></tr>
-	-->
-	<tr><td>National Insurance number</dt>
-	<td>JW 55 55 55 A</td></tr>
-	<tr><td>Date of birth</dt>
-	<td>26 June 1978</td></tr>
-	<tr><td>Address</dt>
-	<td>10 Redhill Drive, Kew, Southport PR8 6XX</td></tr>
-	<tr><td>Mobile number</dt>
-	<td>07737 777777</td></tr>
-	<!--
-	<tr><td>If you have speech or hearing difficulties, would you like us to contact you by textphone?</dt>
-	<td>Yes</td></tr>-->
-	<tr><td>Start date of claim</dt>
-	<td>22 July 2014</td></tr>
-	<tr><td>Nationality</dt>
-	<td>British</td></tr>
-	<!--
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>-->
-	<!--
-	<tr><td>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</dt>
-	<td>No</td></tr>
-	-->
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>
-	<tr><td>Time spent outside of England, Scotland or Wales?</dt>
-	<td>No</td></tr>
-	<tr><td>Do you, or any member of your family, receive any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Have you, or a member of your family, made a claim for any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Are you, or a member of your family, working in or paying insurance to, another EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-</table>
+<legend>Details of the person you care for</legend>
 
+<ul>
+	<li>
+		<label for="title">Title</label>
+		<!--#include virtual="../public/_includes/ui/title.shtml" -->
+	</li>
+	<!--//#include virtual="../public/_includes/ui/name.shtml" -->
+	<li>
+		<label for="fullname">Full name</label>
+		<input type="text"
+	</li>
+	<li>
+		<p>National Insurance number <em>(optional)</em></p>
+		<!--#include virtual="../public/_includes/ui/nino.shtml" -->	
+	</li>
+	<li>
+		<p>Date of birth</p>
+		<p class="helper">e.g. 03 05 1979</p>
+		<!--#include virtual="../public/_includes/ui/date.shtml" -->
+		<p>&nbsp;</p>
+	</li>
 	
-<h2>About your partner</h2>
+</ul>
+	
+<fieldset class="form-elements">
+	
+<legend>Contact details of the person you care for</legend>
 
-<table class="review-answers">
-	<tr>
-	<td>Name</td>
-	<td>Mrs Karen Jane Dennett</td>
-	</tr>
-	<tr>
-	<td>Other surname or maiden name</td>
-	<td>Smith</td>
-	</tr>
-	<tr>
-	<td>National Insurance number</td>
-	<td>JW 55 55 55 A</td>
-	</tr>
-	<tr>
-	<td>Date of birth</td>
-	<td>26 June 1978</td>
-	</tr>
-	<tr>
-		<td>Have you separated from your partner since your claim date?</td>
-		<td>No</td>
-	</tr>
-</table>
+<p style="margin: 0 0 10px 0;"><input type="checkbox" secondary="true" value="true" name="use-my-address" id="use-my-address" style="margin: 0 5px 0 0;">
+<label for="use-my-address" style="font-size: 1.7rem;">Use my address</label></p>
 
-<br><br><br><br><br><p>[MORE SECTIONS GO HERE]</p>
+<ul>
+	<!--<li>
+		<p>Address</p>
+		<//!--#include virtual="../public/_includes/ui/address.shtml"
+	</li>
+	<li>
+		<label for="postcode">Postcode <em>(optional)</em></label>
+		<input type="text" maxlength="60" autocomplete="off" class="postcode" value="" name="postcode" id="postcode">
+	</li>-->
 
-<h2>Is the above information correct?</h2>
+	<!--#include virtual="../public/_includes/ui/address-multiple.shtml"-->
+	<li>
+		<label for="phone">Phone number <em>(optional)</em></label>
+		<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="phone" id="phone">
+	</li>
+</ul>
 
-<p><a href="" class="button">Yes, submit my application</a></p>
-<p><a href="">No, I need to go back and correct something</a>.</p>
+</fieldset>
 
+<div class="form-steps">
+	<a href="/3Partner/partner1.html" class="button secondary">Back</a>
+	<a href="/4Care/care2.html" class="button">Next</a>
+</div><!-- / form steps -->
         </div>
       </div>
 

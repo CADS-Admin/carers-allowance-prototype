@@ -176,85 +176,85 @@
 
       <div id="section-content" class="grid">
         <div class="inner-block">
-          
-<h1>Review your application</h1>
+          <h1>Education</h1>
 
-<p class="intro text">Before submitting your application please check what you've told us below. If you see any mistakes you can <a href="#">go back and correct them</a>.</p>
+<fieldset class="form-elements">   
 
-<h2>About you</h2>
-<table class="review-answers">
-	<tr><td>Name</td>
-	<td>Mr Christopher Howard Dennett</td></tr>
-	<!--
-	<tr><td>Other surname or maiden name</dt>
-	<td>Smith</td></tr>
-	-->
-	<tr><td>National Insurance number</dt>
-	<td>JW 55 55 55 A</td></tr>
-	<tr><td>Date of birth</dt>
-	<td>26 June 1978</td></tr>
-	<tr><td>Address</dt>
-	<td>10 Redhill Drive, Kew, Southport PR8 6XX</td></tr>
-	<tr><td>Mobile number</dt>
-	<td>07737 777777</td></tr>
-	<!--
-	<tr><td>If you have speech or hearing difficulties, would you like us to contact you by textphone?</dt>
-	<td>Yes</td></tr>-->
-	<tr><td>Start date of claim</dt>
-	<td>22 July 2014</td></tr>
-	<tr><td>Nationality</dt>
-	<td>British</td></tr>
-	<!--
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>-->
-	<!--
-	<tr><td>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</dt>
-	<td>No</td></tr>
-	-->
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>
-	<tr><td>Time spent outside of England, Scotland or Wales?</dt>
-	<td>No</td></tr>
-	<tr><td>Do you, or any member of your family, receive any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Have you, or a member of your family, made a claim for any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Are you, or a member of your family, working in or paying insurance to, another EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-</table>
+<p class="security-message">Your claim date is <strong style="text-decoration: none;"><!--#include virtual="../public/_includes/ui/claim-date.shtml" --></strong>.</p>
+ 
+<ul>
+	<li>
+		<p>Have you been on a course of education since your claim date?</p>
+		<p class="helper">This includes any full-time, part-time, or other courses (e.g. home study)</p>
+		<ul class="radio" id="have_you_been_on_a_course_of_education">
+			<li>
+				<input id="education_yes" name="have_you_been_on_a_course_of_education" type="radio" value="yes"> 
+				<label for="education_yes">Yes</label></li>
+			<li>
+				<input id="education_no" name="have_you_been_on_a_course_of_education" type="radio" value="no"> 
+				<label for="education_no">No</label>
+			</li>
+		</ul>
+	</li>
+</ul>
+</fieldset>
 
-	
-<h2>About your partner</h2>
+<fieldset class="form-elements" id="course-details" style="display: none;">
+    
+<legend>Course details</legend>
+<ul>
+    <li >
+        <label for="">Course title</label>
+        <input type="text" id="" name="" value="" maxLength="50" autocomplete="off">
+    </li>
+    <li >
+        <label for="">Where are you studying?</label>
+        <p class="helper">e.g. name of your school, college or university</p>
+        <input type="text" id="" name="" value="" maxLength="50" autocomplete="off">
+    </li>
 
-<table class="review-answers">
-	<tr>
-	<td>Name</td>
-	<td>Mrs Karen Jane Dennett</td>
-	</tr>
-	<tr>
-	<td>Other surname or maiden name</td>
-	<td>Smith</td>
-	</tr>
-	<tr>
-	<td>National Insurance number</td>
-	<td>JW 55 55 55 A</td>
-	</tr>
-	<tr>
-	<td>Date of birth</td>
-	<td>26 June 1978</td>
-	</tr>
-	<tr>
-		<td>Have you separated from your partner since your claim date?</td>
-		<td>No</td>
-	</tr>
-</table>
+            <li >
+                <label for="">Name of your main teacher or tutor </label>
+                <input type="text" id="" name="" value="" maxLength="50" autocomplete="off">
+            </li>
+            <li>
+                <label for="">Course contact number (optional)</label>
+                <p class="helper">e.g. the phone number for your department or tutor</p>
+                <input type="text" id="" name="" value="" maxLength="50" autocomplete="off">   
+            </li>
 
-<br><br><br><br><br><p>[MORE SECTIONS GO HERE]</p>
+            <li>
+                <p>When did you start the course?</p>
+                
+                <!--#include virtual="../public/_includes/ui/date.shtml" -->
+            	<p class="helper">e.g. 01 09 2013</p>
+            </li>
+            <li>
+                <p>When did the course end or when will you finish?</p>
+                
+                <!--#include virtual="../public/_includes/ui/date.shtml" -->
+                <p class="helper">e.g. 01 07 2014</p>
+             </li>
+        </ul>
+    </li>
+</ul>
+</fieldset>
 
-<h2>Is the above information correct?</h2>
+<nav class="form-steps">
+	<a href="/4Care/care4.html" class="button secondary">Back</a>
+	<a href="/7Employment/employment-guard.html" class="button">Next</a>
+</nav><!-- / form steps -->
 
-<p><a href="" class="button">Yes, submit my application</a></p>
-<p><a href="">No, I need to go back and correct something</a>.</p>
+<script>
+	$(document).ready(function() {    
+		$('#education_yes').click(function(){
+			$('#course-details').show('medium');
+		});
+		$('#education_no').click(function(){
+			$('#course-details').hide('medium');
+		});
+	}); 
+</script>
 
         </div>
       </div>

@@ -176,86 +176,79 @@
 
       <div id="section-content" class="grid">
         <div class="inner-block">
-          
-<h1>Review your application</h1>
+          <h1>About self-employed</h1>
 
-<p class="intro text">Before submitting your application please check what you've told us below. If you see any mistakes you can <a href="#">go back and correct them</a>.</p>
+<fieldset class="form-elements">
 
-<h2>About you</h2>
-<table class="review-answers">
-	<tr><td>Name</td>
-	<td>Mr Christopher Howard Dennett</td></tr>
-	<!--
-	<tr><td>Other surname or maiden name</dt>
-	<td>Smith</td></tr>
-	-->
-	<tr><td>National Insurance number</dt>
-	<td>JW 55 55 55 A</td></tr>
-	<tr><td>Date of birth</dt>
-	<td>26 June 1978</td></tr>
-	<tr><td>Address</dt>
-	<td>10 Redhill Drive, Kew, Southport PR8 6XX</td></tr>
-	<tr><td>Mobile number</dt>
-	<td>07737 777777</td></tr>
-	<!--
-	<tr><td>If you have speech or hearing difficulties, would you like us to contact you by textphone?</dt>
-	<td>Yes</td></tr>-->
-	<tr><td>Start date of claim</dt>
-	<td>22 July 2014</td></tr>
-	<tr><td>Nationality</dt>
-	<td>British</td></tr>
-	<!--
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>-->
-	<!--
-	<tr><td>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</dt>
-	<td>No</td></tr>
-	-->
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>
-	<tr><td>Time spent outside of England, Scotland or Wales?</dt>
-	<td>No</td></tr>
-	<tr><td>Do you, or any member of your family, receive any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Have you, or a member of your family, made a claim for any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Are you, or a member of your family, working in or paying insurance to, another EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-</table>
+<legend>Your job</legend>
 
-	
-<h2>About your partner</h2>
+<ul>
+	<li>	
+		<p>Are you self-employed now?</p>		
+		<ul id="self-employed-now" class="radio">
+	        <li>
+	            <input type="radio" value="yes" name="self-employed-now" id="self-employed-now-yes">
+	            <label for="self-employed-now-yes">Yes</label>
+	        </li>   
+	        <li>
+	            <input type="radio" value="no" name="self-employed-now" id="self-employed-now-no">
+	            <label for="self-employed-now-no">No</label>
+	        </li>
+		</ul>
+	</li>	
+	<li>
+		<p>When did you start this self employed work?</p>			
+		<!--#include virtual="../public/_includes/ui/date.shtml" -->
+		<p class="helper">e.g. 03 05 2013</p>
+	</li>              
+	<li style="display: none;" class="other-detail">
+		<ul>
+			<li>
+				<p>When did you finish this self employed work?</p>
+				<!--#include virtual="../public/_includes/ui/date.shtml" -->
+				<p class="helper">e.g. 01 02 2014</p>					           
+			</li>                
+			<li>
+				<p>Has your business ceased trading? <em>(optional)</em></p>
+				<ul id="f0a91a55e7721cc8b43b5f58f7f5db0ffd97fef32d82cc816e9098ade048a22a" class="radio">	    
+			        <li>
+			            <input type="radio" value="yes"  name="f0a91a55e7721cc8b43b5f58f7f5db0ffd97fef32d82cc816e9098ade048a22a" id="f0a91a55e7721cc8b43b5f58f7f5db0fac6ef4499aa3353874efc52c5d65466b">
+			            <label for="f0a91a55e7721cc8b43b5f58f7f5db0fac6ef4499aa3353874efc52c5d65466b">Yes</label>
+			        </li>   
+			        <li>
+			            <input type="radio" value="no"  name="f0a91a55e7721cc8b43b5f58f7f5db0ffd97fef32d82cc816e9098ade048a22a" id="f0a91a55e7721cc8b43b5f58f7f5db0f4e2bd43941f4010eaf03e59371678b2c">
+			            <label for="f0a91a55e7721cc8b43b5f58f7f5db0f4e2bd43941f4010eaf03e59371678b2c">No</label>
+			        </li>
+				</ul>
+			</li>
+		 </ul>
+	</li>
+	<li>
+		<label for="819a9061fb5fe0d7957705f5514f38cb088431fd8c8afc437b2464469ebf9dc8">What type of business is your self employed work?</label>
+		<input type="text" autocomplete="off" maxlength="60" value="" name="819a9061fb5fe0d7957705f5514f38cb088431fd8c8afc437b2464469ebf9dc8" id="819a9061fb5fe0d7957705f5514f38cb088431fd8c8afc437b2464469ebf9dc8">
+	</li>	
+</ul>
+</fieldset>
+			
+<div class="form-steps">
+	<a href="employment-guard.html" class="button secondary">Back</a>
+	<a href="self-employment2.html" class="button">Next</a>
+</div><!-- / form steps -->
 
-<table class="review-answers">
-	<tr>
-	<td>Name</td>
-	<td>Mrs Karen Jane Dennett</td>
-	</tr>
-	<tr>
-	<td>Other surname or maiden name</td>
-	<td>Smith</td>
-	</tr>
-	<tr>
-	<td>National Insurance number</td>
-	<td>JW 55 55 55 A</td>
-	</tr>
-	<tr>
-	<td>Date of birth</td>
-	<td>26 June 1978</td>
-	</tr>
-	<tr>
-		<td>Have you separated from your partner since your claim date?</td>
-		<td>No</td>
-	</tr>
-</table>
+<script>
 
-<br><br><br><br><br><p>[MORE SECTIONS GO HERE]</p>
+// Show & Hide Fields
 
-<h2>Is the above information correct?</h2>
+$(document).ready(function() {  
+	$('#self-employed-now-no').click(function(){
+		$('.other-detail').show('medium');
+	});
+	$('#self-employed-now-yes').click(function(){
+		$('.other-detail').hide('medium');
+	});
+});
 
-<p><a href="" class="button">Yes, submit my application</a></p>
-<p><a href="">No, I need to go back and correct something</a>.</p>
-
+</script>
         </div>
       </div>
 

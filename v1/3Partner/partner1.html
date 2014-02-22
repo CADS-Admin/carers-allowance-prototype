@@ -176,86 +176,73 @@
 
       <div id="section-content" class="grid">
         <div class="inner-block">
-          
-<h1>Review your application</h1>
+          <h1>About your partner/spouse</h1>
 
-<p class="intro text">Before submitting your application please check what you've told us below. If you see any mistakes you can <a href="#">go back and correct them</a>.</p>
+<p class="security-message">Your claim date is <strong style="text-decoration: none;"><!--#include virtual="../public/_includes/ui/claim-date.shtml" --></strong>.</p>
 
-<h2>About you</h2>
-<table class="review-answers">
-	<tr><td>Name</td>
-	<td>Mr Christopher Howard Dennett</td></tr>
-	<!--
-	<tr><td>Other surname or maiden name</dt>
-	<td>Smith</td></tr>
-	-->
-	<tr><td>National Insurance number</dt>
-	<td>JW 55 55 55 A</td></tr>
-	<tr><td>Date of birth</dt>
-	<td>26 June 1978</td></tr>
-	<tr><td>Address</dt>
-	<td>10 Redhill Drive, Kew, Southport PR8 6XX</td></tr>
-	<tr><td>Mobile number</dt>
-	<td>07737 777777</td></tr>
-	<!--
-	<tr><td>If you have speech or hearing difficulties, would you like us to contact you by textphone?</dt>
-	<td>Yes</td></tr>-->
-	<tr><td>Start date of claim</dt>
-	<td>22 July 2014</td></tr>
-	<tr><td>Nationality</dt>
-	<td>British</td></tr>
-	<!--
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>-->
-	<!--
-	<tr><td>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</dt>
-	<td>No</td></tr>
-	-->
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>
-	<tr><td>Time spent outside of England, Scotland or Wales?</dt>
-	<td>No</td></tr>
-	<tr><td>Do you, or any member of your family, receive any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Have you, or a member of your family, made a claim for any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Are you, or a member of your family, working in or paying insurance to, another EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-</table>
+<fieldset class="form-elements">
 
-	
-<h2>About your partner</h2>
+<legend>Partner/Spouse details</legend>
 
-<table class="review-answers">
-	<tr>
-	<td>Name</td>
-	<td>Mrs Karen Jane Dennett</td>
-	</tr>
-	<tr>
-	<td>Other surname or maiden name</td>
-	<td>Smith</td>
-	</tr>
-	<tr>
-	<td>National Insurance number</td>
-	<td>JW 55 55 55 A</td>
-	</tr>
-	<tr>
-	<td>Date of birth</td>
-	<td>26 June 1978</td>
-	</tr>
-	<tr>
-		<td>Have you separated from your partner since your claim date?</td>
-		<td>No</td>
-	</tr>
-</table>
+<!--<p class="helper" style="margin-bottom: 1em">Enter their name as shown on your birth certificate or passport</p>-->
 
-<br><br><br><br><br><p>[MORE SECTIONS GO HERE]</p>
+<ul>
+	<!--<li>
+		<label for="date">Title</label>
+		#include virtual="../public/_includes/ui/title.shtml"
+	</li>-->
+	<li>
+		<label for="fullname">Full name</label>
+		<input type="text"
+	</li>
+	<li>
+		<p>National Insurance number <em>(optional)</em></p>
+		<!--#include virtual="../public/_includes/ui/nino.shtml" -->
+	</li>
+	<li>
+		<label for="nationality">Nationality</label>
+		<p style="color: #6f777b; margin: 0 0 10px 0; font-size: 19px;">If they have a current passport, please give their nationality as shown on their passport</p>
+		<!--#include virtual="../public/_includes/ui/nationality.shtml" -->
+	</li>
+	<li>
+		<p>Date of birth</p>
+		<p class="helper">e.g. 03 05 1979</p>
+		<!--#include virtual="../public/_includes/ui/date.shtml" -->
+		<p>&nbsp;</p>
+	</li>
+	<li>
+		<p>Have you separated from your partner/spouse since your claim date?</p>
+		<ul id="7c60aef13217b7c604396ffde3efc8fc2aea4d5cf4525a0952c0acb73857241a" class="radio">
+			<li>
+			<input type="radio" value="yes" name="90a9d3555cf765a87cfdbdf64e9372eb2aea4d5cf4525a0952c0acb73857241a" id="7c60aef13217b7c604396ffde3efc8fcca193bc188a27a007b152c9f69587445">
+			<label for="7c60aef13217b7c604396ffde3efc8fcca193bc188a27a007b152c9f69587445">Yes</label>
+			</li>
+			<li>
+			<input type="radio" value="no" name="90a9d3555cf765a87cfdbdf64e9372eb2aea4d5cf4525a0952c0acb73857241a" id="7c60aef13217b7c604396ffde3efc8fc7327dc86a7559986ce078035628473f5">
+			<label for="7c60aef13217b7c604396ffde3efc8fc7327dc86a7559986ce078035628473f5">No</label>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<p>Is this the person you are claiming Carer's Allowance for?</p>
+		<ul id="e650dd875d8c881caeb4cb23d95c20f43454c005f10872aad4b88f3523e1f97e" class="radio">
+			<li>
+			<input type="radio" value="yes" name="e650dd875d8c881caeb4cb23d95c20f43454c005f10872aad4b88f3523e1f97e" id="e650dd875d8c881caeb4cb23d95c20f40dcb329f994c6ab3d201b37233d460c9">
+			<label for="e650dd875d8c881caeb4cb23d95c20f40dcb329f994c6ab3d201b37233d460c9">Yes</label>
+			</li>
+			<li>
+			<input type="radio" value="no" name="e650dd875d8c881caeb4cb23d95c20f43454c005f10872aad4b88f3523e1f97e" id="e650dd875d8c881caeb4cb23d95c20f4e444f2f1e2b0406f469122fc271ac289">
+			<label for="e650dd875d8c881caeb4cb23d95c20f4e444f2f1e2b0406f469122fc271ac289">No</label>
+			</li>
+		</ul>
+	</li>
+</ul>
+</fieldset><!-- / form elements -->
 
-<h2>Is the above information correct?</h2>
-
-<p><a href="" class="button">Yes, submit my application</a></p>
-<p><a href="">No, I need to go back and correct something</a>.</p>
-
+<div class="form-steps">
+	<a href="/2About/about7.html" class="button secondary">Back</a>
+	<a href="/4Care/care1.html" class="button">Next</a>
+</div><!-- / form steps --> 
         </div>
       </div>
 

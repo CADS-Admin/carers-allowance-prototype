@@ -176,86 +176,135 @@
 
       <div id="section-content" class="grid">
         <div class="inner-block">
-          
-<h1>Review your application</h1>
+          <h1>About your employment</h1>
 
-<p class="intro text">Before submitting your application please check what you've told us below. If you see any mistakes you can <a href="#">go back and correct them</a>.</p>
-
-<h2>About you</h2>
-<table class="review-answers">
-	<tr><td>Name</td>
-	<td>Mr Christopher Howard Dennett</td></tr>
-	<!--
-	<tr><td>Other surname or maiden name</dt>
-	<td>Smith</td></tr>
-	-->
-	<tr><td>National Insurance number</dt>
-	<td>JW 55 55 55 A</td></tr>
-	<tr><td>Date of birth</dt>
-	<td>26 June 1978</td></tr>
-	<tr><td>Address</dt>
-	<td>10 Redhill Drive, Kew, Southport PR8 6XX</td></tr>
-	<tr><td>Mobile number</dt>
-	<td>07737 777777</td></tr>
-	<!--
-	<tr><td>If you have speech or hearing difficulties, would you like us to contact you by textphone?</dt>
-	<td>Yes</td></tr>-->
-	<tr><td>Start date of claim</dt>
-	<td>22 July 2014</td></tr>
-	<tr><td>Nationality</dt>
-	<td>British</td></tr>
-	<!--
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>-->
-	<!--
-	<tr><td>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</dt>
-	<td>No</td></tr>
-	-->
-	<tr><td>Do you normally live in England, Scotland or Wales?</dt>
-	<td>Yes</td></tr>
-	<tr><td>Time spent outside of England, Scotland or Wales?</dt>
-	<td>No</td></tr>
-	<tr><td>Do you, or any member of your family, receive any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Have you, or a member of your family, made a claim for any benefits or pensions from a EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-	<tr><td>Are you, or a member of your family, working in or paying insurance to, another EEA state or Switzerland?</dt>
-	<td>No</td></tr>
-</table>
-
+<div class="completed">
+    <ul aria-label="Completed questions">     
+        <li>
+            <h3>Your job</h3>
+            <a href="employment1.html">Change these answers</a>
+        </li>    
+        <!--<li>
+            <h3>Employer's contact details</h3>
+            <a href="employment2.html">Change these answers</a>
+        </li>-->
+        <li>
+            <h3>Your last wage</h3>
+            <a href="employment3.html">Change these answers</a>
+        </li>
+    </ul>
+</div>
+		
+<fieldset class="form-elements">
+<legend>Pension schemes</legend>
+		
+<ul>
+	<li>
+		<p>Do you pay towards an occupational pension scheme?</p>
+		<ul id="pay-occupational-pension" class="radio">
+	        <li>
+	            <input type="radio" value="yes" name="pay-occupational-pension" id="pay-occupational-pension-yes">
+	            <label for="pay-occupational-pension-yes">Yes</label>
+	        </li>
+	        <li>
+	            <input type="radio" value="no"  name="pay-occupational-pension" id="pay-occupational-pension-no">
+	            <label for="pay-occupational-pension-no">No</label>
+	        </li>
+		</ul>
+	</li>
 	
-<h2>About your partner</h2>
+	<li style="display: none;" class="other-detail grouped">
+		<ul>
+			<li class="currency"> 
+				<label for="how-much">How much do you pay?</label>
+		        <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much">
+			</li>
+			<li>
+				<label for="how-often-pension">How often?</label>
+			    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
+		            <option value="">Please select</option>
+		            <option value="02">Weekly</option>
+		            <option value="03">Fortnightly</option>
+		            <option value="04">Four-weekly</option>
+		            <option value="05">Monthly</option>
+		            <option value="other">Other</option> 
+		    	</select>
+		 	</li>
+		 </ul>
+	</li>
+	<!--<li style="display: none;" class="other-detail" id="howOftenPension_wrap">
+		<label for="how-often-pension-other">How often?</label>
+		<textarea autocomplete="off" maxlength="60" placeholder="If other please specify..." name="how-often-pension-other" id="how-often-pension-other"></textarea>
+		<p class="helper right">60 characters left</p>       
+	</li>-->	
+	<li>
+		<p>Do you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme?</p>
+		<ul id="pay-personal-pension" class="radio">
+			<li>
+		    	<input type="radio" value="yes" name="pay-personal-pension" id="pay-personal-pension-yes">
+				<label for="pay-personal-pension-yes">Yes</label>
+			</li>
+			<li>
+				<input type="radio" value="no"  name="pay-personal-pension" id="pay-personal-pension-no">
+				<label for="pay-personal-pension-no">No</label>
+			</li>
+		</ul>
+	</li>
+	
+	<li style="display: none;" class="other-detail grouped">
+		<ul>	           
+			<li class="currency"> 
+				<label for="3a5efc8398de3add194db85a26f5ae2c">How much do you pay?</label>
+	        	<input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="3a5efc8398de3add194db85a26f5ae2c" id="3a5efc8398de3add194db85a26f5ae2c">
+			</li>
+			<li>
+				<label for="f4f72885aa832e43f5b2b3a4580d79fb5f729e42bd830dc2062aa4deba104360">How often?</label>
+		    	<select selectwithother="true" name="f4f72885aa832e43f5b2b3a4580d79fb5e2f74fef1bea21f9caaf24af8eaf3c5" id="f4f72885aa832e43f5b2b3a4580d79fb5f729e42bd830dc2062aa4deba104360">
+		            <option value="">Please select</option>
+		            <option value="02">Weekly</option>
+		            <option value="03">Fortnightly</option>
+		            <option value="04">Four-weekly</option>
+		            <option value="05">Monthly</option>
+		            <option value="other">Other</option> 
+		    	</select>
+	    	</li>
+		</ul>
+	</li>
+		
+	<li style="display: none;" class="other-detail" id="howOftenPersonal_wrap">
+		<label for="f4f72885aa832e43f5b2b3a4580d79fbdbb8643ecc9960345333eef3a815fe52679d0b18d6402f06eb60c187c8dcce7f">How often?</label>
+		<textarea autocomplete="off" maxlength="60" placeholder="If other please specify..." name="f4f72885aa832e43f5b2b3a4580d79fbf5cdc83c14ae5d951eb69af9df76e8e3679d0b18d6402f06eb60c187c8dcce7f" id="f4f72885aa832e43f5b2b3a4580d79fbdbb8643ecc9960345333eef3a815fe52679d0b18d6402f06eb60c187c8dcce7f"></textarea>
+		<!--<p class="helper right">60 characters left</p>-->
+	</li>  
 
-<table class="review-answers">
-	<tr>
-	<td>Name</td>
-	<td>Mrs Karen Jane Dennett</td>
-	</tr>
-	<tr>
-	<td>Other surname or maiden name</td>
-	<td>Smith</td>
-	</tr>
-	<tr>
-	<td>National Insurance number</td>
-	<td>JW 55 55 55 A</td>
-	</tr>
-	<tr>
-	<td>Date of birth</td>
-	<td>26 June 1978</td>
-	</tr>
-	<tr>
-		<td>Have you separated from your partner since your claim date?</td>
-		<td>No</td>
-	</tr>
-</table>
+</ul>
+</fieldset><!-- / form elements -->
+			
+<div class="form-steps">
+	<a href="employment3.html" class="button secondary">Back</a>
+	<a href="employment5.html" class="button">Next</a>
+</div><!-- / form steps -->
 
-<br><br><br><br><br><p>[MORE SECTIONS GO HERE]</p>
+<script>
 
-<h2>Is the above information correct?</h2>
+// Show & Hide Fields
 
-<p><a href="" class="button">Yes, submit my application</a></p>
-<p><a href="">No, I need to go back and correct something</a>.</p>
+$(document).ready(function() {  
+	$('#pay-occupational-pension-yes').click(function(){
+		$(this).parents('ul li').next('.other-detail').show('medium');
+	});
+	$('#pay-occupational-pension-no').click(function(){
+		$(this).parents('ul li').next('.other-detail').hide('medium');
+	});
+	$('#pay-personal-pension-yes').click(function(){
+		$(this).parents('ul li').next('.other-detail').show('medium');
+	});
+	$('#pay-personal-pension-no').click(function(){
+		$(this).parents('ul li').next('.other-detail').hide('medium');
+	});
+});
 
+</script>
         </div>
       </div>
 
