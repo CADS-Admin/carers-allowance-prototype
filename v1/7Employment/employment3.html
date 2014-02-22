@@ -123,7 +123,7 @@
   
   
 
-  <main class="main gov-uk">
+  <main class="main carers-allowance">
     <div class="grid-wrapper">
 
       
@@ -141,9 +141,6 @@
 </div> 
       <div class="progress-steps" id="progress-steps">		    
     <ol>
-        <li class="complete">
-            <span><a href="/1eligibility/q1.html">Eligibility</a></span>
-        </li>
         <li class="active">
             <span>About you</span>
         </li>
@@ -152,9 +149,6 @@
         </li>
         <li>
             <span>Care</span>
-        </li>
-        <li>
-            <span>Time abroad</span>
         </li>
         <li>
             <span>Education</span>
@@ -198,7 +192,110 @@
 		<ul>
 			<li>
 				<p>When were you last paid? <!--<em>(optional)--></em></p>
-				<!--#include virtual="../public/_includes/ui/date.shtml" -->
+				<style>
+
+.carers-allowance .form-elements ul.year li {
+	float: left; 
+	padding-top: 0;
+}
+.carers-allowance .form-elements ul.new-labels li p {
+	color: #6F777B;
+}
+.carers-allowance .form-elements ul.year.new-labels li input {}
+
+</style>
+
+<ul class="inline year new-labels" id="date" style="float:left; width: 100%;">
+	<li>
+		<p>Day</p>
+		<input autocomplete="off" maxlength="2" name="date-day" title="Day" type="tel">
+	</li>
+	<li>
+		<p>Month</p>
+		<input autocomplete="off" name="date-month" title="Month" type="tel">
+	</li>
+	<li>
+		<p>Year</p>
+		<input autocomplete="off" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" title="Year" type="tel">
+	</li>
+</ul>
+
+<!--<ul class="inline year" id="date">
+	<li>
+		<input autocomplete="off" id="" maxlength="2" name="date-day" placeholder="DD" title="Day" type="tel">
+	</li>
+	<li>
+		<input autocomplete="off" id="" maxlength="2" name="date-month" placeholder="MM" title="Month" type="tel">
+	</li>
+	<li>
+		<input autocomplete="off" id="" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" placeholder="YYYY" title="Year" type="tel">
+	</li>
+</ul>-->
+
+<!--
+<ul id="date" class="inline year">
+	<li>
+		<label for="02aa57dfdb6b93977f2de87cc5d5f2ef">start_day <em>(optional)</em></label>
+		<select name="0facf991b9971ee42918a0d4cafcda18" id="02aa57dfdb6b93977f2de87cc5d5f2ef">
+			<option value="">Day</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+		</select>
+	</li>
+	<li>
+	<label for="d952a366b1e8c759b0dcbfcd157df35a">start_month <em>(optional)</em></label>
+		<select name="3805952532ad0db1b154716fbc684e57" id="d952a366b1e8c759b0dcbfcd157df35a">
+			<option value="">Month</option>
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select>
+	</li>
+	<li>
+		<label for="4684245046b48bc6394899f3f5e71684">start_year <em>(optional)</em></label>
+		<input type="tel" autocomplete="off" maxlength="4" placeholder="YYYY" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="8615b22e56941b3999713a7544318f15" id="4684245046b48bc6394899f3f5e71684">
+	</li>
+</ul>
+-->
+
 				<p class="helper">e.g. 30 01 2014</p>
 			</li>
 			<li class="currency"> 

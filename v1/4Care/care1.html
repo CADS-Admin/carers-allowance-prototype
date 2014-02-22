@@ -123,7 +123,7 @@
   
   
 
-  <main class="main gov-uk">
+  <main class="main carers-allowance">
     <div class="grid-wrapper">
 
       
@@ -141,9 +141,6 @@
 </div> 
       <div class="progress-steps" id="progress-steps">		    
     <ol>
-        <li class="complete">
-            <span><a href="/1eligibility/q1.html">Eligibility</a></span>
-        </li>
         <li class="active">
             <span>About you</span>
         </li>
@@ -152,9 +149,6 @@
         </li>
         <li>
             <span>Care</span>
-        </li>
-        <li>
-            <span>Time abroad</span>
         </li>
         <li>
             <span>Education</span>
@@ -185,21 +179,168 @@
 <ul>
 	<li>
 		<label for="title">Title</label>
-		<!--#include virtual="../public/_includes/ui/title.shtml" -->
+		<select id="title" name="title">
+    <option value="">Please select</option>
+    <option value="mr">Mr</option>
+    <option value="mrs">Mrs</option> 
+    <option value="miss">Miss</option>
+    <option value="ms">Ms</option>
+    <option value="dr">Dr</option>
+    <option value="rev">Rev</option>
+    <option value="sir">Sir</option>
+    <option value="lord">Lord</option>
+    <option value="lady">Lady</option>
+    <option value="dame">Dame</option>
+</select>
 	</li>
-	<!--//#include virtual="../public/_includes/ui/name.shtml" -->
 	<li>
 		<label for="fullname">Full name</label>
 		<input type="text"
 	</li>
 	<li>
 		<p>National Insurance number <em>(optional)</em></p>
-		<!--#include virtual="../public/_includes/ui/nino.shtml" -->	
+		<p class="helper">e.g. VO 12 34 56 D</p>
+
+<input type="text" name="nino" id="nino">
+
+<!--
+<ul class="inline ni-number">
+	<li>
+		<label for="ni-1">NI part one</label>
+		<input type="text" name="ni-1" id="ni-1" maxlength="2" placeholder="JW">
+	</li>
+	<li>
+		<label for="ni-2">NI part two</label>
+		<input type="tel" name="ni-2" id="ni-2" maxlength="2" placeholder="31">
+	</li>
+	<li>
+		<label for="ni-3">NI part three</label>
+		<input type="tel" name="ni-3" id="ni-3" maxlength="2" placeholder="90">
+	</li>
+	<li>
+		<label for="ni-4">NI part four</label>
+		<input type="tel" name="ni-4" id="ni-4" maxlength="2" placeholder="67">
+	</li>
+	<li>
+		<label for="ni-5">NI part five</label>
+		<input type="text" name="ni-5" id="ni-5" class="single" maxlength="1" placeholder="A">
+	</li>							
+</ul>
+-->
+
+<!--<p class="helper-more">Help</p>
+<div class="helper-info">
+	<p>This can be found on your National Insurance card, a benefit letter, payslip or a P60</p>
+</div>-->
+	
 	</li>
 	<li>
 		<p>Date of birth</p>
 		<p class="helper">e.g. 03 05 1979</p>
-		<!--#include virtual="../public/_includes/ui/date.shtml" -->
+		<style>
+
+.carers-allowance .form-elements ul.year li {
+	float: left; 
+	padding-top: 0;
+}
+.carers-allowance .form-elements ul.new-labels li p {
+	color: #6F777B;
+}
+.carers-allowance .form-elements ul.year.new-labels li input {}
+
+</style>
+
+<ul class="inline year new-labels" id="date" style="float:left; width: 100%;">
+	<li>
+		<p>Day</p>
+		<input autocomplete="off" maxlength="2" name="date-day" title="Day" type="tel">
+	</li>
+	<li>
+		<p>Month</p>
+		<input autocomplete="off" name="date-month" title="Month" type="tel">
+	</li>
+	<li>
+		<p>Year</p>
+		<input autocomplete="off" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" title="Year" type="tel">
+	</li>
+</ul>
+
+<!--<ul class="inline year" id="date">
+	<li>
+		<input autocomplete="off" id="" maxlength="2" name="date-day" placeholder="DD" title="Day" type="tel">
+	</li>
+	<li>
+		<input autocomplete="off" id="" maxlength="2" name="date-month" placeholder="MM" title="Month" type="tel">
+	</li>
+	<li>
+		<input autocomplete="off" id="" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" placeholder="YYYY" title="Year" type="tel">
+	</li>
+</ul>-->
+
+<!--
+<ul id="date" class="inline year">
+	<li>
+		<label for="02aa57dfdb6b93977f2de87cc5d5f2ef">start_day <em>(optional)</em></label>
+		<select name="0facf991b9971ee42918a0d4cafcda18" id="02aa57dfdb6b93977f2de87cc5d5f2ef">
+			<option value="">Day</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+		</select>
+	</li>
+	<li>
+	<label for="d952a366b1e8c759b0dcbfcd157df35a">start_month <em>(optional)</em></label>
+		<select name="3805952532ad0db1b154716fbc684e57" id="d952a366b1e8c759b0dcbfcd157df35a">
+			<option value="">Month</option>
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select>
+	</li>
+	<li>
+		<label for="4684245046b48bc6394899f3f5e71684">start_year <em>(optional)</em></label>
+		<input type="tel" autocomplete="off" maxlength="4" placeholder="YYYY" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="8615b22e56941b3999713a7544318f15" id="4684245046b48bc6394899f3f5e71684">
+	</li>
+</ul>
+-->
+
 		<p>&nbsp;</p>
 	</li>
 	
@@ -222,7 +363,27 @@
 		<input type="text" maxlength="60" autocomplete="off" class="postcode" value="" name="postcode" id="postcode">
 	</li>-->
 
-	<!--#include virtual="../public/_includes/ui/address-multiple.shtml"-->
+	<li>
+	<label for="address-1">Street address</label>
+	<input type="text" autocomplete="off" maxlength="35" name="address-1" id="address-1">
+</li>
+<li style="padding-top:0;">
+	<input type="text" autocomplete="off" maxlength="35" value="" name="address-2" id="address-2">
+</li>
+<li>
+	<label for="address-3">Town or City</label>
+	<input type="text" autocomplete="off" maxlength="35" value="" name="address-3" id="address-3">
+</li>
+<li>
+	<label for="address-3">County (optional)</label>
+	<input type="text" autocomplete="off" maxlength="35" value="" name="address-3" id="address-3">
+</li>
+<li>
+	<p>Postcode</p> 
+	<input autocomplete="off" class="postcode" id="" maxlength="60" name="" type="text" value="">
+</li>
+
+
 	<li>
 		<label for="phone">Phone number <em>(optional)</em></label>
 		<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="phone" id="phone">
@@ -232,8 +393,8 @@
 </fieldset>
 
 <div class="form-steps">
-	<a href="/3Partner/partner1.html" class="button secondary">Back</a>
-	<a href="/4Care/care2.html" class="button">Next</a>
+	<a href="/v1/3Partner/partner1.html" class="button secondary">Back</a>
+	<a href="care2.html" class="button">Next</a>
 </div><!-- / form steps -->
         </div>
       </div>

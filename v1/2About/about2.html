@@ -123,7 +123,7 @@
   
   
 
-  <main class="main gov-uk">
+  <main class="main carers-allowance">
     <div class="grid-wrapper">
 
       
@@ -141,9 +141,6 @@
 </div> 
       <div class="progress-steps" id="progress-steps">		    
     <ol>
-        <li class="complete">
-            <span><a href="/1eligibility/q1.html">Eligibility</a></span>
-        </li>
         <li class="active">
             <span>About you</span>
         </li>
@@ -152,9 +149,6 @@
         </li>
         <li>
             <span>Care</span>
-        </li>
-        <li>
-            <span>Time abroad</span>
         </li>
         <li>
             <span>Education</span>
@@ -196,7 +190,27 @@
 		<li><label for="">Postcode</label> <input autocomplete="off" class="postcode" id="" maxlength="60" name="" type="text" value=""></li>			
 	</ul>-->
 	<ul>
-	<!--#include virtual="../public/_includes/ui/address-multiple.shtml" -->
+	<li>
+	<label for="address-1">Street address</label>
+	<input type="text" autocomplete="off" maxlength="35" name="address-1" id="address-1">
+</li>
+<li style="padding-top:0;">
+	<input type="text" autocomplete="off" maxlength="35" value="" name="address-2" id="address-2">
+</li>
+<li>
+	<label for="address-3">Town or City</label>
+	<input type="text" autocomplete="off" maxlength="35" value="" name="address-3" id="address-3">
+</li>
+<li>
+	<label for="address-3">County (optional)</label>
+	<input type="text" autocomplete="off" maxlength="35" value="" name="address-3" id="address-3">
+</li>
+<li>
+	<p>Postcode</p> 
+	<input autocomplete="off" class="postcode" id="" maxlength="60" name="" type="text" value="">
+</li>
+
+
 	</ul>
 	
 </fieldset>
