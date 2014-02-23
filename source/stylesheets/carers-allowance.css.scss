@@ -615,9 +615,11 @@ header {
 	   	   }
    	   }
 	   ul {
+	   	padding: 0; /* added BH */
 		   li {
 			   background: #e6eff5 url('images/tick.png') 1.1em 1.3em no-repeat;
 			   border-bottom: 1px solid #cdd7dc;
+			   list-style: none; /* added BH */
 			   padding: 1em 11em 1em 2.9em;
 			   position: relative;
 			   @media screen and (max-width: 760px) {padding-right: 1em;}
@@ -2319,4 +2321,18 @@ header {
  }
  .carers-allowance .form-elements ul li .helper-info {
  	padding: 1em .7em .7em;
+ }
+ 
+ 
+ /* help */
+ 
+ .grid-wrapper {
+     padding: 0;
+ }
+ #help-feedback {
+     margin: 0;
+     border-top-width:0;
+     p {
+     	font-size: 1.9rem;
+     }
  }

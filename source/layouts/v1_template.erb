@@ -15,6 +15,10 @@
 
   <script src="<%= asset_path(:js, "/javascripts/jquery.min.js") %>"></script>
   <script src="<%= asset_path(:js, "/javascripts/prototype.js") %>"></script>
+  
+  <script src="<%= asset_path(:js, "/javascripts/plugins.js") %>"></script>
+  <script src="<%= asset_path(:js, "/javascripts/custom.js?ver1.0") %>"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
   <% end %>
 
@@ -23,11 +27,14 @@
     <%= partial "partials/v1-proposition-header" %>
   <% end %>
 
-  <main class="main carers-allowance">
+<main class="main carers-allowance">
     <div class="grid-wrapper">
+   <!-- <main id="main" role="main">
+	<div class="carers-allowance">-->
 
       <%= partial "partials/v1-help-feedback" %> 
-      <%= partial "partials/v1-progress-bar/1-about-you" %> 
+      <!--<%= partial "partials/v1-progress-bar/1-about-you" %>-->
+      <p>&nbsp;</p>
 
       <div id="section-content" class="grid">
         <div class="inner-block">
