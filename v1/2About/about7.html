@@ -63,6 +63,10 @@
 
   <script src="../../javascripts/jquery.min.js"></script>
   <script src="../../javascripts/prototype.js"></script>
+  
+  <script src="../../javascripts/plugins.js"></script>
+  <script src="../../javascripts/custom.js?ver1.0.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
   
   </head>
@@ -123,8 +127,10 @@
   
   
 
-  <main class="main carers-allowance">
+<main class="main carers-allowance">
     <div class="grid-wrapper">
+   <!-- <main id="main" role="main">
+	<div class="carers-allowance">-->
 
       
 <div id="help-feedback" class="js-hidden">
@@ -139,7 +145,7 @@
 	<p><strong><a href="#progress-steps" class="js-help-toggle">Close</a></strong></p>
 	
 </div> 
-      <div class="progress-steps" id="progress-steps">		    
+      <!--<div class="progress-steps" id="progress-steps">		    
     <ol>
         <li class="active">
             <span>About you</span>
@@ -166,19 +172,20 @@
             <span>Declaration</span>
         </li>
     </ol>
-</div> 
+</div>-->
+      <p>&nbsp;</p>
 
       <div id="section-content" class="grid">
         <div class="inner-block">
           <h1>About you - the Carer</h1>
     
-<p class="security-message">Your claim date is <strong style="text-decoration: none;"><!--#include virtual="../public/_includes/ui/claim-date.shtml" --></strong>.</p>
+<p class="security-message">Your claim date is <strong style="text-decoration: none;">24 November 2013</strong>.</p>
     
 <div class="completed">
 	<ul aria-label="Completed questions">
     	<li><h3>Your details</h3><a href="/2About/about1.html">Change these answers</a></li>      
     	<li><h3>Your contact details</h3><a href="/2About/about2.html">Change these answers</a></li> 
-    	<li><h3>Your claim date: <!--#include virtual="../public/_includes/ui/claim-date.shtml" --></h3> <a href="/2About/about3.html">Change this answer</a></li>
+    	<li><h3>Your claim date: 24 November 2013</h3> <a href="/2About/about3.html">Change this answer</a></li>
     	<li><h3>Your nationality and residency</h3> <a href="/2About/about4.html">Change these answers</a></li>
     	<li><h3>Time outside of England, Scotland or Wales</h3> <a href="/2About/about5.html">Change these answers</a></li> 
     	<li><h3>Other European Economic Area (EEA) states or Switzerland</h3> <a href="/2About/about6.html">Change these answers</a></li> 
@@ -275,7 +282,7 @@
 		});
 		$('#marital-status-p').click(function(){
 			$('.spouse_living_with_you').hide('medium');
-			$('#continue').attr('href','/3Partner/partner1.html');
+			$('#continue').attr('href','/v1/3Partner/partner1.html');
 		});
 		$('#marital-status-d').click(function(){
 			$('.spouse_living_with_you').hide();
@@ -290,7 +297,7 @@
 			$('.spouse_living_with_you.q1').show('medium');
 		});  
 		$('#spouse_no, #spouse_q2_no').click(function(){
-			$('#continue').attr('href','/4Care/care1.html');
+			$('#continue').attr('href','/v1/4Care/care1.html');
 		});
 	}); 
 </script>
