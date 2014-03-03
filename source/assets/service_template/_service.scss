@@ -4,8 +4,9 @@
 
 // Phase banner and tag
 
-#phase-banner{
-  @include phase-banner(beta);
+.colour-strip{
+  padding: 8px 0;
+  background-color: #2B8CC4;
   max-width: 960px;
   margin: 0 auto;
   text-indent: -999px;
@@ -195,3 +196,35 @@ table.review-answers{
   .js-enabled .js-hidden{
     display: none;
   }
+
+
+
+// NEW DARK FOOTER STYLES
+//
+// We're overwriting the template styles here.
+
+#footer{
+  border: 0;
+  background: $black;
+  p, a{
+    color: $white;
+  }
+  .footer-meta {
+    .copyright a{
+      background: rgba(0, 0, 0, 0) url(/assets/service_template/govuk-crest-inverse.png) no-repeat 100% 0;
+    }  
+    .footer-meta-inner .open-government-licence h2 a{
+      background: url(/assets/service_template/open-government-licence_2x-inverse.png) no-repeat;
+      background-size: contain;
+      img{
+        display: none;
+      }
+    }
+  }
+
+}
+
+
+
+
+

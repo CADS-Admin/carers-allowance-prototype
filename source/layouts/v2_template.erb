@@ -19,7 +19,7 @@
   <% end %>
 
   <% content_for :after_header do %>
-    <%= partial "partials/template-beta-banner" %>
+    <div class="colour-strip"></div>
   <% end %>
 
   <main class="main gov-uk">
@@ -49,6 +49,8 @@
   </div>
 
   </main>
+
+  <div class="colour-strip"></div>
 
   <% content_for :body_end do %>  
     <script src="<%= asset_path(:js, "/javascripts/jquery.min.js") %>"></script>
