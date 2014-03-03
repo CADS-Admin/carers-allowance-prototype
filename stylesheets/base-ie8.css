@@ -401,38 +401,16 @@ Example usage:
   margin-bottom: 60px; }
 
 /* line 7, assets/service_template/_service.scss */
-#phase-banner {
+.colour-strip {
   padding: 8px 0;
-  background-color: #f47738;
+  background-color: #2B8CC4;
   max-width: 960px;
   margin: 0 auto;
   text-indent: -999px;
   height: 10px;
   padding: 0; }
-  /* line 14, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_alpha-beta.scss */
-  #phase-banner p {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 15px;
-    color: #0b0c0c;
-    font-family: "nta", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.25;
-    font-weight: 300;
-    text-transform: none; }
-    @media (max-width: 640px) {
-      /* line 14, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_alpha-beta.scss */
-      #phase-banner p {
-        font-size: 14px;
-        line-height: 1.14286; } }
-  /* line 23, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_alpha-beta.scss */
-  #phase-banner a, #phase-banner a:link, #phase-banner a:visited, #phase-banner a:active {
-    color: #0b0c0c; }
-  /* line 27, assets/govuk_frontend_toolkit/stylesheets/design-patterns/_alpha-beta.scss */
-  #phase-banner a:hover {
-    color: #0b0c0c; }
 
-/* line 16, assets/service_template/_service.scss */
+/* line 17, assets/service_template/_service.scss */
 #phase-tag {
   display: -moz-inline-stack;
   display: inline-block;
@@ -450,12 +428,12 @@ Example usage:
   margin: 3px 10px 0 5px;
   padding: 2px 5px 0; }
   @media (max-width: 640px) {
-    /* line 16, assets/service_template/_service.scss */
+    /* line 17, assets/service_template/_service.scss */
     #phase-tag {
       font-size: 14px;
       line-height: 1.14286; } }
 
-/* line 20, assets/service_template/_service.scss */
+/* line 21, assets/service_template/_service.scss */
 .button {
   background-color: #00823b;
   position: relative;
@@ -535,13 +513,13 @@ Example usage:
   .button[type=submit].button {
     filter: none; }
 
-/* line 24, assets/service_template/_service.scss */
+/* line 25, assets/service_template/_service.scss */
 #section-nav h2 {
   border-top: 5px solid #0b0c0c;
   padding-top: 10px;
   margin-top: 30px; }
 
-/* line 33, assets/service_template/_service.scss */
+/* line 34, assets/service_template/_service.scss */
 .link-style {
   display: inline;
   color: #005ea5;
@@ -549,12 +527,12 @@ Example usage:
   background: none;
   border: none;
   text-decoration: underline; }
-  /* line 40, assets/service_template/_service.scss */
+  /* line 41, assets/service_template/_service.scss */
   .link-style:hover {
     color: #2e8aca;
     cursor: pointer; }
 
-/* line 48, assets/service_template/_service.scss */
+/* line 49, assets/service_template/_service.scss */
 #help-feedback {
   margin: 0 -30px;
   border-color: #f47738;
@@ -562,76 +540,76 @@ Example usage:
   border-width: 10px;
   padding: 0 20px;
   margin: 0 10px; }
-  /* line 57, assets/service_template/_service.scss */
+  /* line 58, assets/service_template/_service.scss */
   #help-feedback h2 {
     margin-top: 0;
     padding-top: 20px; }
-  /* line 61, assets/service_template/_service.scss */
+  /* line 62, assets/service_template/_service.scss */
   #help-feedback.js-hidden {
     text-indent: -9999px;
     padding: 0;
     height: 0;
     border-width: 10px 0 0 0; }
 
-/* line 72, assets/service_template/_service.scss */
+/* line 73, assets/service_template/_service.scss */
 table.review-answers {
   width: 100%;
   border-top: 1px solid #bfc1c3;
   border-collapse: collapse;
   margin-top: 30px;
   font-size: 19px; }
-  /* line 78, assets/service_template/_service.scss */
+  /* line 79, assets/service_template/_service.scss */
   table.review-answers td {
     padding: 13px 0 10px 0;
     border-bottom: 1px solid #bfc1c3;
     width: 50%;
     vertical-align: top; }
-  /* line 84, assets/service_template/_service.scss */
+  /* line 85, assets/service_template/_service.scss */
   table.review-answers td + td {
     padding-left: 30px; }
 
-/* line 92, assets/service_template/_service.scss */
+/* line 93, assets/service_template/_service.scss */
 .form-control[type="text"] {
   width: 66%; }
 
-/* line 101, assets/service_template/_service.scss */
+/* line 102, assets/service_template/_service.scss */
 .form .form-control.NINumber {
   width: 150px; }
-/* line 104, assets/service_template/_service.scss */
+/* line 105, assets/service_template/_service.scss */
 .form .form-control.postcode {
   width: 100px; }
-/* line 107, assets/service_template/_service.scss */
+/* line 108, assets/service_template/_service.scss */
 .form .form-control.telNo {
   width: 250px; }
-/* line 110, assets/service_template/_service.scss */
+/* line 111, assets/service_template/_service.scss */
 .form .form-control.town {
   width: 250px; }
-/* line 113, assets/service_template/_service.scss */
+/* line 114, assets/service_template/_service.scss */
 .form .form-control.county {
   width: 250px; }
-/* line 116, assets/service_template/_service.scss */
+/* line 117, assets/service_template/_service.scss */
 .form .form-control.country {
   width: 250px; }
-/* line 121, assets/service_template/_service.scss */
+/* line 122, assets/service_template/_service.scss */
 .form .form-group-tight {
   margin-bottom: 15px; }
-/* line 128, assets/service_template/_service.scss */
+/* line 129, assets/service_template/_service.scss */
 .form .radios,
 .form .checkboxes {
   margin: 0;
   padding-top: 15px;
   padding-bottom: 15px; }
-  /* line 132, assets/service_template/_service.scss */
+  /* line 133, assets/service_template/_service.scss */
   .form .radios .form-group,
   .form .checkboxes .form-group {
     position: relative; }
-  /* line 135, assets/service_template/_service.scss */
+  /* line 136, assets/service_template/_service.scss */
   .form .radios input,
   .form .checkboxes input {
     position: absolute;
     top: 10px;
     left: 10px; }
-  /* line 140, assets/service_template/_service.scss */
+  /* line 141, assets/service_template/_service.scss */
   .form .radios label,
   .form .checkboxes label {
     display: inline-block;
@@ -640,44 +618,62 @@ table.review-answers {
     padding: 7px 15px 5px;
     padding-left: 40px;
     margin: -1px 0 0; }
-    /* line 147, assets/service_template/_service.scss */
+    /* line 148, assets/service_template/_service.scss */
     .form .radios label:hover,
     .form .checkboxes label:hover {
       border-color: #0b0c0c;
       cursor: pointer; }
-  /* line 154, assets/service_template/_service.scss */
+  /* line 155, assets/service_template/_service.scss */
   .form .radios.horizontal .form-group,
   .form .checkboxes.horizontal .form-group {
     float: left;
     margin-right: 10px; }
-/* line 163, assets/service_template/_service.scss */
+/* line 164, assets/service_template/_service.scss */
 .form input[type="radio"]:checked + label,
 .form input[type="checkbox"]:checked + label {
   background-color: white;
   border: 1px solid #0b0c0c; }
-/* line 169, assets/service_template/_service.scss */
+/* line 170, assets/service_template/_service.scss */
 .form input[type="radio"]:focus,
 .form input[type="checkbox"]:focus {
   outline: none; }
-/* line 173, assets/service_template/_service.scss */
+/* line 174, assets/service_template/_service.scss */
 .form input[type="radio"]:focus + label,
 .form input[type="checkbox"]:focus + label {
   outline: 3px solid #FFBF47;
   outline-offset: -2px; }
-/* line 180, assets/service_template/_service.scss */
+/* line 181, assets/service_template/_service.scss */
 .form select {
   font-size: 19px;
   margin-left: 0; }
-/* line 185, assets/service_template/_service.scss */
+/* line 186, assets/service_template/_service.scss */
 .form select[size] {
   padding: 10px; }
-/* line 189, assets/service_template/_service.scss */
+/* line 190, assets/service_template/_service.scss */
 .form legend.heading-36 {
   padding-top: 30px; }
 
-/* line 195, assets/service_template/_service.scss */
+/* line 196, assets/service_template/_service.scss */
 .js-enabled .js-hidden {
   display: none; }
+
+/* line 206, assets/service_template/_service.scss */
+#footer {
+  border: 0;
+  background: #0b0c0c; }
+  /* line 209, assets/service_template/_service.scss */
+  #footer p, #footer a {
+    color: white; }
+  /* line 213, assets/service_template/_service.scss */
+  #footer .footer-meta .copyright a {
+    background: rgba(0, 0, 0, 0) url(/assets/service_template/govuk-crest-inverse.png) no-repeat 100% 0; }
+  /* line 216, assets/service_template/_service.scss */
+  #footer .footer-meta .footer-meta-inner .open-government-licence h2 a {
+    background: url(/assets/service_template/open-government-licence_2x-inverse.png) no-repeat;
+    background-size: contain; }
+    /* line 219, assets/service_template/_service.scss */
+    #footer .footer-meta .footer-meta-inner .open-government-licence h2 a img {
+      display: none; }
 
 /* line 1, assets/govuk-helper/_forms.scss */
 form {

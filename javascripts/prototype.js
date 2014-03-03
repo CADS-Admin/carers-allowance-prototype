@@ -5,7 +5,7 @@
 
 $(document).ready(function(){
 
- // $("#addressCountry").select2();
+ $("#addressCountry").select2();
 
  // GOVUK.toggle.init();
 
