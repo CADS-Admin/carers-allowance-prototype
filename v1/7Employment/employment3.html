@@ -304,16 +304,16 @@
 </ul>
 -->
 
-				<p class="helper">e.g. 30 01 2014</p>
+				<p class="helper">For example, 30 01 2014</p>
 			</li>
 			<li class="currency"> 
 				<label for="9789e2b31b57de8cf1640840d6a218d5">How much were you paid?</label>
-				<p class="helper">e.g. the gross pay for this period</p>
+				<p class="helper"> the gross pay for this period</p>
     			<input type="tel" autocomplete="off" maxlength="60" value="" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="9789e2b31b57de8cf1640840d6a218d5" id="9789e2b31b57de8cf1640840d6a218d5">
 			</li>
 			<li>
 				<label for="e7ec1d87a0e6033787a1597e568eadac">What was included in this pay? <em>(optional)</em></label>
-				<p class="helper">e.g. holiday pay, sick pay, or any redundancy payments</p>
+				<p class="helper"> holiday pay, sick pay, or any redundancy payments</p>
 				<input type="text" name="e7ec1d87a0e6033787a1597e568eadac" id="e7ec1d87a0e6033787a1597e568eadac">
 			</li>
     		<li>
@@ -348,7 +348,7 @@
 					</li>
 				    <li>
 				    	<label for="when-get-paid">When do you get paid?</label>
-				    	<p class="helper right" id="when-helper">e.g. the last day of the month</p>
+				    	<p class="helper right" id="when-helper"> the last day of the month</p>
 				        <input type="text" maxlength="60" autocomplete="off" name="when-get-paid" id="when-get-paid">   
 			        </li>
 		        </ul>
@@ -390,22 +390,22 @@ $(document).ready(function() {
 		if ($(this).val() == 'weekly') {
 			$('.other-questions').show('medium');
 			$('#same-amount-label').text("Do you usually get the same amount each week?");
-			$('#when-helper').text("e.g. every Friday");
+			$('#when-helper').text(" every Friday");
 		}
 		if ($(this).val() == 'fortnightly') {
 			$('.other-questions').show('medium');
 			$('#same-amount-label').text("Do you usually get the same amount each fortnight?");
-			$('#when-helper').text("e.g. every second Thursday");
+			$('#when-helper').text(" every second Thursday");
 		}
 		if ($(this).val() == 'fourWeekly') {
 			$('.other-questions').show('medium');
 			$('#same-amount-label').text("Do you usually get the same amount each time?");
-			$('#when-helper').text("e.g. every fourth Thursday");
+			$('#when-helper').text(" every fourth Thursday");
 		}
 		if ($(this).val() == 'monthly') {
 			$('.other-questions').show('medium');
 			$('#same-amount-label').text("Do you usually get the same amount each month?");
-			$('#when-helper').text("e.g. the last day of the month");
+			$('#when-helper').text(" the last day of the month");
 		}
 		
 	});
