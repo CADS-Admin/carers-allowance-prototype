@@ -22,6 +22,17 @@
 	</li>
 	
 	<li>
+		<p>When did your most recent break in care start?</p>
+		<p class="helper">eg. 03 02 2014</p>
+		<%= partial "partials/ui-date-dropdowns" %>		
+	</li>
+	<li>
+		<p>Break start time? <em>(optional)</em></p>
+		<p class="helper">e.g. 10:00</p>
+		<%= partial "partials/ui-times" %>
+	</li>
+	
+	<li>
 		<label for="whereYou_location">Where were you during the break?</label>
 		<select selectwithother="true" name="whereYou.location" id="whereYou_location">
 			<option value="">Please select</option>
@@ -52,25 +63,34 @@
 		<textarea autocomplete="off" maxlength="60" ignorelabel="true" placeholder="If other please specify..." name="wherePerson.location.other" id="wherePerson_location_other"></textarea>
 		<p class="helper right">60 characters left</p>
 	</li>
+	
 	<li>
-		<p>When did the break start?</p>
-		<p class="helper">eg. 03 02 2014</p>
-		<%= partial "partials/ui-date-dropdowns" %>		
+		<p>Have you resumed caring?</p>
+		<ul id="resumed-caring" class="radio">
+			<li>
+				<input type="radio" value="yes" onclick="" name="resumed-caring" id="resumed-caring_yes">
+				<label for="resumed-caring_yes">Yes</label>
+			</li>
+			<li>
+				<input type="radio" value="no" onclick="" name="resumed-caring" id="resumed-caring_no">
+				<label for="resumed-caring_no">No</label>
+			</li>
+		</ul>
 	</li>
-	<li>
-		<p>Break start time? <em>(optional)</em></p>
-		<p class="helper">e.g. 10:00</p>
-		<%= partial "partials/ui-times" %>
-	</li>
-	<li>
-		<p>When did the break end? <em>(optional)</em></p>
-		<p class="helper">eg. 03 02 2014</p>
-		<%= partial "partials/ui-date-dropdowns" %>
-	</li>
-	<li>
-		<p>Break end time? <em>(optional)</em></p>
-		<p class="helper">e.g. 16:00</p>
-		<%= partial "partials/ui-times" %>
+	
+	<li style="display: none">
+		<ul>
+			<li>
+				<p>When did the break end? <em>(optional)</em></p>
+				<p class="helper">eg. 03 02 2014</p>
+				<%= partial "partials/ui-date-dropdowns" %>
+			</li>
+			<li>
+				<p>Break end time? <em>(optional)</em></p>
+				<p class="helper">e.g. 16:00</p>
+				<%= partial "partials/ui-times" %>
+			</li>
+		</ul>
 	</li>
 	<li>
 		<p>Did you or the person you care for get any medical treatment or professional care during this time?</p>
