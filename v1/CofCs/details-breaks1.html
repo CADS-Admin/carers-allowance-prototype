@@ -202,38 +202,7 @@
 	</li>
 	
 	<li>
-		<label for="whereYou_location">Where were you during the break?</label>
-		<select selectwithother="true" name="whereYou.location" id="whereYou_location">
-			<option value="">Please select</option>
-			<option value="Home">Home</option>
-			<option value="Hospital">Hospital</option>
-			<option value="Holiday">Holiday</option>
-			<option value="Respite Care">Respite Care</option>
-			<option value="Other">Other</option>
-		</select>
-	</li>
-	<li style="display: none;" class="other-detail" id="no-id">
-		<textarea autocomplete="off" maxlength="60" ignorelabel="true" placeholder="If other please specify..." name="whereYou.location.other" id="whereYou_location_other"></textarea>
-		<p class="helper right">60 characters left</p>
-	</li>
-	<li>
-		<label for="wherePerson_location">Where was the person you care for during the break?</label>
-			<select selectwithother="true" name="wherePerson.location" id="wherePerson_location">
-				<option value="">Please select</option>
-				<option value="Home">Home</option>
-				<option value="Hospital">Hospital</option>
-				<option value="Respite Care">Respite Care</option>
-				<option value="Care Home">Care Home</option>
-				<option value="Nursing Home">Nursing Home</option>
-				<option value="Other">Other</option>
-			</select>
-	</li>
-	<li style="display: none;" class="other-detail" id="no-id">
-		<textarea autocomplete="off" maxlength="60" ignorelabel="true" placeholder="If other please specify..." name="wherePerson.location.other" id="wherePerson_location_other"></textarea>
-		<p class="helper right">60 characters left</p>
-	</li>
-	<li>
-		<p>When did the break start?</p>
+		<p>When did your most recent break in care start?</p>
 		<p class="helper">eg. 03 02 2014</p>
 		<ul id="date" class="inline year">
 	<li>
@@ -343,10 +312,59 @@
 	</li>
 </ul>
 	</li>
+	
 	<li>
-		<p>When did the break end? <em>(optional)</em></p>
-		<p class="helper">eg. 03 02 2014</p>
-		<ul id="date" class="inline year">
+		<label for="whereYou_location">Where were you during the break?</label>
+		<select selectwithother="true" name="whereYou.location" id="whereYou_location">
+			<option value="">Please select</option>
+			<option value="Home">Home</option>
+			<option value="Hospital">Hospital</option>
+			<option value="Holiday">Holiday</option>
+			<option value="Respite Care">Respite Care</option>
+			<option value="Other">Other</option>
+		</select>
+	</li>
+	<li style="display: none;" class="other-detail" id="no-id">
+		<textarea autocomplete="off" maxlength="60" ignorelabel="true" placeholder="If other please specify..." name="whereYou.location.other" id="whereYou_location_other"></textarea>
+		<p class="helper right">60 characters left</p>
+	</li>
+	<li>
+		<label for="wherePerson_location">Where was the person you care for during the break?</label>
+			<select selectwithother="true" name="wherePerson.location" id="wherePerson_location">
+				<option value="">Please select</option>
+				<option value="Home">Home</option>
+				<option value="Hospital">Hospital</option>
+				<option value="Respite Care">Respite Care</option>
+				<option value="Care Home">Care Home</option>
+				<option value="Nursing Home">Nursing Home</option>
+				<option value="Other">Other</option>
+			</select>
+	</li>
+	<li style="display: none;" class="other-detail" id="no-id">
+		<textarea autocomplete="off" maxlength="60" ignorelabel="true" placeholder="If other please specify..." name="wherePerson.location.other" id="wherePerson_location_other"></textarea>
+		<p class="helper right">60 characters left</p>
+	</li>
+	
+	<li>
+		<p>Have you resumed caring?</p>
+		<ul id="resumed-caring" class="radio">
+			<li>
+				<input type="radio" value="yes" onclick="" name="resumed-caring" id="resumed-caring_yes">
+				<label for="resumed-caring_yes">Yes</label>
+			</li>
+			<li>
+				<input type="radio" value="no" onclick="" name="resumed-caring" id="resumed-caring_no">
+				<label for="resumed-caring_no">No</label>
+			</li>
+		</ul>
+	</li>
+	
+	<li style="display: none">
+		<ul>
+			<li>
+				<p>When did the break end? <em>(optional)</em></p>
+				<p class="helper">eg. 03 02 2014</p>
+				<ul id="date" class="inline year">
 	<li>
 		<label for="02aa57dfdb6b93977f2de87cc5d5f2ef">start_day <em>(optional)</em></label>
 		<select name="0facf991b9971ee42918a0d4cafcda18" id="02aa57dfdb6b93977f2de87cc5d5f2ef">
@@ -407,11 +425,11 @@
 		<input type="tel" autocomplete="off" maxlength="4" placeholder="YYYY" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="8615b22e56941b3999713a7544318f15" id="4684245046b48bc6394899f3f5e71684">
 	</li>
 </ul>
-	</li>
-	<li>
-		<p>Break end time? <em>(optional)</em></p>
-		<p class="helper">e.g. 16:00</p>
-		<ul class="inline year">
+			</li>
+			<li>
+				<p>Break end time? <em>(optional)</em></p>
+				<p class="helper">e.g. 16:00</p>
+				<ul class="inline year">
 	<li>
 		<label for="start_hour">start_hour <em>(optional)</em></label>
 		<select name="start.hour" id="start_hour">
@@ -453,6 +471,8 @@
 		</select>
 	</li>
 </ul>
+			</li>
+		</ul>
 	</li>
 	<li>
 		<p>Did you or the person you care for get any medical treatment or professional care during this time?</p>
