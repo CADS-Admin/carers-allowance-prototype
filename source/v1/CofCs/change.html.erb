@@ -1,0 +1,76 @@
+<h1>Report a change in your circumstances</h1>
+
+<fieldset class="form-elements">
+
+<legend>Details of your change in circumstances</legend>
+		    	
+<ul>
+    <li>			
+    	<p>What type of change do you want to report?</p>
+    	<ul class="radio-block" id="type-of-change">
+        	<li>
+        		<input type="radio" value="type-stopped-caring" name="type-of-change" id="type-stopped-caring">
+        		<label for="type-stopped-caring">I have permanently stopped caring</label>
+        	</li>
+        	<li>
+        		<input type="radio" value="type-breaks" name="type-of-change" id="type-breaks">
+        		<label for="type-breaks">I have a break in care to report</label>	
+        	<li>
+        		<input type="radio" value="type-address" name="type-of-change" id="type-address">
+        		<label for="type-address">I want to change my address</label>
+        	</li>
+        	<li>
+        		<input type="radio" value="type-employment" name="type-of-change" id="type-employment">
+        		<label for="type-employment">I have started employment</label>
+        	</li>
+        	<li>
+        		<input type="radio" value="type-self-employment" name="type-of-change" id="type-self-employment">
+        		<label for="type-self-employment">I have started self employment</label>
+        	</li>	    
+			<li>
+				<input type="radio" value="type-bank-details" name="type-of-change" id="type-bank-details">
+				<label for="type-bank-details">I want to update payment/bank details</label>
+			</li>
+			<li>
+				<input type="radio" value="type-other" name="type-of-change" id="type-other">
+				<label for="type-other">Any other changes</label>
+			</li>
+    	</ul>
+    </li>
+</ul>					
+        
+</fieldset>
+
+<div class="form-steps">
+	<a href="declaration.html" class="button" id="continue">Continue</a>
+</div><!-- / form steps -->
+
+
+<script>
+$(document).ready(function() {    
+
+    	$('#type-stopped-caring').click(function(){
+    		$('#continue').attr('href','details-stopped-caring.html');
+    	});
+    	$('#type-breaks').click(function(){
+    		$('#continue').attr('href','details-breaks1.html');
+    	});
+        $('#type-address').click(function(){
+        	$('#continue').attr('href','details-address.html');
+        });
+        $('#type-bank-details').click(function(){
+        	$('#continue').attr('href','details-bank-details.html');
+        });
+        $('#type-employment').click(function(){
+        	$('#continue').attr('href','details-employment.html');
+        });
+        $('#type-self-employment').click(function(){
+        	$('#continue').attr('href','details-self-employment.html');
+        });
+        $('#type-other').click(function(){
+        	$('#continue').attr('href','details-other.html');
+        }); 
+        	
+}); 
+
+</script>

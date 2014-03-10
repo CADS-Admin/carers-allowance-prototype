@@ -1,0 +1,31 @@
+<h1>Report a change in your circumstances</h1>     
+	        
+<fieldset class="form-elements">
+
+<legend>Permanently stopped caring</legend>
+
+<ul id="details">    	
+	<li>
+		<p>What date did you permanently stop caring?</p>
+		<p class="helper">This is when you stopped caring for the person you looked after for at least 35 hours per week</p>	
+		<%= partial "partials/ui-date" %>
+		<p style="margin: 0 0 -30px; padding: 0;">&nbsp;</p><!-- layout hack (sorry!) - BH -->
+	</li>
+	<li></li>	
+	<%= partial "partials/ui_circs-tell-us-more" %>
+</ul><!-- Details / Stopped Caring -->
+   
+</fieldset>
+
+<div class="form-steps">
+	<a href="change.html" class="button secondary">Back</a>
+	<a href="declaration.html" class="button" id="continue">Continue</a>
+</div><!-- / form steps -->
+
+<script>
+$(document).ready(function() {    
+	$('#other-changes-yes').click(function(){
+		$('#continue').attr('href','change.html');
+	});  	
+});
+</script>

@@ -1,0 +1,96 @@
+<h1>Report a change in your circumstances</h1>
+
+<fieldset class="form-elements">
+
+<legend>Report a break in care in the previous 6 months</legend>
+
+<ul>
+	<li class="c-help">
+		<div class="helper-more">What is a break in care &ndash; Help</div>
+		<div class="helper-info" style="display: none;">
+		    
+		    <p>By break we mean time when, for any reason, you spent less than 35 hours a week caring for the person you care for. For example, if:</p>
+			<ul>
+				<li>They were in respite care, in hospital or on holiday without you, or</li>
+				<li>You were in hospital or on holiday without them.</li>
+			</ul>
+			
+			<p>We understand if you don't have exact details for each break but please add as much information as possible as it will help us process your claim and prevent any unnecessary delays.</p>
+			<p>We may contact you for additional information.</p>
+		
+		</div>
+	</li>
+	
+	<li>
+		<label for="whereYou_location">Where were you during the break?</label>
+		<select selectwithother="true" name="whereYou.location" id="whereYou_location">
+			<option value="">Please select</option>
+			<option value="Home">Home</option>
+			<option value="Hospital">Hospital</option>
+			<option value="Holiday">Holiday</option>
+			<option value="Respite Care">Respite Care</option>
+			<option value="Other">Other</option>
+		</select>
+	</li>
+	<li style="display: none;" class="other-detail" id="no-id">
+		<textarea autocomplete="off" maxlength="60" ignorelabel="true" placeholder="If other please specify..." name="whereYou.location.other" id="whereYou_location_other"></textarea>
+		<p class="helper right">60 characters left</p>
+	</li>
+	<li>
+		<label for="wherePerson_location">Where was the person you care for during the break?</label>
+			<select selectwithother="true" name="wherePerson.location" id="wherePerson_location">
+				<option value="">Please select</option>
+				<option value="Home">Home</option>
+				<option value="Hospital">Hospital</option>
+				<option value="Respite Care">Respite Care</option>
+				<option value="Care Home">Care Home</option>
+				<option value="Nursing Home">Nursing Home</option>
+				<option value="Other">Other</option>
+			</select>
+	</li>
+	<li style="display: none;" class="other-detail" id="no-id">
+		<textarea autocomplete="off" maxlength="60" ignorelabel="true" placeholder="If other please specify..." name="wherePerson.location.other" id="wherePerson_location_other"></textarea>
+		<p class="helper right">60 characters left</p>
+	</li>
+	<li>
+		<p>When did the break start?</p>
+		<p class="helper">eg. 03 02 2014</p>
+		<%= partial "partials/ui-date-dropdowns" %>		
+	</li>
+	<li>
+		<p>Break start time? <em>(optional)</em></p>
+		<p class="helper">e.g. 10:00</p>
+		<%= partial "partials/ui-times" %>
+	</li>
+	<li>
+		<p>When did the break end? <em>(optional)</em></p>
+		<p class="helper">eg. 03 02 2014</p>
+		<%= partial "partials/ui-date-dropdowns" %>
+	</li>
+	<li>
+		<p>Break end time? <em>(optional)</em></p>
+		<p class="helper">e.g. 16:00</p>
+		<%= partial "partials/ui-times" %>
+	</li>
+	<li>
+		<p>Did you or the person you care for get any medical treatment or professional care during this time?</p>
+		<ul id="medicalDuringBreak" class="radio">
+			<li>
+				<input type="radio" value="yes" onclick="" name="medicalDuringBreak" id="medicalDuringBreak_yes">
+				<label for="medicalDuringBreak_yes">Yes</label>
+			</li>
+			<li>
+				<input type="radio" value="no" onclick="" name="medicalDuringBreak" id="medicalDuringBreak_no">
+				<label for="medicalDuringBreak_no">No</label>
+			</li>
+		</ul>
+	</li>
+	<%= partial "partials/ui_circs-tell-us-more" %>
+</ul>
+
+</fieldset>
+
+<div class="form-steps">
+	<a href="change.html" class="button secondary">Back</a>
+	<a href="details-breaks2.html" class="button" id="continue">Continue</a>
+</div><!-- / form steps -->

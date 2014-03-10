@@ -1,0 +1,27 @@
+<h1>Report a change in your circumstances</h1>     
+
+<fieldset class="form-elements">
+
+<legend>Any other changes</legend>
+       
+<ul id="details">
+	<li>
+		<label for="circs-tell-us-more">Tell us about your changes including all dates</label>
+		<textarea autocomplete="off" maxlength="2000" name="circs-tell-us-more" id="circs-tell-us-more"></textarea>
+	</li>
+</ul>		
+        
+</fieldset>
+
+<div class="form-steps">
+	<a href="change.html" class="button secondary">Back</a>
+	<a href="declaration.html" class="button" id="continue">Continue</a>
+</div><!-- / form steps -->
+
+<script>
+$(document).ready(function() {    
+	$('#other-changes-yes').click(function(){
+		$('#continue').attr('href','change.html');
+	});    	
+});
+</script>

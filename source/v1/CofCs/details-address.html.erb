@@ -1,0 +1,85 @@
+<h1>Report a change in your circumstances</h1> 
+
+<fieldset class="form-elements">
+<p class="security-message">For security, we also need you to confirm your previous address</p>
+
+<legend>Previous address</legend>
+
+<ul>
+	<li>
+		<p>Your previous address</p>
+		<%= partial "partials/ui-address" %>
+	
+	</li>
+	<li>
+	    <label for="previous-postcode">Your previous postcode <em>(optional)</em></label>
+	    <input type="text" maxlength="60" autocomplete="off" class="postcode" value="" name="previous-postcode" id="previous-postcode">
+	</li>
+</ul>
+
+</fieldset>    
+
+<fieldset class="form-elements">
+
+<legend>Change of address</legend>
+
+<ul id="details">
+	<li>			       
+		<p>Are you still caring 35 hours or more each week?</p>
+		<ul class="radio" id="still-caring">
+			<li>
+				<input type="radio" value="still-caring-yes" name="still-caring" id="still-caring-yes">
+				<label for="still-caring-yes">Yes</label>
+			</li>			    
+			<li>
+				<input type="radio" value="still-caring-no" name="still-caring" id="still-caring-no">
+				<label for="still-caring-no">No</label>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<p>Your new address</p>							
+		<ul class="address-stack">
+			<li><label for="">address_lineOne <em>(optional)</em></label> <input autocomplete="off" id="" maxlength="60" name="" type="text" value=""></li>
+		
+			<li><label for="">address_lineTwo <em>(optional)</em></label> <input autocomplete="off" id="1569da368576accf2184c6178262df37" maxlength="60" name="" type="text" value=""></li>
+		
+			<li><label for="">address_lineThree <em>(optional)</em></label> <input autocomplete="off" id="" maxlength="60" name="" type="text" value=""></li>
+		</ul>
+	</li>
+	<li>
+		<label for="">Your new Postcode</label> 
+		<input autocomplete="off" class="postcode" id="" maxlength="60" name="" type="text" value="">
+	</li>
+	<li>			       
+	<p>Has the person you care for changed address?</p>
+		<ul class="radio" id="dp-address-changed">
+			<li>
+				<input type="radio" value="dp-address-changed-yes" name="dp-address-changed" id="dp-address-changed-yes">
+				<label for="dp-address-changed-yes">Yes</label>
+			</li>			    
+			<li>
+				<input type="radio" value="dp-address-changed-no" name="dp-address-changed" id="dp-address-changed-no">
+				<label for="dp-address-changed-no">No</label>
+			</li>
+		</ul>
+	</li>
+	<%= partial "partials/ui_circs-tell-us-more" %>     
+</ul><!-- Details / Adresss -->
+
+</fieldset>
+        
+<div class="form-steps">
+	<a href="change.html" class="button secondary">Back</a>
+	<a href="declaration.html" class="button" id="continue">Continue</a>
+</div><!-- / form steps -->
+			
+<script>
+$(document).ready(function() {    
+
+	$('#other-changes-yes').click(function(){
+		$('#continue').attr('href','change.html');
+	});
+    	
+});
+</script>

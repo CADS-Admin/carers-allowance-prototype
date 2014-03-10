@@ -1,0 +1,62 @@
+<h1>Report a change in your circumstances</h1>     
+
+<fieldset class="form-elements">
+
+<legend>About Your Self-Employment</legend>
+
+<ul id="details">
+	<li>			       
+		<p>Are you still caring 35 hours or more each week?</p>
+		<ul class="radio" id="still-caring">
+			<li>
+				<input type="radio" value="still-caring-yes" name="still-caring" id="still-caring-yes">
+				<label for="still-caring-yes">Yes</label>
+			</li>			    
+			<li>
+				<input type="radio" value="still-caring-no" name="still-caring" id="still-caring-no">
+				<label for="still-caring-no">No</label>
+			</li>
+		</ul>
+	</li>	
+	<li>
+		<p>When did you start this self employed work?</p>
+		<p class="helper">e.g. 03 02 2014</p>
+		<%= partial "partials/ui-date" %>
+		<p style="margin: 0 0 -30px; padding: 0;">&nbsp;</p><!-- layout hack (sorry!) - BH -->
+	</li>
+	<li>
+		<label for="type-of-business">What type of business is your self employed work?</label>
+		<input type="text" name="type-of-business" id="type-of-business">
+	</li>
+	<li>
+		<p>Will the total income into your business be more than £100 a week?</p>
+		<ul class="radio" id="total-income">
+			<li>
+				<input type="radio" value="total-income-yes" name="total-income" id="total-income-yes">
+				<label for="total-income-yes">Yes</label>
+			</li>			    
+			<li>
+				<input type="radio" value="total-income-no" name="total-income" id="total-income-no">
+				<label for="total-income-no">No</label>
+			</li>
+			<li>
+				<input type="radio" value="total-income-other" name="total-income" id="still-caring-other">
+				<label for="total-income-other">Don't Know</label>
+			</li>
+		</ul>
+	</li>
+	<%= partial "partials/ui_circs-tell-us-more" %>
+</ul>		      
+        
+</fieldset>
+
+<div class="form-steps">
+	<a href="change.html" class="button secondary">Back</a>
+	<a href="declaration.html" class="button" id="continue">Continue</a>
+</div><!-- / form steps -->
+			
+<script>
+$(document).ready(function() {    
+    	
+});
+</script>

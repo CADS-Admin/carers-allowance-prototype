@@ -1,0 +1,108 @@
+<h1>Report a change in your circumstances</h1>     
+	        
+<p class="security-message">For security, we also need you to confirm your current payment details.</p> 
+
+<fieldset class="form-elements">
+
+<legend>Existing payment details</legend>
+       
+<ul id="details">					      
+	<li>			
+		<p>Are you currently paid into a bank or building society?</p>
+		<ul class="radio" id="security-mop-screener">
+	    	<li>
+	    		<input type="radio" value="security-mop-screener-yes" name="security-mop-screener" id="security-mop-screener-yes">
+	    		<label for="security-mop-screener-yes">Yes</label>
+	    	</li>			    
+			<li>
+				<input type="radio" value="security-mop-screener-no" name="security-mop-screener" id="security-mop-screener-no">
+				<label for="security-mop-screener-no">No</label>
+			</li>
+		</ul>
+	</li>				      
+	<!-- IF YES -->
+	<li id="security-mop-yes" style="display: none;">
+		<label for="security-mop">Name of your current bank or building society</label>
+	    <input type="text" name="security-mop" id="security-mop">
+	</li>			      
+	<!-- IF No -->       
+	<li id="security-mop-no" style="display: none;">
+		<label for="security-mop">Confirm your current method of payment</label>
+	    <input type="text" name="security-mop" id="security-mop">
+	    <!--<p class="helper"></p>-->
+	</li>	
+</ul>
+	
+</fieldset>
+	
+<fieldset class="form-elements">
+	
+<legend>New payment details</legend>
+	       
+<ul id="details">
+	<li>
+		<label for="account-holder">Name of account holder</label>
+		<input type="text" name="account-holder" id="account-holder">
+	</li>
+	<li>
+		<label for="account-name">Whose name or names is the account in?</label>
+		<select id="account-name" name="account-name">
+			<option value="">Please select</option>       
+			<option value="">Your name</option> 
+			<option value="">Your partners name</option> 
+			<option value="">Both you and your partner</option> 
+			<option value="">Person acting on your behalf</option> 
+			<option value="">You and the person acting on behalf</option> 
+			<option value="">Other</option> <!-- << surely we need an other here? -->
+		</select>
+		</li> 
+	</li>   			       
+	<li>
+		<label for="bank-name">Full name of bank or building society</label>
+		<input type="text" name="bank-name" id="bank-name">
+	</li>	
+	<li>
+		<label for="sort-code">Sort code</label>
+		<input type="text" name="sort-code" id="sort-code">	
+	</li>
+	<li>
+		<label for="sort-code">Account number</label>
+		<input type="text" name="sort-code" id="sort-code">
+	</li>			       
+	<li>
+		<label for="paid">How often do you want to be paid?</label>
+		<select id="paid" name="paid">
+		    <option value="">Please select</option>       
+		    <option value="">Every Week</option> 
+		    <option value="">Every four weeks</option> 
+		</select>
+	</li>  
+	<li>
+			<label for="bank-ref">Building society roll or reference number <em>(optional)</em></label>
+			<input type="text" name="bank-ref" id="bank-ref">
+			<!--<p class="helper">e.g. 246810121416182022</p>-->
+	</li> 
+	<%= partial "partials/ui_circs-tell-us-more" %>
+</ul>
+
+</fieldset>
+
+<div class="form-steps">
+	<a href="change.html" class="button secondary">Back</a>
+	<a href="declaration.html" class="button" id="continue">Continue</a>
+</div><!-- / form steps -->
+			
+<script>
+$(document).ready(function() {    
+
+    	$('#security-mop-screener-yes').click(function(){
+    		$('#security-mop-no').hide();
+    		$('#security-mop-yes').show('medium');
+        });
+        $('#security-mop-screener-no').click(function(){
+			$('#security-mop-no').show('medium');
+			$('#security-mop-yes').hide();
+        });
+        
+}); 
+</script>
