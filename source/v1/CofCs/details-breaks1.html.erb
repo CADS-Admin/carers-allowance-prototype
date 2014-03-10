@@ -23,7 +23,7 @@
 	
 	<li>
 		<p>When did your most recent break in care start?</p>
-		<p class="helper">For example, 03 02 2014</p>
+		<p class="helper">For example, 03 February 2014</p>
 		<%= partial "partials/ui-date-dropdowns" %>		
 	</li>
 	<li>
@@ -132,8 +132,12 @@
 		<ul>
 			<li>
 				<p>When did the break end?</p>
-				<p class="helper">For example, 03 02 2014</p>
+				<p class="helper">For example, 07 February 2014</p>
 				<%= partial "partials/ui-date-dropdowns" %>
+				<p style="margin: 10px 0 0 0;">
+					<input type="checkbox" secondary="true" value="true" name="use-start-date" id="use-start-date" style="margin: 0 5px 0 0;">
+					<label for="use-start-date" style="font-size: 1.7rem; display: inline;"">Use the start date - 03 February 2014</label>
+				</p>
 			</li>
 			<li>
 				<p>End time <em>(optional)</em></p>
