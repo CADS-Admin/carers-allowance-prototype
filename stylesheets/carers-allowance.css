@@ -8,7 +8,7 @@
 /* line 14, stylesheets/carers-allowance.css.scss */
 main {
   background: #fff;
-  border-bottom: 10px solid #f47738;
+  border-bottom: 10px solid #005EA5;
   display: block;
   padding: 0 .7em; }
 
@@ -85,7 +85,7 @@ header {
 /* line 92, stylesheets/carers-allowance.css.scss */
 .feedback-container {
   display: none;
-  border: 10px solid #f47738;
+  border: 10px solid #005EA5;
   border-top: 0;
   background: #fff;
   padding: 1.5em; }
@@ -114,7 +114,7 @@ header {
 
 /* line 123, stylesheets/carers-allowance.css.scss */
 .carers-allowance {
-  border-top: 10px solid #f47738;
+  border-top: 10px solid #005EA5;
   background: #fff;
   padding: 0 0 4em 0;
   margin: 0 auto;
@@ -132,7 +132,7 @@ header {
     width: 980px; }
   /* line 135, stylesheets/carers-allowance.css.scss */
   .carers-allowance .prototype {
-    background: #f47738;
+    background: #005EA5;
     overflow: hidden;
     zoom: 1;
     padding: 0 1em 0.7em 1em; }
@@ -2220,7 +2220,7 @@ header {
   background: none repeat scroll 0 0 #EEEEEE;
   border: 1px solid #FFFFFF;
   cursor: pointer;
-  display: block;
+  display: inline-block;
   font-size: 1.7rem;
   font-weight: 500;
   line-height: 1em;
@@ -2267,7 +2267,8 @@ header {
 /* line 2332, stylesheets/carers-allowance.css.scss */
 #help-feedback {
   margin: 0;
-  border-top-width: 0; }
-  /* line 2335, stylesheets/carers-allowance.css.scss */
+  border-top-width: 0;
+  border-color: #005EA5; }
+  /* line 2336, stylesheets/carers-allowance.css.scss */
   #help-feedback p {
     font-size: 1.9rem; }
