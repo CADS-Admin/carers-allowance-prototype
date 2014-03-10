@@ -592,7 +592,7 @@ table.review-answers {
   width: 250px; }
 /* line 122, assets/service_template/_service.scss */
 .form .form-group-tight {
-  margin-bottom: 15px; }
+  margin-bottom: 10px; }
 /* line 129, assets/service_template/_service.scss */
 .form .radios,
 .form .checkboxes {
@@ -613,67 +613,73 @@ table.review-answers {
   .form .radios label,
   .form .checkboxes label {
     display: inline-block;
-    background-color: #dee0e2;
-    border: 1px solid #dee0e2;
+    background-color: white;
+    border: 1px solid #bfc1c3;
     padding: 7px 15px 5px;
     padding-left: 40px;
     margin: -1px 0 0; }
-    /* line 148, assets/service_template/_service.scss */
+    /* line 150, assets/service_template/_service.scss */
     .form .radios label:hover,
     .form .checkboxes label:hover {
       border-color: #0b0c0c;
       cursor: pointer; }
-  /* line 155, assets/service_template/_service.scss */
+  /* line 157, assets/service_template/_service.scss */
   .form .radios.horizontal .form-group,
   .form .checkboxes.horizontal .form-group {
     float: left;
     margin-right: 10px; }
-/* line 164, assets/service_template/_service.scss */
+/* line 166, assets/service_template/_service.scss */
 .form input[type="radio"]:checked + label,
 .form input[type="checkbox"]:checked + label {
-  background-color: white;
-  border: 1px solid #0b0c0c; }
-/* line 170, assets/service_template/_service.scss */
+  outline: 3px solid #0b0c0c;
+  outline-offset: -2px; }
+/* line 174, assets/service_template/_service.scss */
 .form input[type="radio"]:focus,
 .form input[type="checkbox"]:focus {
   outline: none; }
-/* line 174, assets/service_template/_service.scss */
+/* line 178, assets/service_template/_service.scss */
 .form input[type="radio"]:focus + label,
 .form input[type="checkbox"]:focus + label {
   outline: 3px solid #FFBF47;
   outline-offset: -2px; }
-/* line 181, assets/service_template/_service.scss */
+/* line 185, assets/service_template/_service.scss */
 .form select {
   font-size: 19px;
   margin-left: 0; }
-/* line 186, assets/service_template/_service.scss */
+/* line 190, assets/service_template/_service.scss */
 .form select[size] {
   padding: 10px; }
-/* line 190, assets/service_template/_service.scss */
+/* line 194, assets/service_template/_service.scss */
 .form legend.heading-36 {
   padding-top: 30px; }
 
-/* line 196, assets/service_template/_service.scss */
+/* line 200, assets/service_template/_service.scss */
 .js-enabled .js-hidden {
   display: none; }
 
-/* line 206, assets/service_template/_service.scss */
+/* line 210, assets/service_template/_service.scss */
 #footer {
   border: 0;
   background: #0b0c0c; }
-  /* line 209, assets/service_template/_service.scss */
+  /* line 213, assets/service_template/_service.scss */
   #footer p, #footer a {
     color: white; }
-  /* line 213, assets/service_template/_service.scss */
+  /* line 217, assets/service_template/_service.scss */
   #footer .footer-meta .copyright a {
     background: rgba(0, 0, 0, 0) url(../assets/service_template/govuk-crest-inverse.png) no-repeat 100% 0; }
-  /* line 216, assets/service_template/_service.scss */
+  /* line 220, assets/service_template/_service.scss */
   #footer .footer-meta .footer-meta-inner .open-government-licence h2 a {
     background: url(../assets/service_template/open-government-licence_2x-inverse.png) no-repeat;
     background-size: contain; }
-    /* line 219, assets/service_template/_service.scss */
+    /* line 223, assets/service_template/_service.scss */
     #footer .footer-meta .footer-meta-inner .open-government-licence h2 a img {
       display: none; }
+
+/* line 231, assets/service_template/_service.scss */
+.quote {
+  border-left: 10px solid #bfc1c3;
+  padding-left: 10px;
+  margin-bottom: 20px; }
 
 /* line 1, assets/govuk-helper/_forms.scss */
 form {
@@ -739,18 +745,25 @@ textarea {
   width: 350px; }
 
 /* line 73, assets/govuk-helper/_forms.scss */
-.form-group label {
+.form-label {
   display: block;
-  margin-bottom: 5px; }
+  padding-bottom: 5px;
+  padding-top: 10px;
+  font-weight: bold; }
 
-/* line 78, assets/govuk-helper/_forms.scss */
+/* line 80, assets/govuk-helper/_forms.scss */
+label {
+  display: block;
+  padding-bottom: 5px; }
+
+/* line 85, assets/govuk-helper/_forms.scss */
 .hint {
   color: #6f777b;
-  margin-top: 8px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   clear: left; }
 
-/* line 86, assets/govuk-helper/_forms.scss */
+/* line 93, assets/govuk-helper/_forms.scss */
 input[type="radio"],
 input[type="checkbox"] {
   margin-right: 5px;
@@ -1050,22 +1063,19 @@ input[type="checkbox"] {
 
 /* line 3, assets/patterns/_date-of-birth.scss */
 .date-of-birth legend {
-  margin-bottom: 5px; }
+  margin-bottom: 10px; }
 /* line 7, assets/patterns/_date-of-birth.scss */
 .date-of-birth .form-group {
-  width: 40px;
+  width: 45px;
   float: left;
   margin-right: 15px;
-  margin-right: 30px; }
+  margin-right: 20px; }
 /* line 16, assets/patterns/_date-of-birth.scss */
 .date-of-birth .form-group-year {
   width: 60px; }
 /* line 20, assets/patterns/_date-of-birth.scss */
 .date-of-birth .form-control {
   width: 100%; }
-/* line 24, assets/patterns/_date-of-birth.scss */
-.date-of-birth label {
-  color: #6f777b; }
 
 /*
 Version: 3.4.5 Timestamp: Mon Nov  4 08:22:42 PST 2013
