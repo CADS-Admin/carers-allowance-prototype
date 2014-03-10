@@ -7,7 +7,7 @@ $(document).ready(function(){
 
  $("#addressCountry").select2();
 
- // GOVUK.toggle.init();
+ GOVUK.toggle.init();
 
   // TOGGLE HELP PANEL
 

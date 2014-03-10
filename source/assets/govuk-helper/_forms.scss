@@ -70,15 +70,22 @@ textarea {
   }
 }
 
-.form-group label {
+.form-label {
   display: block;
-  margin-bottom: 5px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+label{
+  display: block;
+  padding-bottom: 5px;
 }
 
 .hint{
   color: $secondary-text-colour;
-  margin-top: 8px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   clear: left;
 }
 

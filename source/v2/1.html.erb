@@ -2,11 +2,9 @@
 
 <p>In this section you'll be asked about:</p>
 <ul>
-	<li>Your personal details</li>
-	<li>Your contact details</li>
-	<li>Your address</li>
-	<li>Your residency</li>
-	<li>Your claim</li>
+	<li>your personal details</li>
+	<li>where you live and work</li>
+	<li>your partner (if you have one)</li>
 </ul>
 
 <form class="form">
@@ -14,17 +12,18 @@
 	<fieldset>
 		<legend class="heading-36">Your personal details</legend>
 		<div class="form-group">
-			<label for="fullName">Full name</label>
+			<label for="fullName" class="form-label">Your full name</label>
 			<div class="hint">As shown on your birth certificate or passport</div>
 			<input type="text" class="form-control" id="fullName">
 		</div>
 		<div class="form-group">
-			<label for="other-name">Any other last names</label>
+			<label for="other-name" class="form-label">Any other last names you have</label>
+			<div class="hint">For example, a maiden name</div>
 			<input type="text" class="form-control" id="other-name">
-			<div class="hint">Eg. your maiden name</div>
 		</div>
 		<fieldset class="date-of-birth">
-	      <legend>Date of birth</legend>
+	      <legend class="form-label">Your date of birth</legend>
+	      <div class="hint">For example, '21/3/1976'</div>
 	      <div class="form-group">
 	        <label for="day">Day</label>
 	        <input type="text" class="form-control" pattern="[0-9]*" id="day" class="form-control">
@@ -39,42 +38,38 @@
 	      </div>
 	    </fieldset>
 		<div class="form-group">
-			<label for="NINumber">National Insurance number</label>
-			<div class="hint">As shown on your National Insurance card, benefit letter, payslip or P60</div>
+			<label for="NINumber" class="form-label">Your National Insurance number</label>
+			<div class="hint">It's on your National Insurance card, benefit letter, payslip or P60.<br>
+			For example, 'VO 12 34 56 D'.</div>
 			<input type="text" class="form-control NINumber" id="NINumber">
-			<div class="hint">Eg. 'VO 12 34 56 D'</div>
 		</div>	
 		<div class="form-group">
-			<label for="nationality">Nationality</label>
-			<div class="hint">As shown on your current passport</div>
+			<label for="nationality" class="form-label">Your nationality</label>
+			<div class="hint">As shown on your current passport. For example, 'British'</div>
 			<input type="text" class="form-control" id="nationality">
-			<div class="hint">Eg. 'British'</div>
 		</div>
-	</fieldset>
-
-	<fieldset>
-		<legend class="heading-36">Contact details</legend>
 		<div class="form-group form-group-tight">
-	  		<label for="telNo">Phone or mobile number (if you have one)</label>
+	  		<label for="telNo" class="form-label">Phone or mobile number</label>
+			<div class="hint">We may use this to contact you for further information</div>
 	  		<input type="text" class="form-control telNo" id="telNo">
 		</div>
 		<div class="form-group">	
-  			<label for="textPhone"><input type="checkbox" class="form-control" id="textPhone"> Please use a textphone when contacting me</label>
+  			<label for="textPhone"><input type="checkbox" class="form-control" id="textPhone"> I need to be contacted using a textphone</label>
 		</div>
 	</fieldset>
 
 	<fieldset>
-		<legend class="heading-36">Your address</legend>
+		<legend class="form-label">Home address</legend>
 		<div class="form-group form-group-tight">
-	  		<label for="street">Street address</label>
+	  		<label for="street">Building and street</label>
 	  		<input type="text" class="form-control" id="street">
 		</div>
 		<div class="form-group">
-	  		<label for="street2" class="visuallyhidden">Street address line 2</label>
+	  		<label for="street2" class="visuallyhidden">Building and street line 2</label>
 	  		<input type="text" class="form-control" id="street2">
 		</div>
 		<div class="form-group">
-	  		<label for="town">Town or City</label>
+	  		<label for="town">Town or city</label>
 	  		<input type="text" class="form-control town" id="town">
 		</div>
 		<div class="form-group">
@@ -92,10 +87,11 @@
 	</fieldset>
 
 	<fieldset>
-		<legend class="heading-36">Residency</legend>
+		<legend class="heading-36">Where you live and work</legend>
 
+		<div class="form-label">Residency and time abroad</div>
 		<fieldset>
-			<legend>Do you normally live in England, Scotland or Wales?</legend>
+			<legend>1. Do you normally live in England, Scotland or Wales?</legend>
 
 			<div class="horizontal radios">
 				<div class="form-group">
@@ -109,9 +105,8 @@
 				</div>
 			</div>
 		</fieldset>
-
 		<fieldset>
-			<legend>Have you been out of England, Scotland or Wales for more than a total of 52 weeks in the last 3 years?</legend>
+			<legend>2. Over the last 3 years have you spent more than a total of 52 weeks outside England, Scotland or Wales?</legend>
 			<div class="horizontal radios">
 				<div class="form-group">
 			  		<input type="radio" id="TimeAbroadYes" name="TimeAbroad">
@@ -125,15 +120,31 @@
 			</div>
 		</fieldset>
 
+		<h4 class="heading-19">Work, insurance, pensions and benefits</h4>
+		<fieldset>
+			<legend>1. Do you get state pension?</legend>
+			<div class="horizontal radios">
+				<div class="form-group">
+			  		<input type="radio" id="pensionYes" name="pension">
+			  		<label for="pensionYes">Yes</label>
+				</div>
+				<div class="form-group">
+			  		<input type="radio" id="pensionNo" name="partner">
+			  		<label for="pensionNo" name="partner">No</label>
+				</div>
+			</div>
+		</fieldset>
 		<fieldset>
 			<legend>
-				<p>Answer 'Yes' below if any of the following statements are true.</p>
-				<p>You or a member of your family:</p>
-				<ul>
-					<li>currently works or pays insurance outside the United Kingdom</li>
-					<li>currently receives a benefit or pension outside the United Kingdom</li>
-					<li>has claimed for a benefit or pension outside the United Kingdom</li>
-				</ul>
+				<p>2. Are any of the following 3 statements true?</p>
+				<div class="quote">
+					<p>You or a member of your family:</p>
+					<ul>
+						<li>currently works or pays insurance outside the United Kingdom</li>
+						<li>currently receives a benefit or pension outside the United Kingdom</li>
+						<li>has claimed for a benefit or pension outside the United Kingdom</li>
+					</ul>
+				</div>
 			</legend>
 			<div class="horizontal radios">
 				<div class="form-group">
@@ -149,8 +160,8 @@
 		</fieldset>
 		<fieldset class="js-hidden" id="jsToggleEEAYes">
 			<legend>
-				<p>Is it from one of these countries?</p>
-				<p class="hint">Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden or Switzerland.</p>
+				<p>3. Is it from one of these countries?</p>
+				<p class="quote">Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden or Switzerland.</p>
 			</legend>
 			<div class="horizontal radios">
 				<div class="form-group">
@@ -166,15 +177,17 @@
 		</fieldset>
 
 
-		<%= partial "partials/questions/state-pension" %>
+
 
 	</fieldset>
 
 
 	<fieldset>
-		<legend class="heading-36">Your claim</legend>
+		<legend class="heading-36">The person you're caring for</legend>
 		<fieldset class="date-of-birth">
-	      <legend>What date did you start caring from?</legend>
+	      <legend class="form-label">What date did you start caring for this person?</legend>
+
+		<div class="hint">Please note that Carer's Allowance can only be back-dated from up to 3 months before the date you submit this application.</div>
 	      <div class="form-group form-group-tight">
 	        <label for="day">Day</label>
 	        <input type="text" class="form-control" pattern="[0-9]*" id="day" class="form-control">
@@ -187,12 +200,11 @@
 	        <label for="year">Year</label>
 	        <input type="text" class="form-control" pattern="[0-9]*" id="year" class="form-control">
 	      </div>
-		<div class="hint">Please note that claims can only be back-dated up to 3 months from the date you submit this application.</div>
 	    </fieldset>
 	</fieldset>
 
 	<fieldset>
-		<legend class="heading-36">Your marital status</legend>
+		<legend class="heading-36">Your partner</legend>
 		<fieldset>
 			<!--<legend style="padding-top: 30px;">Have you had a partner living with you at any time since this date?</legend>-->
 			<legend style="padding-top: 30px;">Have you lived with a partner at any time in the last 3 months?</legend>

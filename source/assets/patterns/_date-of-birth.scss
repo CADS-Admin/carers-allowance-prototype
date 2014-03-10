@@ -1,15 +1,15 @@
 .date-of-birth {
   
   legend {
-    margin-bottom: 5px
+    margin-bottom: 10px
   }
   
   .form-group {
-    width: 40px;
+    width: 45px;
     float: left;
     margin-right: $gutter-half;
     @include media(tablet) {
-      margin-right: $gutter;
+      margin-right: $gutter-two-thirds;
     }
   }
   
@@ -22,7 +22,7 @@
   }
 
   label{
-    color: $secondary-text-colour;
+    //color: $secondary-text-colour;
   }
   
 }
