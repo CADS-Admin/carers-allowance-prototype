@@ -5,9 +5,9 @@
 
 $(document).ready(function(){
 
- //$("#addressCountry").select2(); *This breaking my scripts elsewhere - BH*
+//$("#addressCountry").select2(); *This breaking my scripts elsewhere - BH*
 
- GOVUK.toggle.init();
+// GOVUK.toggle.init();
 
   // TOGGLE HELP PANEL
 
