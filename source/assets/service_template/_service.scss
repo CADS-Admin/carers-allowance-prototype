@@ -2,6 +2,58 @@
 
 
 
+// Suggest these styles for the helper
+
+.sub-heading{
+  color: $secondary-text-colour;
+  @include core-24;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+// Headings don't get enough bottom margin as legends
+
+.govuk .heading-36{
+  //border-top: 3px solid $black;
+  //padding-top: 5px;
+  //margin-top: 45px;
+  margin-bottom: 45px;
+  clear: both; // Fixes weird border issue
+}
+/*
+.govuk legend.heading-36 {
+  padding-top: 0; // Hmm, need to figure this out
+}
+*/
+
+hr {
+  margin-top: 45px;
+  background: $border-colour;
+  height: 1px; 
+  border: 0;
+  clear: both;
+}
+
+
+
+// Borders on headings
+
+/*
+.govuk legend.heading-36 {
+  padding-top: 15px;
+}
+*/
+
+// Bigger margin for numbered lists?
+.govuk .list-number {
+  margin-left: 25px;
+}
+
+
+
 // Phase banner and tag
 
 .colour-strip{
@@ -18,18 +70,16 @@
   @include phase-tag(beta)
 }
 
-.button{
-  @include button()
-}
 
 #section-nav h2{
-  border-top: 5px solid $black;
-  padding-top: $gutter-one-third;
+  //border-top: 5px solid $black;
+  //padding-top: $gutter-one-third;
   margin-top: $gutter;
 }
 
 // Link style
 
+/*
 %link-style,
 .link-style {
     display: inline;
@@ -43,6 +93,7 @@
     cursor: pointer;
   }
 }
+*/
 
 // Help and feedback drop-down panel
 
@@ -87,13 +138,18 @@ table.review-answers{
   }
 }
 
+
+
+// ===================================================
 // Forms
 
 // Default text field width
+
+/*
 .form-control[type="text"]{
   width: 66%;
 }
-
+*/
 
 .form{ 
 
@@ -119,12 +175,15 @@ table.review-answers{
     }
   }
 
+/*
   .form-group-tight{
     margin-bottom: $gutter-one-third;
   }
+  */
 
   // Give radios and checkboxes visible active areas
 
+/*
   .radios,
   .checkboxes{
     margin: 0;
@@ -179,8 +238,11 @@ table.review-answers{
     outline: 3px solid #FFBF47;
     outline-offset: -2px;
   }
+  */
 
   // Select boxes
+
+  /*
 
   select{
     font-size: 19px;
@@ -194,8 +256,11 @@ table.review-answers{
   legend.heading-36{
     padding-top: $gutter;
   }
+*/
+
 
 }
+
 
   .js-enabled .js-hidden{
     display: none;
