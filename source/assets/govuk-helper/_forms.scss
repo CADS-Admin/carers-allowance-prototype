@@ -92,26 +92,16 @@ textarea {
   width: 100%;
   clear: both;
   @extend .cf;
-  @include media(tablet) {
-    margin-bottom: $form-group-spacing;
-  }
-
-  // Nested form groups have smaller spacing
-  .form-group{
-    margin-bottom: 10px;
-    &:last-child{
-      margin-bottom: 0;
-    }
-  }
 }
 
-// Every form group should start with a form group label
+// Every form group should have a form group label
 
 .form-group-label{
-  @include bold-24;
+  //@include bold-24;
+  @extend .heading-24;
   display: block;
-  margin-top: 0;
-  margin-bottom: $form-element-spacing;
+  //margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 // If your form group contains multiple controls, each one should have a form control label
@@ -119,8 +109,8 @@ textarea {
 .form-control-label{
   @include core-19;
   display: block;
+  margin-top: $form-element-spacing;
   margin-bottom: $form-element-spacing;
-  //margin-top: $form-element-spacing;
 }
 
 .form-hint {
@@ -131,27 +121,13 @@ textarea {
   clear: both;
 }
 
-.form-group-compound {
-  margin-bottom: 10px;
-}
-
-
-// Form labels, or for legends styled to look like labels
-/*
-.form-label,
-.form-group label {
-  @include core-19;
-  display: block;
-  margin-bottom: 5px;
-}
-*/
-
 
 // By default, form controls are 50% width for desktop and 100% width for mobile
 
 .form-control {
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 10px;
   @include media(tablet) {
     width: 75%;
   }

@@ -2,60 +2,33 @@
 
 
 
-// Suggest these styles for the helper
-
-.sub-heading{
-  color: $secondary-text-colour;
-  @include core-24;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-
-
 // Headings don't get enough bottom margin as legends
 
+/*
 .govuk .heading-36{
-  //border-top: 3px solid $black;
-  //padding-top: 5px;
-  //margin-top: 45px;
   margin-bottom: 45px;
   clear: both; // Fixes weird border issue
-}
-/*
-.govuk legend.heading-36 {
-  padding-top: 0; // Hmm, need to figure this out
 }
 */
 
 hr {
-  margin-top: 45px;
+  margin-top: $gutter;
+  margin-bottom: $gutter;
   background: $border-colour;
   height: 1px; 
   border: 0;
+  float: left;
+  width: 100%;
   clear: both;
 }
 
-
-
-// Borders on headings
-
-/*
-.govuk legend.heading-36 {
-  padding-top: 15px;
-}
-*/
 
 // Bigger margin for numbered lists?
 .govuk .list-number {
   margin-left: 25px;
 }
 
-
-
-// Phase banner and tag
-
+// Blue colour strip
 .colour-strip{
   padding: 8px 0;
   background-color: #2B8CC4;
@@ -66,37 +39,17 @@ hr {
   padding: 0;
 }
 
+// Phase tag
 #phase-tag{
   @include phase-tag(beta)
 }
 
-
+// Section nav heading
 #section-nav h2{
-  //border-top: 5px solid $black;
-  //padding-top: $gutter-one-third;
   margin-top: $gutter;
 }
 
-// Link style
-
-/*
-%link-style,
-.link-style {
-    display: inline;
-    color: $link-colour;
-    -webkit-appearance:none;
-    background: none;
-    border: none;
-    text-decoration: underline;
-  &:hover {
-    color: $link-hover-colour;
-    cursor: pointer;
-  }
-}
-*/
-
 // Help and feedback drop-down panel
-
 #help-feedback{
   margin: 0 -30px;
   border-color: $beta-colour;
@@ -117,7 +70,6 @@ hr {
     border-width: 10px 0 0 0;
   }
 }
-
 
 // Review page
 
@@ -140,138 +92,15 @@ table.review-answers{
 
 
 
-// ===================================================
-// Forms
-
-// Default text field width
-
-/*
-.form-control[type="text"]{
-  width: 66%;
+.js-enabled .js-hidden{
+  display: none;
 }
-*/
-
-.form{ 
-
-  // Custom form control styles
-  .form-control{
-    &.NINumber{
-      width: 150px;
-    }
-    &.postcode{
-      width: 100px;
-    }
-    &.telNo{
-      width: 250px;
-    }
-    &.town{
-      width: 250px;
-    }
-    &.county{
-      width: 250px;
-    }
-    &.country{
-      width: 250px;
-    }
-  }
-
-/*
-  .form-group-tight{
-    margin-bottom: $gutter-one-third;
-  }
-  */
-
-  // Give radios and checkboxes visible active areas
-
-/*
-  .radios,
-  .checkboxes{
-    margin: 0;
-    padding-top: $gutter-half;
-    padding-bottom: $gutter-half;
-    .form-group{
-      position: relative;
-    }
-    input{
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-    label{
-      display: inline-block;
-      //background-color: $panel-colour;
-      //border: 1px solid $panel-colour;
-      background-color: $white;
-      border: 1px solid $border-colour;
-      padding: 7px 15px 5px;
-      padding-left: 40px;
-      margin: -1px 0 0;
-      &:hover{
-        border-color: $black;
-        cursor: pointer;
-      }
-    }
-    &.horizontal{
-      @extend %contain-floats;
-      .form-group{
-        float: left;
-        margin-right: 10px;
-      }
-
-    }
-  }
-
-  input[type="radio"]:checked + label,
-  input[type="checkbox"]:checked + label{
-    //background-color: $white;
-    //border: 1px solid $black;
-    outline: 3px solid $black;
-    outline-offset: -2px;
-  }
-
-  input[type="radio"]:focus,
-  input[type="checkbox"]:focus {
-    outline: none;
-  }
-  input[type="radio"]:focus + label,
-  input[type="checkbox"]:focus + label{
-    outline: 3px solid #FFBF47;
-    outline-offset: -2px;
-  }
-  */
-
-  // Select boxes
-
-  /*
-
-  select{
-    font-size: 19px;
-    margin-left: 0;
-  }
-
-  select[size]{
-    padding: 10px;
-  }
-
-  legend.heading-36{
-    padding-top: $gutter;
-  }
-*/
-
-
-}
-
-
-  .js-enabled .js-hidden{
-    display: none;
-  }
 
 
 
 // NEW DARK FOOTER STYLES
-//
-// We're overwriting the template styles here.
 
+// We're overwriting the template styles here.
 #footer{
   border: 0;
   background: $black;
@@ -290,13 +119,6 @@ table.review-answers{
       }
     }
   }
-
-}
-
-.quote{
-  border-left: 10px solid $border-colour;
-  padding-left: 10px;
-  margin-bottom: 20px;
 }
 
 
