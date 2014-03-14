@@ -41,22 +41,20 @@
         </legend>
 
         <p class="form-hint">For example, '21/3/1976'</p>
+        
+        <div class="form-group-inline form-group-day">
+            <label for="dob-day" class="form-control-label">Day</label>
+            <input type="text" class="form-control" pattern="[0-9]*" id="dob-day">
+        </div>
 
-        <div class="form-group">
-            <div class="form-group-inline form-group-day">
-                <label for="dob-day" class="form-control-label">Day</label>
-                <input type="text" class="form-control" pattern="[0-9]*" id="dob-day">
-            </div>
+        <div class="form-group-inline form-group-month">
+            <label for="dob-month" class="form-control-label">Month</label>
+            <input type="text" class="form-control" id="dob-month">
+        </div>
 
-            <div class="form-group-inline form-group-month">
-                <label for="dob-month" class="form-control-label">Month</label>
-                <input type="text" class="form-control" id="dob-month">
-            </div>
-
-            <div class="form-group-inline form-group-year">
-                <label for="dob-year" class="form-control-label">Year</label>
-                <input type="text" class="form-control" pattern="[0-9]*" id="dob-year">
-            </div>
+        <div class="form-group-inline form-group-year">
+            <label for="dob-year" class="form-control-label">Year</label>
+            <input type="text" class="form-control" pattern="[0-9]*" id="dob-year">
         </div>
 
     </fieldset>
@@ -85,18 +83,14 @@
     <div class="form-group">
         <label class="form-group-label" for="telNo">Phone or mobile number</label>
         <div class="form-hint">We may use this to contact you for further information</div>
-        <div class="form-group">
-            <input type="text" class="form-control form-control-1-2" id="telNo">
-        </div>
-        <div class="form-group">    
-            <label for="textPhone" class="form-radio">
-                <input type="checkbox" id="textPhone"> 
-                I need to be contacted using a textphone
-            </label>
-        </div>
+        
+        <input type="text" class="form-control form-control-1-2" id="telNo">
+
+        <label for="textPhone" class="form-radio">
+            <input type="checkbox" id="textPhone"> 
+            I need to be contacted using a textphone
+        </label>
     </div>
-
-
 
     <!-- Address -->
 
@@ -106,107 +100,97 @@
             Home address
         </legend>
 
-        <div class="form-group">
-            <label class="form-control-label" for="address-line-1">Building and street</label>
-            <input type="text" class="form-control" id="address-line-1">
-        </div>
+        <label class="form-control-label" for="address-line-1">Building and street</label>
+        <input type="text" class="form-control" id="address-line-1">
 
-        <div class="form-group">
-            <label class="form-control-label visuallyhidden" for="address-line-2" class="">Building and street line 2 (optional)</label>
-            <input type="text" class="form-control" id="address-line-2">
-        </div>
-      
-        <div class="form-group">
-            <label class="form-control-label" for="address-town">Town or city</label>
-            <input type="text" class="form-control form-control-1-2" id="address-town">
-        </div>
+        <label class="form-control-label visuallyhidden" for="address-line-2">Building and street line 2 (optional)</label>
+        <input type="text" class="form-control" id="address-line-2">
 
-        <div class="form-group">
-            <label class="form-control-label" for="address-postcode">Postcode</label>
-            <input type="text" class="form-control form-control-1-4" id="address-postcode">
-        </div>
+        <label class="form-control-label" for="address-town">Town or city</label>
+        <input type="text" class="form-control form-control-1-2" id="address-town">
 
-        <div class="form-group">
-            <label for="country" class="form-control-label">Country</label>
-            <%= partial "partials/country-select" %>
-        </div>
+        <label class="form-control-label" for="address-postcode">Postcode</label>
+        <input type="text" class="form-control form-control-1-4" id="address-postcode">
+
+        <label for="country" class="form-control-label">Country</label>
+        <%= partial "partials/country-select" %>
 
     </fieldset>
-
-
-
 
     <hr>
 
     <h2 class="heading-36">2. Where you live and work</h2>
 
-	<fieldset>
+    <!-- Residency -->
+
+	<fieldset class-"form-group">
 		<legend class="form-group-label">Residency</legend>
+        
+        <p class="form-control-label">Do you normally live in England, Scotland or Wales?</p>
 
-        <fieldset class-"form-group">
-            <legend class="form-control-label">Do you normally live in England, Scotland or Wales?</legend>
-
-            <div class="form-group">
-                <div class="form-group-inline form-radio">
-                  <label for="UKYes" class="block-label">
-                    <input id="UKYes" type="radio" name="UKResident" value="">
-                    Yes
-                  </label>
-                </div>
-                <div class="form-group-inline form-radio">
-                  <label for="UKNo" class="block-label">
-                    <input id="UKNo" type="radio" name="UKResident" value="">
-                    No
-                  </label>
-                </div>
-            </div>
-        </fieldset>
-
-
-        <legend class="form-group-label">Time abroad</legend>    
-		<fieldset>
-			<legend class="form-control-label">Over the last 3 years have you spent more than a total of 52 weeks outside England, Scotland or Wales?</legend>
-
-			<div class="form-group">
-				<div class="form-radio form-group-inline">
-			  		<label for="TimeAbroadYes" class="block-label">
-                        <input type="radio" id="TimeAbroadYes" name="TimeAbroad">
-                        Yes
-                    </label>
-				</div>
-
-				<div class="form-radio form-group-inline">
-			  		<label for="TimeAbroadNo" name="partner" class="block-label">
-                        <input type="radio" id="TimeAbroadNo" name="TimeAbroad">
-                        No
-                    </label>
-				</div>
-			</div>
-		</fieldset>
-
+        <div class="form-group-inline form-radio">
+          <label for="UKYes" class="block-label">
+            <input id="UKYes" type="radio" name="UKResident" value="">
+            Yes
+          </label>
+        </div>
+        <div class="form-group-inline form-radio">
+          <label for="UKNo" class="block-label">
+            <input id="UKNo" type="radio" name="UKResident" value="">
+            No
+          </label>
+        </div>
     </fieldset>
 
-	<fieldset>
-		<legend class="form-group-label">State pension</legend>
+    <!-- Time abroad -->
+
+    <fieldset class-"form-group">
+        <legend class="form-group-label">Time abroad</legend>
+
+		<p class="form-control-label">Over the last 3 years have you spent more than a total of 52 weeks outside England, Scotland or Wales?</p>
+
+		<div class="form-radio form-group-inline">
+	  		<label for="TimeAbroadYes" class="block-label">
+                <input type="radio" id="TimeAbroadYes" name="TimeAbroad">
+                Yes
+            </label>
+		</div>
+
+		<div class="form-radio form-group-inline">
+	  		<label for="TimeAbroadNo" name="partner" class="block-label">
+                <input type="radio" id="TimeAbroadNo" name="TimeAbroad">
+                No
+            </label>
+		</div>
+    </fieldset>
+
+    <!-- State pension -->
+
+	<fieldset class-"form-group">
+        <legend class="form-group-label">State pension</legend>
+
         <p class="form-control-label">Do you get state pension?</p>
-		<div class="form-group">
-			<div class="form-radio form-group-inline">
-		  		<label for="pensionYes" class="block-label">
-                    <input type="radio" id="pensionYes" name="pension">
-                    Yes
-                </label>
-			</div>
-			<div class="form-radio form-group-inline">
-		  		<label for="pensionNo" name="partner" class="block-label">
-                    <input type="radio" id="pensionNo" name="partner">
-                    No
-                </label>
-			</div>
+		<div class="form-radio form-group-inline">
+	  		<label for="pensionYes" class="block-label">
+                <input type="radio" id="pensionYes" name="pension">
+                Yes
+            </label>
+		</div>
+		<div class="form-radio form-group-inline">
+	  		<label for="pensionNo" name="partner" class="block-label">
+                <input type="radio" id="pensionNo" name="partner">
+                No
+            </label>
 		</div>
 	</fieldset>
 
+
+
+    <!-- Benefits, pensions, work and insurance -->
+
+    <h3 class="form-group-label">Benefits, pensions, work and insurance</h3>
+
 	<fieldset class="form-group">
-        <h3 class="form-group-label">Benefits, pensions, work and insurance</h3>
 		<legend class="form-control-label">
 			Are any of the following 3 statements true?
             <div class="form-group-indent">             
@@ -356,43 +340,67 @@
 
 			<fieldset class="js-hidden" id="partnerDetails">
 				<legend class="heading-36">Your partner's details</legend>
-				<div class="form-group">
-					<label for="partnerFullName">Full name</label>
-					<div class="hint">As shown on their birth certificate or passport</div>
-					<input type="text" class="form-control" id="partnerFullName">
-				</div>
-				<div class="form-group">
-					<label for="partnerOther-name">Any other last names</label>
-					<input type="text" class="form-control" id="partnerOther-name">
-					<div class="hint">Eg. their maiden name</div>
-				</div>
-				<fieldset class="date-of-birth">
-			      <legend>Date of birth</legend>
-			      <div class="form-group">
-			        <label for="partnerDay">Day</label>
-			        <input type="text" class="form-control" pattern="[0-9]*" id="partnerDay" class="form-control">
-			      </div>
-			      <div class="form-group">
-			        <label for="partnerMonth">Month</label>
-			        <input type="text" class="form-control" id="partnerMonth" class="form-control">
-			      </div>
-			      <div class="form-group form-group-year">
-			        <label for="partnerYear">Year</label>
-			        <input type="text" class="form-control" pattern="[0-9]*" id="partnerYear" class="form-control">
-			      </div>
-			    </fieldset>
-				<div class="form-group">
-					<label for="partnerNINumber">National Insurance number</label>
-					<div class="hint">As shown on their National Insurance card, benefit letter, payslip or P60</div>
-					<input type="text" class="form-control NINumber" id="partnerNINumber">
-					<div class="hint">Eg. 'VO 12 34 56 D'</div>
-				</div>	
-				<div class="form-group">
-					<label for="partnerNationality">Nationality (optional)</label>
-					<div class="hint">As shown on their current passport</div>
-					<input type="text" class="form-control" id="partnerNationality">
-					<div class="hint">Eg. 'British'</div>
-				</div>
+				    <!-- Name -->
+
+                    <div class="form-group">
+                        <label class="form-group-label" for="partner-full-name">Full name</label>
+                        <p class="form-hint">As shown on their birth certificate or passport</p>
+                        <input type="text" class="form-control" id="partner-full-name">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group-label" for="other-names">Any other last names</label>
+                        <p class="form-hint">For example their maiden name</p>
+                        <input type="text" class="form-control form-control-1-2" id="other-names">
+                    </div>
+
+                    <!-- Date of birth -->
+
+                    <fieldset class="form-group date-of-birth">
+
+                        <legend class="form-group-label">
+                            Date of birth
+                        </legend>
+
+                        <p class="form-hint">For example, '21/3/1976'</p>
+
+                        <div class="form-group">
+                            <div class="form-group-inline form-group-day">
+                                <label for="partner-dob-day" class="form-control-label">Day</label>
+                                <input type="text" class="form-control" pattern="[0-9]*" id="partner-dob-day">
+                            </div>
+
+                            <div class="form-group-inline form-group-month">
+                                <label for="partner-dob-month" class="form-control-label">Month</label>
+                                <input type="text" class="form-control" id="partner-dob-month">
+                            </div>
+
+                            <div class="form-group-inline form-group-year">
+                                <label for="partner-dob-year" class="form-control-label">Year</label>
+                                <input type="text" class="form-control" pattern="[0-9]*" id="partner-dob-year">
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <!-- National Insurance number -->
+
+                    <div class="form-group">
+                        <label class="form-group-label" for="partner-NINumber">National Insurance number</label>
+                        <p class="form-hint">
+                            It's on their National Insurance card, benefit letter, payslip or P60.<br>
+                            For example, 'QQ 12 34 56 C'.
+                        </p>
+                        <input type="text" class="form-control form-control-1-2" id="partner-NINumber">
+                    </div>
+
+                    <!-- Nationality -->
+
+                    <div class="form-group">
+                        <label class="form-group-label" for="partner-nationality">Nationality (optional)</label>
+                        <div class="form-hint">As shown on their current passport. For example, 'British'</div>
+                        <input type="text" class="form-control form-control-1-2" id="partner-nationality">
+                    </div>
 			</fieldset>
 		</div>
 
