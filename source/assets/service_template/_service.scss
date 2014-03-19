@@ -97,6 +97,30 @@ table.review-answers{
 }
 
 
+// 35 Hour week list
+// Used in the 'Breaks from caring' part of the 'Care you provide' section
+
+.under35hr-week-list{
+  .week-label{
+    width: 50%;
+  }
+  .under35Hrs{
+    margin-top: 0;
+    label{
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .hoursCared{
+      width: 50px;
+    }
+    .reasonText{
+      width: 97%;
+    }
+  }
+}
+
+
+
 
 // NEW DARK FOOTER STYLES
 

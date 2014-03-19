@@ -1,0 +1,153 @@
+<h1 class="heading-48"><span class="heading-27">Section 2</span> The person you care for</h1>
+
+<p>In this section you'll be asked about the person you care for.</p>
+
+<hr>
+
+<form class="form">
+
+    <!-- Name -->
+
+    <div class="form-group">
+        <label class="form-group-label" for="full-name">Their full name</label>
+        <p class="form-hint">As shown on their birth certificate or passport</p>
+        <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <div class="form-group">
+        <label class="form-group-label" for="other-names">Any other last names</label>
+        <p class="form-hint">For example their maiden name</p>
+        <input type="text" class="form-control form-control-1-2" id="other-names">
+    </div>
+
+    <!-- Date of birth -->
+
+    <fieldset class="form-group date-of-birth">
+
+        <legend class="form-group-label">
+            Their date of birth
+        </legend>
+
+        <p class="form-hint">For example, '21/3/1976'</p>
+        
+        <div class="form-group-inline form-group-day">
+            <label for="dob-day" class="form-control-label">Day</label>
+            <input type="text" class="form-control" pattern="[0-9]*" id="dob-day">
+        </div>
+
+        <div class="form-group-inline form-group-month">
+            <label for="dob-month" class="form-control-label">Month</label>
+            <input type="text" class="form-control" id="dob-month">
+        </div>
+
+        <div class="form-group-inline form-group-year">
+            <label for="dob-year" class="form-control-label">Year</label>
+            <input type="text" class="form-control" pattern="[0-9]*" id="dob-year">
+        </div>
+
+    </fieldset>
+
+    <!-- National Insurance number -->
+
+    <div class="form-group">
+        <label class="form-group-label" for="NINumber">Their National Insurance number</label>
+        <p class="form-hint">
+            It's on their National Insurance card, benefit letter, payslip or P60.<br>
+            For example, 'VO 12 34 56 D'.
+        </p>
+        <input type="text" class="form-control form-control-1-2" id="NINumber">
+    </div>
+
+    <fieldset class="form-group">
+
+        <legend class="form-group-label">
+            Their address
+        </legend>
+
+        <div class="form-radio form-group">
+            <label for="myAddressYes" class="block-label">
+                <input type="radio" id="myAddressYes" name="contactAddress" class="js-toggle" data-hide="#newAddress">
+                Use my address
+            </label>
+        </div>
+        <div class="form-radio form-group">
+            <label for="myAddressNo" name="partner" class="block-label">
+                <input type="radio" id="myAddressNo" name="contactAddress" class="js-toggle" data-show="#newAddress">
+                Provide another address
+            </label>
+        </div>
+
+    </fieldset>
+
+    <!-- Address -->
+
+    <fieldset class="form-group form-group-indent js-hidden" id="newAddress">
+
+        <legend class="form-group-label visuallyhidden">
+            Contact address
+        </legend>
+        <div>
+
+            <label class="form-control-label" for="address-line-1">Building and street</label>
+            <input type="text" class="form-control" id="address-line-1">
+
+            <label class="form-control-label visuallyhidden" for="address-line-2">Building and street line 2 (optional)</label>
+            <input type="text" class="form-control" id="address-line-2">
+
+            <label class="form-control-label" for="address-town">Town or city</label>
+            <input type="text" class="form-control form-control-1-2" id="address-town">
+
+            <label class="form-control-label" for="address-postcode">Postcode</label>
+            <input type="text" class="form-control form-control-1-4" id="address-postcode">
+
+            <label for="country" class="form-control-label">Country</label>
+            <%= partial "partials/country-select" %>
+
+        </div>
+
+    </fieldset>
+
+    <!-- Phone number -->
+
+    <div class="form-group">
+        <label class="form-group-label" for="telNo">Their phone or mobile number</label>        
+        <input type="text" class="form-control form-control-1-2" id="telNo">
+    </div>
+
+    <!-- Relationship -->
+
+    <fieldset class="form-group">
+        <legend class="form-group-label" for="relationship">What's their relationship to you?</legend>
+        <p class="form-hint">
+            For example, wife, step-sister, friend etc.
+        </p>
+        <label class="form-control-label">They are my...</label>
+        <%= partial "partials/ui-relationship-2" %>
+    </fieldset>
+
+
+    <!-- Benefits -->
+
+    <fieldset class-"form-group">
+        <legend class="form-group-label">Benefits</legend>
+        
+        <p class="form-control-label">Do they get Armed Forces Independence Payment?</p>
+        <p class="form-hint">
+            Also known as AFIP.
+        </p>
+        <div class="form-group-inline form-radio">
+          <label for="AFIPYes" class="block-label">
+            <input id="AFIPYes" type="radio" name="AFIP" value="">
+            Yes
+          </label>
+        </div>
+        <div class="form-group-inline form-radio">
+          <label for="AFIPNo" class="block-label">
+            <input id="AFIPNo" type="radio" name="AFIP" value="">
+            No
+          </label>
+        </div>
+    </fieldset>
+    
+
+</form>
