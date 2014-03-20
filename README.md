@@ -2,7 +2,7 @@
 
 A front-end prototype for the 'Apply for Carer's Allowance service on GOV.UK.
 
-You can [view the prototype](http://thomasmooredwp.github.io/carers-allowance-prototype/) on GitHub.
+You can [view the prototype](http://CADS-Admin.github.io/carers-allowance-prototype/) on GitHub.
 
 
 ## Dependencies
