@@ -1,0 +1,217 @@
+<h1>Report a change in your circumstances</h1>     
+
+<fieldset class="form-elements">
+
+<legend>About your employment</legend>
+
+<ul id="details">
+	<li>			       
+		<p>Are you still caring 35 hours or more each week?</p>
+		<ul class="radio" id="still-caring">
+			<li>
+				<input type="radio" value="still-caring-yes" name="still-caring" id="still-caring-yes">
+				<label for="still-caring-yes">Yes</label>
+			</li>			    
+			<li>
+				<input type="radio" value="still-caring-no" name="still-caring" id="still-caring-no">
+				<label for="still-caring-no">No</label>
+			</li>
+		</ul>
+	</li>
+	<!-- -->
+	
+	<li>			       
+		<p>Are you<!--, <i>or</i> will you be--> employed, or are you working for yourself?</p>
+		<p class="helper">For example, when employed you get payslips for your work</p>
+		<ul class="radio-block" id="type-employment">
+			<li>
+				<input type="radio" value="type-employment-yes" name="type-employment" id="type-employment-yes">
+				<label for="type-employment-yes">I am employed</label>
+			</li>			    
+			<li>
+				<input type="radio" value="type-employment-no" name="type-employment" id="type-employment-no">
+				<label for="type-employment-no">I am working for myself</label>
+			</li>
+		</ul>
+	</li>	
+	
+	<li class="other-detail-yes grouped" style="display: none;">
+		<ul>	
+			<li>
+				<label for="employers-name">Employer's name</label>	
+				<input type="text" autocomplete="off" maxlength="60" value="" name="employers-name" id="employers-name">
+			</li>
+			<li>
+				<label for="6b3c442979a26ee0fa217015282f5c85">Employer's contact number <em>(optional)</em></label>
+				<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="6b3c442979a26ee0fa217015282f5c85" id="6b3c442979a26ee0fa217015282f5c85">
+			</li>
+			<li>
+				<label for="payroll-number">Payroll or employee number <em>(optional)</em></label>
+				<p class="helper">We will use this if we contact your employer</p>
+				<input type="text" autocomplete="off" maxlength="16" value="" name="payroll-number" id="payroll-number">			
+			</li>
+		</ul>
+	</li>
+	<li class="other-detail-no grouped" style="display: none;">
+		<ul>	
+			<li>
+				<label for="employers-name">What type of business is your work?</label>	
+				<input type="text" autocomplete="off" maxlength="60" value="" name="employers-name" id="employers-name">
+			</li>
+		</ul>
+	</li>
+	<li>		
+		<p>When did you start, <i>or</i> when will you start this work?</p>
+		<p class="helper">For example, 27 06 2013</p>
+		<%= partial "partials/ui-date" %>
+		<p style="font-size: 1px">&nbsp;</p>
+	</li>
+	
+	</li>
+	<li>
+		<p>Has this work finished?</p>
+		<ul id="finished-job" class="radio">
+	        <li>
+	            <input type="radio" value="yes" name="finished-job" id="finished-job-yes">
+	            <label for="finished-job-yes">Yes</label>
+	        </li>
+	        <li>
+	            <input type="radio" value="no"  name="finished-job" id="finished-job-no">
+	            <label for="finished-job-no">No</label>
+	        </li>
+		</ul>
+	</li>
+	<li style="display: none;" class="other-detail grouped">
+		<ul>
+			<li class="yes">
+				<ul>
+					<li>
+			  			<p>What date did you last work?</p>
+			  			<p class="helper">For example, 27 06 2013</p>
+			 			<%= partial "partials/ui-date" %>
+			 			<p style="font-size: 1px">&nbsp;</p>
+					</li>
+				</ul>
+			</li>
+			<li class="short-field"> 		
+				<label for="hours-worked">How many hours a week <span class="past-present">do</span> you normally work?</label>
+				<input type="text" autocomplete="off" value="" name="hours-worked" id="hours-worked"> 
+			</li>
+			
+			<li>
+				<p><span class="past-present" style="text-transform: capitalize;">Do</span> you usually earn more than £100 a week?</p>
+				<ul id="total-income" class="radio">
+					<li>
+						<input type="radio" id="total-income-yes" name="total-income" value="total-income-yes">
+						<label for="total-income-yes">Yes</label>
+					</li>			    
+					<li>
+						<input type="radio" id="total-income-no" name="total-income" value="total-income-no">
+						<label for="total-income-no">No</label>
+					</li>
+					<li>
+						<input type="radio" id="still-caring-other" name="total-income" value="total-income-other">
+						<label for="total-income-other">Don't Know</label>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<!--<li>
+		<p>Have you been paid yet for this work?</p>
+		<ul id="paid-yet" class="radio">
+	        <li>
+	            <input type="radio" value="yes" name="paid-yet" id="paid-yet-yes">
+	            <label for="paid-yet-yes">Yes</label>
+	        </li>
+	        <li>
+	            <input type="radio" value="no"  name="paid-yet" id="paid-yet-no">
+	            <label for="paid-yet-no">No</label>
+	        </li>
+		</ul>
+	</li>-->
+	<!--<li class="other-detail-yes grouped">
+		<ul>
+			<li>
+				<p>When were you last paid?</em></p>
+				<= partial "partials/ui-date" %>
+				<p class="helper">For example, 30 01 2014</p>
+			</li>
+			<li>
+				<p>When will you start getting paid for this work?</em></p>
+				<= partial "partials/ui-date" %>
+				<p class="helper">For example, 30 01 2014</p>
+			</li>
+			<li>
+				<label for="pay-how-much">How much [past=were you][present=will you be] paid?</label>
+				<p class="helper">For example, the gross pay for this period </p>
+				<input type="text" autocomplete="off" maxlength="16" value="" name="pay-how-much" id="pay-how-much">			
+			</li>
+			
+		</ul>
+	</li>-->
+	
+	<!--
+	
+	We're going to send out for payslips or accounts anyway…
+	
+	<li>
+		<label for="e7ec1d87a0e6033787a1597e568eadac">What was included in this pay? <em>(optional)</em></label>
+		<p class="helper">For example, holiday pay, sick pay, or any redundancy payments</p>
+		<input type="text" name="e7ec1d87a0e6033787a1597e568eadac" id="e7ec1d87a0e6033787a1597e568eadac">
+	</li>
+	
+
+How often are you paid?
+- Do you usually get the same amount each <<xxxx>>
+- When did you get paid?
+
+-->
+</ul>
+
+<fieldset class="form-elements">
+<legend>Additional information</legend>
+<ul>
+	<%= partial "partials/ui_circs-tell-us-more" %>
+
+</ul>
+
+
+</fieldset>
+
+
+<div class="form-steps">
+	<a href="change.html" class="button secondary">Back</a>
+	<a href="declaration.html" class="button" id="continue">Continue</a>
+</div><!-- / form steps -->
+
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+
+	$('#type-employment-yes').click(function(){
+		$(this).parents('ul li').next('.other-detail-yes').show();
+		$('.other-detail-no').hide();
+	});
+	$('#type-employment-no').click(function(){
+		$('.other-detail-no').show();
+		$(this).parents('ul li').next('.other-detail-yes').hide();	
+	});
+
+	$('#finished-job-yes').click(function(){
+		$(this).parents('ul li').next('.other-detail').show();
+		$('.past-present').text("did");
+		$('.yes').show();	
+	});
+	$('#finished-job-no').click(function(){
+		$(this).parents('ul li').next('.other-detail').show();
+		$('.past-present').text("do");
+		$('.yes').hide();		
+	});
+});
+
+
+</script>

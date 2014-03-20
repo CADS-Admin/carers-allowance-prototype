@@ -32,20 +32,19 @@
 				<ul>
 					<li>
 			  			<p>What date did you last work?</p>
-			 			<%= partial "partials/ui-date" 
+			 			<%= partial "partials/ui-date"%>
 						<p class="helper"> 27 06 2013</p>
 					</li>
 				</ul>
 			</li>
 			<li class="short-field"> 		
-				<label for="20ae10ac30ba6c8b3709e5418dd59f0b">How many hours a week do you normally work? <!--<em>(optional)</em>--></label>
-				<input type="text" autocomplete="off" value="" name="20ae10ac30ba6c8b3709e5418dd59f0b" id="20ae10ac30ba6c8b3709e5418dd59f0b"> 
+				<label for="hours-worked">How many hours a week do you normally work?</label>
+				<input type="text" autocomplete="off" value="" name="hours-worked" id="hours-worked"> 
 			</li>
 			<li>
-				<label for="af29dc1fa36e0380b8598fdf6f8a90ccf49bcb1ab641917547c26b41fec8311d">Payroll or Employee number <em>(optional)</em></label>
+				<label for="payroll-number">Payroll or Employee number <em>(optional)</em></label>
 				<p class="helper">We will use this if we need to contact your employer</p>
-				<input type="text" autocomplete="off" maxlength="16" value="" name="af29dc1fa36e0380b8598fdf6f8a90ccf49bcb1ab641917547c26b41fec8311d" id="af29dc1fa36e0380b8598fdf6f8a90ccf49bcb1ab641917547c26b41fec8311d">
-				
+				<input type="text" autocomplete="off" maxlength="16" value="" name="payroll-number" id="payroll-number">			
 			</li>
 		</ul>
 		</fieldset>
@@ -97,9 +96,11 @@
 $(document).ready(function() {  
 	$('#finished-job-yes').click(function(){
 		$(this).parents('ul li').next('.other-detail').show('medium');
+		$('.past-present').text("did you");
 	});
 	$('#finished-job-no').click(function(){
 		$(this).parents('ul li').next('.other-detail').hide('medium');
+		$('.past-present').text("do you");
 	});
 });
 
