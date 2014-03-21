@@ -57,5 +57,24 @@
 		.helper{
 			@extend .form-hint;
 		}
+		ul{
+			//margin: 0;
+		}
+	}
+
+	.radio,
+	.block{
+		input{
+			position: absolute;
+			margin: 20px;
+		}
+		label{
+			@extend .block-label;
+			padding-left: 50px;
+		}
+
+	}
+	.block{
+		clear: both;
 	}
 }

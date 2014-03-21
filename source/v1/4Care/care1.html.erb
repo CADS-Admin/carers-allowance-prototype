@@ -4,43 +4,45 @@
 
 <legend>Details of the person you care for</legend>
 
+
+	<div>
+		<label for="relationship" class="form-group-label">What is their relationship to you?</label>
+		<p class="helper">For example, mother, daughter etc.</p>		
+		<!--= partial "partials/ui-relationship" -->
+		<input type="text" for="relationship" class="form-control form-control-1-2">	
+	</div>
+
+<p class="form-group-label">Name</p>
+
 <ul>
 	<li>
-		<label for="relationship">What is their relationship to you?</label>
-		<p class="helper">For example, Mother, Daughter etc.</p>		
-		<!--= partial "partials/ui-relationship" -->
-		<input type="text" for="relationship">	
-	</li>
-	<li>
-		<label for="title">Title</label>
+		<label for="title" class="form-control-label">Title</label>
 		<%= partial "partials/ui-title" %>
 	</li>
 	<li>
-		<label for="full-name">Full name</label>
-		<p class="helper">Enter as shown on their birth certificate or passport</p>
-		<input type="text" for="full-name">
+		<label for="full-name" class="form-control-label">Full name</label>
+		<p class="helper">As shown on their birth certificate or passport</p>
+		<input type="text" for="full-name" class="form-control form-control-1-2">
 	</li>
 	<li>
-		<p>National Insurance number <em>(optional)</em></p>
+		<p class="form-group-label">National Insurance number (optional)</p>
 		<%= partial "partials/ui-nino" %>	
 	</li>
 	<li>
-		<p>Date of birth</p>
+		<p class="form-group-label">Date of birth</p>
 
 		<p class="helper">For example, 03 May 1979</p>
 
 		<%= partial "partials/ui-date" %>
-		<p>&nbsp;</p>
 	</li>
 	
 </ul>
 	
-<fieldset class="form-elements">
 	
-<legend>Contact details of the person you care for</legend>
+<h2 class="form-group-label">Contact details</h2>
 
-<p style="margin: 0 0 10px 0;"><input type="checkbox" secondary="true" value="true" name="use-my-address" id="use-my-address" style="margin: 0 5px 0 0;">
-<label for="use-my-address" style="font-size: 1.7rem; display: inline-block;">This person lives with me - use my address</label></p>
+<p class="block"><input type="checkbox" secondary="true" value="true" name="use-my-address" id="use-my-address">
+<label for="use-my-address" style="display: inline-block;">This person lives with me. Use my address</label></p>
 
 <ul>
 	<!--<li>
@@ -54,11 +56,10 @@
 
 	<%= partial "partials/ui-address-multiple" %>
 	<li>
-		<label for="phone">Phone number <em>(optional)</em></label>
+		<label for="phone" class="form-control-label">Phone number (optional)</label>
 		<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="phone" id="phone">
 	</li>
 </ul>
-</fieldset>
 	
 <fieldset class="form-elements">
 	

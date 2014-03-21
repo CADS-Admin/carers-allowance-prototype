@@ -47,7 +47,7 @@
 
 <div class="prompt helper-prompt">
 	<p>By break we mean any time when you spent less than 35 hours a week caring for the person you care for. For example, if:</p>
-	<ul>
+	<ul class="list-bullet">
 		<li>they were in respite care, hospital or on holiday without you, <em>or</em></li>
 		<li>you were in hospital or on holiday without them.</li>
 	</ul>
@@ -55,7 +55,7 @@
 
 <ul>
 	<li>
-		<p>Have you had any breaks in caring for this person since 24 May 2013?</p>
+		<p class="form-group-label">Have you had any breaks in caring for this person since 24 May 2013?</p>
 		<p class="helper">This is six months before your claim date. If 'Yes', you need to provide details about these breaks</p>
 		<ul id="f2cbfe6effbfd5628881aae30ddd526b" class="radio">
 			<li>
@@ -87,9 +87,9 @@
 
 </fieldset>
 
+
 <div class="form-steps">
 
-<!--<p>Enter details for these breaks in care</p>-->
-	<a href="care2.html" class="button-link">Back</a>
-	<a href="/carers-allowance-prototype/v1/6Education/education1.html" class="button">Next</a>
-</div><!-- / form steps -->
+	<%= link_to 'Back', 'care2.html', :class => 'button-link' %>
+	<%= link_to 'Next', '../6Education/education1.html', :class => 'button', :relative => true %>
+</div>

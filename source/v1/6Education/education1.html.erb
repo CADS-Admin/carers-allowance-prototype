@@ -6,7 +6,7 @@
  
 <ul>
 	<li>
-		<p>Have you been on a course of education since your claim date?</p>
+		<p class="form-group-label">Have you been on a course of education since your claim date?</p>
 
 		<p class="helper">This includes any full-time, part-time, or other courses. For example, home study</p>
 
@@ -64,10 +64,11 @@
 </ul>
 </fieldset>
 
-<nav class="form-steps">
-	<a href="/carers-allowance-prototype/v1/4Care/care4.html" class="button-link">Back</a>
-	<a href="/carers-allowance-prototype/v1/7Employment/employment-guard.html" class="button">Next</a>
-</nav><!-- / form steps -->
+<div class="form-steps">
+
+    <%= link_to 'Back', '../4Care/care4.html', :class => 'button-link' %>
+    <%= link_to 'Next', '../7Employment/employment-guard.html', :class => 'button', :relative => true %>
+</div>
 
 <script>
 	$(document).ready(function() {    

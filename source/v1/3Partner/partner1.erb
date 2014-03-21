@@ -4,35 +4,29 @@
 
 <fieldset class="form-elements">
 
-<legend>Partner/Spouse details</legend>
-
 <!--<p class="form-hint" style="margin-bottom: 1em">Enter their name as shown on your birth certificate or passport</p>-->
 
+
 <ul>
-	<!--<li>
-		<label for="date">Title</label>
-		#include virtual="../public/_includes/ui/title.shtml"
-	</li>-->
 	<li>
-		<label for="fullname">Full name</label>
-		<input type="text"
+		<label for="full-name" class="form-group-label">Full name</label>
+		<p class="form-hint">Enter as shown on your birth certificate or passport</p>
+		<input type="text" name="first-name" id="first-name" class="form-control form-control-1-2">
 	</li>
 	<li>
-		<p>National Insurance number <em>(optional)</em></p>
-		<%= partial "partials/ui-nino" %>
-	</li>
+		<label for="nino" class="form-group-label">National Insurance number (optional)</label>
+		<%= partial "partials/ui-nino" %>				
+	</li> 
 	<li>
-		<label for="nationality">Nationality</label>
+		<label for="nationality" class="form-group-label">Nationality</label>
 		<p style="color: #6f777b; margin: 0 0 10px 0; font-size: 19px;">If they have a current passport, enter as shown on their passport<br />For example, British</p>
 		<%= partial "partials/ui-nationality" %>
 	</li>
-	<li>
-		<p>Date of birth</p>
-		<p class="helper">For example, 03 May 1979</p>
-
-		<%= partial "partials/ui-date" %>
-		<p>&nbsp;</p>
-	</li>
+		<li class="form-group">
+			<p class="form-group-label">Date of birth</p>
+			<p class="form-hint">For example, 03 May 1979</p>
+			<%= partial "partials/ui-date" %>
+		</li>
 	<li>
 		<p>Have you separated from your partner/spouse since your claim date?</p>
 		<ul id="7c60aef13217b7c604396ffde3efc8fc2aea4d5cf4525a0952c0acb73857241a" class="radio">
@@ -62,7 +56,10 @@
 </ul>
 </fieldset><!-- / form elements -->
 
+
 <div class="form-steps">
-	<a href="/carers-allowance-prototype/v1/2About/about7.html" class="button-link">Back</a>
-	<a href="/carers-allowance-prototype/v1/4Care/care1.html" class="button">Next</a>
-</div><!-- / form steps --> 
+	<%= link_to 'Back', '../2About/about7.html', :class => 'button-link' %>
+	<%= link_to 'Next', '../4Care/care1.html', :class => 'button' %>
+</div>
+
+
