@@ -1,8 +1,3 @@
-$form-group-spacing: 45px;
-$form-element-spacing: 10px;
-$inline-form-group-spacing: 20px;
-
-
 // Normalize form elements
 
 form {
@@ -24,7 +19,6 @@ legend {
 }
 
 // Swap legend margins for padding
-/*
 legend.heading-36 {
   margin: 0;
   padding-top: 45px;
@@ -35,7 +29,7 @@ legend.heading-24 {
   margin: 0;
   padding-top: 45px;
   padding-bottom: 20px
-}*/
+}
 
 
 button,
@@ -85,60 +79,29 @@ textarea {
   height: auto;
 }
 
-// Wrap individual or compound controls in a form group
+// Form group is used to wrap label and input pairs
 
 .form-group {
   float: left;
   width: 100%;
   clear: both;
   @extend .cf;
-}
-
-// Every form group should have a form group label
-
-/*
-.form-group-label{
-  @extend .heading-24;
-  display: block;
-  margin-bottom: 10px;
-}
-*/
-
-
-.form-group-label{
-  display: block;
-  float: left;
-  clear: both;
-  width: 100%;
-
-  @include bold-24();
-
-  // Use padding instead of margins.
-  // So that spacing is always applied, even on legends
-
-  margin-top: 25px;
-  margin-bottom: 10px;
   @include media(tablet) {
-    margin-top: 45px;
-    margin-bottom: 10px;
+    margin-bottom: ($gutter*1.5);
   }
 }
 
-// If your form group contains multiple controls, each one should have a form control label
-
-.form-control-label{
-  @include core-19;
-  display: block;
-  margin-top: $form-element-spacing;
-  margin-bottom: $form-element-spacing;
+.form-group-compound {
+  margin-bottom: 10px;
 }
 
-.form-hint {
+
+// Form labels, or for legends styled to look like labels
+.form-label,
+.form-group label {
+  @include core-19;
   display: block;
-  color: $secondary-text-colour;
-  margin-top: 0;
-  margin-bottom: $form-element-spacing;
-  clear: both;
+  margin-bottom: 5px;
 }
 
 
@@ -147,9 +110,8 @@ textarea {
 .form-control {
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 10px;
   @include media(tablet) {
-    width: 75%;
+    width: 50%;
   }
 }
 
@@ -183,58 +145,60 @@ textarea {
   }
 }
 
+// Form hints & examples are light grey and sit above a form control
 
+.form-hint {
+  display: block;
+  color: $secondary-text-colour;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
 
 
 // Date of birth
 
-.date-of-birth{
-  .form-control-label{
-    margin-top: 0;
-  }
-  .form-group-day,
-  .form-group-month{
-     @include media(tablet){
-      width: 50px;
-    }   
-  }
-  .form-group-year {
-    @include media(tablet){
-      width: 70px;
-    }
-  }
-  .form-control{
-    width: 100%;
+.date-of-birth legend {
+  @extend .form-label;
+}
+.date-of-birth label {
+  display: block;
+  color: $grey-1;
+  margin-bottom: 5px;
+}
+.date-of-birth .form-group {  
+  @include media(tablet){
+    width: 50px;
+    float: left;
+    margin-right: 20px;
+    clear: none;
   }
 }
-
+.date-of-birth .form-group-year {
+  @include media(tablet){
+    width: 70px;
+  }
+}
+.date-of-birth .form-group input {
+  width: 100%;
+}
 
 // Vertical alignment of checkboxes
 
-.form-checkbox{
-  display: block;
-  margin-top: 2px; 
-  input {
-    vertical-align: middle;
-    margin: -2px 5px 0 0;
-  }
+.form-checkbox input {
+  vertical-align: middle;
+  margin: -2px 5px 0 0;
 }
 
 // Vertical alignment of radio buttons
 
-.form-radio {
-  display: block;
-  margin-top: 4px; 
-  input {
-    vertical-align: middle;
-    margin: -4px 5px 0 0;
-  }
+.form-radio input {
+  vertical-align: middle;
+  margin: -4px 5px 0 0;
 }
 
 // Grey indented panels
 
 .form-group-indent {
-  @extend %contain-floats;
   @include box-sizing(border-box);
   border-left: 5px solid $grey-3;
   padding-left: $gutter-half;
@@ -242,7 +206,6 @@ textarea {
 }
 
 // Inline form layout (tablet and up)
-/*
 .form-group-inline {
   padding-top: $gutter-half;
 }
@@ -251,13 +214,6 @@ textarea {
   float: left;
   margin-right: $gutter-half;
   margin-bottom: $gutter-half;
-}
-*/
-
-.form-group-inline{
-  float: left;
-  margin-right: $inline-form-group-spacing;
-  clear: none;
 }
 
 // Block form layout (tablet and up)
@@ -279,7 +235,6 @@ textarea {
   display: inline-block;
   padding: (18px $gutter $gutter-half $gutter-half);
   background: $grey-3;
-  margin-bottom: 10px;
 }
 
 
