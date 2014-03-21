@@ -1,4 +1,4 @@
-<h1>About you - the Carer</h1>
+<h1 class="heading-48">About you - the Carer</h1>
 
 <div class="completed">
 	<ul aria-label="Completed questions">
@@ -6,44 +6,35 @@
     </ul>
  </div>
 
-<fieldset class="form-elements">
-	<legend>Your address</legend>
 
-<!--<ul>
-		<li style="list-style: none; display: inline">
-			<p>Address</p>
-			!//#include virtual="../public/_includes/ui/address-multiple.shtml"
-		</li>
-
-		<li><label for="">Postcode</label> <input autocomplete="off" class="postcode" id="" maxlength="60" name="" type="text" value=""></li>			
-	</ul>-->
-	<ul>
+	<h2 class="form-group-label">Your address</h2>
 	<%= partial "partials/ui-address-multiple" %>
-	</ul>
+
 	
+
 </fieldset>
 
 <fieldset class="form-elements">
-	<legend>How we can contact you</legend>
+	<legend class="form-group-label">How we can contact you?</legend>
 	<ul>	
 		<li>
-            <label for="0f4afad373ea0227bb1aca1a1f0bc0c3">Contact phone or mobile number</label>
+            <label for="0f4afad373ea0227bb1aca1a1f0bc0c3" class="form-control-label">Contact phone or mobile number</label>
 
-             <p class="helper">Alternatively, tell us here if you don't have a contact number</p>
-            <input type="tel" id="0f4afad373ea0227bb1aca1a1f0bc0c3" name="0f4afad373ea0227bb1aca1a1f0bc0c3" pattern="[0-9 \-]{1,20}" title="Must be numbers only" value="" autocomplete="off" maxlength="60">
+             <p class="form-hint">If you don't have one, let us know how else we can contact you</p>
+            <input type="tel" id="0f4afad373ea0227bb1aca1a1f0bc0c3" name="0f4afad373ea0227bb1aca1a1f0bc0c3" pattern="[0-9 \-]{1,20}" title="Must be numbers only" value="" autocomplete="off" maxlength="60" class="form-control form-control-1-2">
            
 
 		</li>
 		<li>
-			<p>Would you like us to contact you by textphone? <em>(optional)</em></p>
-			<p class="helper">This is a service for people with speech or hearing difficulties</p>
+			<p class="form-control-label">Would you like us to contact you by textphone? </p>
+			<p class="form-hint">This is a service for people with speech or hearing difficulties</p>
 			<ul class="radio" id="textphone">
 				<li><input id="textphone-yes" name="textphone" type="radio" value="yes"> <label for="textphone-yes">Yes</label></li>
 				<li><input id="textphone-no" name="textphone" type="radio" value="no"> <label for="textphone-no">No</label></li>
 			</ul>
 		</li>
 	</ul>
-</fieldset><!-- / form elements -->		
+
 
 <div class="form-steps">
 
