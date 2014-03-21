@@ -178,7 +178,434 @@
 
       <div id="section-content" class="grid">
         <div class="inner-block">
-          
+          <h1>Report a change in your circumstances</h1>     
+
+<fieldset class="form-elements">
+
+<legend>About your employment</legend>
+
+<ul id="details">
+	<li>			       
+		<p>Are you still caring 35 hours or more each week?</p>
+		<ul class="radio" id="still-caring">
+			<li>
+				<input type="radio" value="still-caring-yes" name="still-caring" id="still-caring-yes">
+				<label for="still-caring-yes">Yes</label>
+			</li>			    
+			<li>
+				<input type="radio" value="still-caring-no" name="still-caring" id="still-caring-no">
+				<label for="still-caring-no">No</label>
+			</li>
+		</ul>
+	</li>
+	<!-- -->
+	
+	<li>			       
+		<p>Are you<!--, <i>or</i> will you be--> employed, or are you working for yourself?</p>
+		<p class="helper">For example, when employed you get payslips for your work</p>
+		<ul class="radio-block" id="type-employment">
+			<li>
+				<input type="radio" value="type-employment-yes" name="type-employment" id="type-employment-yes">
+				<label for="type-employment-yes">I am employed</label>
+			</li>			    
+			<li>
+				<input type="radio" value="type-employment-no" name="type-employment" id="type-employment-no">
+				<label for="type-employment-no">I am working for myself</label>
+			</li>
+		</ul>
+	</li>	
+	
+	<li class="other-detail-yes grouped" style="display: none;">
+		<ul>	
+			<li>
+				<label for="employers-name">Employer's name</label>	
+				<input type="text" autocomplete="off" maxlength="60" value="" name="employers-name" id="employers-name">
+			</li>
+			<li>
+				<label for="6b3c442979a26ee0fa217015282f5c85">Employer's contact number <em>(optional)</em></label>
+				<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="6b3c442979a26ee0fa217015282f5c85" id="6b3c442979a26ee0fa217015282f5c85">
+			</li>
+			<li>
+				<label for="payroll-number">Payroll or employee number <em>(optional)</em></label>
+				<p class="helper">We will use this if we contact your employer</p>
+				<input type="text" autocomplete="off" maxlength="16" value="" name="payroll-number" id="payroll-number">			
+			</li>
+		</ul>
+	</li>
+	<li class="other-detail-no grouped" style="display: none;">
+		<ul>	
+			<li>
+				<label for="employers-name">What type of business is your work?</label>	
+				<input type="text" autocomplete="off" maxlength="60" value="" name="employers-name" id="employers-name">
+			</li>
+		</ul>
+	</li>
+	<li>		
+		<p>When did you start, <i>or</i> when will you start this work?</p>
+		<p class="helper">For example, 27 06 2013</p>
+		<style>
+
+.carers-allowance .form-elements ul.year li {
+	float: left; 
+	padding-top: 0;
+}
+.carers-allowance .form-elements ul.new-labels li p {
+	color: #6F777B;
+}
+.carers-allowance .form-elements ul.year.new-labels li input {}
+
+</style>
+
+<ul class="inline year new-labels" id="date" style="float:left; width: 100%;">
+	<li>
+		<p>Day</p>
+		<input autocomplete="off" maxlength="2" name="date-day" title="Day" type="tel">
+	</li>
+	<li>
+		<p>Month</p>
+		<input autocomplete="off" name="date-month" title="Month" type="tel">
+	</li>
+	<li>
+		<p>Year</p>
+		<input autocomplete="off" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" title="Year" type="tel">
+	</li>
+</ul>
+
+<!--<ul class="inline year" id="date">
+	<li>
+		<input autocomplete="off" id="" maxlength="2" name="date-day" placeholder="DD" title="Day" type="tel">
+	</li>
+	<li>
+		<input autocomplete="off" id="" maxlength="2" name="date-month" placeholder="MM" title="Month" type="tel">
+	</li>
+	<li>
+		<input autocomplete="off" id="" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" placeholder="YYYY" title="Year" type="tel">
+	</li>
+</ul>-->
+
+<!--
+<ul id="date" class="inline year">
+	<li>
+		<label for="02aa57dfdb6b93977f2de87cc5d5f2ef">start_day <em>(optional)</em></label>
+		<select name="0facf991b9971ee42918a0d4cafcda18" id="02aa57dfdb6b93977f2de87cc5d5f2ef">
+			<option value="">Day</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+		</select>
+	</li>
+	<li>
+	<label for="d952a366b1e8c759b0dcbfcd157df35a">start_month <em>(optional)</em></label>
+		<select name="3805952532ad0db1b154716fbc684e57" id="d952a366b1e8c759b0dcbfcd157df35a">
+			<option value="">Month</option>
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select>
+	</li>
+	<li>
+		<label for="4684245046b48bc6394899f3f5e71684">start_year <em>(optional)</em></label>
+		<input type="tel" autocomplete="off" maxlength="4" placeholder="YYYY" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="8615b22e56941b3999713a7544318f15" id="4684245046b48bc6394899f3f5e71684">
+	</li>
+</ul>
+-->
+
+		<p style="font-size: 1px">&nbsp;</p>
+	</li>
+	
+	</li>
+	<li>
+		<p>Has this work finished?</p>
+		<ul id="finished-job" class="radio">
+	        <li>
+	            <input type="radio" value="yes" name="finished-job" id="finished-job-yes">
+	            <label for="finished-job-yes">Yes</label>
+	        </li>
+	        <li>
+	            <input type="radio" value="no"  name="finished-job" id="finished-job-no">
+	            <label for="finished-job-no">No</label>
+	        </li>
+		</ul>
+	</li>
+	<li style="display: none;" class="other-detail grouped">
+		<ul>
+			<li class="yes">
+				<ul>
+					<li>
+			  			<p>What date did you last work?</p>
+			  			<p class="helper">For example, 27 06 2013</p>
+			 			<style>
+
+.carers-allowance .form-elements ul.year li {
+	float: left; 
+	padding-top: 0;
+}
+.carers-allowance .form-elements ul.new-labels li p {
+	color: #6F777B;
+}
+.carers-allowance .form-elements ul.year.new-labels li input {}
+
+</style>
+
+<ul class="inline year new-labels" id="date" style="float:left; width: 100%;">
+	<li>
+		<p>Day</p>
+		<input autocomplete="off" maxlength="2" name="date-day" title="Day" type="tel">
+	</li>
+	<li>
+		<p>Month</p>
+		<input autocomplete="off" name="date-month" title="Month" type="tel">
+	</li>
+	<li>
+		<p>Year</p>
+		<input autocomplete="off" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" title="Year" type="tel">
+	</li>
+</ul>
+
+<!--<ul class="inline year" id="date">
+	<li>
+		<input autocomplete="off" id="" maxlength="2" name="date-day" placeholder="DD" title="Day" type="tel">
+	</li>
+	<li>
+		<input autocomplete="off" id="" maxlength="2" name="date-month" placeholder="MM" title="Month" type="tel">
+	</li>
+	<li>
+		<input autocomplete="off" id="" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" placeholder="YYYY" title="Year" type="tel">
+	</li>
+</ul>-->
+
+<!--
+<ul id="date" class="inline year">
+	<li>
+		<label for="02aa57dfdb6b93977f2de87cc5d5f2ef">start_day <em>(optional)</em></label>
+		<select name="0facf991b9971ee42918a0d4cafcda18" id="02aa57dfdb6b93977f2de87cc5d5f2ef">
+			<option value="">Day</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+		</select>
+	</li>
+	<li>
+	<label for="d952a366b1e8c759b0dcbfcd157df35a">start_month <em>(optional)</em></label>
+		<select name="3805952532ad0db1b154716fbc684e57" id="d952a366b1e8c759b0dcbfcd157df35a">
+			<option value="">Month</option>
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select>
+	</li>
+	<li>
+		<label for="4684245046b48bc6394899f3f5e71684">start_year <em>(optional)</em></label>
+		<input type="tel" autocomplete="off" maxlength="4" placeholder="YYYY" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="8615b22e56941b3999713a7544318f15" id="4684245046b48bc6394899f3f5e71684">
+	</li>
+</ul>
+-->
+
+			 			<p style="font-size: 1px">&nbsp;</p>
+					</li>
+				</ul>
+			</li>
+			<li class="short-field"> 		
+				<label for="hours-worked">How many hours a week <span class="past-present">do</span> you normally work?</label>
+				<input type="text" autocomplete="off" value="" name="hours-worked" id="hours-worked"> 
+			</li>
+			
+			<li>
+				<p><span class="past-present" style="text-transform: capitalize;">Do</span> you usually earn more than £100 a week?</p>
+				<ul id="total-income" class="radio">
+					<li>
+						<input type="radio" id="total-income-yes" name="total-income" value="total-income-yes">
+						<label for="total-income-yes">Yes</label>
+					</li>			    
+					<li>
+						<input type="radio" id="total-income-no" name="total-income" value="total-income-no">
+						<label for="total-income-no">No</label>
+					</li>
+					<li>
+						<input type="radio" id="still-caring-other" name="total-income" value="total-income-other">
+						<label for="total-income-other">Don't Know</label>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<!--<li>
+		<p>Have you been paid yet for this work?</p>
+		<ul id="paid-yet" class="radio">
+	        <li>
+	            <input type="radio" value="yes" name="paid-yet" id="paid-yet-yes">
+	            <label for="paid-yet-yes">Yes</label>
+	        </li>
+	        <li>
+	            <input type="radio" value="no"  name="paid-yet" id="paid-yet-no">
+	            <label for="paid-yet-no">No</label>
+	        </li>
+		</ul>
+	</li>-->
+	<!--<li class="other-detail-yes grouped">
+		<ul>
+			<li>
+				<p>When were you last paid?</em></p>
+				<= partial "partials/ui-date" %>
+				<p class="helper">For example, 30 01 2014</p>
+			</li>
+			<li>
+				<p>When will you start getting paid for this work?</em></p>
+				<= partial "partials/ui-date" %>
+				<p class="helper">For example, 30 01 2014</p>
+			</li>
+			<li>
+				<label for="pay-how-much">How much [past=were you][present=will you be] paid?</label>
+				<p class="helper">For example, the gross pay for this period </p>
+				<input type="text" autocomplete="off" maxlength="16" value="" name="pay-how-much" id="pay-how-much">			
+			</li>
+			
+		</ul>
+	</li>-->
+	
+	<!--
+	
+	We're going to send out for payslips or accounts anyway…
+	
+	<li>
+		<label for="e7ec1d87a0e6033787a1597e568eadac">What was included in this pay? <em>(optional)</em></label>
+		<p class="helper">For example, holiday pay, sick pay, or any redundancy payments</p>
+		<input type="text" name="e7ec1d87a0e6033787a1597e568eadac" id="e7ec1d87a0e6033787a1597e568eadac">
+	</li>
+	
+
+How often are you paid?
+- Do you usually get the same amount each <<xxxx>>
+- When did you get paid?
+
+-->
+</ul>
+
+<fieldset class="form-elements">
+<legend>Additional information</legend>
+<ul>
+	<li>
+	<label for="circs-tell-us-more">Tell us more about your changes <em>(optional)</em></label>
+	<!--<p class="helper">If you didn't tell us about changes as soon as they happened, we need you to tell us why</p>-->
+	<p class="helper">For example, why you didn't report changes as soon as they happened</p>
+	<textarea autocomplete="off" maxlength="2000" name="circs-tell-us-more" id="circs-tell-us-more"></textarea>
+</li>
+
+</ul>
+
+
+</fieldset>
+
+
+<div class="form-steps">
+	<a href="change.html" class="button secondary">Back</a>
+	<a href="declaration.html" class="button" id="continue">Continue</a>
+</div><!-- / form steps -->
+
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+
+	$('#type-employment-yes').click(function(){
+		$(this).parents('ul li').next('.other-detail-yes').show();
+		$('.other-detail-no').hide();
+	});
+	$('#type-employment-no').click(function(){
+		$('.other-detail-no').show();
+		$(this).parents('ul li').next('.other-detail-yes').hide();	
+	});
+
+	$('#finished-job-yes').click(function(){
+		$(this).parents('ul li').next('.other-detail').show();
+		$('.past-present').text("did");
+		$('.yes').show();	
+	});
+	$('#finished-job-no').click(function(){
+		$(this).parents('ul li').next('.other-detail').show();
+		$('.past-present').text("do");
+		$('.yes').hide();		
+	});
+});
+
+
+</script>
         </div>
       </div>
 
