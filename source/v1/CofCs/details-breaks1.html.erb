@@ -23,18 +23,18 @@
 	
 	<li>
 		<p>When did your most recent break from caring start?</p>
-		<p class="helper">For example, 03 February 2014</p>
+		<p class="form-hint">For example, 03 February 2014</p>
 		<%= partial "partials/ui-date-dropdowns" %>		
 	</li>
 	<li>
 		<p>Start time <em>(optional)</em></p>
-		<p class="helper">For example, 10:00am</p>
+		<p class="form-hint">For example, 10:00am</p>
 		<%= partial "partials/ui-times" %>
 	</li>
 
 	<li>
 		<label for="wherePerson_location">Where was the person you care for?</label>
-		<p class="helper">During this time, they were:</p>
+		<p class="form-hint">During this time, they were:</p>
 		
 		<ul class="radio-block" id="breaks-where-care">
 			<li>
@@ -85,7 +85,7 @@
 			<option value="Other">Other</option>
 		</select>
 		-->
-		<p class="helper">During this time, I was:</p>
+		<p class="form-hint">During this time, I was:</p>
 		<ul class="radio-block" id="breaks-where">
 			<li>
 				<input type="radio" value="breaks-where-home" id="breaks-where-home" name="breaks-where">
@@ -132,12 +132,12 @@
 		<ul>
 			<li>
 				<p>When did the break end?</p>
-				<p class="helper">For example, 07 February 2014</p>
+				<p class="form-hint">For example, 07 February 2014</p>
 				<%= partial "partials/ui-date-dropdowns" %>
 			</li>
 			<li>
 				<p>End time <em>(optional)</em></p>
-				<p class="helper">For example, 4:30pm</p>
+				<p class="form-hint">For example, 4:30pm</p>
 				<%= partial "partials/ui-times" %>
 			</li>
 		</ul>

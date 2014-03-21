@@ -2,26 +2,28 @@
 progress-bar: about-you
 ---
 
-<h1>About you - the Carer</h1>
+<h1 class="heading-48">About you - the Carer</h1>
 
-<fieldset class="form-elements">
-	<legend>Your details</legend>
-	
-	<ul class="group">		
+<fieldset>
+	<legend class="heading-36">Your name</legend>
+			
+
+	<p class="form-hint">Enter your name as shown on birth certificate or passport</p>
+	<ul>
 		<li>
-			<label for="title">Title</label>
+			<label for="title" class="form-control-label">Title</label>
 			<%= partial "partials/ui-title" %>
 		</li>
 			<%= partial "partials/ui-name" %>
 		<li>
-			<label for="nino">National Insurance number</label>
+			<label for="nino" class="form-control-label">National Insurance number</label>
 			<%= partial "partials/ui-nino" %>				
 		</li> 
-		<li>
-			<p>Date of birth</p>
-			<p class="helper">For example, 03 May 1979</p>
+
+		<li class="form-group">
+			<p class="form-control-label">Date of birth</p>
+			<p class="form-hint">For example, 03 May 1979</p>
 			<%= partial "partials/ui-date" %>
-			<p style="padding:0;">&nbsp;</p>
 		</li>	
 	</ul>
 	

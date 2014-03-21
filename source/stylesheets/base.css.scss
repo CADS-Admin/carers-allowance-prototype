@@ -18,14 +18,11 @@
 // Import typography & layout base styles
 @import "../assets/service_template/template";
 
-// Import forms styles
-//@import "../assets/service_template/forms";
-
 // Import service-specific styles
 @import "../assets/service_template/service";
 
 // GOV.UK helper styles
-@import "../assets/govuk-helper/forms";
+@import "../assets/govuk-helper/govuk-helper";
 
 // Design-patterns
 @import "../assets/patterns/progress-indicator";

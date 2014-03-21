@@ -21,16 +21,20 @@
 			<li>
 				<p>When were you last paid? <!--<em>(optional)--></em></p>
 				<%= partial "partials/ui-date" %>
+
 				<p class="helper">For example, 30 January 2014</p>
 			</li>
 			<li class="currency"> 
 				<label for="9789e2b31b57de8cf1640840d6a218d5">How much were you paid?</label>
 				<p class="helper">Enter your gross pay for this period</p>
+
     			<input type="tel" autocomplete="off" maxlength="60" value="" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="9789e2b31b57de8cf1640840d6a218d5" id="9789e2b31b57de8cf1640840d6a218d5">
 			</li>
 			<li>
 				<label for="e7ec1d87a0e6033787a1597e568eadac">What was included in this pay? <em>(optional)</em></label>
+
 				<p class="helper"> For example, holiday pay, sick pay, or any redundancy payments</p>
+
 				<input type="text" name="e7ec1d87a0e6033787a1597e568eadac" id="e7ec1d87a0e6033787a1597e568eadac">
 			</li>
     		<li>
