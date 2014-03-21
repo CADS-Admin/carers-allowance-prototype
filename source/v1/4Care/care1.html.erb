@@ -6,12 +6,17 @@
 
 <ul>
 	<li>
+		<label for="relationship">What is their relationship to you?</label>
+		<%= partial "partials/ui-relationship" %>
+	</li>
+	<li>
 		<label for="title">Title</label>
 		<%= partial "partials/ui-title" %>
 	</li>
 	<li>
-		<label for="fullname">Full name</label>
-		<input type="text"
+		<label for="full-name">Full name</label>
+		<p class="helper">Enter as shown on their birth certificate or passport</p>
+		<input type="text" for="full-name">
 	</li>
 	<li>
 		<p>National Insurance number <em>(optional)</em></p>
@@ -31,7 +36,7 @@
 <legend>Contact details of the person you care for</legend>
 
 <p style="margin: 0 0 10px 0;"><input type="checkbox" secondary="true" value="true" name="use-my-address" id="use-my-address" style="margin: 0 5px 0 0;">
-<label for="use-my-address" style="font-size: 1.7rem;">Use my address</label></p>
+<label for="use-my-address" style="font-size: 1.7rem; display: inline-block;">This person lives with me - use my address</label></p>
 
 <ul>
 	<!--<li>
@@ -49,8 +54,26 @@
 		<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="phone" id="phone">
 	</li>
 </ul>
-
 </fieldset>
+	
+<fieldset class="form-elements">
+	
+<legend>Other claims</legend>
+<ul>
+
+<li>
+	<p>Does this person get Armed Forces Independence Payment (AFIP)?</p>
+	<ul id="armed-forces" class="radio">
+		<li>
+			<input type="radio" value="yes" name="armed-forces" id="armed-forces-yes">
+			<label for="armed-forces-yes">Yes</label>
+		</li>
+		<li>
+			<input type="radio" value="no" name="armed-forces" id="armed-forces-no">
+			<label for="armed-forces-no">No</label>
+		</li>
+	</ul>
+</li>
 
 <div class="form-steps">
 	<a href="/carers-allowance-prototype/v1/3Partner/partner1.html" class="button secondary">Back</a>

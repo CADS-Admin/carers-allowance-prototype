@@ -1,36 +1,54 @@
 <h1>About the care you provide</h1>
 
+<p class="security-message">Your claim date is <strong style="text-decoration: none;"><%= partial "partials/claim-date" %></strong>.</p>
+
 <div class="completed">
-<ul aria-label="Completed questions">
-	<li>
-		<h3>Details of the person you care for</h3>
-		<a aria-label="Change these answers - this is an optional link relating to a previous question section" href="care1.html">Change these answers</a>
-	</li>
-	<!--<li>
-	<h3>Contact details of the person you care for</h3>
-	<a aria-label="Change these answers - this is an optional link relating to a previous question section" href="/care-you-provide/their-contact-details">Change these answers</a>
-	</li>-->
-</ul>
+	<ul aria-label="Completed questions">
+		<li>
+			<h3>Details of the person you care for</h3>
+			<a aria-label="Change these answers - this is an optional link relating to a previous question section" href="care1.html">Change these answers</a>
+		</li>
+	</ul>
 </div>
 
 <fieldset class="form-elements">
-<legend>Relationship and other claims</legend>
+
+<legend>More about the care you provide</legend>
 
 <ul>
 	<li>
-		<label for="relationship">What's their relationship to you?</label>
-		<%= partial "partials/ui-relationship" %>
-	</li>
-	<li>
-		<p>Does this person get Armed Forces Independence Payment (AFIP)?</p>
-		<ul id="armed-forces" class="radio">
+		<p>Do you spend 35 hours or more each week caring for this person?</p>
+		<ul id="653407d0d11e3732476667bb289bb7dce6480bb6df05e1a8f1c940fa2cdc49b1" class="radio">
 			<li>
-				<input type="radio" value="yes" name="armed-forces" id="armed-forces-yes">
-				<label for="armed-forces-yes">Yes</label>
+			<input type="radio" value="yes" name="653407d0d11e3732476667bb289bb7dce6480bb6df05e1a8f1c940fa2cdc49b1" id="653407d0d11e3732476667bb289bb7dc051b0e0a9161ffd23ef8c58749a09bbd">
+			<label for="653407d0d11e3732476667bb289bb7dc051b0e0a9161ffd23ef8c58749a09bbd">Yes</label>
 			</li>
 			<li>
-				<input type="radio" value="no" name="armed-forces" id="armed-forces-no">
-				<label for="armed-forces-no">No</label>
+			<input type="radio" value="no" name="653407d0d11e3732476667bb289bb7dce6480bb6df05e1a8f1c940fa2cdc49b1" id="653407d0d11e3732476667bb289bb7dcd045277d7050e23740bffb8f90591e86">
+			<label for="653407d0d11e3732476667bb289bb7dcd045277d7050e23740bffb8f90591e86">No</label>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<p>Did you care for this person for 35 hours or more each week before your claim date?</p>
+		<ul id="care-before-claim-date" class="radio">
+			<li>
+				<input type="radio" value="yes" name="care-before-claim-date" id="care-before-claim-date-yes">
+				<label for="care-before-claim-date-yes">Yes</label>
+			</li>
+			<li>
+				<input type="radio" value="no" name="care-before-claim-date" id="care-before-claim-date-no">
+				<label for="care-before-claim-date-no">No</label>
+			</li>
+		</ul>
+	</li>
+	<li style="display: none;" class="other-detail">
+		<ul>
+			<li>
+			<p>When did you start to care for this person?</p>
+			<p class="helper">For example, 27 06 2013</p>
+			<%= partial "partials/ui-date" %>
+			<p>&nbsp;</p>
 			</li>
 		</ul>
 	</li>
@@ -41,3 +59,18 @@
 	<a href="care1.html" class="button secondary">Back</a>
 	<a href="care3.html" class="button">Next</a>
 </div><!-- / form steps -->
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+	$('#care-before-claim-date-yes').click(function(){
+		$(this).parents('ul li').next('.other-detail').show('medium');
+	});
+	$('#care-before-claim-date-no').click(function(){
+		$(this).parents('ul li').next('.other-detail').hide('medium');
+	});
+});
+
+</script>
