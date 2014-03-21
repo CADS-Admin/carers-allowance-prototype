@@ -33,3 +33,29 @@
 
 
 
+.govuk{
+	h1{
+		@extend .heading-48;
+		margin-bottom: 0;
+	}
+
+	.completed{
+		display: none;
+	}
+
+	.helper-more{
+		display: none;
+	}
+	.helper-info{
+		@extend .form-hint;
+	}
+
+	.form-elements{
+		legend{
+			@extend .heading-36;
+		}
+		.helper{
+			@extend .form-hint;
+		}
+	}
+}

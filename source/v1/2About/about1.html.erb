@@ -6,10 +6,8 @@ progress-bar: about-you
 
 
 <fieldset>
-	<legend class="heading-36">Your name</legend>
+	<legend class="form-group-label">Your name</legend>
 			
-
-	<p class="form-hint">Enter your name as shown on birth certificate or passport</p>
 	<ul>
 		<li>
 			<label for="title" class="form-control-label">Title</label>
@@ -17,12 +15,12 @@ progress-bar: about-you
 		</li>
 			<%= partial "partials/ui-name" %>
 		<li>
-			<label for="nino" class="form-control-label">National Insurance number</label>
+			<label for="nino" class="form-group-label">National Insurance number</label>
 			<%= partial "partials/ui-nino" %>				
 		</li> 
 
 		<li class="form-group">
-			<p class="form-control-label">Date of birth</p>
+			<p class="form-group-label">Date of birth</p>
 			<p class="form-hint">For example, 03 May 1979</p>
 			<%= partial "partials/ui-date" %>
 		</li>	
