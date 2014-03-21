@@ -1,19 +1,19 @@
 $(document).ready(function() {
    // Eligibility / 
    $('#yes').click(function(){
-        $('#answerNoMessageWrap').hide('medium');
+        $('#answerNoMessageWrap').hide();
     });
     $('#no').click(function(){
-        $('#answerNoMessageWrap').show('medium');
+        $('#answerNoMessageWrap').show();
     });
     $(function(){
       $('.hideShowStart').hide();
       $('.hideShowEnd').hide();
         $('#select-start').click(function(){
-            $('.hideShowStart').toggle('slow');
+            $('.hideShowStart').toggle();
         });
         $('#select-end').click(function(){
-            $('.hideShowEnd').toggle('slow');
+            $('.hideShowEnd').toggle();
         });
     });
 // view more / view less
@@ -21,7 +21,7 @@ $(document).ready(function() {
 	var helper_label = $('.helper-more').text();
     $('.helper-more').click(function(){
        $(this).toggleClass("helper-less");
-       $(this).next(".helper-info").slideToggle("medium");
+       $(this).next(".helper-info").slideToggle();
        if($(this).text() === 'Close')
        {
            //$(this).text('Show example');

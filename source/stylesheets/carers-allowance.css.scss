@@ -11,12 +11,37 @@
 
 
 
-main {
+.main {
 	background: #fff;
 	border-bottom: 10px solid #005EA5;
+	border-top: 10px solid #005EA5;
 	display: block;
-	padding: 0 .7em;
+	margin-bottom: 0;
+	max-width: 968px;
+	padding-bottom: 90px;
+	.grid-wrapper{
+		padding: 0;
+		.inner-block{
+			padding: 0;
+		}
+	}
 }
+
+.form-steps{
+	padding-top: 45px;
+	width: 100%;
+	overflow: hidden;
+	// Horrible hack to avoid re-coding 86 pages.
+	.button{
+		float: left;
+		margin-left: -77px;
+	}
+	.button-link{
+		float: left;
+		margin-top: 60px;
+	}
+}
+
 
 /*
 header {
