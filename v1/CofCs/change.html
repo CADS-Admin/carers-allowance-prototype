@@ -67,6 +67,7 @@
   <script src="../../javascripts/plugins.js"></script>
   <script src="../../javascripts/custom.js?ver1.0.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="../../javascripts/jquery.details.js"></script>
 
   
   </head>
@@ -127,7 +128,7 @@
   
   
 
-<main class="main carers-allowance">
+<main class="main govuk">
     <div class="grid-wrapper">
    <!-- <main id="main" role="main">
 	<div class="carers-allowance">-->
@@ -136,7 +137,7 @@
 <div id="help-feedback" class="js-hidden">
 	<h2>Help and feedback</h2>
 
-	<p><a href="">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
+	<p><a href="https://www.carersallowance.service.gov.uk/claim-notes">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
 
 	<p>Alternatively, you can call us on 0845 601 8040. Opening hours are Monday to Friday 08:00 am – 09:00 pm. Weekends: 09:00am – 04:00pm. Closed on all public and bank holidays. <a href="">Find out about call charges</a>.</p>
 
@@ -145,38 +146,9 @@
 	<p><strong><a href="#progress-steps" class="js-help-toggle">Close</a></strong></p>
 	
 </div> 
-      <!--<div class="progress-steps" id="progress-steps">		    
-    <ol>
-        <li class="active">
-            <span>About you</span>
-        </li>
-        <li>
-            <span>Partner</span>
-        </li>
-        <li>
-            <span>Care</span>
-        </li>
-        <li>
-            <span>Education</span>
-        </li>
-        <li>
-            <span>Employment</span>
-        </li>
-        <li>
-            <span>Other money</span>
-        </li>
-        <li>
-            <span>Pay details</span>
-        </li>
-        <li>
-            <span>Declaration</span>
-        </li>
-    </ol>
-</div>-->
       
-      <p>&nbsp;</p>
 
-      <div id="section-content" class="grid">
+      <div id="section-content" class="grid grid-2-3">
         <div class="inner-block">
           <h1>Report a change in your circumstances</h1>
 
@@ -234,25 +206,25 @@
 $(document).ready(function() {    
 
     	$('#type-stopped-caring').click(function(){
-    		$('#continue').attr('href','details-stopped-caring.html');
+    		$('.form-steps .button').attr('href','details-stopped-caring.html');
     	});
     	$('#type-breaks').click(function(){
-    		$('#continue').attr('href','details-breaks1.html');
+    		$('.form-steps .button').attr('href','details-breaks1.html');
     	});
         $('#type-address').click(function(){
-        	$('#continue').attr('href','details-address.html');
+        	$('.form-steps .button').attr('href','details-address.html');
         });
         $('#type-bank-details').click(function(){
-        	$('#continue').attr('href','details-bank-details.html');
+        	$('.form-steps .button').attr('href','details-bank-details.html');
         });
         $('#type-employment').click(function(){
-        	$('#continue').attr('href','details-employment.html');
+        	$('.form-steps .button').attr('href','details-employment.html');
         });
         $('#type-self-employment').click(function(){
-        	$('#continue').attr('href','details-self-employment.html');
+        	$('.form-steps .button').attr('href','details-self-employment.html');
         });
         $('#type-other').click(function(){
-        	$('#continue').attr('href','details-other.html');
+        	$('.form-steps .button').attr('href','details-other.html');
         }); 
         	
 }); 

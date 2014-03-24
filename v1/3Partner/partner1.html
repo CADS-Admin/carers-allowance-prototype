@@ -67,6 +67,7 @@
   <script src="../../javascripts/plugins.js"></script>
   <script src="../../javascripts/custom.js?ver1.0.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="../../javascripts/jquery.details.js"></script>
 
   
   </head>
@@ -127,7 +128,7 @@
   
   
 
-<main class="main carers-allowance">
+<main class="main govuk">
     <div class="grid-wrapper">
    <!-- <main id="main" role="main">
 	<div class="carers-allowance">-->
@@ -136,7 +137,7 @@
 <div id="help-feedback" class="js-hidden">
 	<h2>Help and feedback</h2>
 
-	<p><a href="">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
+	<p><a href="https://www.carersallowance.service.gov.uk/claim-notes">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
 
 	<p>Alternatively, you can call us on 0845 601 8040. Opening hours are Monday to Friday 08:00 am – 09:00 pm. Weekends: 09:00am – 04:00pm. Closed on all public and bank holidays. <a href="">Find out about call charges</a>.</p>
 
@@ -145,61 +146,27 @@
 	<p><strong><a href="#progress-steps" class="js-help-toggle">Close</a></strong></p>
 	
 </div> 
-      <!--<div class="progress-steps" id="progress-steps">		    
-    <ol>
-        <li class="active">
-            <span>About you</span>
-        </li>
-        <li>
-            <span>Partner</span>
-        </li>
-        <li>
-            <span>Care</span>
-        </li>
-        <li>
-            <span>Education</span>
-        </li>
-        <li>
-            <span>Employment</span>
-        </li>
-        <li>
-            <span>Other money</span>
-        </li>
-        <li>
-            <span>Pay details</span>
-        </li>
-        <li>
-            <span>Declaration</span>
-        </li>
-    </ol>
-</div>-->
       
-      <p>&nbsp;</p>
 
-      <div id="section-content" class="grid">
+      <div id="section-content" class="grid grid-2-3">
         <div class="inner-block">
-          <h1>About your partner/spouse</h1>
-
-<p class="security-message">Your claim date is <strong style="text-decoration: none;">24 November 2013</strong>.</p>
-
+          <h1><span>Section 2 of 7</span>About your partner</h1>
 <fieldset class="form-elements">
 
-<legend>Partner/Spouse details</legend>
+<!--<p class="form-hint" style="margin-bottom: 1em">Enter their name as shown on your birth certificate or passport</p>-->
 
-<!--<p class="helper" style="margin-bottom: 1em">Enter their name as shown on your birth certificate or passport</p>-->
 
 <ul>
-	<!--<li>
-		<label for="date">Title</label>
-		#include virtual="../public/_includes/ui/title.shtml"
-	</li>-->
 	<li>
-		<label for="fullname">Full name</label>
-		<input type="text"
+		<label for="full-name" class="form-group-label">Full name</label>
+		<p class="form-hint">Enter as shown on your birth certificate or passport</p>
+		<input type="text" name="first-name" id="first-name" class="form-control form-control-1-2">
 	</li>
 	<li>
-		<p>National Insurance number <em>(optional)</em></p>
-		<p class="helper">This is on your National Insurance card, benefit letter, payslip or P60<br/> For example, VO 12 34 56 D</p>
+		<label for="nino" class="form-group-label">National Insurance number (optional)</label>
+		<p class="form-hint">This is on their National Insurance card, benefit letter, payslip or P60<br/> For example, VO 12 34 56 D</p>
+		
+
 
 <input type="text" name="nino" id="nino">
 
@@ -232,124 +199,45 @@
 <div class="helper-info">
 	<p>This can be found on your National Insurance card, a benefit letter, payslip or a P60</p>
 </div>-->
-
-	</li>
+				
+	</li> 
 	<li>
-		<label for="nationality">Nationality</label>
+		<label for="nationality" class="form-group-label">Nationality</label>
 		<p style="color: #6f777b; margin: 0 0 10px 0; font-size: 19px;">If they have a current passport, enter as shown on their passport<br />For example, British</p>
 		<input type="text" name="nationality" id="nationality">
-	</li>
-	<li>
-		<p>Date of birth</p>
-		<p class="helper">For example, 03 May 1979</p>
-		<style>
 
-.carers-allowance .form-elements ul.year li {
-	float: left; 
-	padding-top: 0;
-}
-.carers-allowance .form-elements ul.new-labels li p {
-	color: #6F777B;
-}
-.carers-allowance .form-elements ul.year.new-labels li input {}
 
-</style>
+	</li>
+		<li class="form-group">
+			<p class="form-group-label">Date of birth</p>
+			<p class="form-hint">For example, 03 May 1979</p>
+			<!-- Date of birth -->
 
-<ul class="inline year new-labels" id="date" style="float:left; width: 100%;">
-	<li>
-		<p>Day</p>
-		<input autocomplete="off" maxlength="2" name="date-day" title="Day" type="tel">
-	</li>
-	<li>
-		<p>Month</p>
-		<input autocomplete="off" name="date-month" title="Month" type="tel" style="width: 9.6rem;">
-	</li>
-	<li>
-		<p>Year</p>
-		<input autocomplete="off" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" title="Year" type="tel">
-	</li>
-</ul>
+    <fieldset class="form-group date-of-birth">
+        
+        <div class="form-group-inline form-group-day">
+            <label for="dob-day" class="form-control-label">Day</label>
+            <input autocomplete="off" maxlength="2" type="text" class="form-control" pattern="[0-9]*" id="dob-day">
+        </div>
 
-<!--<ul class="inline year" id="date">
-	<li>
-		<input autocomplete="off" id="" maxlength="2" name="date-day" placeholder="DD" title="Day" type="tel">
-	</li>
-	<li>
-		<input autocomplete="off" id="" maxlength="2" name="date-month" placeholder="MM" title="Month" type="tel">
-	</li>
-	<li>
-		<input autocomplete="off" id="" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" placeholder="YYYY" title="Year" type="tel">
-	</li>
-</ul>-->
+        <div class="form-group-inline form-group-month">
+            <label for="dob-month" class="form-control-label">Month</label>
+            <input autocomplete="off" type="text" class="form-control" id="dob-month">
+        </div>
 
-<!--
-<ul id="date" class="inline year">
-	<li>
-		<label for="02aa57dfdb6b93977f2de87cc5d5f2ef">start_day <em>(optional)</em></label>
-		<select name="0facf991b9971ee42918a0d4cafcda18" id="02aa57dfdb6b93977f2de87cc5d5f2ef">
-			<option value="">Day</option>
-			<option value="1">01</option>
-			<option value="2">02</option>
-			<option value="3">03</option>
-			<option value="4">04</option>
-			<option value="5">05</option>
-			<option value="6">06</option>
-			<option value="7">07</option>
-			<option value="8">08</option>
-			<option value="9">09</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-			<option value="20">20</option>
-			<option value="21">21</option>
-			<option value="22">22</option>
-			<option value="23">23</option>
-			<option value="24">24</option>
-			<option value="25">25</option>
-			<option value="26">26</option>
-			<option value="27">27</option>
-			<option value="28">28</option>
-			<option value="29">29</option>
-			<option value="30">30</option>
-			<option value="31">31</option>
-		</select>
-	</li>
-	<li>
-	<label for="d952a366b1e8c759b0dcbfcd157df35a">start_month <em>(optional)</em></label>
-		<select name="3805952532ad0db1b154716fbc684e57" id="d952a366b1e8c759b0dcbfcd157df35a">
-			<option value="">Month</option>
-			<option value="1">January</option>
-			<option value="2">February</option>
-			<option value="3">March</option>
-			<option value="4">April</option>
-			<option value="5">May</option>
-			<option value="6">June</option>
-			<option value="7">July</option>
-			<option value="8">August</option>
-			<option value="9">September</option>
-			<option value="10">October</option>
-			<option value="11">November</option>
-			<option value="12">December</option>
-		</select>
-	</li>
-	<li>
-		<label for="4684245046b48bc6394899f3f5e71684">start_year <em>(optional)</em></label>
-		<input type="tel" autocomplete="off" maxlength="4" placeholder="YYYY" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="8615b22e56941b3999713a7544318f15" id="4684245046b48bc6394899f3f5e71684">
-	</li>
-</ul>
--->
+        <div class="form-group-inline form-group-year">
+            <label for="dob-year" class="form-control-label">Year</label>
+            <input autocomplete="off" maxlength="4" type="text" class="form-control" pattern="[0-9]*" id="dob-year">
+        </div>
 
-		<p>&nbsp;</p>
-	</li>
+    </fieldset>
+
+
+
+		</li>
 	<li>
-		<p>Have you separated from your partner/spouse since your claim date?</p>
+		<p class="form-group-label">Have you separated from your partner or spouse since your claim date?</p>
+			<p class="form-hint">Your claim date is 25 December 2013</p>
 		<ul id="7c60aef13217b7c604396ffde3efc8fc2aea4d5cf4525a0952c0acb73857241a" class="radio">
 			<li>
 			<input type="radio" value="yes" name="90a9d3555cf765a87cfdbdf64e9372eb2aea4d5cf4525a0952c0acb73857241a" id="7c60aef13217b7c604396ffde3efc8fcca193bc188a27a007b152c9f69587445">
@@ -362,7 +250,7 @@
 		</ul>
 	</li>
 	<li>
-		<p>Is this the person you are claiming Carer's Allowance for?</p>
+		<p class="form-group-label">Is this the person you are claiming Carer's Allowance for?</p>
 		<ul id="e650dd875d8c881caeb4cb23d95c20f43454c005f10872aad4b88f3523e1f97e" class="radio">
 			<li>
 			<input type="radio" value="yes" name="e650dd875d8c881caeb4cb23d95c20f43454c005f10872aad4b88f3523e1f97e" id="e650dd875d8c881caeb4cb23d95c20f40dcb329f994c6ab3d201b37233d460c9">
@@ -377,10 +265,14 @@
 </ul>
 </fieldset><!-- / form elements -->
 
+
 <div class="form-steps">
-	<a href="/carers-allowance-prototype/v1/2About/about7.html" class="button secondary">Back</a>
-	<a href="/carers-allowance-prototype/v1/4Care/care1.html" class="button">Next</a>
-</div><!-- / form steps --> 
+	<a class="button-link" href="../2About/about7.html">Back</a>
+	<a class="button" href="../4Care/care1.html">Next</a>
+</div>
+
+
+
         </div>
       </div>
 

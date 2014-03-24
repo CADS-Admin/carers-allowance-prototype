@@ -67,6 +67,7 @@
   <script src="../../javascripts/plugins.js"></script>
   <script src="../../javascripts/custom.js?ver1.0.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="../../javascripts/jquery.details.js"></script>
 
   
   </head>
@@ -127,7 +128,7 @@
   
   
 
-<main class="main carers-allowance">
+<main class="main govuk">
     <div class="grid-wrapper">
    <!-- <main id="main" role="main">
 	<div class="carers-allowance">-->
@@ -136,7 +137,7 @@
 <div id="help-feedback" class="js-hidden">
 	<h2>Help and feedback</h2>
 
-	<p><a href="">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
+	<p><a href="https://www.carersallowance.service.gov.uk/claim-notes">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
 
 	<p>Alternatively, you can call us on 0845 601 8040. Opening hours are Monday to Friday 08:00 am – 09:00 pm. Weekends: 09:00am – 04:00pm. Closed on all public and bank holidays. <a href="">Find out about call charges</a>.</p>
 
@@ -145,63 +146,31 @@
 	<p><strong><a href="#progress-steps" class="js-help-toggle">Close</a></strong></p>
 	
 </div> 
-      <!--<div class="progress-steps" id="progress-steps">		    
-    <ol>
-        <li class="active">
-            <span>About you</span>
-        </li>
-        <li>
-            <span>Partner</span>
-        </li>
-        <li>
-            <span>Care</span>
-        </li>
-        <li>
-            <span>Education</span>
-        </li>
-        <li>
-            <span>Employment</span>
-        </li>
-        <li>
-            <span>Other money</span>
-        </li>
-        <li>
-            <span>Pay details</span>
-        </li>
-        <li>
-            <span>Declaration</span>
-        </li>
-    </ol>
-</div>-->
       
-      <p>&nbsp;</p>
 
-      <div id="section-content" class="grid">
+      <div id="section-content" class="grid grid-2-3">
         <div class="inner-block">
-          <h1>Employment</h1>
-    
+          <h1><span>Section 5 of 7</span>About your employment</h1>    
 <fieldset class="form-elements">
 
-<p class="security-message">Your claim date is <strong style="text-decoration: none;">24 November 2013</strong>.</p>
-	
-<div class="prompt helper-prompt" style="margin: 2em 0;">
-    <p>Employment includes:</p>
+<ul>	                
+	<li>
+		<p class="form-group-label">Have you been employed at any time since 25 June 2013?</p>
 
-    <ul>
-        <li>full-time or part time work</li>
-        <li>casual or temporary work</li>
+	<div>
+	<p>This is 6 months before your claim date. Answer 'yes' if you were:</p>
+    <ul class="list-bullet">
+        <li>in full-time or part time work</li>
+        <li>in casual or temporary work</li>
         <li>job sharing</li>
         <li>being included in any tax return as a worker or non worker</li>
         <li>being a company director</li>
         <li>being in the territorial army or other auxiliary armed forces</li>
         <li>being on a career break</li>
     </ul>
-</div>	
+    <br>
+</div>
 
-<ul>	                
-	<li>
-		<p>Have you been employed at any time since 24 May 2013?</p>
-		<p class="helper">This is six months before your claim date</p>			
 		<ul id="employment-guard" class="radio">
 	        <li>
 	            <input type="radio" value="yes" name="employment-guard" id="employment-guard-yes">
@@ -216,21 +185,30 @@
 	</li>
 </ul>
 
-<div class="prompt helper-prompt" style="margin: 2em 0;">
-    <p>Self Employment includes:</p>
 
-    <ul>
-        <li>working for yourself, or</li>
-        <li>being a partner or sleeping partner in a business</li>
-        <li>receive income from property or land you own</li>
-        <li>renting out any part of the home you live in - i.e to a lodger</li>
-    </ul>
-</div>
+
+
+
+
 
 <ul>	
 	<li>	    
-		<p>Have you been self employed at any time since 17 November 2013?</p>
-		<p class="helper">This is one week before your claim date</p>	
+		<p class="form-group-label">Have you been self employed at any time since 18 March 2014?</p>
+		
+
+<div>
+		<p>This is 1 week before your claim date. Answer 'yes' if you were:</p>
+
+    <ul class="list-bullet">
+        <li>working for yourself, or</li>
+        <li>being a partner or sleeping partner in a business</li>
+        <li>receiving income from property or land you own</li>
+        <li>renting out any part of the home you live in - i.e to a lodger</li>
+    </ul>
+    <br>
+</div>
+
+
 		<ul id="self-employment-guard" class="radio">		    
 	        <li>
 	            <input type="radio" value="yes" name="self-employment-guard" id="self-employment-guard-yes">
@@ -245,22 +223,24 @@
 	</ul>
 	
 	</fieldset><!-- / form elements -->
-	
+
 	<div class="form-steps">
-		<a href="/carers-allowance-prototype/v1/6Education/education1.html" class="button secondary">Back</a>
-		<a href="/carers-allowance-prototype/v1/8Other-Money/other-money1.html" class="button" id="continue">Next</a>
-	</div><!-- / form steps -->
+
+	    <a class="button-link" href="../6Education/education1.html">Back</a>
+	    <a class="button" href="../8Other-Money/other-money1.html">Next</a>
+	</div>
+
 
 <script>
 	$(document).ready(function() {    
 		$('#employment-guard-yes').click(function(){
-			$('#continue').attr('href','employment1.html');
+			$('.form-steps .button').attr('href','employment1.html');
 		});
 		$('#self-employment-guard-yes').click(function(){
-			$('#continue').attr('href','self-employment1.html');
+			$('.form-steps .button').attr('href','self-employment1.html');
 		});
 		//$('#employment-guard-no, #self-employment-guard-no').click(function(){
-			//$('#continue').attr('href','/8Other-Money/other-money1.html');
+			//$('.form-steps .button').attr('href','/8Other-Money/other-money1.html');
 		//});
 	}); 
 </script>

@@ -67,6 +67,7 @@
   <script src="../../javascripts/plugins.js"></script>
   <script src="../../javascripts/custom.js?ver1.0.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="../../javascripts/jquery.details.js"></script>
 
   
   </head>
@@ -127,7 +128,7 @@
   
   
 
-<main class="main carers-allowance">
+<main class="main govuk">
     <div class="grid-wrapper">
    <!-- <main id="main" role="main">
 	<div class="carers-allowance">-->
@@ -136,7 +137,7 @@
 <div id="help-feedback" class="js-hidden">
 	<h2>Help and feedback</h2>
 
-	<p><a href="">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
+	<p><a href="https://www.carersallowance.service.gov.uk/claim-notes">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
 
 	<p>Alternatively, you can call us on 0845 601 8040. Opening hours are Monday to Friday 08:00 am – 09:00 pm. Weekends: 09:00am – 04:00pm. Closed on all public and bank holidays. <a href="">Find out about call charges</a>.</p>
 
@@ -145,58 +146,29 @@
 	<p><strong><a href="#progress-steps" class="js-help-toggle">Close</a></strong></p>
 	
 </div> 
-      <!--<div class="progress-steps" id="progress-steps">		    
-    <ol>
-        <li class="active">
-            <span>About you</span>
-        </li>
-        <li>
-            <span>Partner</span>
-        </li>
-        <li>
-            <span>Care</span>
-        </li>
-        <li>
-            <span>Education</span>
-        </li>
-        <li>
-            <span>Employment</span>
-        </li>
-        <li>
-            <span>Other money</span>
-        </li>
-        <li>
-            <span>Pay details</span>
-        </li>
-        <li>
-            <span>Declaration</span>
-        </li>
-    </ol>
-</div>-->
       
-      <p>&nbsp;</p>
 
-      <div id="section-content" class="grid">
+      <div id="section-content" class="grid grid-2-3">
         <div class="inner-block">
-          <h1>About you - the Carer</h1>
-		
+          <h1><span>Section 1 of 7</span>About you - the Carer</h1>		
 <div class="completed">
 	<ul aria-label="Completed questions">
-		<li><h3>Your details</h3><a href="about1.html">Change these answers</a></li>      
-		<li><h3>Your contact details</h3><a href="about2.html">Change these answers</a></li> 
-		<li><h3>Your claim date: 24 November 2013</h3> <a href="about3.html">Change this answer</a></li>
-		<li><h3>Your nationality and residency</h3> <a href="about4.html">Change these answers</a></li>         
+		<li><h3>1. Your claim date is 25 December 2013</h3> <a href="about1.html">Change this answer</a></li>   
+    	<li><h3>2. Your details</h3><a href="about2.html">Change these answers</a></li>   
+		<li><h3>3. Your contact details</h3><a href="about3.html">Change these answers</a></li>
+		<li><h3>4. Your nationality and residency</h3> <a href="about4.html">Change these answers</a></li>         
     </ul>
  </div>
 
 <fieldset class="form-elements">
 
-<legend>Time outside of England, Scotland or Wales</legend>
+<legend>5. Time outside of England, Scotland or Wales</legend>
 
 <ul>
 	<li>
-		<p>Have you been away for more than 52 weeks in the last 3 years before your claim date? </p>
+		<p class="form-group-label">Have you been away for more than 52 weeks in the last 3 years before your claim date? </p>
 		<p class="helper">This could be one trip, or a number of trips adding up to 52 weeks</p>		
+
 		<ul id="time-outside" class="radio">
 	        <li>
 	            <input type="radio" value="yes" name="time-outside" id="time-outside-yes">
@@ -218,22 +190,23 @@
 </fieldset>
 	
 <div class="form-steps">
-	<a class="button secondary" href="about4.html">Back</a>
+	<a class="button-link" href="about4.html">Back</a>
 	<a class="button" href="about6.html">Next</a>
 </div>
 <!-- / form steps -->
+
 
 <script>
 
 // Show & Hide Fields
 $(document).ready(function() {  
 	$('#time-outside-yes').click(function(){
-		//$("#warningMessageWrap").show('medium');
-		$('#continue').attr('href','about5-2.html');
+		//$("#warningMessageWrap").show();
+		$('.form-steps .button').attr('href','about5-2.html');
 	});
 	$('#time-outside-no').click(function(){
-		//$("#warningMessageWrap").hide('medium');
-		$('#continue').attr('href','about6.html');
+		//$("#warningMessageWrap").hide();
+		$('.form-steps .button').attr('href','about6.html');
 	});
 });
 

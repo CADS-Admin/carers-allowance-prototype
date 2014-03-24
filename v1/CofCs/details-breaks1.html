@@ -67,6 +67,7 @@
   <script src="../../javascripts/plugins.js"></script>
   <script src="../../javascripts/custom.js?ver1.0.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="../../javascripts/jquery.details.js"></script>
 
   
   </head>
@@ -127,7 +128,7 @@
   
   
 
-<main class="main carers-allowance">
+<main class="main govuk">
     <div class="grid-wrapper">
    <!-- <main id="main" role="main">
 	<div class="carers-allowance">-->
@@ -136,7 +137,7 @@
 <div id="help-feedback" class="js-hidden">
 	<h2>Help and feedback</h2>
 
-	<p><a href="">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
+	<p><a href="https://www.carersallowance.service.gov.uk/claim-notes">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
 
 	<p>Alternatively, you can call us on 0845 601 8040. Opening hours are Monday to Friday 08:00 am – 09:00 pm. Weekends: 09:00am – 04:00pm. Closed on all public and bank holidays. <a href="">Find out about call charges</a>.</p>
 
@@ -145,38 +146,9 @@
 	<p><strong><a href="#progress-steps" class="js-help-toggle">Close</a></strong></p>
 	
 </div> 
-      <!--<div class="progress-steps" id="progress-steps">		    
-    <ol>
-        <li class="active">
-            <span>About you</span>
-        </li>
-        <li>
-            <span>Partner</span>
-        </li>
-        <li>
-            <span>Care</span>
-        </li>
-        <li>
-            <span>Education</span>
-        </li>
-        <li>
-            <span>Employment</span>
-        </li>
-        <li>
-            <span>Other money</span>
-        </li>
-        <li>
-            <span>Pay details</span>
-        </li>
-        <li>
-            <span>Declaration</span>
-        </li>
-    </ol>
-</div>-->
       
-      <p>&nbsp;</p>
 
-      <div id="section-content" class="grid">
+      <div id="section-content" class="grid grid-2-3">
         <div class="inner-block">
           <h1>Report a change in your circumstances</h1>
 
@@ -203,7 +175,7 @@
 	
 	<li>
 		<p>When did your most recent break from caring start?</p>
-		<p class="helper">For example, 03 February 2014</p>
+		<p class="form-hint">For example, 03 February 2014</p>
 		<ul id="date" class="inline year">
 	<li>
 		<label for="02aa57dfdb6b93977f2de87cc5d5f2ef">start_day <em>(optional)</em></label>
@@ -268,7 +240,7 @@
 	</li>
 	<li>
 		<p>Start time <em>(optional)</em></p>
-		<p class="helper">For example, 10:00am</p>
+		<p class="form-hint">For example, 10:00am</p>
 		<!--<ul class="inline year">
 	<li>
 		<label for="start_hour">start_hour <em>(optional)</em></label>
@@ -317,7 +289,7 @@
 
 	<li>
 		<label for="wherePerson_location">Where was the person you care for?</label>
-		<p class="helper">During this time, they were:</p>
+		<p class="form-hint">During this time, they were:</p>
 		
 		<ul class="radio-block" id="breaks-where-care">
 			<li>
@@ -368,7 +340,7 @@
 			<option value="Other">Other</option>
 		</select>
 		-->
-		<p class="helper">During this time, I was:</p>
+		<p class="form-hint">During this time, I was:</p>
 		<ul class="radio-block" id="breaks-where">
 			<li>
 				<input type="radio" value="breaks-where-home" id="breaks-where-home" name="breaks-where">
@@ -415,7 +387,7 @@
 		<ul>
 			<li>
 				<p>When did the break end?</p>
-				<p class="helper">For example, 07 February 2014</p>
+				<p class="form-hint">For example, 07 February 2014</p>
 				<ul id="date" class="inline year">
 	<li>
 		<label for="02aa57dfdb6b93977f2de87cc5d5f2ef">start_day <em>(optional)</em></label>
@@ -480,7 +452,7 @@
 			</li>
 			<li>
 				<p>End time <em>(optional)</em></p>
-				<p class="helper">For example, 4:30pm</p>
+				<p class="form-hint">For example, 4:30pm</p>
 				<!--<ul class="inline year">
 	<li>
 		<label for="start_hour">start_hour <em>(optional)</em></label>
@@ -544,7 +516,8 @@
 	<li>
 	<label for="circs-tell-us-more">Tell us more about your changes <em>(optional)</em></label>
 	<!--<p class="helper">If you didn't tell us about changes as soon as they happened, we need you to tell us why</p>-->
-	<p class="helper">For example, why you didn't report changes as soon as they happened</p>
+	<p class="form-hint">For example, why you didn't report changes as soon as they happened</p>
+
 	<textarea autocomplete="off" maxlength="2000" name="circs-tell-us-more" id="circs-tell-us-more"></textarea>
 </li>
 </ul>
@@ -552,17 +525,17 @@
 </fieldset>
 
 <div class="form-steps">
-	<a href="change.html" class="button secondary">Back</a>
+	<a href="change.html" class="button-link">Back</a>
 	<a href="details-breaks2.html" class="button" id="continue">Continue</a>
 </div><!-- / form steps -->
 
 <script>
 
 $('#resumed-caring_yes').click(function(){
-	$(this).parents('ul li').next().show('medium');
+	$(this).parents('ul li').next().show();
 });
 $('#resumed-caring_no').click(function(){
-	$(this).parents('ul li').next().hide('medium');
+	$(this).parents('ul li').next().hide();
 });
 
 </script>

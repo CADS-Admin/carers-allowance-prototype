@@ -67,6 +67,7 @@
   <script src="../../javascripts/plugins.js"></script>
   <script src="../../javascripts/custom.js?ver1.0.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="../../javascripts/jquery.details.js"></script>
 
   
   </head>
@@ -127,7 +128,7 @@
   
   
 
-<main class="main carers-allowance">
+<main class="main govuk">
     <div class="grid-wrapper">
    <!-- <main id="main" role="main">
 	<div class="carers-allowance">-->
@@ -136,7 +137,7 @@
 <div id="help-feedback" class="js-hidden">
 	<h2>Help and feedback</h2>
 
-	<p><a href="">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
+	<p><a href="https://www.carersallowance.service.gov.uk/claim-notes">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
 
 	<p>Alternatively, you can call us on 0845 601 8040. Opening hours are Monday to Friday 08:00 am – 09:00 pm. Weekends: 09:00am – 04:00pm. Closed on all public and bank holidays. <a href="">Find out about call charges</a>.</p>
 
@@ -145,56 +146,27 @@
 	<p><strong><a href="#progress-steps" class="js-help-toggle">Close</a></strong></p>
 	
 </div> 
-      <!--<div class="progress-steps" id="progress-steps">		    
-    <ol>
-        <li class="active">
-            <span>About you</span>
-        </li>
-        <li>
-            <span>Partner</span>
-        </li>
-        <li>
-            <span>Care</span>
-        </li>
-        <li>
-            <span>Education</span>
-        </li>
-        <li>
-            <span>Employment</span>
-        </li>
-        <li>
-            <span>Other money</span>
-        </li>
-        <li>
-            <span>Pay details</span>
-        </li>
-        <li>
-            <span>Declaration</span>
-        </li>
-    </ol>
-</div>-->
       
-      <p>&nbsp;</p>
 
-      <div id="section-content" class="grid">
+      <div id="section-content" class="grid grid-2-3">
         <div class="inner-block">
-          <h1>About self-employed</h1>		
+          <h1><span>Section 5 of 7</span>About your employment</h1>	
 		            
 <div class="completed">
 	<ul aria-label="Completed questions">
 	    <li>
-	        <h3>Your job</h3>
+	        <h3>1. Employment details</h3>
 	        <a href="self-employment1">Change these answers</a>
 	    </li>
 	</ul>
 </div>
 		            
 <fieldset class="form-elements">
-<legend>Your accounts</legend>
+<legend>2. Your accounts</legend>
 		
 <ul>
 	<li> 
-		<p>Is the income, outgoings and profit you are making now, similar to your last trading year?</p>
+		<p class="form-group-label">Is the income, outgoings and profit you are making now, similar to your last trading year?</p>
 		<ul id="f6f2b1aa7d7d96148cfb079da630d3f4d6ef7351778f0389e6941ecb662517198bf92291d33536ec366deda43844273e" class="radio">
 	        <li>
 	            <input type="radio" value="yes"  name="f6f2b1aa7d7d96148cfb079da630d3f4d6ef7351778f0389e6941ecb662517198bf92291d33536ec366deda43844273e" id="f6f2b1aa7d7d96148cfb079da630d3f4d6ef7351778f0389e6941ecb662517194cdcc8b2adf90422f9d26c28cc9d71ec">
@@ -207,117 +179,36 @@
 		</ul>
 	</li>	
 	<li>
-		<p>When was your last year end date? <em>(optional)</em></p> <!-- We should only need one date? -->
-		<style>
+		<p class="form-group-label">When was your last year end date? <em>(optional)</em></p> <!-- We should only need one date? -->
+		<p class="form-hint">This is the date your trading or accounting year ended</p>
+		<!-- Date of birth -->
 
-.carers-allowance .form-elements ul.year li {
-	float: left; 
-	padding-top: 0;
-}
-.carers-allowance .form-elements ul.new-labels li p {
-	color: #6F777B;
-}
-.carers-allowance .form-elements ul.year.new-labels li input {}
+    <fieldset class="form-group date-of-birth">
+        
+        <div class="form-group-inline form-group-day">
+            <label for="dob-day" class="form-control-label">Day</label>
+            <input autocomplete="off" maxlength="2" type="text" class="form-control" pattern="[0-9]*" id="dob-day">
+        </div>
 
-</style>
+        <div class="form-group-inline form-group-month">
+            <label for="dob-month" class="form-control-label">Month</label>
+            <input autocomplete="off" type="text" class="form-control" id="dob-month">
+        </div>
 
-<ul class="inline year new-labels" id="date" style="float:left; width: 100%;">
-	<li>
-		<p>Day</p>
-		<input autocomplete="off" maxlength="2" name="date-day" title="Day" type="tel">
-	</li>
-	<li>
-		<p>Month</p>
-		<input autocomplete="off" name="date-month" title="Month" type="tel" style="width: 9.6rem;">
-	</li>
-	<li>
-		<p>Year</p>
-		<input autocomplete="off" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" title="Year" type="tel">
-	</li>
-</ul>
+        <div class="form-group-inline form-group-year">
+            <label for="dob-year" class="form-control-label">Year</label>
+            <input autocomplete="off" maxlength="4" type="text" class="form-control" pattern="[0-9]*" id="dob-year">
+        </div>
 
-<!--<ul class="inline year" id="date">
-	<li>
-		<input autocomplete="off" id="" maxlength="2" name="date-day" placeholder="DD" title="Day" type="tel">
-	</li>
-	<li>
-		<input autocomplete="off" id="" maxlength="2" name="date-month" placeholder="MM" title="Month" type="tel">
-	</li>
-	<li>
-		<input autocomplete="off" id="" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" placeholder="YYYY" title="Year" type="tel">
-	</li>
-</ul>-->
+    </fieldset>
 
-<!--
-<ul id="date" class="inline year">
-	<li>
-		<label for="02aa57dfdb6b93977f2de87cc5d5f2ef">start_day <em>(optional)</em></label>
-		<select name="0facf991b9971ee42918a0d4cafcda18" id="02aa57dfdb6b93977f2de87cc5d5f2ef">
-			<option value="">Day</option>
-			<option value="1">01</option>
-			<option value="2">02</option>
-			<option value="3">03</option>
-			<option value="4">04</option>
-			<option value="5">05</option>
-			<option value="6">06</option>
-			<option value="7">07</option>
-			<option value="8">08</option>
-			<option value="9">09</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-			<option value="20">20</option>
-			<option value="21">21</option>
-			<option value="22">22</option>
-			<option value="23">23</option>
-			<option value="24">24</option>
-			<option value="25">25</option>
-			<option value="26">26</option>
-			<option value="27">27</option>
-			<option value="28">28</option>
-			<option value="29">29</option>
-			<option value="30">30</option>
-			<option value="31">31</option>
-		</select>
-	</li>
-	<li>
-	<label for="d952a366b1e8c759b0dcbfcd157df35a">start_month <em>(optional)</em></label>
-		<select name="3805952532ad0db1b154716fbc684e57" id="d952a366b1e8c759b0dcbfcd157df35a">
-			<option value="">Month</option>
-			<option value="1">January</option>
-			<option value="2">February</option>
-			<option value="3">March</option>
-			<option value="4">April</option>
-			<option value="5">May</option>
-			<option value="6">June</option>
-			<option value="7">July</option>
-			<option value="8">August</option>
-			<option value="9">September</option>
-			<option value="10">October</option>
-			<option value="11">November</option>
-			<option value="12">December</option>
-		</select>
-	</li>
-	<li>
-		<label for="4684245046b48bc6394899f3f5e71684">start_year <em>(optional)</em></label>
-		<input type="tel" autocomplete="off" maxlength="4" placeholder="YYYY" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="8615b22e56941b3999713a7544318f15" id="4684245046b48bc6394899f3f5e71684">
-	</li>
-</ul>
--->
 
-		<p class="helper">This is the date your trading/accounting year ended</p>	
+	
 	</li>
 </ul>
 		        
 <div class="form-steps">
-	<a href="self-employment1.html" class="button secondary">Back</a>
+	<a href="self-employment1.html" class="button-link">Back</a>
 	<a href="self-employment3.html" class="button">Next</a>
 </div><!-- / form steps -->
         </div>

@@ -67,6 +67,7 @@
   <script src="../../javascripts/plugins.js"></script>
   <script src="../../javascripts/custom.js?ver1.0.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="../../javascripts/jquery.details.js"></script>
 
   
   </head>
@@ -127,7 +128,7 @@
   
   
 
-<main class="main carers-allowance">
+<main class="main govuk">
     <div class="grid-wrapper">
    <!-- <main id="main" role="main">
 	<div class="carers-allowance">-->
@@ -136,7 +137,7 @@
 <div id="help-feedback" class="js-hidden">
 	<h2>Help and feedback</h2>
 
-	<p><a href="">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
+	<p><a href="https://www.carersallowance.service.gov.uk/claim-notes">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
 
 	<p>Alternatively, you can call us on 0845 601 8040. Opening hours are Monday to Friday 08:00 am – 09:00 pm. Weekends: 09:00am – 04:00pm. Closed on all public and bank holidays. <a href="">Find out about call charges</a>.</p>
 
@@ -145,38 +146,9 @@
 	<p><strong><a href="#progress-steps" class="js-help-toggle">Close</a></strong></p>
 	
 </div> 
-      <!--<div class="progress-steps" id="progress-steps">		    
-    <ol>
-        <li class="active">
-            <span>About you</span>
-        </li>
-        <li>
-            <span>Partner</span>
-        </li>
-        <li>
-            <span>Care</span>
-        </li>
-        <li>
-            <span>Education</span>
-        </li>
-        <li>
-            <span>Employment</span>
-        </li>
-        <li>
-            <span>Other money</span>
-        </li>
-        <li>
-            <span>Pay details</span>
-        </li>
-        <li>
-            <span>Declaration</span>
-        </li>
-    </ol>
-</div>-->
       
-      <p>&nbsp;</p>
 
-      <div id="section-content" class="grid">
+      <div id="section-content" class="grid grid-2-3">
         <div class="inner-block">
           <h1>Pay details</h1>
 
@@ -184,20 +156,20 @@
 
 <ul>             
 	<li>
-	  	<p>How would you like to get paid?</p>
-	  	<p class="helper">Select 'Other' if you want to be paid into an International Bank Account</p>
-		<ul class="radio-block" id="233ab6c90b2e125818cc64e97587db12">
-			<li>
+	  	<p class="form-group-label">How would you like to get paid?</p>
+	  	<p class="form-hint">Select 'Other' if you want to be paid into an International Bank Account</p>
+		<ul id="233ab6c90b2e125818cc64e97587db12">
+			<li class="block-label" >
 			    <input type="radio" id="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" name="233ab6c90b2e125818cc64e97587db12"   value="bankBuildingAccount"  helperBelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
 			    <label for="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" style="width: 400px">UK bank or building society account</label>
 			</li>
 			
-			<li>
+			<li class="block-label" >
 			    <input type="radio" id="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" name="233ab6c90b2e125818cc64e97587db12"   value="appliedForAccount"  helperBelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
 			    <label for="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" style="width: 400px">You don&#x27;t have an account but intend to open one</label>
 			</li>
 			
-			<li>
+			<li class="block-label" >
 			    <input type="radio" id="3f18d35ee6308a03059ee762dacddeac00443e1812b622dbf6d309e98117e5d5" name="233ab6c90b2e125818cc64e97587db12"   value="notOpenAccount" helperBelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
 			    <label for="3f18d35ee6308a03059ee762dacddeac00443e1812b622dbf6d309e98117e5d5" style="width: 400px">Other - you would like more information</label>
 			</li>
@@ -205,21 +177,34 @@
 	    
 	</li>
 	<li>
-		<label for="ffdfe7640ba21ea3e3598cc22cf2002752857dc244a0fbf78a670ef4d69ff177">How often do you want to get paid?</label>
-	    <select id="ffdfe7640ba21ea3e3598cc22cf2002752857dc244a0fbf78a670ef4d69ff177" name="ffdfe7640ba21ea3e3598cc22cf2002752857dc244a0fbf78a670ef4d69ff177" >
-	        <option value="" >Please Select</option>
-	        <option value="everyWeek" selected>Every week</option> 
-	        <option value="fourWeekly" >Every four weeks</option>  
-	    </select>
+		<label for="ffdfe7640ba21ea3e3598cc22cf2002752857dc244a0fbf78a670ef4d69ff177" class="form-group-label">How often do you want to get paid?</label>
+
+	    		<ul id="233ab6c90b2e125818cc64e97587db12">
+			<li >
+				<div class="block-label">
+			    <input type="radio" id="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" name="233ab6c90b2e125818cc64e97587db12"   value="bankBuildingAccount"  helperBelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
+			    <label for="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" style="width: 400px">Every week</label>
+			</div>
+			</li>
+			
+			<li>
+				<div class="block-label">
+			    <input type="radio" id="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" name="233ab6c90b2e125818cc64e97587db12"   value="appliedForAccount"  helperBelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
+			    <label for="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" style="width: 400px">Every 4 weeks</label>
+			</div>
+			</li>
+
+		</ul>
 	</li>
 </ul>
 
 </fieldset>
-        
-<nav class="form-steps">
-    <a href="/carers-allowance-prototype/v1/8Other-Money/other-money1.html" id="backButton" class="button secondary" aria-label="Back button">Back</a>
-    <a href="/carers-allowance-prototype/v1/10Declaration/declaration1.html" class="button">Next</a>
-</nav>
+
+<div class="form-steps">
+
+    <a class="button-link" href="../8Other-Money/other-money1.html">Back</a>
+    <a class="button" href="../10Declaration/declaration1.html">Next</a>
+</div>
         </div>
       </div>
 

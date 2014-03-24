@@ -67,6 +67,7 @@
   <script src="../../javascripts/plugins.js"></script>
   <script src="../../javascripts/custom.js?ver1.0.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="../../javascripts/jquery.details.js"></script>
 
   
   </head>
@@ -127,7 +128,7 @@
   
   
 
-<main class="main carers-allowance">
+<main class="main govuk">
     <div class="grid-wrapper">
    <!-- <main id="main" role="main">
 	<div class="carers-allowance">-->
@@ -136,7 +137,7 @@
 <div id="help-feedback" class="js-hidden">
 	<h2>Help and feedback</h2>
 
-	<p><a href="">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
+	<p><a href="https://www.carersallowance.service.gov.uk/claim-notes">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
 
 	<p>Alternatively, you can call us on 0845 601 8040. Opening hours are Monday to Friday 08:00 am – 09:00 pm. Weekends: 09:00am – 04:00pm. Closed on all public and bank holidays. <a href="">Find out about call charges</a>.</p>
 
@@ -145,60 +146,34 @@
 	<p><strong><a href="#progress-steps" class="js-help-toggle">Close</a></strong></p>
 	
 </div> 
-      <!--<div class="progress-steps" id="progress-steps">		    
-    <ol>
-        <li class="active">
-            <span>About you</span>
-        </li>
-        <li>
-            <span>Partner</span>
-        </li>
-        <li>
-            <span>Care</span>
-        </li>
-        <li>
-            <span>Education</span>
-        </li>
-        <li>
-            <span>Employment</span>
-        </li>
-        <li>
-            <span>Other money</span>
-        </li>
-        <li>
-            <span>Pay details</span>
-        </li>
-        <li>
-            <span>Declaration</span>
-        </li>
-    </ol>
-</div>-->
       
-      <p>&nbsp;</p>
 
-      <div id="section-content" class="grid">
+      <div id="section-content" class="grid grid-2-3">
         <div class="inner-block">
-          <h1>About you - the Carer</h1>
-
+          <h1><span>Section 1 of 7</span>About you - the Carer</h1>
 <div class="completed">
-<ul aria-label="Completed questions">
-	<li><h3>Your details</h3><a href="about1.html">Change these answers</a></li>      
-	<li><h3>Your contact details</h3><a href="about2.html">Change these answers</a></li> 
-	<li><h3>Your claim date: 24 November 2013</h3> <a href="about3.html">Change this answer</a></li>      
-</ul>
-</div>
+	<ul aria-label="Completed questions">		
+		<li><h3>1. Your claim date is 25 December 2013</h3> <a href="about1.html">Change this answer</a></li>   
+    	<li><h3>2. Your details</h3><a href="about2.html">Change these answers</a></li>   
+		<li><h3>3. Your contact details</h3><a href="about3.html">Change these answers</a></li>              
+    </ul>
+ </div>
 
 <fieldset class="form-elements">
 
-<legend>Your nationality and residency</legend>
+<legend>4. Your nationality and residency</legend>
 <ul>	
 <li>
-	<label for="nationality">Nationality</label>
+	<label for="nationality" class="form-group-label">Nationality</label>
+
 	<p class="helper">If you have a current passport, enter as shown on your passport<br />For example, British</p>
+
 	<input type="text" name="nationality" id="nationality">
+
+
 </li>	
 <li>	
-	<p>Do you normally live in England, Scotland or Wales?</p>
+	<p class="form-group-label">Do you normally live in England, Scotland or Wales?</p>
 	<ul id="normally-live" class="radio">
         <li>
             <input type="radio" value="yes"  name="normally-live" id="normally-live-yes">
@@ -210,10 +185,10 @@
         </li>
 	</ul>	
 </li>
-<li style="display: none;" class="other-detail">
+<li style="display: none;" class="other-detail form-group-indent">
     <ul>
 		<li>
-			<label for="normally-live-details">Which country do you normally live in?</label>
+			<label for="normally-live-details" class="form-control-label">Which country do you normally live in?</label>
 		    <input type="text" autocomplete="off" maxlength="35" value="" name="normally-live-details" id="normally-live-details">
 		</li>
     </ul>
@@ -223,21 +198,23 @@
 </fieldset><!-- / form elements -->
 
 <div class="form-steps">
-	<a class="button secondary" href="about3.html">Back</a>
+
+	<a class="button-link" href="about3.html">Back</a>
 	<a class="button" href="about5.html">Next</a>
 </div>
 </div>
 <!-- / form steps -->
+
 
 <script>
 
 // Show & Hide Fields
 $(document).ready(function() {  
 	$('#normally-live-no').click(function(){
-		$(this).parents('ul li').next('.other-detail').show('medium');
+		$(this).parents('ul li').next('.other-detail').show();
 	});
 	$('#normally-live-yes').click(function(){
-		$(this).parents('ul li').next('.other-detail').hide('medium');
+		$(this).parents('ul li').next('.other-detail').hide();
 	});
 });
 

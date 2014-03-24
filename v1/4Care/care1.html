@@ -67,6 +67,7 @@
   <script src="../../javascripts/plugins.js"></script>
   <script src="../../javascripts/custom.js?ver1.0.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="../../javascripts/jquery.details.js"></script>
 
   
   </head>
@@ -127,7 +128,7 @@
   
   
 
-<main class="main carers-allowance">
+<main class="main govuk">
     <div class="grid-wrapper">
    <!-- <main id="main" role="main">
 	<div class="carers-allowance">-->
@@ -136,7 +137,7 @@
 <div id="help-feedback" class="js-hidden">
 	<h2>Help and feedback</h2>
 
-	<p><a href="">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
+	<p><a href="https://www.carersallowance.service.gov.uk/claim-notes">Read this guide</a> for answers to the most common questions about applying for Carer's Allowance.</p>
 
 	<p>Alternatively, you can call us on 0845 601 8040. Opening hours are Monday to Friday 08:00 am – 09:00 pm. Weekends: 09:00am – 04:00pm. Closed on all public and bank holidays. <a href="">Find out about call charges</a>.</p>
 
@@ -145,54 +146,27 @@
 	<p><strong><a href="#progress-steps" class="js-help-toggle">Close</a></strong></p>
 	
 </div> 
-      <!--<div class="progress-steps" id="progress-steps">		    
-    <ol>
-        <li class="active">
-            <span>About you</span>
-        </li>
-        <li>
-            <span>Partner</span>
-        </li>
-        <li>
-            <span>Care</span>
-        </li>
-        <li>
-            <span>Education</span>
-        </li>
-        <li>
-            <span>Employment</span>
-        </li>
-        <li>
-            <span>Other money</span>
-        </li>
-        <li>
-            <span>Pay details</span>
-        </li>
-        <li>
-            <span>Declaration</span>
-        </li>
-    </ol>
-</div>-->
       
-      <p>&nbsp;</p>
 
-      <div id="section-content" class="grid">
+      <div id="section-content" class="grid grid-2-3">
         <div class="inner-block">
-          <h1>About the care you provide</h1>
-
+          <h1><span>Section 3 of 7</span>About the care you provide</h1>
 <fieldset class="form-elements">
 
-<legend>Details of the person you care for</legend>
+<legend>1. Details of the person you care for</legend>
+
+
+	<div>
+		<label for="relationship" class="form-group-label">What is their relationship to you?</label>
+		<p class="helper">For example, mother, daughter etc.</p>		
+		<!--= partial "partials/ui-relationship" -->
+		<input type="text" for="relationship" class="form-control form-control-1-2">	
+	</div>
+
 
 <ul>
 	<li>
-		<label for="relationship">What is their relationship to you?</label>
-		<p class="helper">For example, Mother, Daughter etc.</p>		
-		<!--= partial "partials/ui-relationship" -->
-		<input type="text" for="relationship">	
-	</li>
-	<li>
-		<label for="title">Title</label>
+		<label for="title" class="form-group-label">Title</label>
 		<select id="title" name="title">
     <!--<option value="">Please select</option>-->
     <option value="mr">Mr</option>
@@ -209,13 +183,15 @@
 </select>
 	</li>
 	<li>
-		<label for="full-name">Full name</label>
-		<p class="helper">Enter as shown on their birth certificate or passport</p>
-		<input type="text" for="full-name">
+		<label for="full-name" class="form-group-label">Full name</label>
+		<p class="helper">As shown on their birth certificate or passport</p>
+		<input type="text" for="full-name" class="form-control form-control-1-2">
 	</li>
 	<li>
-		<p>National Insurance number <em>(optional)</em></p>
-		<p class="helper">This is on your National Insurance card, benefit letter, payslip or P60<br/> For example, VO 12 34 56 D</p>
+		<p class="form-group-label">National Insurance number (optional)</p>
+		<p class="form-hint">This is on their National Insurance card, benefit letter, payslip or P60<br/> For example, VO 12 34 56 D</p>
+		
+
 
 <input type="text" name="nino" id="nino">
 
@@ -251,123 +227,42 @@
 	
 	</li>
 	<li>
-		<p>Date of birth</p>
+		<p class="form-group-label">Date of birth</p>
+
 		<p class="helper">For example, 03 May 1979</p>
-		<style>
 
-.carers-allowance .form-elements ul.year li {
-	float: left; 
-	padding-top: 0;
-}
-.carers-allowance .form-elements ul.new-labels li p {
-	color: #6F777B;
-}
-.carers-allowance .form-elements ul.year.new-labels li input {}
+		<!-- Date of birth -->
 
-</style>
+    <fieldset class="form-group date-of-birth">
+        
+        <div class="form-group-inline form-group-day">
+            <label for="dob-day" class="form-control-label">Day</label>
+            <input autocomplete="off" maxlength="2" type="text" class="form-control" pattern="[0-9]*" id="dob-day">
+        </div>
 
-<ul class="inline year new-labels" id="date" style="float:left; width: 100%;">
-	<li>
-		<p>Day</p>
-		<input autocomplete="off" maxlength="2" name="date-day" title="Day" type="tel">
-	</li>
-	<li>
-		<p>Month</p>
-		<input autocomplete="off" name="date-month" title="Month" type="tel" style="width: 9.6rem;">
-	</li>
-	<li>
-		<p>Year</p>
-		<input autocomplete="off" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" title="Year" type="tel">
-	</li>
-</ul>
+        <div class="form-group-inline form-group-month">
+            <label for="dob-month" class="form-control-label">Month</label>
+            <input autocomplete="off" type="text" class="form-control" id="dob-month">
+        </div>
 
-<!--<ul class="inline year" id="date">
-	<li>
-		<input autocomplete="off" id="" maxlength="2" name="date-day" placeholder="DD" title="Day" type="tel">
-	</li>
-	<li>
-		<input autocomplete="off" id="" maxlength="2" name="date-month" placeholder="MM" title="Month" type="tel">
-	</li>
-	<li>
-		<input autocomplete="off" id="" maxlength="4" name="date-year" pattern="[0-9 \-]{1,20}" placeholder="YYYY" title="Year" type="tel">
-	</li>
-</ul>-->
+        <div class="form-group-inline form-group-year">
+            <label for="dob-year" class="form-control-label">Year</label>
+            <input autocomplete="off" maxlength="4" type="text" class="form-control" pattern="[0-9]*" id="dob-year">
+        </div>
 
-<!--
-<ul id="date" class="inline year">
-	<li>
-		<label for="02aa57dfdb6b93977f2de87cc5d5f2ef">start_day <em>(optional)</em></label>
-		<select name="0facf991b9971ee42918a0d4cafcda18" id="02aa57dfdb6b93977f2de87cc5d5f2ef">
-			<option value="">Day</option>
-			<option value="1">01</option>
-			<option value="2">02</option>
-			<option value="3">03</option>
-			<option value="4">04</option>
-			<option value="5">05</option>
-			<option value="6">06</option>
-			<option value="7">07</option>
-			<option value="8">08</option>
-			<option value="9">09</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-			<option value="20">20</option>
-			<option value="21">21</option>
-			<option value="22">22</option>
-			<option value="23">23</option>
-			<option value="24">24</option>
-			<option value="25">25</option>
-			<option value="26">26</option>
-			<option value="27">27</option>
-			<option value="28">28</option>
-			<option value="29">29</option>
-			<option value="30">30</option>
-			<option value="31">31</option>
-		</select>
-	</li>
-	<li>
-	<label for="d952a366b1e8c759b0dcbfcd157df35a">start_month <em>(optional)</em></label>
-		<select name="3805952532ad0db1b154716fbc684e57" id="d952a366b1e8c759b0dcbfcd157df35a">
-			<option value="">Month</option>
-			<option value="1">January</option>
-			<option value="2">February</option>
-			<option value="3">March</option>
-			<option value="4">April</option>
-			<option value="5">May</option>
-			<option value="6">June</option>
-			<option value="7">July</option>
-			<option value="8">August</option>
-			<option value="9">September</option>
-			<option value="10">October</option>
-			<option value="11">November</option>
-			<option value="12">December</option>
-		</select>
-	</li>
-	<li>
-		<label for="4684245046b48bc6394899f3f5e71684">start_year <em>(optional)</em></label>
-		<input type="tel" autocomplete="off" maxlength="4" placeholder="YYYY" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="8615b22e56941b3999713a7544318f15" id="4684245046b48bc6394899f3f5e71684">
-	</li>
-</ul>
--->
+    </fieldset>
 
-		<p>&nbsp;</p>
+
+
 	</li>
 	
 </ul>
 	
-<fieldset class="form-elements">
 	
-<legend>Contact details of the person you care for</legend>
+<h2 class="form-group-label">Contact details</h2>
 
-<p style="margin: 0 0 10px 0;"><input type="checkbox" secondary="true" value="true" name="use-my-address" id="use-my-address" style="margin: 0 5px 0 0;">
-<label for="use-my-address" style="font-size: 1.7rem; display: inline-block;">This person lives with me - use my address</label></p>
+<p class="block"><input type="checkbox" secondary="true" value="true" name="use-my-address" id="use-my-address">
+<label for="use-my-address" style="display: inline-block;">This person lives with me. Use my address</label></p>
 
 <ul>
 	<!--<li>
@@ -379,33 +274,28 @@
 		<input type="text" maxlength="60" autocomplete="off" class="postcode" value="" name="postcode" id="postcode">
 	</li>-->
 
-	<li>
-	<label for="address-1">Street address</label>
-	<input type="text" autocomplete="off" maxlength="35" name="address-1" id="address-1">
-</li>
-<li style="padding-top:0;">
-	<input type="text" autocomplete="off" maxlength="35" value="" name="address-2" id="address-2">
-</li>
-<li>
-	<label for="address-3">Town or City</label>
-	<input type="text" autocomplete="off" maxlength="35" value="" name="address-3" id="address-3">
-</li>
-<li>
-	<label for="address-3">County (optional)</label>
-	<input type="text" autocomplete="off" maxlength="35" value="" name="address-3" id="address-3">
-</li>
-<li>
-	<p>Postcode</p> 
-	<input autocomplete="off" class="postcode" id="" maxlength="60" name="" type="text" value="">
-</li>
+	
+	<label for="address-1" class="form-control-label">Street address</label>
+	<input type="text" autocomplete="off" maxlength="35" name="address-1" id="address-1" class="form-control-1-2">
+
+	<input type="text" autocomplete="off" maxlength="35" value="" name="address-2" id="address-2" class="form-control-1-2" style="margin-top: 10px">
+
+	<label for="address-3" class="form-control-label">Town or City</label>
+	<input type="text" autocomplete="off" maxlength="35" value="" name="address-3" id="address-3" class="form-control form-control-1-4">
+
+	<label for="address-3" class="form-control-label">County (optional)</label>
+	<input type="text" autocomplete="off" maxlength="35" value="" name="address-3" id="address-3" class="form-control-1-4">
+
+	<p class="form-control-label">Postcode</p> 
+	<input autocomplete="off" class="postcode form-control" id="" maxlength="60" name="" type="text" value="">
+
 
 
 	<li>
-		<label for="phone">Phone number <em>(optional)</em></label>
+		<label for="phone" class="form-control-label">Phone number (optional)</label>
 		<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="phone" id="phone">
 	</li>
 </ul>
-</fieldset>
 	
 <fieldset class="form-elements">
 	
@@ -427,7 +317,7 @@
 </li>
 
 <div class="form-steps">
-	<a href="/carers-allowance-prototype/v1/3Partner/partner1.html" class="button secondary">Back</a>
+	<a href="/carers-allowance-prototype/v1/3Partner/partner1.html" class="button-link">Back</a>
 	<a href="care2.html" class="button">Next</a>
 </div><!-- / form steps -->
         </div>
