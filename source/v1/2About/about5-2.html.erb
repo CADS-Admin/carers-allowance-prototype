@@ -74,7 +74,7 @@
 $(document).ready(function() {  
 	$('#reason-for-being-there').change(function(){
 		if ($(this).val() == 'other') {
-			$(this).parents().next('.other-detail').show('medium');	
+			$(this).parents().next('.other-detail').show();	
 		}
 	});
 });

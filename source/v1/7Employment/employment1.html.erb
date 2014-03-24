@@ -98,11 +98,11 @@
 
 $(document).ready(function() {  
 	$('#finished-job-yes').click(function(){
-		$(this).parents('ul li').next('.other-detail').show('medium');
+		$(this).parents('ul li').next('.other-detail').show();
 		$('.past-present').text("did you");
 	});
 	$('#finished-job-no').click(function(){
-		$(this).parents('ul li').next('.other-detail').hide('medium');
+		$(this).parents('ul li').next('.other-detail').hide();
 		$('.past-present').text("do you");
 	});
 });

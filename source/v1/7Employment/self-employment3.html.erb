@@ -95,10 +95,10 @@
 
 $(document).ready(function() {  
 	$('#self-employed-pension-yes').click(function(){
-		$(this).parents('ul li').next('.other-detail').show('medium');
+		$(this).parents('ul li').next('.other-detail').show();
 	});
 	$('#self-employed-pension-no').click(function(){
-		$(this).parents('ul li').next('.other-detail').hide('medium');
+		$(this).parents('ul li').next('.other-detail').hide();
 	});
 	$('#paid-childcare-yes').click(function(){
 		$('#continue').attr('href','employment6.html');

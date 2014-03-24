@@ -9,7 +9,7 @@
 <ul>
 	            
 	<li>
-		<p>Have you claimed or received any other benefits since your claim date?</p>
+		<p class="form-group-label">Have you claimed or received any other benefits since your claim date?</p>
 		<!-- "Have you or your Partner/Spouse claimed or received any other benefits since your claim date: 03/03/2010?" -->
 		<ul class="radio" id="806299bb55c1f3cc8239d602f5ce9b6254cb70275e80eea68135caeb29f5ab0c">
 	        <li>
@@ -23,40 +23,37 @@
 		</ul>
 	</li>
 	<li>
-		<p>Have you received payments for the person you care for or any other person since your claim date?</p>
+		<p class="form-group-label">Have you received payments for the person you care for or any other person since your claim date?</p>
 		<p class="form-hint">For example, from a local authority, fostering, direct payments, or adult placements</p>
 		<ul class="radio" id="other-payments">
-	        <li>
+	        <li  class="form-group-inline">
 	            <input type="radio" id="other-payments-yes" name="other-pay">
 	            <label for="other-payments-yes">Yes</label>
 	        </li>
-	        <li>
+	        <li  class="form-group-inline">
 	            <input type="radio" id="other-payments-no" name="other-pay"  >
 	            <label for="other-payments-no">No</label>
 	        </li>
 		</ul>
 	</li>
 
-    <li class="other-detail grouped" style="display:none;" >
+    <li class="other-detail grouped form-group-indent" style="display:none;" >
         <ul>
 			<li>
-				<label for="6a95970fdb90faec2baa4cfa03c1c6f6">Who pays you?</label>
+				<label class="form-control-label" for="6a95970fdb90faec2baa4cfa03c1c6f6">Who pays you?</label>
     			<input type="text" id="6a95970fdb90faec2baa4cfa03c1c6f6" name="6a95970fdb90faec2baa4cfa03c1c6f6" value="" maxlength="35" autocomplete="off">
 			</li>
  			<li class="currency"> 
-				<label for="44334dfd18f1835122515c200ddd4486">How much?</label>
-        		<input type="tel" id="44334dfd18f1835122515c200ddd4486" name="44334dfd18f1835122515c200ddd4486" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" title="The amount must be in the format 12 or 12.5 or 12.55" value="" placeholder="£" maxlength="60" autocomplete="off">
-			</li>
-			<li>
-				<label for="53edd5444d0ecca690d0202bc695aa4d1ee8c1aee318bc06fadfea2d6caba835">How often? <em>(optional)</em></label>
+				<label class="form-control-label" for="44334dfd18f1835122515c200ddd4486">How much?</label>
+        		<input style="width: 100px" type="tel" id="44334dfd18f1835122515c200ddd4486" name="44334dfd18f1835122515c200ddd4486" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" title="The amount must be in the format 12 or 12.5 or 12.55" value="" placeholder="£" maxlength="60" autocomplete="off">
+				<label class="form-control-label visuallyhidden" for="53edd5444d0ecca690d0202bc695aa4d1ee8c1aee318bc06fadfea2d6caba835">How often? (optional)</label>
     			<select id="53edd5444d0ecca690d0202bc695aa4d1ee8c1aee318bc06fadfea2d6caba835" name="fcadd9ffc1c3b935ea9ea939768ef4301ee8c1aee318bc06fadfea2d6caba835">
         
-            		<option value="">Please select</option>
-            		<option value="weekly">Weekly</option>
-            		<option value="fortnightly">Fortnightly</option>
-            		<option value="fourWeekly">Four-weekly</option>
-            		<option value="monthly">Monthly</option>
-         		   <option value="other">Other</option>
+            		<option value="weekly">a week</option>
+            		<option value="fortnightly">every 2 weeks</option>
+            		<option value="fourWeekly">every 4 weeks</option>
+            		<option value="monthly">every month</option>
+         		   <option value="other">other</option>
     			</select>
    		 	</li>
     		<!--<li id="howOften_wrap" class="other-detail" style="display: none;">
@@ -75,7 +72,7 @@
                  
 <ul>
 	<li>
-		<p>Have you received any Statutory Sick Pay (SSP) since your claim date?</p>
+		<p class="form-group-label">Have you received any Statutory Sick Pay (SSP) since your claim date?</p>
 		<ul class="radio" id="sick-pay">
 		     <li>
 		         <input type="radio" id="sick-pay-yes" name="sick-pay" value="yes">
@@ -137,7 +134,7 @@
 		</ul>
 		</li>
  		<li>
-	 		<p>Have you received any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since your claim date?</p>
+	 		<p class="form-group-label">Have you received any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since your claim date?</p>
 	 			<ul class="radio" id="other-pay">
 	            	<li>
 	                	<input type="radio" id="other-pay-yes" name="other-pay" value="yes">
@@ -212,30 +209,30 @@
 $(document).ready(function() {  
 	//$('#how-often-pay-child-care').change(function(){
 		//if ($(this).val() == 'other') {
-			//$(this).parents().next('.other-detail').show('medium');	
+			//$(this).parents().next('.other-detail').show();	
 		//}
 	//});
 });
 
 $('#other-payments-yes').click(function(){
-	$(this).parents('ul li').next('.other-detail').show('medium');
+	$(this).parents('ul li').next('.other-detail').show();
 });
 $('other-payments-no').click(function(){
-	$(this).parents('ul li').next('.other-detail').hide('medium');
+	$(this).parents('ul li').next('.other-detail').hide();
 });
 
 $('#other-pay-yes').click(function(){
-	$(this).parents('ul li').next('.other-detail').show('medium');
+	$(this).parents('ul li').next('.other-detail').show();
 });
 $('#other-pay-no').click(function(){
-	$(this).parents('ul li').next('.other-detail').hide('medium');
+	$(this).parents('ul li').next('.other-detail').hide();
 });
 
 $('#sick-pay-yes').click(function(){
-	$(this).parents('ul li').next('.other-detail').show('medium');
+	$(this).parents('ul li').next('.other-detail').show();
 });
 $('#sick-pay-no').click(function(){
-	$(this).parents('ul li').next('.other-detail').hide('medium');
+	$(this).parents('ul li').next('.other-detail').hide();
 });
 
 </script>
