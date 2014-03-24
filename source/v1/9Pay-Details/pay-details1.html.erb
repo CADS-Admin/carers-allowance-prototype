@@ -4,20 +4,20 @@
 
 <ul>             
 	<li>
-	  	<p>How would you like to get paid?</p>
+	  	<p class="form-group-label">How would you like to get paid?</p>
 	  	<p class="form-hint">Select 'Other' if you want to be paid into an International Bank Account</p>
-		<ul class="radio-block" id="233ab6c90b2e125818cc64e97587db12">
-			<li>
+		<ul id="233ab6c90b2e125818cc64e97587db12">
+			<li class="block-label" >
 			    <input type="radio" id="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" name="233ab6c90b2e125818cc64e97587db12"   value="bankBuildingAccount"  helperBelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
 			    <label for="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" style="width: 400px">UK bank or building society account</label>
 			</li>
 			
-			<li>
+			<li class="block-label" >
 			    <input type="radio" id="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" name="233ab6c90b2e125818cc64e97587db12"   value="appliedForAccount"  helperBelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
 			    <label for="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" style="width: 400px">You don&#x27;t have an account but intend to open one</label>
 			</li>
 			
-			<li>
+			<li class="block-label" >
 			    <input type="radio" id="3f18d35ee6308a03059ee762dacddeac00443e1812b622dbf6d309e98117e5d5" name="233ab6c90b2e125818cc64e97587db12"   value="notOpenAccount" helperBelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
 			    <label for="3f18d35ee6308a03059ee762dacddeac00443e1812b622dbf6d309e98117e5d5" style="width: 400px">Other - you would like more information</label>
 			</li>
@@ -25,18 +25,31 @@
 	    
 	</li>
 	<li>
-		<label for="ffdfe7640ba21ea3e3598cc22cf2002752857dc244a0fbf78a670ef4d69ff177">How often do you want to get paid?</label>
-	    <select id="ffdfe7640ba21ea3e3598cc22cf2002752857dc244a0fbf78a670ef4d69ff177" name="ffdfe7640ba21ea3e3598cc22cf2002752857dc244a0fbf78a670ef4d69ff177" >
-	        <option value="" >Please Select</option>
-	        <option value="everyWeek" selected>Every week</option> 
-	        <option value="fourWeekly" >Every four weeks</option>  
-	    </select>
+		<label for="ffdfe7640ba21ea3e3598cc22cf2002752857dc244a0fbf78a670ef4d69ff177" class="form-group-label">How often do you want to get paid?</label>
+
+	    		<ul id="233ab6c90b2e125818cc64e97587db12">
+			<li >
+				<div class="block-label">
+			    <input type="radio" id="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" name="233ab6c90b2e125818cc64e97587db12"   value="bankBuildingAccount"  helperBelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
+			    <label for="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" style="width: 400px">Every week</label>
+			</div>
+			</li>
+			
+			<li>
+				<div class="block-label">
+			    <input type="radio" id="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" name="233ab6c90b2e125818cc64e97587db12"   value="appliedForAccount"  helperBelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
+			    <label for="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" style="width: 400px">Every 4 weeks</label>
+			</div>
+			</li>
+
+		</ul>
 	</li>
 </ul>
 
 </fieldset>
-        
-<nav class="form-steps">
-    <a href="/carers-allowance-prototype/v1/8Other-Money/other-money1.html" id="backButton" class="button-link" aria-label="Back button">Back</a>
-    <a href="/carers-allowance-prototype/v1/10Declaration/declaration1.html" class="button">Next</a>
-</nav>
+
+<div class="form-steps">
+
+    <%= link_to 'Back', '/v1/8Other-Money/other-money1.html', :class => 'button-link', :relative => true %>
+    <%= link_to 'Next', '/v1/10Declaration/declaration1.html', :class => 'button', :relative => true %>
+</div>

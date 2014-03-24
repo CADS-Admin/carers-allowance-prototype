@@ -1,36 +1,44 @@
----
-progress-bar: about-you
----
-
-<h1 class="heading-48">About you the carer</h1>
+<%= partial "partials/section-headings/section-1" %>
 
 
-<fieldset>
-	<legend class="form-group-label">Your name</legend>
-			
-	<ul>
-		<li>
-			<label for="title" class="form-control-label">Title</label>
-			<%= partial "partials/ui-title" %>
-		</li>
-			<%= partial "partials/ui-name" %>
-		<li>
-			<label for="nino" class="form-group-label">National Insurance number</label>
-			<%= partial "partials/ui-nino" %>				
-		</li> 
 
-		<li class="form-group">
-			<p class="form-group-label">Date of birth</p>
-			<p class="form-hint">For example, 03 May 1979</p>
-			<%= partial "partials/ui-date" %>
-		</li>	
-	</ul>
-	
-</fieldset>
-<!-- / form elements -->
+ <h2 class="heading-36">1. Your claim date</h2>
+
+<fieldset class="form-elements">
+
+<ul class="group">
+<li>
+<p class="form-group-label">When do you want your Carer's Allowance claim to start?</p><!-- datePlaceholder -->
+
+<p class="helper">For example, 24 November 2013</p>
+
+<%= partial "partials/ui-date" %>	
+
+<!--
+<p class="helper-more">When to claim from? - Help</p>
+<div class="helper-info">
+	<p>Entitlement to Carer's Allowance can normally be backdated for up to 3 months but in some circumstances this can be longer. For further information, see the <a href="https://www.carersallowance.service.gov.uk/claim-notes" target="_blank">help guide</a>.</p>
+</div>
+
+-->
+
+
+
+<details>
+	<summary>When should I claim from?</summary>
+
+	<p>Entitlement to Carer's Allowance can normally be backdated for up to 3 months but in some circumstances this can be longer. For further information, see the <a href="https://www.carersallowance.service.gov.uk/claim-notes" target="_blank">help guide</a>.</p>
+</details>
+
+
+</li>
+</ul>
+</fieldset><!-- / form elements -->
 
 <div class="form-steps">
-	<%= link_to 'Back', '/v1/1eligibility/carers-response.html', :class => 'button-link', :relative => true %>
+	<%= link_to 'Back', '/govuk-carers/how-to-claim.html', :class => 'button-link', :relative => true %>
+
 	<%= link_to 'Next', 'about2.html', :class => 'button' %>
 </div>
-<!-- / form steps -->
+<!-- / form steps -->   
+

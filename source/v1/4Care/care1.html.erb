@@ -1,8 +1,8 @@
-<h1>About the care you provide</h1>
+<%= partial "partials/section-headings/section-3" %>
 
 <fieldset class="form-elements">
 
-<legend>Details of the person you care for</legend>
+<legend>1. Details of the person you care for</legend>
 
 
 	<div>
@@ -12,20 +12,20 @@
 		<input type="text" for="relationship" class="form-control form-control-1-2">	
 	</div>
 
-<p class="form-group-label">Name</p>
 
 <ul>
 	<li>
-		<label for="title" class="form-control-label">Title</label>
+		<label for="title" class="form-group-label">Title</label>
 		<%= partial "partials/ui-title" %>
 	</li>
 	<li>
-		<label for="full-name" class="form-control-label">Full name</label>
+		<label for="full-name" class="form-group-label">Full name</label>
 		<p class="helper">As shown on their birth certificate or passport</p>
 		<input type="text" for="full-name" class="form-control form-control-1-2">
 	</li>
 	<li>
 		<p class="form-group-label">National Insurance number (optional)</p>
+		<p class="form-hint">This is on their National Insurance card, benefit letter, payslip or P60<br/> For example, VO 12 34 56 D</p>
 		<%= partial "partials/ui-nino" %>	
 	</li>
 	<li>

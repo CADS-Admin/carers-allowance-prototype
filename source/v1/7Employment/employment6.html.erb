@@ -1,53 +1,53 @@
-<h1>About your employment</h1>
+<%= partial "partials/section-headings/section-5" %>
 		
 		<div class="completed">
 	        <ul aria-label="Completed questions">     
 		        <li>
-		            <h3>Your job</h3>
+		            <h3>1. Employment details</h3>
 		            <a href="employment1.html">Change these answers</a>
 		        </li>
 		        <li>
-		            <h3>Your last wage</h3>
+		            <h3>2. Your last wage</h3>
 		            <a href="employment3.html">Change these answers</a>
 		        </li>
 		        <li>
-		            <h3>Pension schemes</h3>
+		            <h3>3. Pension schemes</h3>
 		            <a href="employment4.html">Change these answers</a>
 		        </li>
 		        <li>
-		            <h3>About expenses to do with your employment</h3>
+		            <h3>4. About expenses to do with your employment</h3>
 		            <a href="employment5.html">Change these answers</a>
 		        </li>
 	        </ul>
 		</div>	
 		
 		<fieldset class="form-elements">
-		<legend>Childcare expenses while you are at work</legend>
+		<legend>5. Childcare expenses while you are at work</legend>
 		<ul>
 		<li>
-			<label for="name">Name of the person/organisation who looks after your child/children</label>
+			<label for="name" class="form-group-label">Who looks after your children</label>
+			<p class="form-hint">The name of the person or organisation</p>
 		    <input type="text" maxlength="60" autocomplete="off" value="" name="name" id="name">
 		</li>
 		<li class="currency"> 
-			<label for="how-much-child-care">How much do you pay them?</label>
-			<input type="tel" autocomplete="off" maxlength="60" value="" title="how-much-child-care" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much-child-care" id="how-much-child-care">
-		</li>
-		<li>
-			<label for="how-often-pay-child-care">How often do you pay them?</label>
-		    <select selectwithother="true" name="how-often-pay-child-care" id="how-often-pay-child-care">
-		    	<option value="">Please select</option>
-				<option value="02">Weekly</option>
-				<option value="03">Fortnightly</option>
-				<option value="04">Four-weekly</option>
-				<option value="05">Monthly</option>
-				<option value="other">Other</option>
-		    </select>
+								<label for="how-much" class="form-group-label">How much do you pay them?</label>
+		        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
+
+				<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
+			    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
+		            <option value="02">a week</option>
+		            <option value="03">a fortnight</option>
+		            <option value="04">every 4 weeks</option>
+		            <option value="05">a month</option>
+		            <option value="other">other</option> 
+		    	</select>
 	    </li>
 	    <li style="display: none;" class="other-detail">
 		    <textarea autocomplete="off" maxlength="60" placeholder="Please specify..." name="how-often-pay-child-care-other" id="how-often-pay-child-care-other"></textarea>	
 		</li>
 		<li>
-			<label for="what-relation-you">What relation, if any, is this person/organisation to you?</label>
+			<label for="name" class="form-group-label">How are they related to you and the person you care for?</label>
+			<label for="what-relation-you" class="form-control-label">Relationship to you</label>
 			<input type="text" id="what-relation-you">
 		</li>	
 	<!--<li>
@@ -55,16 +55,17 @@
 		    <input type="text">
 		</li>-->
 		<li>
-			<label for="what-relation-person-care-for">What relation, if any, is this person/organisation to the person you care for?</label>
+			<label for="what-relation-person-care-for" class="form-control-label">Relationship to the person you care for</label>
 		     <input type="text" id="what-relation-person-care-for">
 		</li>
 		</ul>
 		</fieldset><!-- / form elements -->	
+
 		<div class="form-steps">
-			<a href="employment5.html" class="button-link">Back</a>
-			<!--<a href="employment7.html" class="button">Next</a> NOT INCLUDED STEP 7 EMPLOYMENT IN THIS TESTING -->
-			<a href="/carers-allowance-prototype/v1/8Other-Money/other-money1.html" class="button">Next</a>
-		</div><!-- / form steps -->
+
+    <%= link_to 'Back', 'employment5.html', :class => 'button-link' %>
+    <%= link_to 'Next', '/v1/8Other-Money/other-money1.html', :class => 'button', :relative => true %>
+</div>
 
 <script>
 

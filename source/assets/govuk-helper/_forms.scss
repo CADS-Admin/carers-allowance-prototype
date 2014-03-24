@@ -192,10 +192,14 @@ textarea {
   .form-control-label{
     margin-top: 0;
   }
-  .form-group-day,
-  .form-group-month{
+  .form-group-day{
      @include media(tablet){
       width: 50px;
+    }   
+  }  
+  .form-group-month{
+     @include media(tablet){
+      width: 100px;
     }   
   }
   .form-group-year {
@@ -239,6 +243,8 @@ textarea {
   border-left: 5px solid $grey-3;
   padding-left: $gutter-half;
   margin: ($gutter $gutter-two-thirds $gutter 0);
+  
+clear: both;
 }
 
 // Inline form layout (tablet and up)

@@ -1,23 +1,34 @@
-<h1>About your employment</h1>
+<%= partial "partials/section-headings/section-5" %>
 		
 		<input type="hidden" value="8d1c7066-6913-41c8-b4fc-1f26bd88a19d" name="jobID">
 		
 		<fieldset class="form-elements">
-		<legend>Employment details</legend>
+		<legend>1. Employment details</legend>
 		
+
+		<p class="form-group-label">Employer details</p>
+		<p class="helper">This is used when contacting your employer</p>
 		<ul>
 			<li>
-				<label for="employers-name">Employer's name</label>	
-				<input type="text" autocomplete="off" maxlength="60" value="" name="employers-name" id="employers-name">
+				<label for="employers-name" class="form-control-label">Name</label>	
+				<input type="text" autocomplete="off" maxlength="60" value="" name="employers-name" id="employers-name" class="form-control form-control-3-4">
+			</li>
+					<li>
+			<label for="6b3c442979a26ee0fa217015282f5c85" class="form-control-label">Phone number <em>(optional)</em></label>
+			<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="6b3c442979a26ee0fa217015282f5c85" id="6b3c442979a26ee0fa217015282f5c85">
+		</li>
+			<li>
+				<label for="payroll-number" class="form-control-label">Payroll or employee number (optional)</label>
+				<input type="text" autocomplete="off" maxlength="16" value="" name="payroll-number" id="payroll-number">			
 			</li>
 			<li>		
-				<p>When did you start this job?</p>
-				<%= partial "partials/ui-date" %>
+				<p class="form-group-label">When did you start this job?</p>
 			    <p class="helper">For example, 27 June 2013</p>
+				<%= partial "partials/ui-date" %>
 
 			</li>
 			<li>
-				<p>Have you finished this job?</p>
+				<p class="form-group-label">Have you finished this job?</p>
 				<ul id="finished-job" class="radio">
 			        <li>
 			            <input type="radio" value="yes" name="finished-job" id="finished-job-yes">
@@ -29,31 +40,24 @@
 			        </li>
 				</ul>
 			</li>	
-			<li style="display: none;" class="other-detail">
+			<li style="display: none;" class="other-detail form-group-indent">
 				<ul>
 					<li>
-			  			<p>What date did you last work?</p>
-
+			  			<p class="form-control-label">What date did you last work?</p>
+			    		<p class="helper">For example, 27 June 2013</p>
 			 			<%= partial "partials/ui-date"%>
-						<p class="helper"> 27 06 2013</p>
 
 					</li>
 				</ul>
 			</li>
-			<li class="short-field"> 		
-				<label for="hours-worked">How many hours a week do you normally work?</label>
-				<input type="text" autocomplete="off" value="" name="hours-worked" id="hours-worked"> 
-			</li>
-			<li>
-				<label for="payroll-number">Payroll or Employee number <em>(optional)</em></label>
-				<p class="helper">This is used when contacting your employer</p>
-				<input type="text" autocomplete="off" maxlength="16" value="" name="payroll-number" id="payroll-number">			
+			<li> 		
+				<label for="hours-worked" class="form-group-label">How many hours a week do you normally work?</label>
+				<input type="text" autocomplete="off" value="" name="hours-worked" id="hours-worked" class="short-field"> 
 			</li>
 		</ul>
 		</fieldset>
 		
 		<fieldset class="form-elements">
-		<legend>Employer's contact details</legend>
 			
 		<ul>	
 		<!--<li>
@@ -80,10 +84,7 @@
 		</li>-->
 		<!--#include virtual="../public/_includes/ui/address-multiple.shtml"-->
 		
-		<li>
-			<label for="6b3c442979a26ee0fa217015282f5c85">Phone number <em>(optional)</em></label>
-			<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="6b3c442979a26ee0fa217015282f5c85" id="6b3c442979a26ee0fa217015282f5c85">
-		</li>		
+		
 		</ul>
 		</fieldset><!-- / form elements -->
 			

@@ -1,0 +1,55 @@
+// Details and summary tags
+
+details {
+
+  clear: both;
+
+  @include box-sizing(border-box);
+  border-left: 5px solid $grey-3;
+  padding-left: $gutter-half;
+  margin: ($gutter $gutter-two-thirds $gutter 0);
+
+  summary{
+    padding-left: 16px;
+    padding-top: 3px;
+    text-indent: -16px;
+    text-decoration: underline;
+    color: $link-colour;
+    &:hover{
+      text-decoration: none;
+      cursor: pointer;
+      color: $link-hover-colour;
+    }
+    &::-webkit-details-marker { display:none; }
+  }
+  p, ol, ul{
+    margin-bottom: 10px;
+  }
+}
+
+
+details[open] {
+  background: white;
+
+  & > summary{
+    margin-bottom: 10px;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+details details[open]{
+  border: 1px solid transparent;
+}
+
+details > details {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* Styles for browsers that don't yet natively support details/summary */
+.no-details details > * { display: none; }
+.no-details details > summary:before { float: left; margin-top: 1px; margin-right: -1px; width: 20px; content: '► ';}
+.no-details details.open > summary:before { content: '▼ ';  }
+.no-details details summary { display: block; }

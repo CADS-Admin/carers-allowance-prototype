@@ -34,11 +34,12 @@
 	// Horrible hack to avoid re-coding 86 pages.
 	.button{
 		float: left;
-		margin-left: -77px;
+		margin-left: -67px;
 	}
 	.button-link{
 		float: left;
 		margin-top: 60px;
+		padding-left: 0;
 	}
 }
 
@@ -2201,7 +2202,7 @@ header {
 		border-bottom: 1px solid #ccc;
 		dt, dd {
 			display: inline-block;
-			width: 25%;
+			width: 33.33%;
 			margin: 0;
 			padding: 8px 0 6px 0;
 			border-top: 1px solid #ccc;
@@ -2217,7 +2218,7 @@ header {
 			}
 		}
 		dd {
-			width: 72%;
+			width: 63.33%;
 			padding-left: 3%;
 			margin-left: -4px;
 			@media screen and (max-width: 640px) {

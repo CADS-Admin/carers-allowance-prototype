@@ -37,11 +37,38 @@
 .govuk{
 	h1{
 		@extend .heading-48;
-		margin-bottom: 0;
+		span{
+			color: $secondary-text-colour;
+			@include heading-24;
+			display: block;
+		}
 	}
 
 	.completed{
-		display: none;
+		//border-top: 1px solid $border-colour;
+		margin-right: -50%;
+		//display: none;
+		li{
+			@extend %contain-floats;
+			//border-bottom: 1px solid $border-colour;
+			//background-color: #DEE0E2;
+			background-color: #DEE0E2;
+			margin-bottom: 2px;
+			padding: 8px 10px 5px 10px;
+		}
+		h3{
+			font-size: 19px;
+			font-weight: normal;
+			float: left;
+		}
+		a{
+			display: block;
+			float: right;
+		}
+	}
+
+	em{
+		font-style: normal;
 	}
 
 	.helper-more{
@@ -53,7 +80,8 @@
 
 	.form-elements{
 		legend{
-			@extend .heading-36;
+			@extend .heading-36;		
+			width: 150%;
 		}
 		.helper{
 			@extend .form-hint;
@@ -61,6 +89,19 @@
 		ul{
 			//margin: 0;
 		}
+	}
+
+	.form-group-label{
+
+		width: 150%;
+	}
+
+	.short-field{
+		width: 100px;
+	}
+
+	.grouped{
+		@extend .form-group-indent;
 	}
 
 	.radio,

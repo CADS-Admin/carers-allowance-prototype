@@ -1,16 +1,16 @@
-<h1>About you - the Carer</h1>
+<%= partial "partials/section-headings/section-1" %>
 
 <div class="completed">
-<ul aria-label="Completed questions">
-	<li><h3>Your details</h3><a href="about1.html">Change these answers</a></li>      
-	<li><h3>Your contact details</h3><a href="about2.html">Change these answers</a></li> 
-	<li><h3>Your claim date: <%= partial "partials/claim-date" %></h3> <a href="about3.html">Change this answer</a></li>      
-</ul>
-</div>
+	<ul aria-label="Completed questions">		
+		<li><h3>1. Your claim date is <%= partial "partials/claim-date" %></h3> <a href="about1.html">Change this answer</a></li>   
+    	<li><h3>2. Your details</h3><a href="about2.html">Change these answers</a></li>   
+		<li><h3>3. Your contact details</h3><a href="about3.html">Change these answers</a></li>              
+    </ul>
+ </div>
 
 <fieldset class="form-elements">
 
-<legend>Your nationality and residency</legend>
+<legend>4. Your nationality and residency</legend>
 <ul>	
 <li>
 	<label for="nationality" class="form-group-label">Nationality</label>
@@ -32,10 +32,10 @@
         </li>
 	</ul>	
 </li>
-<li style="display: none;" class="other-detail">
+<li style="display: none;" class="other-detail form-group-indent">
     <ul>
 		<li>
-			<label for="normally-live-details">Which country do you normally live in?</label>
+			<label for="normally-live-details" class="form-control-label">Which country do you normally live in?</label>
 		    <input type="text" autocomplete="off" maxlength="35" value="" name="normally-live-details" id="normally-live-details">
 		</li>
     </ul>

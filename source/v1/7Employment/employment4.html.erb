@@ -1,20 +1,20 @@
-<h1>About your employment</h1>
+<%= partial "partials/section-headings/section-5" %>
 
 <div class="completed">
     <ul aria-label="Completed questions">     
         <li>
-            <h3>Your job</h3>
+            <h3>1. Employment detailsb</h3>
             <a href="employment1.html">Change these answers</a>
         </li>    
         <li>
-            <h3>Your last wage</h3>
+            <h3>2. Your last wage</h3>
             <a href="employment3.html">Change these answers</a>
         </li>
     </ul>
 </div>
 		
 <fieldset class="form-elements">
-<legend>Pension schemes</legend>
+<legend>3. Pension schemes</legend>
 		
 <ul>
 	<li>
@@ -34,18 +34,16 @@
 	<li style="display: none;" class="other-detail grouped">
 		<ul>
 			<li class="currency"> 
-				<label for="how-much">How much do you pay?</label>
-		        <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much">
-			</li>
-			<li>
-				<label for="how-often-pension">How often?</label>
+				<label for="how-much" class="form-control-label">How much do you pay?</label>
+		        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
+
+				<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
 			    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
-		            <option value="">Please select</option>
-		            <option value="02">Weekly</option>
-		            <option value="03">Fortnightly</option>
-		            <option value="04">Four-weekly</option>
-		            <option value="05">Monthly</option>
-		            <option value="other">Other</option> 
+		            <option value="02">a week</option>
+		            <option value="03">a fortnight</option>
+		            <option value="04">every 4 weeks</option>
+		            <option value="05">a month</option>
+		            <option value="other">other</option> 
 		    	</select>
 		 	</li>
 		 </ul>
@@ -72,18 +70,16 @@
 	<li style="display: none;" class="other-detail grouped">
 		<ul>	           
 			<li class="currency"> 
-				<label for="3a5efc8398de3add194db85a26f5ae2c">How much do you pay?</label>
-	        	<input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="3a5efc8398de3add194db85a26f5ae2c" id="3a5efc8398de3add194db85a26f5ae2c">
-			</li>
-			<li>
-				<label for="f4f72885aa832e43f5b2b3a4580d79fb5f729e42bd830dc2062aa4deba104360">How often?</label>
-		    	<select selectwithother="true" name="f4f72885aa832e43f5b2b3a4580d79fb5e2f74fef1bea21f9caaf24af8eaf3c5" id="f4f72885aa832e43f5b2b3a4580d79fb5f729e42bd830dc2062aa4deba104360">
-		            <option value="">Please select</option>
-		            <option value="02">Weekly</option>
-		            <option value="03">Fortnightly</option>
-		            <option value="04">Four-weekly</option>
-		            <option value="05">Monthly</option>
-		            <option value="other">Other</option> 
+								<label for="how-much" class="form-control-label">How much do you pay?</label>
+		        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
+
+				<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
+			    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
+		            <option value="02">a week</option>
+		            <option value="03">a fortnight</option>
+		            <option value="04">every 4 weeks</option>
+		            <option value="05">a month</option>
+		            <option value="other">other</option> 
 		    	</select>
 	    	</li>
 		</ul>

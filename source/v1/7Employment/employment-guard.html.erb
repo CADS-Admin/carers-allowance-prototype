@@ -1,19 +1,13 @@
-<h1>Employment</h1>
+<%= partial "partials/section-headings/section-5" %>
     
 <fieldset class="form-elements">
 
-<p class="security-message">Your claim date is <strong style="text-decoration: none;"><%= partial "partials/claim-date" %></strong>.</p>
-	
-
-
 <ul>	                
 	<li>
-		<p class="form-group-label">Have you been employed at any time since<br> 24 May 2013?</p>
+		<p class="form-group-label">Have you been employed at any time since 24 May 2013?</p>
 
-<details>
-	<summary>Not sure how to answer?</summary>
-	<p>This is 6 months before your claim date.</p>	
-    <p>Answer 'yes' if you were:</p>
+	<div>
+	<p>This is 6 months before your claim date. Answer 'yes' if you were:</p>
     <ul class="list-bullet">
         <li>in full-time or part time work</li>
         <li>in casual or temporary work</li>
@@ -23,7 +17,8 @@
         <li>being in the territorial army or other auxiliary armed forces</li>
         <li>being on a career break</li>
     </ul>
-</details>
+    <br>
+</div>
 
 		<ul id="employment-guard" class="radio">
 	        <li>
@@ -47,14 +42,11 @@
 
 <ul>	
 	<li>	    
-		<p class="form-group-label">Have you been self employed at any time since<br> 17 November 2013?</p>
+		<p class="form-group-label">Have you been self employed at any time since 17 November 2013?</p>
 		
 
-<details>
-	<summary>Not sure how to answer?</summary>
-	
-	<p>This is 1 week before your claim date.</p>	
-    <p>Answer 'yes' if you were:</p>
+<div>
+		<p>This is 1 week before your claim date. Answer 'yes' if you were:</p>
 
     <ul class="list-bullet">
         <li>working for yourself, or</li>
@@ -62,7 +54,8 @@
         <li>receiving income from property or land you own</li>
         <li>renting out any part of the home you live in - i.e to a lodger</li>
     </ul>
-</details>
+    <br>
+</div>
 
 
 		<ul id="self-employment-guard" class="radio">		    
@@ -90,13 +83,13 @@
 <script>
 	$(document).ready(function() {    
 		$('#employment-guard-yes').click(function(){
-			$('#continue').attr('href','employment1.html');
+			$('.form-steps .button').attr('href','employment1.html');
 		});
 		$('#self-employment-guard-yes').click(function(){
-			$('#continue').attr('href','self-employment1.html');
+			$('.form-steps .button').attr('href','self-employment1.html');
 		});
 		//$('#employment-guard-no, #self-employment-guard-no').click(function(){
-			//$('#continue').attr('href','/8Other-Money/other-money1.html');
+			//$('.form-steps .button').attr('href','/8Other-Money/other-money1.html');
 		//});
 	}); 
 </script>

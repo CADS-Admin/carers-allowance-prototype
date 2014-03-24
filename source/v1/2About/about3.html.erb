@@ -1,35 +1,50 @@
-<h1>About you - the Carer</h1>
+<%= partial "partials/section-headings/section-1" %>
 
 <div class="completed">
-	<ul aria-label="Completed questions">
-    	<li><h3>Your details</h3><a href="about1.html">Change these answers</a></li>      
-    	<li><h3>Your contact details</h3><a href="/2About/about2.html">Change these answers</a></li>            
+	<ul aria-label="Completed questions">		
+		<li><h3>1. Your claim date is <%= partial "partials/claim-date" %></h3> <a href="about1.html">Change this answer</a></li>   
+    	<li><h3>2. Your details</h3><a href="about2.html">Change these answers</a></li>                
     </ul>
  </div>
 
+	
+
+
+
 <fieldset class="form-elements">
-<legend>Your claim date</legend>
 
-<ul class="group">
-<li>
-<p class="form-group-label">When do you want your Carer's Allowance claim to start?</p><!-- datePlaceholder -->
+ <legend>3. Your contact details</legend>
 
-<p class="helper">For example, 24 November 2013</p>
 
-<%= partial "partials/ui-date" %>	
-<p class="helper-more">When to claim from? - Help</p>
-<div class="helper-info">
-	<p>Entitlement to Carer's Allowance can normally be backdated for up to 3 months but in some circumstances this can be longer. For further information, see the <a href="https://www.carersallowance.service.gov.uk/claim-notes" target="_blank">help guide</a>.</p>
-</div>
-<p style="padding:0;">&nbsp;</p>
-</li>
-</ul>
-</fieldset><!-- / form elements -->
+<h3 class="form-group-label">Your address</h3>
+<%= partial "partials/ui-address-multiple" %>
+
+
+<h3 class="form-group-label">How we can contact you?</h3>
+	<ul>	
+		<li>
+            <label for="0f4afad373ea0227bb1aca1a1f0bc0c3" class="form-control-label">Contact phone or mobile number</label>
+
+             <!--<p class="form-hint">This will help us to process your claim quickly if we need more information</p>-->
+            <input type="tel" id="0f4afad373ea0227bb1aca1a1f0bc0c3" name="0f4afad373ea0227bb1aca1a1f0bc0c3" pattern="[0-9 \-]{1,20}" title="Must be numbers only" value="" autocomplete="off" maxlength="60" class="form-control form-control-1-2">
+           
+
+		</li>
+		<li>
+			<p class="form-control-label">Would you like us to contact you by textphone? </p>
+			<p class="form-hint">This is a service for people with speech or hearing difficulties</p>
+			<ul class="radio" id="textphone">
+				<li><input id="textphone-yes" name="textphone" type="radio" value="yes"> <label for="textphone-yes">Yes</label></li>
+				<li><input id="textphone-no" name="textphone" type="radio" value="no"> <label for="textphone-no">No</label></li>
+			</ul>
+		</li>
+	</ul>
+</fieldset>
 
 <div class="form-steps">
 
 	<%= link_to 'Back', 'about2.html', :class => 'button-link' %>
 	<%= link_to 'Next', 'about4.html', :class => 'button' %>
-</div>
-<!-- / form steps -->   
 
+</div>
+<!-- / form steps -->

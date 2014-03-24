@@ -1,14 +1,12 @@
-<h1>Education</h1>
+<%= partial "partials/section-headings/section-4" %>
 
 <fieldset class="form-elements">   
-
-<p class="security-message">Your claim date is <strong style="text-decoration: none;"><%= partial "partials/claim-date" %></strong>.</p>
  
 <ul>
 	<li>
 		<p class="form-group-label">Have you been on a course of education since your claim date?</p>
 
-		<p class="helper">This includes any full-time, part-time, or other courses. For example, home study</p>
+		<p class="helper">Your claim date is <%= partial "partials/claim-date" %>. Include any full-time, part-time, or other courses. For example, home study</p>
 
 		<ul class="radio" id="have_you_been_on_a_course_of_education">
 			<li>
@@ -21,47 +19,46 @@
 		</ul>
 	</li>
 </ul>
-</fieldset>
 
-<fieldset class="form-elements" id="course-details" style="display: none;">
+<div  id="course-details" style="display: none;">
     
-<legend>Course details</legend>
 <ul>
-    <li >
-        <label for="">Course title</label>
+    <li><p class="form-group-label">Course details</p>
+        <label for="" class="form-control-label">Name of course</label>
         <input type="text" id="" name="" value="" maxLength="50" autocomplete="off">
     </li>
     <li >
-        <label for="">Where are you studying?</label>
-        <p class="form-hint"> name of your school, college or university</p>
+        <label for="" class="form-control-label">Name of school, college or university</label>
         <input type="text" id="" name="" value="" maxLength="50" autocomplete="off">
     </li>
 
             <li >
-                <label for="">Name of your main teacher or tutor </label>
+                <p class="form-group-label">Contact details</p>
+                <label for="" class="form-control-label">Name of your main teacher or tutor</label>
                 <input type="text" id="" name="" value="" maxLength="50" autocomplete="off">
             </li>
             <li>
-                <label for="">Course contact number (optional)</label>
-                <p class="form-hint"> the phone number for your department or tutor</p>
+                <label for="" class="form-control-label">Phone number for your department or tutor (optional)</label>
                 <input type="text" id="" name="" value="" maxLength="50" autocomplete="off">   
             </li>
 
             <li>
-                <p>When did you start the course?</p>
+                <p class="form-group-label">When did you start the course?</p>
                 
+                <p class="form-hint"> For example, 01 September 2014</p>
                 <%= partial "partials/ui-date" %>
-            	<p class="form-hint"> 01 09 2013</p>
             </li>
             <li>
-                <p>When did the course end or when will you finish?</p>
+                <p class="form-group-label">When did the course end or when will you finish?</p>
                 
+                <p class="form-hint"> For example, 01 July 2014</p>
                 <%= partial "partials/ui-date" %>
-                <p class="form-hint"> 01 07 2014</p>
              </li>
         </ul>
     </li>
 </ul>
+</div>
+
 </fieldset>
 
 <div class="form-steps">

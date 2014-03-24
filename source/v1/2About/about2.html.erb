@@ -1,43 +1,59 @@
-<h1 class="heading-48">About you - the Carer</h1>
+<%= partial "partials/section-headings/section-1" %>
 
 <div class="completed">
 	<ul aria-label="Completed questions">
-    	<li><h3>Your details</h3><a href="about1.html">Change these answers</a></li>                
+		<li><h3>1. Your claim date is <%= partial "partials/claim-date" %></h3> <a href="about1.html">Change this answer</a></li>           
     </ul>
  </div>
 
-
-	<h2 class="form-group-label">Your address</h2>
-	<%= partial "partials/ui-address-multiple" %>
-
-	
-
-</fieldset>
-
 <fieldset class="form-elements">
-	<legend class="form-group-label">How we can contact you?</legend>
-	<ul>	
-		<li>
-            <label for="0f4afad373ea0227bb1aca1a1f0bc0c3" class="form-control-label">Enter phone or mobile number</label>
+	<legend>2. Your details</legend>
 
-             <p class="form-hint">If you don't have one, let us know how else we can contact you</p>
-            <input type="tel" id="0f4afad373ea0227bb1aca1a1f0bc0c3" name="0f4afad373ea0227bb1aca1a1f0bc0c3" pattern="[0-9 \-]{1,20}" title="Must be numbers only" value="" autocomplete="off" maxlength="60" class="form-control form-control-1-2">
-           
 
-		</li>
+	<label for="title" class="form-group-label">Title</label>
+	<%= partial "partials/ui-title" %>
+
+
+	<ul>
+		<%= partial "partials/ui-name" %>
+	</ul>	
+
+	<ul>
 		<li>
-			<p class="form-control-label">Would you like us to contact you by textphone? </p>
-			<p class="form-hint">This is a service for people with speech or hearing difficulties</p>
-			<ul class="radio" id="textphone">
-				<li><input id="textphone-yes" name="textphone" type="radio" value="yes"> <label for="textphone-yes">Yes</label></li>
-				<li><input id="textphone-no" name="textphone" type="radio" value="no"> <label for="textphone-no">No</label></li>
+			<label for="nino" class="form-group-label">National Insurance number</label>
+			<p class="form-hint">This is on your National Insurance card, benefit letter, payslip or P60<br/> For example, VO 12 34 56 D</p>
+			<%= partial "partials/ui-nino" %>				
+		</li> 
+
+		<li class="form-group">
+			<p class="form-group-label">Date of birth</p>
+			<p class="form-hint">For example, 03 May 1979</p>
+			<%= partial "partials/ui-date" %>
+		</li>	
+		<li class="spouse_living_with_you">
+			<p class="form-group-label">Have you had a partner or spouse living with you at any time since <%= partial "partials/claim-date" %>?</p>
+			<p class="helper">This is your claim date. If you have separated since then select 'Yes'</p>
+
+			<ul class="radio" id="spouse_living_with_you_since_your_claim_date">
+				<li><input id="spouse_yes" name="spouse_living_with_you_since_your_claim_date" type="radio" value="yes"> <label for="spouse_yes">Yes</label></li>
+				<li><input id="spouse_no" name="spouse_living_with_you_since_your_claim_date" type="radio" value="no"> <label for="spouse_no">No</label></li>
+			</ul>
+			
+		</li>				
+
+		<li>
+			<p class="form-group-label">Do you get State Pension?</p>
+			<ul class="radio" id="do_you_get_state_pension">
+				<li><input id="pension_yes" name="do_you_get_state_pension" type="radio" value="yes"><label for="pension_yes">Yes</label></li>
+				<li><input id="pension_no" name="do_you_get_state_pension" type="radio" value="no"><label for="pension_no">No</label></li>
 			</ul>
 		</li>
-	</ul>
-
+	</ul>		
+	
+</fieldset>
+<!-- / form elements -->
 
 <div class="form-steps">
-
 	<%= link_to 'Back', 'about1.html', :class => 'button-link' %>
 	<%= link_to 'Next', 'about3.html', :class => 'button' %>
 
