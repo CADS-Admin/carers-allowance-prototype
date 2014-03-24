@@ -35,6 +35,7 @@ $(document).ready(function() {
 
 	 
 // smooth scroll    
+/*
 $('a[href^="#"]').bind('click.smoothscroll',function (e) {
     e.preventDefault();
     var target = this.hash,
@@ -45,7 +46,7 @@ $('a[href^="#"]').bind('click.smoothscroll',function (e) {
         window.location.hash = target;
     });
 }); 
-
+*/
 
 
 //$.extend($.datepicker, {
