@@ -21,6 +21,11 @@
     margin-top: 45px;
     margin-bottom: 20px;
   }
+  .heading-27 {
+    display: block;
+    @include core-27();
+    color: $secondary-text-colour;
+  }
 }
 
 .heading-24 {
