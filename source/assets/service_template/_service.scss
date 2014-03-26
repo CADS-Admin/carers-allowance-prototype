@@ -23,6 +23,10 @@ hr {
 }
 
 
+
+
+
+
 // Bigger margin for numbered lists?
 .govuk .list-number {
   margin-left: 25px;
@@ -46,7 +50,7 @@ hr {
 
 // Section nav heading
 #section-nav h2{
-  margin-top: $gutter;
+  margin-bottom: 10px;
 }
 
 // Help and feedback drop-down panel
@@ -80,13 +84,20 @@ table.review-answers{
   margin-top: $gutter;
   font-size: 19px;
   td{
-    padding: 13px 0 10px 0;
+    padding: 13px 15px 10px 0;
     border-bottom: 1px solid $border-colour;
-    width: 50%; 
+    width: 33.33%; 
     vertical-align: top;
   }
   td + td {
-    padding-left: $gutter;
+    padding-left: 0;
+    width: 66.66%;
+  }
+  a{
+    float: right;
+  }
+  .skipped{
+    color: $mellow-red;
   }
 }
 

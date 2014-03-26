@@ -30,3 +30,27 @@
 
 // Import service-specific styles
 @import "../assets/service_template/service";
+
+
+.completed{
+		//border-top: 1px solid $border-colour;
+		margin-right: -50%;
+		//display: none;
+		li{
+			@extend %contain-floats;
+			//border-bottom: 1px solid $border-colour;
+			//background-color: #DEE0E2;
+			background-color: #DEE0E2;
+			margin-bottom: 2px;
+			padding: 8px 10px 5px 10px;
+		}
+		h3{
+			font-size: 19px;
+			font-weight: normal;
+			float: left;
+		}
+		a{
+			display: block;
+			float: right;
+		}
+	}
