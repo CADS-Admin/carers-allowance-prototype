@@ -1,0 +1,25 @@
+---
+question:   2
+title:      What's your name?
+---
+
+<%= partial "partials/v3/page-title" %>
+
+
+<form class="form">
+
+    <div class="form-group">
+        <label class="form-control-label" for="full-name">Your full name, as shown on your birth certificate or passport</label>
+        <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <div class="form-group">
+        <label class="form-control-label" for="other-names">Any other names you've had in the last 12 months</label>
+        <input type="text" class="form-control" id="other-names">
+    </div>
+
+        <%= partial "partials/v3/next-question" %>
+
+        <%= partial "partials/v3/back-skip" %>
+
+</form>

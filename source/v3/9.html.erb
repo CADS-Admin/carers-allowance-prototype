@@ -1,0 +1,24 @@
+---
+question:   9
+title:      Do you normally live in England, Scotland or Wales?
+---
+
+<%= partial "partials/v3/page-title" %>
+
+<form class="form">
+    <div class-"form-group">
+
+        <%= partial 'partials/v3/yes-no', :locals => { :id => 'ukResident', noToggle: '#noToggle'} %>
+
+        <div class="js-hidden form-group form-group-indent" id="noToggle">
+        	<label class="form-control-label" for="other-country">Which country do you normally live in?</label>
+        	<input type="text" class="form-control" id="other-country">
+    	</div>
+
+        <%= partial "partials/v3/next-question" %>
+
+        <%= partial "partials/v3/back-skip" %>
+
+
+    </div>
+</form>

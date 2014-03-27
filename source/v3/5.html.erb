@@ -1,0 +1,55 @@
+---
+question:   5
+title:      How can we contact you?
+---
+
+<%= partial "partials/v3/page-title" %>
+
+<p>We might need to do this to ask for more information. The faster we can contact you, the faster we can process your application.</p>
+
+<form class="form">
+
+    <!-- Phone number -->
+
+    <div class="form-group">
+        <label class="form-group-label" for="telNo">Phone number</label>
+        <div class="form-hint">Landline or mobile number</div>
+        
+        <input type="text" class="form-control form-control-1-2" id="telNo">
+
+        <label for="textPhone" class="form-radio">
+            <input type="checkbox" id="textPhone"> 
+            I need to be contacted using a textphone
+        </label>
+    </div>
+
+    <!-- Address -->
+
+    <fieldset class="form-group">
+
+        <legend class="form-group-label">
+            Home address
+        </legend>
+
+        <label class="form-control-label" for="address-line-1">Building and street</label>
+        <input type="text" class="form-control" id="address-line-1">
+
+        <label class="form-control-label visuallyhidden" for="address-line-2">Building and street line 2 (optional)</label>
+        <input type="text" class="form-control" id="address-line-2">
+
+        <label class="form-control-label" for="address-town">Town or city</label>
+        <input type="text" class="form-control form-control-1-2" id="address-town">
+
+        <label class="form-control-label" for="address-postcode">Postcode</label>
+        <input type="text" class="form-control form-control-1-4" id="address-postcode">
+
+        <label for="country" class="form-control-label">Country</label>
+        <%= partial "partials/country-select" %>
+
+    </fieldset>
+
+        <%= partial "partials/v3/next-question" %>
+
+        <%= partial "partials/v3/back-skip" %>
+
+</form>

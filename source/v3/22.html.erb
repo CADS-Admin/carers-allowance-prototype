@@ -1,0 +1,46 @@
+---
+question:   22
+title:      Have you been on a course of education since your claim date?
+---
+
+
+<%= partial "partials/v3/page-title" %>
+
+
+<form class="form">
+
+    <%= partial 'partials/v3/yes-no', :locals => { :id => 'education', yesToggle: '#yesToggle'} %>
+
+    <div class="js-hidden form-group-indent" id="yesToggle">
+        
+        <div class="form-group">
+
+    		<label class="form-control-label" for="name">Name of course</label>
+        	<input class="form-control" type="text" id="name">
+
+    		<label class="form-control-label" for="institution">Name of school, college or university</label>
+        	<input class="form-control" type="text" id="institution">
+
+        	<label class="form-control-label" for="teacher">Name of your main teacher or tutor</label>
+        	<input class="form-control" type="text" id="teacher">
+
+        	<label class="form-control-label" for="telNo">Phone number for your department or tutor (optional)</label>
+        	<input class="form-control form-control-1-2" type="text" id="telNo">
+
+        	<label class="form-control-label" for="startDate">Start date</label>
+        	<p class="form-hint">For example, September 2013</p>
+        	<input class="form-control form-control-1-4" type="text" id="startDate">
+
+        	<label class="form-control-label" for="endDate">End date</label>
+        	<input class="form-control form-control-1-4" type="text" id="endDate">
+
+
+        </div>
+
+	</div>
+
+    <%= partial "partials/v3/next-question" %>
+
+    <%= partial "partials/v3/back-skip" %>
+
+</form>

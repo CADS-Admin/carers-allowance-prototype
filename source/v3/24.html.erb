@@ -1,0 +1,66 @@
+---
+question:   24
+title:      Have you been employed at any time since 25 June 2013?
+---
+
+<%= partial "partials/v3/page-title" %>
+
+<p>This includes:</p>
+
+<ul class="list-bullet">
+    <li>full-time or part time work</li>
+    <li>casual or temporary work</li>
+    <li>job sharing</li>
+    <li>being on a career break</li>
+    <li>being a company director</li>
+    <li>being included in any tax return as a worker or non worker</li>
+    <li>being in the territorial army or other auxiliary armed forces</li>
+</ul>
+
+<p>Do not include periods of self employment.</p>
+
+<!--<p>TEST: <%= req.params["test"] %></p>-->
+
+<form class="form">
+
+    <%= partial 'partials/v3/yes-no', :locals => { :id => 'employed', yesToggle: '#yesToggle'} %>
+
+    <div class="js-hidden form-group-indent" id="yesToggle">
+        
+        <div class="form-group">
+
+    		<label class="form-control-label" for="name">Name of last employer</label>
+        	<input class="form-control" type="text" id="name">
+
+    		<label class="form-control-label" for="institution">Phone number (optional)</label>
+        	<input class="form-control form-control-1-2" type="text" id="institution">
+
+        	<label class="form-control-label" for="teacher">Payroll or employee number (optional)</label>
+        	<input class="form-control form-control-1-2" type="text" id="teacher">
+
+        	<label class="form-control-label" for="startDate">Start date</label>
+        	<p class="form-hint">For example, September 2013</p>
+        	<input class="form-control form-control-1-4" type="text" id="startDate">
+
+        	<label class="form-control-label" for="endDate">End date</label>
+        	<p class="form-hint">Write 'Current' if this is your current employer</p>
+        	<input class="form-control form-control-1-4" type="text" id="endDate">
+
+        	<label class="form-control-label" for="hours">Normal working hours</label>
+        	<input class="form-control form-control-dec-3" type="text" id="hours"> hours a week
+
+        </div>
+
+        <div class="form-group">
+
+        	<br>
+        	<p><a href="#">Add a previous employer</a></p>
+        </div>
+
+	</div>
+
+        <%= partial "partials/v3/next-question" %>
+
+        <%= partial "partials/v3/back-skip" %>
+
+</form>

@@ -1,0 +1,44 @@
+---
+question:   23
+title:      Have you been self employed at any time since 18 December 2013?
+---
+
+<%= partial "partials/v3/page-title" %>
+
+<p>This includes:</p>
+
+<ul class="list-bullet">
+    <li>working for yourself</li>
+    <li>being a partner or sleeping partner in a business</li>
+    <li>receive income from property or land you own</li>
+    <li>renting out any part of the home you live in - i.e to a lodger</li>
+</ul>
+
+<form class="form">
+
+        <%= partial 'partials/v3/yes-no', :locals => { :id => 'selfEmployed', yesToggle: '#yesToggle'} %>
+
+	    <div class="js-hidden form-group-indent" id="yesToggle">
+	        
+	        <div class="form-group">
+
+	    		<label class="form-control-label" for="name">What kind of work do you do?</label>
+	        	<input class="form-control" type="text" id="name">
+
+	        	<label class="form-control-label" for="startDate">Start date</label>
+	        	<p class="form-hint">For example, September 2013</p>
+	        	<input class="form-control form-control-1-4" type="text" id="startDate">
+
+	        	<label class="form-control-label" for="endDate">End date</label>
+	        	<p class="form-hint">Write 'Current' if you're currently self employed</p>
+	        	<input class="form-control form-control-1-4" type="text" id="endDate">
+
+	        </div>
+
+		</div>
+
+        <%= partial "partials/v3/next-question" %>
+
+        <%= partial "partials/v3/back-skip" %>
+
+</form>

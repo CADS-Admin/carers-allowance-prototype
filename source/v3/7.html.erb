@@ -1,0 +1,17 @@
+---
+question:   7
+title:      Do you get State Pension?
+---
+
+<%= partial "partials/v3/page-title" %>
+
+
+<form class="form">
+
+        <%= partial 'partials/v3/yes-no', :locals => { :id => 'statePension'} %>
+
+        <%= partial "partials/v3/next-question" %>
+
+        <%= partial "partials/v3/back-skip" %>
+
+</form>

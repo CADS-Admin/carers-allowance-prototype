@@ -1,0 +1,34 @@
+---
+question:   21
+title:      From when did you start caring for them for this amount of time?
+---
+
+
+<%= partial "partials/v3/page-title" %>
+
+
+<form class="form">
+
+	<div class="form-group form-radio">
+	  <label for="when1" class="block-label">
+	    <input id="when1" type="radio" name="when" value="" class="js-toggle" data-hide="#date">
+	    From the claim date: <%= data.claim.claimDate %>
+	  </label>
+	</div>
+
+	<div class="form-group form-radio">
+	  <label for="when2" class="block-label">
+	    <input id="when2" type="radio" name="when" value="" class="js-toggle"  data-show="#date">
+	    From a different date
+	  </label>
+	</div>
+
+    <div class="js-hidden form-group form-group-indent" id="date">
+    	<%= partial "partials/v3/date" %>
+	</div>
+
+    <%= partial "partials/v3/next-question" %>
+
+    <%= partial "partials/v3/back-skip" %>
+
+</form>
