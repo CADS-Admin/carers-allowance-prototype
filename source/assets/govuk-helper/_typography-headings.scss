@@ -25,6 +25,7 @@
     display: block;
     @include core-27();
     color: $secondary-text-colour;
+    margin-bottom: 10px;
   }
 }
 

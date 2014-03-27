@@ -5,35 +5,19 @@ title:      When do you want your Carer's Allowance claim to start?
 
 <%= partial "partials/v3/page-title" %>
 
-<p>Entitlement to Carer's Allowance can normally be backdated for up to 3 months but in some circumstances this can be longer. For further information, see the help guide.
+
+  <p>This is normally the date you became eligible for Carer's Allowance.</p>
+  <p>Note that Carer's Allowance can only be back-dated from up to 3 months before the date you submit this application.</p>
+
 
 <form class="form">
-  <div class-"form-group">
 
-               
-               <br>
+        <h2 class="form-group-label">Claim date</h2>
 
-        <div class="form-group-inline form-radio">
-          <label for="UKYes" class="block-label">
-            <input id="UKYes" type="radio" name="UKResident" value="">
-            Yes
-          </label>
-        </div>
-        <div class="form-group-inline form-radio">
-          <label for="UKNo" class="block-label">
-            <input id="UKNo" type="radio" name="UKResident" value="">
-            No
-          </label>
-        </div>
-
-     
-
-
+        <%= partial "partials/v3/date" %>
 
         <%= partial "partials/v3/next-question" %>
 
         <%= partial "partials/v3/back-skip" %>
 
-
-    </div>
 </form>

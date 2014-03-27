@@ -1,37 +1,24 @@
 ---
 question:   4
-title:      Do you normally live in England, Scotland or Wales?
+title:      What's your National Insurance number?
 ---
 
 <%= partial "partials/v3/page-title" %>
 
+<p>
+    It's on your National Insurance card, benefit letter, payslip or P60.<br>
+    For example, 'VO 12 34 56 D'.
+</p>
+
 <form class="form">
-    <div class-"form-group">
 
-               
-               <br>
-
-        <div class="form-group-inline form-radio">
-          <label for="UKYes" class="block-label">
-            <input id="UKYes" type="radio" name="UKResident" value="">
-            Yes
-          </label>
-        </div>
-        <div class="form-group-inline form-radio">
-          <label for="UKNo" class="block-label">
-            <input id="UKNo" type="radio" name="UKResident" value="">
-            No
-          </label>
-        </div>
-
-     
-
-
+    <div class="form-group">
+        <label class="form-control-label" for="NINumber">National Insurance number</label>
+        <input type="text" class="form-control form-control-1-2" id="NINumber">
+    </div>
 
         <%= partial "partials/v3/next-question" %>
 
         <%= partial "partials/v3/back-skip" %>
 
-
-    </div>
 </form>

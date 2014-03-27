@@ -13,24 +13,11 @@ layout:  v3_wide_template
 <h3 class="heading-24">Your answers</h3>
 
 
-
-
-
-
-
-
-
 <table class="review-answers">
-    <tr><td>Name</td>
-    <td>Mr Christopher Howard Dennett<a href="#">Change this</a></td></tr>
-    <!--
-    <tr><td>Other surname or maiden name</dt>
-    <td>Smith</td></tr>
-    -->
-    <tr><td>National Insurance number<dt>
-    <td><span class="skipped">You skipped this question</span><a href="#">Change this</a></td></tr>
-    <tr><td>Date of birth</dt>
-    <td>26 June 1978<a href="#">Change this</a></td></tr>
+    
+    <%= partial 'partials/v3/answer', :locals => { q:  1, title: 'Name', answer: 'Graham Smith' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  2, title: 'National Insurance number', answer: 'VO 12 34 56 D' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  3, title: 'Date of birth', answer: '06 March 1976' } %>
     
 </table>
         <div class="form-group">
@@ -41,7 +28,7 @@ layout:  v3_wide_template
 
 
         <ul class="form-group">
-            <li><a href="#">Back</a></li>
+            <li><a href="<%= req.params["currentPage"] %>.html">Back</a></li>
             <li><a href="#">Print this page</a></li>
             <li><a href="#">Email this page</a></li>
         </ul>
