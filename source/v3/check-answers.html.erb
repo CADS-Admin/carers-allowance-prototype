@@ -22,11 +22,8 @@ layout:  v3_wide_template
 </h1>
 
 <!--<p>You've answered 3 questions and skipped 1 question.</p>-->
-<% if answered == 1 %>
-    <p><%= answered %> question answered.</p>
-<% else %>
-    <p><%= answered %> questions answered.</p>
-<% end %>
+
+<p> <%= pluralize(answered, 'question') %> answered.</p>
 
 
 <% end %>

@@ -37,12 +37,8 @@
           <h2 class="heading-24"><%= percentage %>% complete</h2>
 
           <ul>
-            
-            <% if current_page.data.question == 2 %>
-              <li><%= current_page.data.question - 1 %> question answered</li>
-            <% else %>
-              <li><%= current_page.data.question - 1 %> questions answered</li>
-            <% end %>
+
+            <p><%= pluralize(current_page.data.question - 1, 'question') %> answered</p>
 
             <!--<li>1 question skipped</li>-->
             <li><a href="check-answers.html?currentPage=<%= current_page.data.question %>">Check your answers</a></li>
