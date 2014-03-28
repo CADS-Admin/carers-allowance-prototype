@@ -2,33 +2,81 @@
 layout:  v3_wide_template
 ---
 
+<% 
+    answered    = req.params["currentPage"].to_i - 1
+    percentage  = ((req.params["currentPage"].to_i - 1) * 100 / data.claim.totalQuestions).round()
+%>
 
+<% if answered == data.claim.totalQuestions %>
 
 <h1 class="heading-36">
-    Your application is 20% complete
+    Now submit your application
 </h1>
 
-<p>You've answered 3 questions and skipped 1 question.</p>
+<p>Check your answers below before submitting your application.</p>
+
+<% else %>
+
+<h1 class="heading-36">
+    Your application is <%= percentage %>% complete
+</h1>
+
+<!--<p>You've answered 3 questions and skipped 1 question.</p>-->
+<% if answered == 1 %>
+    <p><%= answered %> question answered.</p>
+<% else %>
+    <p><%= answered %> questions answered.</p>
+<% end %>
+
+
+<% end %>
+
+<p><a href="<%= req.params["currentPage"] %>.html">Back</a></p>
+
 
 <h3 class="heading-24">Your answers</h3>
 
 
 <table class="review-answers">
     
-    <%= partial 'partials/v3/answer', :locals => { q:  1, title: 'Name', answer: 'Graham Smith' } %>
-    <%= partial 'partials/v3/answer', :locals => { q:  2, title: 'National Insurance number', answer: 'VO 12 34 56 D' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  1, title: 'Claim date', answer: '12 March 2014' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  2, title: 'Name', answer: 'John Smith' } %>
     <%= partial 'partials/v3/answer', :locals => { q:  3, title: 'Date of birth', answer: '06 March 1976' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  4, title: 'National Insurance number', answer: 'VO 12 34 56 D' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  5, title: 'Contact details', answer: '12 Calder Close, Swindon SN2 4ER, 02345 165724 ' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  6, title: 'Partner living with you since your claim date?', answer: 'No' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  7, title: 'State pension?', answer: 'No' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  8, title: 'Nationality?', answer: 'British' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  9, title: 'Normally live in England, Scotland or Wales?', answer: 'Yes' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  10, title: 'Away for more than 52 weeks in the 3 years before your claim date?', answer: 'No' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  11, title: 'Get benefits or pensions from EEA or Switzerland?', answer: 'No' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  12, title: 'Claimed for benefits or pensions from EEA or Switzerland?', answer: 'No' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  13, title: 'Working in or paying insurance to EEA or Switzerland?', answer: 'No' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  14, title: 'Person you care for', answer: 'Jane Smith' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  15, title: 'Their date of birth', answer: '21 September 1943' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  16, title: 'Their national insurance number?', answer: 'VO 12 34 56 D' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  17, title: 'Lives with you?', answer: 'Yes' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  18, title: 'Relationship to you', answer: 'Mother' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  19, title: 'Does they get Armed Forces Independence Payment?', answer: 'No' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  20, title: '35 hours a week caring for them?', answer: 'Yes' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  21, title: 'Date started care', answer: 'December 2013' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  22, title: 'In education since claim date?', answer: 'No' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  23, title: 'Self employed since 18 December 2013?', answer: 'No' } %>
+    <%= partial 'partials/v3/answer', :locals => { q:  24, title: 'Employed since 25 June 2013?', answer: 'No' } %>
     
 </table>
-        <div class="form-group">
-        <br>
-               <br>
-            <input type="submit" class="button" value="Continue with your application">
 
+<div class="form-group">
+<br>
+<br>
 
+<% if answered == data.claim.totalQuestions %>
+    <a class="button" href="confirmation.html">Submit your application</a>
+<% else %>
+    <a class="button" href="<%= req.params["currentPage"] %>.html">Continue with your application</a>
+<% end %>
 
-        <ul class="form-group">
-            <li><a href="<%= req.params["currentPage"] %>.html">Back</a></li>
-            <li><a href="#">Print this page</a></li>
-            <li><a href="#">Email this page</a></li>
-        </ul>
+<ul class="form-group">
+    <li><a href="#">Print this page</a></li>
+    <li><a href="#">Email this page</a></li>
+</ul>

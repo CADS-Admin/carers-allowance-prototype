@@ -3,8 +3,12 @@ if req.params["currentPage"].to_i > locals[:q]
 %>
 
 <tr>
-    <td><%= locals[:title] %></td>
-    <td><%= locals[:answer] %>
+    <td class="question"><%= locals[:q] %>.</td>
+    <td class="title"><%= locals[:title] %></td>
+    <td class="answer">
+        <%= locals[:answer] %>
+    </td>
+    <td>
         <a href="<%= locals[:q] %>.html">Change this</a>
     </td>
 </tr>

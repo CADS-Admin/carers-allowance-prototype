@@ -1,4 +1,15 @@
+<%
+href = (current_page.data.question + 1).to_s + '.html'
+buttonText = 'Go to next question'
+
+if current_page.data.question == data.claim.totalQuestions
+	buttonText = 'Check your answers'
+	href = 'check-answers.html?currentPage=' + (current_page.data.question + 1).to_s
+end
+%>
+
 <div class="form-group">
        <br><br>
-    <a class="button" href="<%= current_page.data.question + 1 %>.html">Go to next question</a>
+    <a class="button" href="<%= href %>"><%= buttonText %></a>
 </div>
+

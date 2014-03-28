@@ -84,17 +84,26 @@ table.review-answers{
   margin-top: $gutter;
   font-size: 19px;
   td{
-    padding: 13px 15px 10px 0;
     border-bottom: 1px solid $border-colour;
-    width: 33.33%; 
     vertical-align: top;
-  }
-  td + td {
-    padding-left: 0;
-    width: 66.66%;
+    padding-top: 13px;
+    padding-bottom: 10px;
   }
   a{
-    float: right;
+    white-space: nowrap;
+  }
+  .question{
+    width: 3%;
+    text-align: right;
+    padding-right: 5px;
+  }
+  .title{
+    padding-right: 45px;
+    width: 30.33%;
+  }
+  .answer{
+    padding-left: 45px;
+    width: 66.66%;
   }
   .skipped{
     color: $mellow-red;
@@ -131,7 +140,9 @@ table.review-answers{
 }
 
 
-
+.made-by{
+  font-size: 16px;
+}
 
 // NEW DARK FOOTER STYLES
 

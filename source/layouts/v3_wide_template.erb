@@ -37,7 +37,11 @@
 
   </main>
 
-  <div class="colour-strip"></div>
+  <% content_for :footer_support_links do %> 
+    <div class="made-by">
+        <p>Made in Preston by Department for Work &amp; Pensions</p>
+    </div>
+  <% end %>
 
   <% content_for :body_end do %>  
     <script src="<%= asset_path(:js, "/javascripts/jquery.min.js") %>"></script>
