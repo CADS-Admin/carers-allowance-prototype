@@ -38,7 +38,7 @@
 
           <ul>
 
-            <p><%= pluralize(current_page.data.question - 1, 'question') %> answered</p>
+            <li><%= pluralize(current_page.data.question - 1, 'question') %> answered</li>
 
             <!--<li>1 question skipped</li>-->
             <li><a href="check-answers.html?currentPage=<%= current_page.data.question %>">Check your answers</a></li>
