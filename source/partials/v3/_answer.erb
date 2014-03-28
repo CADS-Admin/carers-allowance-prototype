@@ -9,7 +9,7 @@ if req.params["currentPage"].to_i > locals[:q]
         <%= locals[:answer] %>
     </td>
     <td>
-        <a href="<%= locals[:q] %>.html">Change this</a>
+        <a href="<%= locals[:q] %>.html?edit=true&currentPage=<%= req.params["currentPage"] %>">Change this</a>
     </td>
 </tr>
 

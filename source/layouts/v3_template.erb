@@ -28,17 +28,23 @@
       <div class="grid grid-1-3" id="section-nav">
         <div class="inner-block">
 
-          <% 
-            percentage = ((current_page.data.question - 1) * 100 / data.claim.totalQuestions).round()
+          <%
+            if req.params["currentPage"]
+              page = req.params["currentPage"].to_i
+            else
+              page = current_page.data.question
+            end
+
+            percentage = ((page - 1) * 100 / data.claim.totalQuestions).round()
           %>
 
-          <% if current_page.data.question > 1 %>
+          <% if page > 1 %>
 
           <h2 class="heading-24"><%= percentage %>% complete</h2>
 
           <ul>
 
-            <li><%= pluralize(current_page.data.question - 1, 'question') %> answered</li>
+            <li><%= pluralize(page - 1, 'question') %> answered</li>
 
             <!--<li>1 question skipped</li>-->
             <li><a href="check-answers.html?currentPage=<%= current_page.data.question %>">Check your answers</a></li>

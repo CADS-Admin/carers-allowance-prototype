@@ -1,10 +1,26 @@
 <%
-href = (current_page.data.question + 1).to_s + '.html'
-buttonText = 'Go to next question'
 
-if current_page.data.question == data.claim.totalQuestions
+if req.params["currentPage"]
+  page = req.params["currentPage"].to_i
+else
+  page = current_page.data.question
+end
+
+
+if req.params["edit"]
+	# User is editing question from the 'Check answers' page
+	buttonText = 'Update this answer'
+	href = 'check-answers.html?currentPage=' + page.to_s
+
+elsif current_page.data.question == data.claim.totalQuestions
+	# User is on the last question
 	buttonText = 'Check your answers'
 	href = 'check-answers.html?currentPage=' + (current_page.data.question + 1).to_s
+
+else
+	buttonText = 'Go to next question'
+	href = (current_page.data.question + 1).to_s + '.html'
+
 end
 %>
 

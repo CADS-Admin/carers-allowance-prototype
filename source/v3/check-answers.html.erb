@@ -68,6 +68,9 @@ layout:  v3_wide_template
 <br>
 
 <% if answered == data.claim.totalQuestions %>
+
+    <p>By submitting your application you are confirming that the above information is true.</p>
+
     <a class="button" href="confirmation.html">Submit your application</a>
 <% else %>
     <a class="button" href="<%= req.params["currentPage"] %>.html">Continue with your application</a>
