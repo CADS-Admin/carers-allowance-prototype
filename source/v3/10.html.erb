@@ -6,13 +6,13 @@ title:      Have you been away for more than 52 weeks in the 3 years before your
 <%= partial "partials/v3/page-title" %>
 
 <p>This could be one trip, or a number of trips adding up to 52 weeks.
-Your claim date is <%= data.claim.claimDate %>. 
+Your claim date is <%= partial "partials/v3/claim-date" %>. 
 </p>
 
-<form class="form">
+<form class="form" id="form" name="data">
     <div class-"form-group">
 
-        <%= partial 'partials/v3/yes-no', :locals => { :id => 'ukResident'} %>
+        <%= partial 'partials/v3/yes-no', :locals => { :id => 'away52Weeks'} %>
 
         <%= partial "partials/v3/next-question" %>
 

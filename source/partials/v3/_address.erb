@@ -1,0 +1,24 @@
+<fieldset class="form-group">
+
+    <legend class="form-group-label">
+        <%= locals[:label] %>
+    </legend>
+
+    <label class="form-control-label" for="<%= locals[:id] %>Line-1">Building and street</label>
+    <input type="text" class="form-control" id="<%= locals[:id] %>Line-1" name="<%= locals[:id] %>Line-1">
+
+    <label class="form-control-label visuallyhidden" for="<%= locals[:id] %>Line-2">Building and street line 2 (optional)</label>
+    <input type="text" class="form-control" id="<%= locals[:id] %>Line-2" name="<%= locals[:id] %>Line-2">
+
+    <label class="form-control-label" for="<%= locals[:id] %>Town">Town or city</label>
+    <input type="text" class="form-control form-control-1-2" id="<%= locals[:id] %>Town" name="<%= locals[:id] %>Town">
+
+    <label class="form-control-label" for="<%= locals[:id] %>Postcode">Postcode</label>
+    <input type="text" class="form-control form-control-1-4" id="<%= locals[:id] %>Postcode" name="<%= locals[:id] %>Postcode">
+
+    <label for="<%= locals[:id] %>Country" class="form-control-label">Country</label>
+    <select name="<%= locals[:id] %>Country" class="form-control js-country" id="<%= locals[:id] %>Country" name="<%= locals[:id] %>Country">
+    <%= partial "partials/v3/country-options" %>
+	</select>
+
+</fieldset>

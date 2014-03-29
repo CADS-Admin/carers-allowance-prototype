@@ -6,20 +6,20 @@ title:      What's the name of the person you care for?
 <%= partial "partials/v3/page-title" %>
 
 
-<form class="form">
+<form class="form" id="form" name="data">
 
-    <div class="form-group">
-        <label class="form-control-label" for="full-name">Use their full name, as shown on their birth certificate or passport</label>
-        <input type="text" class="form-control" id="full-name">
-    </div>
+    <%= partial 'partials/v3/text-field', :locals => { 
+        :id => 'careForName',
+        :label => "Their full name, as shown on your birth certificate or passport"
+    }%>
 
-    <div class="form-group">
-        <label class="form-control-label" for="other-names">Any other names they've had in the last 12 months</label>
-        <input type="text" class="form-control" id="other-names">
-    </div>
+    <%= partial 'partials/v3/text-field', :locals => { 
+        :id => 'careForOtherNames',
+        :label => "Any other names They've had in the last 12 months"
+    }%>
 
-        <%= partial "partials/v3/next-question" %>
+    <%= partial "partials/v3/next-question" %>
 
-        <%= partial "partials/v3/back-skip" %>
+    <%= partial "partials/v3/back-skip" %>
 
 </form>

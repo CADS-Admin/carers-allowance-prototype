@@ -7,10 +7,10 @@ title:      Are you, or a member of your family, working in or paying insurance 
 
 <p>Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden and Switzerland</p>
 
-<form class="form">
+<form class="form" id="form" name="data">
     <div class-"form-group">
 
-        <%= partial 'partials/v3/yes-no', :locals => { :id => 'getBenefits'} %>
+        <%= partial 'partials/v3/yes-no', :locals => { :id => 'workInsurance'} %>
 
         <%= partial "partials/v3/next-question" %>
 

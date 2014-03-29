@@ -5,9 +5,22 @@
 
 $(document).ready(function(){
 
- $("#addressCountry").select2();
+ $(".js-country").select2();
 
  $("#relationship").select2();
+
+ $("form").sisyphus();
+
+var getFormData = function(id) {
+    var prefix = "formdata";
+    return localStorage.getItem('' + prefix + id);
+};
+
+$('[data-from]').text(function(){
+	var id = $(this).data('from');
+	return getFormData(id);
+});
+
 
  GOVUK.toggle.init();
 

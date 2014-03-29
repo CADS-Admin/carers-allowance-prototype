@@ -7,7 +7,7 @@ title:      From when did you start caring for them for this amount of time?
 <%= partial "partials/v3/page-title" %>
 
 
-<form class="form">
+<form class="form" id="form" name="data">
 
 	<div class="form-group form-radio">
 	  <label for="when1" class="block-label">
@@ -23,9 +23,11 @@ title:      From when did you start caring for them for this amount of time?
 	  </label>
 	</div>
 
-    <div class="js-hidden form-group form-group-indent" id="date">
-    	<%= partial "partials/v3/date" %>
+    <div class="js-hidden form-group-indent" id="date">
+    	<%= partial 'partials/v3/date', :locals => { :id => 'careForDate'} %>
 	</div>
+
+	        
 
     <%= partial "partials/v3/next-question" %>
 

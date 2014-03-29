@@ -7,7 +7,7 @@ title:      Does this person live with you?
 
 
 
-<form class="form">
+<form class="form" id="form" name="data">
 
 <%= partial 'partials/v3/yes-no', :locals => { :id => 'liveWith', noToggle: '#noToggle'} %>
 
@@ -33,28 +33,10 @@ title:      Does this person live with you?
 
     <!-- Address -->
 
-    <fieldset class="form-group">
-
-        <legend class="form-group-label">
-            Contact address
-        </legend>
-
-        <label class="form-control-label" for="address-line-1">Building and street</label>
-        <input type="text" class="form-control" id="address-line-1">
-
-        <label class="form-control-label visuallyhidden" for="address-line-2">Building and street line 2 (optional)</label>
-        <input type="text" class="form-control" id="address-line-2">
-
-        <label class="form-control-label" for="address-town">Town or city</label>
-        <input type="text" class="form-control form-control-1-2" id="address-town">
-
-        <label class="form-control-label" for="address-postcode">Postcode</label>
-        <input type="text" class="form-control form-control-1-4" id="address-postcode">
-
-        <label for="country" class="form-control-label">Country</label>
-        <%= partial "partials/country-select" %>
-
-    </fieldset>
+    <%= partial "partials/v3/address", :locals => { 
+        :id         => "careForAddress",
+        :label      => "Contact address"
+    }%>
 
 </div>
 

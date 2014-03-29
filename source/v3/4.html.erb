@@ -10,15 +10,16 @@ title:      What's your National Insurance number?
     For example, 'VO 12 34 56 D'.
 </p>
 
-<form class="form">
+<form class="form" id="form" name="data">
 
-    <div class="form-group">
-        <label class="form-control-label" for="NINumber">National Insurance number</label>
-        <input type="text" class="form-control form-control-1-2" id="NINumber">
-    </div>
+    <%= partial "partials/v3/text-field", :locals => { 
+        :id 		=> "yourNino",
+        :label 		=> "National Insurance number",
+        :classes 	=> "form-control-1-2"
+    }%>
 
-        <%= partial "partials/v3/next-question" %>
+    <%= partial "partials/v3/next-question" %>
 
-        <%= partial "partials/v3/back-skip" %>
+    <%= partial "partials/v3/back-skip" %>
 
 </form>

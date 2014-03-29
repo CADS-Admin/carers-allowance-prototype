@@ -10,14 +10,19 @@ title:      Do you know their National Insurance number?
     For example, 'VO 12 34 56 D'.
 </p>
 
-<form class="form">
+<form class="form" id="form" name="data">
 
     <%= partial 'partials/v3/yes-no', :locals => { :id => 'caredForNino', yesToggle: '#yesToggle'} %>
 
-    <div class="js-hidden form-group form-group-indent" id="yesToggle">
-        <label class="form-control-label" for="NINumber">National Insurance number</label>
-        <input type="text" class="form-control form-control-1-2" id="NINumber">
+    <div class="js-hidden form-group-indent" id="yesToggle">
+	<%= partial "partials/v3/text-field", :locals => { 
+        :id 		=> "careForNino",
+        :label 		=> "National Insurance number",
+        :classes 	=> "form-control-1-2"
+    }%>
 	</div>
+
+
 
         <%= partial "partials/v3/next-question" %>
 

@@ -6,17 +6,17 @@ title:      What is your nationality?
 <%= partial "partials/v3/page-title" %>
 
 
-<form class="form">
+<form class="form" id="form" name="data">
 
-<p>As shown on your current passport.</p>
+	<p>As shown on your current passport.</p>
 
-<div class="form-group">
-    <label class="form-control-label" for="full-name">Nationality</label>
-    <input type="text" class="form-control" id="full-name">
-</div>
+    <%= partial "partials/v3/text-field", :locals => { 
+        :id 		=> "yourNationality",
+        :label 		=> "Nationality"
+    }%>
 
-        <%= partial "partials/v3/next-question" %>
+    <%= partial "partials/v3/next-question" %>
 
-        <%= partial "partials/v3/back-skip" %>
+    <%= partial "partials/v3/back-skip" %>
 
 </form>

@@ -10,11 +10,11 @@ title:      When do you want your Carer's Allowance claim to start?
   <p>Note that Carer's Allowance can only be back-dated from up to 3 months before the date you submit this application.</p>
 
 
-<form class="form">
+<form class="form" id="form" name="data">
 
         <h2 class="form-group-label">Claim date</h2>
 
-        <%= partial "partials/v3/date" %>
+        <%= partial 'partials/v3/date', :locals => { :id => 'claimDate'} %>
 
         <%= partial "partials/v3/next-question" %>
 

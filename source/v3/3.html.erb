@@ -8,9 +8,9 @@ title:      What's your date of birth?
 <p>For example 20 3 1976</p>
 
 
-<form class="form">
+<form class="form" id="form" name="data">
 
-        <%= partial "partials/v3/date" %>
+        <%= partial 'partials/v3/date', :locals => { :id => 'yourDob'} %>
 
         <%= partial "partials/v3/next-question" %>
 

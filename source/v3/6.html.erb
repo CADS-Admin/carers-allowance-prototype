@@ -5,10 +5,10 @@ title:      Have you had a partner living with you since your claim date?
 
 <%= partial "partials/v3/page-title" %>
 
-<p>Your claim date is 25 December 2013. If you have separated since then select 'Yes'.</p>
+<p>Your claim date is <%= partial "partials/v3/claim-date" %>. If you have separated since then select 'Yes'.</p>
 
 
-<form class="form">
+<form class="form" id="form" name="data">
 
         <%= partial 'partials/v3/yes-no', :locals => { :id => 'partner'} %>
 

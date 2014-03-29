@@ -7,49 +7,31 @@ title:      How can we contact you?
 
 <p>We might need to do this to ask for more information. The faster we can contact you, the faster we can process your application.</p>
 
-<form class="form">
+<form class="form" id="form" name="data">
 
     <!-- Phone number -->
 
     <div class="form-group">
-        <label class="form-group-label" for="telNo">Phone number</label>
+        <label class="form-group-label" for="yourTelNo">Phone number</label>
         <div class="form-hint">Landline or mobile number</div>
         
-        <input type="text" class="form-control form-control-1-2" id="telNo">
+        <input type="text" class="form-control form-control-1-2" id="yourTelNo" name="yourTelNo">
 
-        <label for="textPhone" class="form-radio">
-            <input type="checkbox" id="textPhone"> 
+        <label for="useTextPhone" class="form-radio">
+            <input type="checkbox" id="useTextPhone" name="useTextPhone"> 
             I need to be contacted using a textphone
         </label>
     </div>
 
     <!-- Address -->
 
-    <fieldset class="form-group">
+    <%= partial "partials/v3/address", :locals => { 
+        :id         => "yourAddress",
+        :label      => "Home address"
+    }%>
 
-        <legend class="form-group-label">
-            Home address
-        </legend>
+    <%= partial "partials/v3/next-question" %>
 
-        <label class="form-control-label" for="address-line-1">Building and street</label>
-        <input type="text" class="form-control" id="address-line-1">
-
-        <label class="form-control-label visuallyhidden" for="address-line-2">Building and street line 2 (optional)</label>
-        <input type="text" class="form-control" id="address-line-2">
-
-        <label class="form-control-label" for="address-town">Town or city</label>
-        <input type="text" class="form-control form-control-1-2" id="address-town">
-
-        <label class="form-control-label" for="address-postcode">Postcode</label>
-        <input type="text" class="form-control form-control-1-4" id="address-postcode">
-
-        <label for="country" class="form-control-label">Country</label>
-        <%= partial "partials/country-select" %>
-
-    </fieldset>
-
-        <%= partial "partials/v3/next-question" %>
-
-        <%= partial "partials/v3/back-skip" %>
+    <%= partial "partials/v3/back-skip" %>
 
 </form>

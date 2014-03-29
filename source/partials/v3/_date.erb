@@ -3,18 +3,18 @@
 	<!--<p class="form-hint">For example, 21 03 1976</p>-->
 
 	<div class="form-group-inline form-group-day">
-	    <label for="dob-day" class="form-control-label">Day</label>
-	    <input type="text" class="form-control" pattern="[0-9]*" id="dob-day">
+	    <label for="<%= locals[:id] %>Day" class="form-control-label">Day</label>
+	    <input type="text" class="form-control" pattern="[0-9]*" id="<%= locals[:id] %>Day" name="<%= locals[:id] %>Day">
 	</div>
 
 	<div class="form-group-inline form-group-month">
-	    <label for="dob-month" class="form-control-label">Month</label>
-	    <input type="text" class="form-control" id="dob-month">
+	    <label for="<%= locals[:id] %>Month" class="form-control-label">Month</label>
+	    <input type="text" class="form-control" id="<%= locals[:id] %>Month" name="<%= locals[:id] %>Month">
 	</div>
 
 	<div class="form-group-inline form-group-year">
-	    <label for="dob-year" class="form-control-label">Year</label>
-	    <input type="text" class="form-control" pattern="[0-9]*" id="dob-year">
+	    <label for="<%= locals[:id] %>Year" class="form-control-label">Year</label>
+	    <input type="text" class="form-control" pattern="[0-9]*" id="<%= locals[:id] %>Year" name="<%= locals[:id] %>Year">
 	</div>
 
 </div>
