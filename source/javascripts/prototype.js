@@ -22,6 +22,11 @@ $('[data-from]').text(function(){
 });
 
 
+
+  $(".cancel-application").click(function( event ) {
+	localStorage.clear();
+  });
+
  GOVUK.toggle.init();
 
   // TOGGLE HELP PANEL
