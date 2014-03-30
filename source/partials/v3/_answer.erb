@@ -1,9 +1,9 @@
 <%
-if req.params["currentPage"].to_i > locals[:q]
+# if req.params["currentPage"].to_i > locals[:q]
 %>
 
 <tr>
-    <td class="question"><%= locals[:q] %>.</td>
+    <td class="question"><%= locals[:q] %></td>
     <td class="title"><%= locals[:title] %></td>
     <td class="answer">
     	<% if locals[:type] == 'date' %>
@@ -30,5 +30,5 @@ if req.params["currentPage"].to_i > locals[:q]
 </tr>
 
 <%
-end
+# end
 %>

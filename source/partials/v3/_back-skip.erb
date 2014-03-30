@@ -1,4 +1,6 @@
 <ul class="form-group">
-    <li><a href="<%= current_page.data.question + 1 %>.html">Skip this question</a></li>
+	<% if current_page.data.noskip != true %>
+    <li><a href="<%= current_page.data.question + 1 %>.html" data-skip="<%= current_page.data.question %>">Skip this for now</a></li>
+    <% end %>
     <li><a href="<%= current_page.data.question - 1 %>.html">Back</a></li>        
 </ul>

@@ -40,13 +40,9 @@
 
           <% if page > 1 %>
 
-          <h2 class="heading-24"><%= percentage %>% complete</h2>
+          <h2 class="heading-24"><span class="percentage-complete"><%= percentage %></span>% complete</h2>
 
-          <ul>
-
-            <li><%= pluralize(page - 1, 'question') %> answered</li>
-
-            <!--<li>1 question skipped</li>-->
+          <ul class="question-status">
             <li><a href="check-answers.html?currentPage=<%= current_page.data.question %>">Check your answers</a></li>
           </ul>
 
