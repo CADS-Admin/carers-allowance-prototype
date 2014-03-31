@@ -1,0 +1,23 @@
+---
+question:   18
+title:      What's their relationship to you?
+---
+
+<%= partial "partials/page-title" %>
+
+<p>
+    For example, 'mother', 'friend', 'son-in-law'.
+</p>
+
+<form class="form" id="form" name="data">
+
+	    <%= partial 'partials/questions/text-field', :locals => { 
+        	:id => 'careForRelationship',
+        	:label => "Relationship"
+    	}%>
+
+        <%= partial "partials/next-question" %>
+
+        <%= partial "partials/back-skip" %>
+
+</form>

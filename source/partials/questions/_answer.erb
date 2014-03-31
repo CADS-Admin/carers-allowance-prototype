@@ -1,0 +1,34 @@
+<%
+# if req.params["currentPage"].to_i > locals[:q]
+%>
+
+<tr>
+    <td class="question"><%= locals[:q] %></td>
+    <td class="title"><%= locals[:title] %></td>
+    <td class="answer">
+    	<% if locals[:type] == 'date' %>
+    		<%= partial 'partials/questions/date-write', :locals => { id: locals[:id] } %>
+    	<% elsif locals[:type] == 'text-field' %>
+    		<%= partial 'partials/questions/text-field-write', :locals => { id: locals[:id] } %>
+    	<% elsif locals[:type] == 'address' %>
+    		<%= partial 'partials/questions/address-write', :locals => { id: locals[:id] } %>    	
+    	<% elsif locals[:type] == 'yes-no' %>
+    		<%= partial 'partials/questions/yes-no-write', :locals => { id: locals[:id] } %>    	
+    	<% elsif locals[:type] == 'education' %>
+    		<%= partial 'partials/questions/education-write' %>  
+        <% elsif locals[:type] == 'self-employment' %>
+            <%= partial 'partials/questions/self-employment-write' %>
+        <% elsif locals[:type] == 'employment' %>
+            <%= partial 'partials/questions/employment-write' %>
+    	<% else %>
+        <%= locals[:answer] %>
+        <% end %>
+    </td>
+    <td>
+        <a href="<%= locals[:q] %>?edit=true&currentPage=<%= req.params["currentPage"] %>">Change this</a>
+    </td>
+</tr>
+
+<%
+# end
+%>

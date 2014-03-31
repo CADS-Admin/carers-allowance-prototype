@@ -1,0 +1,25 @@
+---
+question:   22
+title:      Have you been on a course of education since your claim date?
+---
+
+
+<%= partial "partials/page-title" %>
+
+<p>Your claim date is <%= data.claim.claimDate %>.</p>
+
+<form class="form" id="form" name="data">
+
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'education', yesToggle: '#yesToggle'} %>
+
+    <div class="js-hidden form-group-indent" id="yesToggle">
+        
+        <%= partial 'partials/questions/education' %>
+
+	</div>
+
+    <%= partial "partials/next-question" %>
+
+    <%= partial "partials/back-skip" %>
+
+</form>

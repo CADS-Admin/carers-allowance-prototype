@@ -7,9 +7,18 @@ $(document).ready(function(){
 
 	// ------------------------------------------------------------------
 	// GLOBAL VARIABLES
-	var totalQuestions = 24;	
-	var answered = JSON.parse(localStorage.getItem('answered'));
-	var skipped = JSON.parse(localStorage.getItem('skipped'));
+	var totalQuestions = 24;
+
+	if (!localStorage["skipped"] ) {
+		localStorage["skipped"] = JSON.stringify([]);
+    }
+
+    if (!localStorage["answered"] ) {
+		localStorage["answered"] = JSON.stringify([]);
+    } 
+
+	var answered = JSON.parse(localStorage['answered']);
+	var skipped = JSON.parse(localStorage['skipped']);
 
 
 
@@ -44,22 +53,21 @@ $(document).ready(function(){
 	// ------------------------------------------------------------------
 	// STORING SKIPPED AND ANSERED QUESTIONS
 
-	// Create empty 'skipped' and 'answered' arrays if they don't exist.
-	if (skipped == null) { localStorage.setItem('skipped', JSON.stringify([])); };
-	if (skipped == null) { localStorage.setItem('answered', JSON.stringify([])); };
-
 	// If a question is skipped, add the question number to the 'skipped' 
 	// array in local storage.
 	$('[data-skip]').click(function(){
 		skipped.push($(this).data('skip'));
-		localStorage.setItem('skipped', JSON.stringify(skipped));
+		localStorage['skipped'] = JSON.stringify(skipped);
 	});
 
 	// If a question is answered, add the question number to the 'answered' 
 	// array in local storage.
 	$('[data-answer]').click(function(){
-		answered.push($(this).data('answer'));
-		localStorage.setItem('answered', JSON.stringify(answered));
+		var answer = $(this).data('answer');
+		answered.push(answer);
+		localStorage['answered'] = JSON.stringify(answered);
+
+		// TO DO: Remove answered questions from skipped list
 	});
 
 
@@ -70,14 +78,11 @@ $(document).ready(function(){
 	// Iterate over questions on the 'check answers' page and highlight 
 	// the ones that have been skipped.
 
-	$('.review-answers tr').each(function(){
-		var question = $(this).find('.question').text();
+	$('.check-answers tr').each(function(){
+		var question = parseInt($(this).find('.question').text());
 
-		console.log(question + ': ' + skipped);
-		console.log(localStorage.getItem('skipped').indexOf(question));
-
-		if (localStorage.getItem('answered').indexOf(question) == -1){
-			if (localStorage.getItem('skipped').indexOf(question) > -1){
+		if (answered.indexOf(question) == -1){
+			if (skipped.indexOf(question) > -1){
 				$(this).find('.answer').addClass('skipped').text('You skipped this question');
 			} else {
 				$(this).remove();

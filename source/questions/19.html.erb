@@ -1,0 +1,19 @@
+---
+question:   19
+title:      Does this person get Armed Forces Independence Payment?
+---
+
+<%= partial "partials/page-title" %>
+
+<p>
+    Also known as AFIP.
+</p>
+
+<form class="form" id="form" name="data">
+        <%= partial 'partials/questions/yes-no', :locals => { :id => 'afip'} %>
+
+        <%= partial "partials/next-question" %>
+
+        <%= partial "partials/back-skip" %>
+
+</form>

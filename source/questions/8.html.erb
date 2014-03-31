@@ -1,0 +1,22 @@
+---
+question:   8
+title:      What is your nationality?
+---
+
+<%= partial "partials/page-title" %>
+
+
+<form class="form" id="form" name="data">
+
+	<p>As shown on your current passport.</p>
+
+    <%= partial "partials/questions/text-field", :locals => { 
+        :id 		=> "yourNationality",
+        :label 		=> "Nationality"
+    }%>
+
+    <%= partial "partials/next-question" %>
+
+    <%= partial "partials/back-skip" %>
+
+</form>

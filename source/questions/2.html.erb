@@ -1,0 +1,25 @@
+---
+question:   2
+title:      What's your name?
+---
+
+<%= partial "partials/page-title" %>
+
+
+<form class="form" id="form" name="data">
+
+    <%= partial 'partials/questions/text-field', :locals => { 
+        :id => 'yourName',
+        :label => "Your full name, as shown on your birth certificate or passport"
+    }%>
+
+    <%= partial 'partials/questions/text-field', :locals => { 
+        :id => 'yourOtherNames',
+        :label => "Any other names you've had in the last 12 months"
+    }%>
+
+    <%= partial "partials/next-question" %>
+
+    <%= partial "partials/back-skip" %>
+
+</form>

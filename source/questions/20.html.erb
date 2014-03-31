@@ -1,0 +1,15 @@
+---
+question:   20
+title:      Do you spend at least 35 hours a week caring for this person?
+---
+
+<%= partial "partials/page-title" %>
+
+<form class="form" id="form" name="data">
+        <%= partial 'partials/questions/yes-no', :locals => { :id => 'hrs35'} %>
+
+        <%= partial "partials/next-question" %>
+
+        <%= partial "partials/back-skip" %>
+
+</form>

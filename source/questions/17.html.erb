@@ -1,0 +1,47 @@
+---
+question:   17
+title:      Does this person live with you?
+---
+
+<%= partial "partials/page-title" %>
+
+
+
+<form class="form" id="form" name="data">
+
+<%= partial 'partials/questions/yes-no', :locals => { :id => 'liveWith', noToggle: '#noToggle'} %>
+
+
+<div class="js-hidden form-group form-group-indent" id="noToggle">
+
+
+    <p>Provide contact details below:<p>
+
+    <!-- Phone number -->
+
+    <div class="form-group">
+        <label class="form-group-label" for="telNo">Contact phone number</label>
+        <div class="form-hint">Landline or mobile number</div>
+        
+        <input type="text" class="form-control form-control-1-2" id="telNo">
+
+        <label for="textPhone" class="form-radio">
+            <input type="checkbox" id="textPhone"> 
+            They need to be contacted using a textphone
+        </label>
+    </div>
+
+    <!-- Address -->
+
+    <%= partial "partials/questions/address", :locals => { 
+        :id         => "careForAddress",
+        :label      => "Contact address"
+    }%>
+
+</div>
+
+        <%= partial "partials/next-question" %>
+
+        <%= partial "partials/back-skip" %>
+
+</form>

@@ -1,0 +1,29 @@
+---
+question:   16
+title:      Do you know their National Insurance number?
+---
+
+<%= partial "partials/page-title" %>
+
+<p>
+    It's on their National Insurance card, benefit letter, payslip or P60.<br>
+    For example, 'VO 12 34 56 D'.
+</p>
+
+<form class="form" id="form" name="data">
+
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'caredForNino', yesToggle: '#yesToggle'} %>
+
+    <div class="js-hidden form-group-indent" id="yesToggle">
+	<%= partial "partials/questions/text-field", :locals => { 
+        :id 		=> "careForNino",
+        :label 		=> "National Insurance number",
+        :classes 	=> "form-control-1-2"
+    }%>
+	</div>
+
+    <%= partial "partials/next-question" %>
+
+    <%= partial "partials/back-skip" %>
+
+</form>

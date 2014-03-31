@@ -20,9 +20,7 @@
 # page "/path/to/file.html", :layout => :otherlayout
 
 page "index.html", :layout => :blank_template
-page "/v1/*", :layout => :v1_template
-page "/v2/*", :layout => :v2_template
-page "/v3/*", :layout => :v3_template
+page "/questions/*", :layout => :carers_template
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {

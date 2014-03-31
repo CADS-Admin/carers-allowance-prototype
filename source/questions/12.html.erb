@@ -1,0 +1,20 @@
+---
+question:   12
+title:      Have you, or a member of your family, made a claim for any benefits or pensions from the following countries?
+---
+
+<%= partial "partials/page-title" %>
+
+<p>Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden and Switzerland</p>
+
+<form class="form" id="form" name="data">
+    <div class-"form-group">
+
+        <%= partial 'partials/questions/yes-no', :locals => { :id => 'claimBenefits'} %>
+
+        <%= partial "partials/next-question" %>
+
+        <%= partial "partials/back-skip" %>
+
+    </div>
+</form>

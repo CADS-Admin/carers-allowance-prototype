@@ -1,0 +1,19 @@
+---
+question:   3
+title:      What's your date of birth?
+---
+
+<%= partial "partials/page-title" %>
+
+<p>For example 20 3 1976</p>
+
+
+<form class="form" id="form" name="data">
+
+        <%= partial 'partials/questions/date', :locals => { :id => 'yourDob'} %>
+
+        <%= partial "partials/next-question" %>
+
+        <%= partial "partials/back-skip" %>
+
+</form>
