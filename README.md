@@ -46,3 +46,58 @@ If you want to publish the prototype to GitHub Pages, there's a Rake task for th
 
 	rake publish
 
+---
+
+## Developing the prototype
+
+
+### Storing and clearing form data
+
+The prototype uses local storage to store and play back the data that users enter.
+
+When you're testing with users, remember to clear the data before each new session. Use the 'Cancel this application' link on the 'Check your answers page'.
+
+
+### Form groups
+
+Form groups are stored as a partials in the 'partials' folder.
+
+Some form groups are generic, like 'date' or 'text field'. You can pass variables into these partials to set things like id, label text and custom classes.
+
+Other form groups are unique, like 'education' and therefore don't require variables.
+
+
+### Writing form data to the screen
+
+For each form-group partial there's an equivalent 'write' partial (with the suffix '-write'). These specify how the data should be written back to the screen (for example, on the 'check your answers' page).
+
+If you look in the files you'll see how they work. The 'data-from' attribute should match the id variable passed in to the partial (actually, the 'name' attribute of the form field).
+
+
+### Toggling visibility of elements
+
+Some pages use the 'toggler' JavaScript to show form fields based on he users interaction with other form fields (usually radio buttons). Use 'data-show' and 'data-hide' attributes on the radio button to specify the elements you want to toggle.
+
+You can pass 'yesToggle' and 'noToggle' variables into the 'yes-no' partial to active the same effect.
+
+
+### Skipping questions
+
+A tally of which questions have been answered or skipped is kept in local storage. This is used to calculate overall progress and to display the correct information on the 'check answers' page.
+
+On some pages you might want to disable skipping, for example if the the users response triggers a branching of the flow.
+
+Add 'noskip: true' to the YAML front matter of pages you want to disable skipping on.
+
+
+
+
+
+
+
+
+
+
+
+
+
