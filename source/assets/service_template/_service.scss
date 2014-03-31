@@ -23,7 +23,14 @@ hr {
 }
 
 
-
+#get-help{
+  @include core-16;
+  padding-right: $gutter;
+  strong{
+    margin: 10px 0;
+    display: block;
+  }
+}
 
 
 
