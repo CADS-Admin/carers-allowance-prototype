@@ -2,6 +2,8 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
+ruby "1.9.3"
+
 gem "middleman", "~>3.2.1"
 
 # Live-reloading plugin
@@ -12,3 +14,9 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
 # For easy publishing of static site to Github Pages
 gem 'middleman-gh-pages'
+
+
+
+gem "rack-contrib"
+
+gem "puma"

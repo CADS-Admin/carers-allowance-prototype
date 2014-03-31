@@ -71,3 +71,7 @@ set :relative_links, true
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+activate :directory_indexes
+
+set :build_dir, "tmp"
