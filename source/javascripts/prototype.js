@@ -61,7 +61,7 @@ $(document).ready(function(){
 	// IF in edit mode AND current question has been previously answered 
 	// or skipped, THEN change button text and href
 
-	if (localStorage['edit'] && (answeredSkipped.indexOf(currentQuestion) > -1)){
+	if (localStorage['edit'] == true && (answeredSkipped.indexOf(currentQuestion) > -1)){
 		$('.next.button')
 			.text('Update this answer')
 			.attr("href", 'check-answers')
@@ -94,27 +94,34 @@ $(document).ready(function(){
 	// If a question is skipped, add the question number to the 'skipped' 
 	// array in local storage.
 	$('[data-skip]').click(function(){
-		skipped.push($(this).data('skip'));
-		localStorage['skipped'] = JSON.stringify(skipped);
+		var question = $(this).data('skip');
+
+		if (skipped.indexOf(question) == -1){
+			skipped.push(question);
+			localStorage['skipped'] = JSON.stringify(skipped);
+		}
 	});
 
 	// If a question is answered, add the question number to the 'answered' 
 	// array in local storage.
 	$('[data-answer]').click(function(){
 		var answer = $(this).data('answer');
-		answered.push(answer);
-		localStorage['answered'] = JSON.stringify(answered);
 
-		// Remove answered questions from skipped list
+		if (answered.indexOf(answer) == -1){
+			answered.push(answer);
+			localStorage['answered'] = JSON.stringify(answered);
 
-		// Skipped questions can become answered, but answered questions
-		// STAY answered
+			// Remove answered questions from skipped list
 
-		var newSkipped = skipped;
-		var index = newSkipped.indexOf(answer);
-		if (index > -1) {
-		    newSkipped.splice(index, 1);
-		    localStorage["skipped"] = JSON.stringify(newSkipped)
+			// Skipped questions can become answered, but answered questions
+			// STAY answered
+
+			var newSkipped = skipped;
+			var index = newSkipped.indexOf(answer);
+			if (index > -1) {
+			    newSkipped.splice(index, 1);
+			    localStorage["skipped"] = JSON.stringify(newSkipped)
+			}
 		}
 	});
 
@@ -173,11 +180,13 @@ $(document).ready(function(){
 	// SUBMIT APPLICATION
 
 	if (answered.length == totalQuestions){
+		$('h1.heading-36').text('Now submit your application');
 		$('.continue.button')
 			.text('Submit your application')
 			.attr("href", 'done')
 			.before('<p>By sumitting this application you are confirming that the above information is true</p>');
-		$('.question-status').append('<p>Check your answers below before submitting your application.</p>')
+		$('.question-status p').text('Check your answers below before submitting your application.');
+		$('.continue.back').attr("href", totalQuestions);
 	}
 
 
