@@ -1,22 +1,39 @@
 ---
 question:   4
-title:      What's your National Insurance number?
+title:      What is your nationality and residency?
 ---
 
 <%= partial "partials/page-title" %>
 
-<p>
-    It's on your National Insurance card, benefit letter, payslip or P60.<br>
-    For example, 'VO 12 34 56 D'.
-</p>
 
 <form class="form" id="form" name="data">
 
+<!-- Nationality -->
+
+    <h2 class="section-heading">Nationality</h2>
+
+	<p class="form-hint">As shown on your current passport</p>
+
     <%= partial "partials/questions/text-field", :locals => { 
-        :id 		=> "yourNino",
-        :label 		=> "National Insurance number",
-        :classes 	=> "form-control-1-2"
+        :id 		=> "yourNationality",
+        :label 		=> "Nationality",
+        :hideLabel	=> true
     }%>
+
+
+
+<!-- Residency -->
+
+	<h2 class="section-heading">Do you normally live in England, Scotland or Wales?</h2>
+
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'ukResident', noToggle: '#noToggle'} %>
+
+    <div class="js-hidden form-group form-group-indent" id="noToggle">
+    	<label class="form-control-label" for="other-country">Which country do you normally live in?</label>
+    	<input type="text" class="form-control" id="other-country">
+	</div>
+
+
 
     <%= partial "partials/next-question" %>
 

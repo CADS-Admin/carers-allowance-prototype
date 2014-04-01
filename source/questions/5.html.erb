@@ -1,37 +1,23 @@
 ---
 question:   5
-title:      How can we contact you?
+title:      Have you been away for more than 52 weeks in the 3 years before your claim date?
 ---
 
 <%= partial "partials/page-title" %>
 
-<p>We might need to do this to ask for more information. The faster we can contact you, the faster we can process your application.</p>
+<p>This could be one trip, or a number of trips adding up to 52 weeks.
+Your claim date is <%= partial "partials/claim-date" %>. 
+</p>
 
 <form class="form" id="form" name="data">
+    <div class-"form-group">
 
-    <!-- Phone number -->
+        <%= partial 'partials/questions/yes-no', :locals => { :id => 'away52Weeks'} %>
 
-    <div class="form-group">
-        <label class="form-group-label" for="yourTelNo">Phone number</label>
-        <div class="form-hint">Landline or mobile number</div>
-        
-        <input type="text" class="form-control form-control-1-2" id="yourTelNo" name="yourTelNo">
+        <%= partial "partials/next-question" %>
 
-        <label for="useTextPhone" class="form-radio">
-            <input type="checkbox" id="useTextPhone" name="useTextPhone"> 
-            I need to be contacted using a textphone
-        </label>
+        <%= partial "partials/back-skip" %>
+
+
     </div>
-
-    <!-- Address -->
-
-    <%= partial "partials/questions/address", :locals => { 
-        :id         => "yourAddress",
-        :label      => "Home address"
-    }%>
-
-    <%= partial "partials/next-question" %>
-
-    <%= partial "partials/back-skip" %>
-
 </form>

@@ -1,4 +1,4 @@
 <div class="form-group">
-    <label class="form-control-label" for="<%= locals[:id] %>"><%= locals[:label] %></label>
+    <label class="form-control-label<% if locals[:hideLabel] == true %> visuallyhidden<% end %>" for="<%= locals[:id] %>"><%= locals[:label] %></label>
     <input type="text" class="form-control <%= locals[:classes] %>" id="<%= locals[:id] %>" name="<%= locals[:id] %>">
 </div>

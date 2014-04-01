@@ -11,22 +11,34 @@ layout:  carers_wide_template
 
 <p><a class="continue back" href="">Back</a></p>
 
-<h3 class="heading-24">Your answers</h3>
-
+<h3 class="heading-24">Your claim</h3>
 <table class="check-answers">
     <%= partial 'partials/questions/answer', :locals => { q:  1, title: 'Claim date', type: 'date', id: 'claimDate' } %>
+</table>
+<h3 class="heading-24">Your personal details</h3>
+<table class="check-answers">
     <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'Name', type: 'text-field', id: 'yourName' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  3, title: 'Date of birth', type: 'date', id: 'yourDob' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  4, title: 'National Insurance number', type: 'text-field', id: 'yourNino' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  5, title: 'Contact details', type: 'address', id: 'yourAddress' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Partner living with you since your claim date?', type: 'yes-no', id: 'partner' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'State pension', type: 'yes-no', id: 'statePension' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'Nationality', type: 'text-field', id: 'yourNationality' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  9, title: 'Normally live in England, Scotland or Wales?', type: 'yes-no', id: 'ukResident' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  10, title: 'Away for more than 52 weeks in the 3 years before your claim date?', type: 'yes-no', id: 'away52Weeks' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  11, title: 'Get benefits or pensions from EEA or Switzerland?', type: 'yes-no', id: 'getBenefits' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Claimed for benefits or pensions from EEA or Switzerland?', type: 'yes-no', id: 'claimBenefits' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  13, title: 'Working in or paying insurance to EEA or Switzerland?', type: 'yes-no', id: 'workInsurance' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'National Insurance number', type: 'text-field', id: 'yourNino' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'Date of birth', type: 'date', id: 'yourDob' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'Partner living with you since your claim date?', type: 'yes-no', id: 'partner' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'State pension', type: 'yes-no', id: 'statePension' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  3, title: 'Contact details', type: 'address', id: 'yourAddress' } %>
+</table>
+<h3 class="heading-24">Nationality, residency and time abroad</h3>
+<table class="check-answers">
+    <%= partial 'partials/questions/answer', :locals => { q:  4, title: 'Nationality', type: 'text-field', id: 'yourNationality' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  4, title: 'Normally live in England, Scotland or Wales?', type: 'yes-no', id: 'ukResident' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  5, title: 'Away for more than 52 weeks in the 3 years before your claim date?', type: 'yes-no', id: 'away52Weeks' } %>
+    </table>
+<h3 class="heading-24">European Economic Area states and Switzerland</h3>
+<table class="check-answers">
+    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Get benefits or pensions from EEA or Switzerland?', type: 'yes-no', id: 'getBenefits' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Claimed for benefits or pensions from EEA or Switzerland?', type: 'yes-no', id: 'claimBenefits' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Working in or paying insurance to EEA or Switzerland?', type: 'yes-no', id: 'workInsurance' } %>
+
+
+
+
     <%= partial 'partials/questions/answer', :locals => { q:  14, title: 'Name', type: 'text-field', id: 'careForName' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  15, title: 'Date of birth', type: 'date', id: 'careForDob' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  16, title: 'National insurance number', type: 'text-field', id: 'careForNino' } %>
