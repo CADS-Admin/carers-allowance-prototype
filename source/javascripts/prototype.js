@@ -113,7 +113,6 @@ $(document).ready(function(){
 		var newSkipped = skipped;
 		var index = newSkipped.indexOf(answer);
 		if (index > -1) {
-			alert('woo');
 		    newSkipped.splice(index, 1);
 		    localStorage["skipped"] = JSON.stringify(newSkipped)
 		}
@@ -171,10 +170,14 @@ $(document).ready(function(){
 
 
 	// ------------------------------------------------------------------
-	// DON'T LET USER SUBMIT APPLICATION UNTIL ALL QUESTIONS ARE ANSWERED
+	// SUBMIT APPLICATION
 
-	if ($('.submit-application') && skipped.length > 0){
-		$('.submit-application').remove();
+	if (answered.length == totalQuestions){
+		$('.continue.button')
+			.text('Submit your application')
+			.attr("href", 'done')
+			.before('<p>By sumitting this application you are confirming that the above information is true</p>');
+		$('.question-status').append('<p>Check your answers below before submitting your application.</p>')
 	}
 
 
