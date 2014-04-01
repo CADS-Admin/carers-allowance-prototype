@@ -1,7 +1,3 @@
-<%
-# if req.params["currentPage"].to_i > locals[:q]
-%>
-
 <tr>
     <td class="question"><%= locals[:q] %></td>
     <td class="title"><%= locals[:title] %></td>
@@ -25,10 +21,6 @@
         <% end %>
     </td>
     <td>
-        <a href="<%= locals[:q] %>?edit=true&currentPage=<%= req.params["currentPage"] %>">Change this</a>
+        <a class="edit-link" href="<%= locals[:q] %>">Change this</a>
     </td>
 </tr>
-
-<%
-# end
-%>

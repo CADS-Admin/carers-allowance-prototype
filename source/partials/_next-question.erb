@@ -1,21 +1,9 @@
 <%
 
-if req.params["currentPage"]
-  page = req.params["currentPage"].to_i
-else
-  page = current_page.data.question
-end
-
-
-if req.params["edit"]
-	# User is editing question from the 'Check answers' page
-	buttonText = 'Update this answer'
-	href = 'check-answers?currentPage=' + page.to_s
-
-elsif current_page.data.question == data.claim.totalQuestions
+if current_page.data.question == data.claim.totalQuestions
 	# User is on the last question
 	buttonText = 'Check your answers'
-	href = 'check-answers?currentPage=' + (current_page.data.question + 1).to_s
+	href = 'check-answers'
 
 else
 	buttonText = 'Go to next question'
@@ -26,6 +14,6 @@ end
 
 <div class="form-group">
        <br><br>
-    <a class="button" data-answer="<%= current_page.data.question %>" href="<%= href %>"><%= buttonText %></a>
+    <a class="next button" data-answer="<%= current_page.data.question %>" href="<%= href %>"><%= buttonText %></a>
 </div>
 

@@ -3,6 +3,8 @@
 // This code is not intended for the live service
 // The functionality is creates should be recreated using producton-ready code
 
+
+
 $(document).ready(function(){
 
 	// ------------------------------------------------------------------
@@ -15,10 +17,15 @@ $(document).ready(function(){
 
     if (!localStorage["answered"] ) {
 		localStorage["answered"] = JSON.stringify([]);
+    }
+
+    if (!localStorage["edit"] ) {
+		localStorage["edit"] = false;
     } 
 
 	var answered = JSON.parse(localStorage['answered']);
 	var skipped = JSON.parse(localStorage['skipped']);
+	var edit = JSON.parse(localStorage['edit']);
 
 
 
@@ -31,6 +38,37 @@ $(document).ready(function(){
 	// Apply Select 2 to country selectors
 	$(".js-country").select2();
 
+
+
+	// ------------------------------------------------------------------
+	// 'CONTINUE WITH APPLICATION' LINK
+
+	// The right page is the question after the highest answered 
+	// or skipped question
+
+	answeredSkipped = answered.concat(skipped)
+	var i = answeredSkipped.indexOf(Math.max.apply(Math, answeredSkipped));
+	$('.continue').attr("href", answeredSkipped[i] + 1);
+
+
+	$('.edit-link').click(function(){
+		localStorage['edit'] = true;
+	});
+
+
+	var currentQuestion = $('[data-answer]').data('answer');
+
+	// IF in edit mode AND current question has been previously answered 
+	// or skipped, THEN change button text and href
+
+	if (localStorage['edit'] && (answeredSkipped.indexOf(currentQuestion) > -1)){
+		$('.next.button')
+			.text('Update this answer')
+			.attr("href", 'check-answers')
+			.click(function(){
+				localStorage['edit'] = false;
+			});
+	}
 
 
 	// ------------------------------------------------------------------

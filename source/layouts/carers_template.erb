@@ -29,21 +29,15 @@
         <div class="inner-block">
 
           <%
-            if req.params["currentPage"]
-              page = req.params["currentPage"].to_i
-            else
-              page = current_page.data.question
-            end
-
-            percentage = ((page - 1) * 100 / data.claim.totalQuestions).round()
+            percentage = ((current_page.data.question - 1) * 100 / data.claim.totalQuestions).round()
           %>
 
-          <% if page > 1 %>
+          <% if current_page.data.question > 1 %>
 
           <h2 class="heading-24"><span class="percentage-complete"><%= percentage %></span>% complete</h2>
 
           <ul class="question-status">
-            <li><a href="check-answers?currentPage=<%= current_page.data.question %>">Check your answers</a></li>
+            <li><a href="check-answers">Check your answers</a></li>
           </ul>
 
           <% end %>
