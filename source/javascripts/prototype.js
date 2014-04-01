@@ -67,7 +67,18 @@ $(document).ready(function(){
 		answered.push(answer);
 		localStorage['answered'] = JSON.stringify(answered);
 
-		// TO DO: Remove answered questions from skipped list
+		// Remove answered questions from skipped list
+
+		// Skipped questions can become answered, but answered questions
+		// STAY answered
+
+		var newSkipped = skipped;
+		var index = newSkipped.indexOf(answer);
+		if (index > -1) {
+			alert('woo');
+		    newSkipped.splice(index, 1);
+		    localStorage["skipped"] = JSON.stringify(newSkipped)
+		}
 	});
 
 
