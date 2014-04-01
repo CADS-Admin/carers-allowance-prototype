@@ -180,11 +180,11 @@ $(document).ready(function(){
 	// SUBMIT APPLICATION
 
 	if (answered.length == totalQuestions){
-		$('h1.heading-36').text('Now submit your application');
+		$('.submit-application').text('Now submit your application');
 		$('.continue.button')
 			.text('Submit your application')
 			.attr("href", 'done')
-			.before('<p>By sumitting this application you are confirming that the above information is true</p>');
+			.before('<p>By sumitting this application you are confirming that the above information is true.</p>');
 		$('.question-status p').text('Check your answers below before submitting your application.');
 		$('.continue.back').attr("href", totalQuestions);
 	}
