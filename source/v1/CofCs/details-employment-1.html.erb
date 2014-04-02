@@ -1,0 +1,170 @@
+<style>
+.heading-temp {
+	font-size: 2.4rem!important;
+	font-weight: 600!important;;
+	line-height: 1.2em!important;;
+	padding: 0.12em 0 1em!important;;
+	position: relative!important;;
+	margin: 0!important;
+}
+</style>
+
+<h1>Report changes - employment</h1>     
+
+<fieldset class="form-elements">
+
+<ul id="details">
+	<li>	
+	<p class="heading-temp">Are you still caring 35 hours or more each week?</p>		       
+		<ul class="radio" id="still-caring">
+			<li>
+				<input type="radio" value="still-caring-yes" name="still-caring" id="still-caring-yes">
+				<label for="still-caring-yes">Yes</label>
+			</li>			    
+			<li>
+				<input type="radio" value="still-caring-no" name="still-caring" id="still-caring-no">
+				<label for="still-caring-no">No</label>
+			</li>
+		</ul>
+	</li>
+	
+</ul>
+
+<ul>
+	
+	<li>
+	<p class="heading-temp">Has this work started yet?</p>
+		<ul id="started-job" class="radio">
+	        <li>
+	            <input type="radio" value="yes" name="started-job" id="started-job-yes">
+	            <label for="started-job-yes">Yes</label>
+	        </li>
+	        <li>
+	            <input type="radio" value="no" name="started-job" id="started-job-no">
+	            <label for="started-job-no">No</label>
+	        </li>
+		</ul>
+	</li>
+	<li style="display: none;" class="other-detail grouped">
+		<ul>
+			<li>		
+				<p>When <span class="past-present">did</span> you start this work?</p>
+				<p class="helper">For example, 27 06 2013</p>
+				<%= partial "partials/ui-date" %>
+				<p style="font-size: 1px">&nbsp;</p>
+			</li>
+			<li class="yes">
+				<p>Has this work finished?</p>
+				<ul id="finished-job" class="radio">
+			        <li>
+			            <input type="radio" value="yes" name="finished-job" id="finished-job-yes">
+			            <label for="finished-job-yes">Yes</label>
+			        </li>
+			        <li>
+			            <input type="radio" value="no"  name="finished-job" id="finished-job-no">
+			            <label for="finished-job-no">No</label>
+			        </li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	
+	
+	<li>			       
+		<p class="heading-temp">What type of work is this?</p>
+		<p class="helper">For example, you are usually self-employed if you work for yourself, or have a business</p>
+		<ul class="radio-block" id="type-employment">
+			<li>
+				<input type="radio" value="type-employment-yes" name="type-employment" id="type-employment-yes">
+				<label for="type-employment-yes">Employed</label>
+			</li>			    
+			<li>
+				<input type="radio" value="type-employment-no" name="type-employment" id="type-employment-no">
+				<label for="type-employment-no">Self-employed</label>
+			</li>
+		</ul>
+	</li>	
+	
+	<li class="other-detail-yes grouped" style="display: none;">
+		<ul>	
+			<!--<li>
+				<label for="employers-name">Employer's name</label>	
+				<input type="text" autocomplete="off" maxlength="60" value="" name="employers-name" id="employers-name">
+			</li>-->
+			<li>
+			<label for="employers-name">Employer's name and address</label>	
+			<%= partial "partials/ui-address" %>
+			</li>
+			<li>
+				<p>Postcode <em>(optional)</em></p> 
+				<input autocomplete="off" class="postcode" id="" name="" type="tel" value="" style="width: 150px;">
+			</li>
+			<li>
+				<label for="6b3c442979a26ee0fa217015282f5c85">Employer's contact number <em>(optional)</em></label>
+				<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="6b3c442979a26ee0fa217015282f5c85" id="6b3c442979a26ee0fa217015282f5c85">
+			</li>
+			<li>
+				<label for="payroll-number">Payroll or employee number <em>(optional)</em></label>
+				<!--<p class="helper">We will use this if we contact your employer</p>-->
+				<input type="text" autocomplete="off" maxlength="16" value="" name="payroll-number" id="payroll-number">			
+			</li>
+		</ul>
+	</li>
+	<li class="other-detail-no grouped" style="display: none;">
+		<ul>	
+			<li>
+				<label for="employers-name">Type of work or business</label>	
+				<input type="text" autocomplete="off" maxlength="60" value="" name="employers-name" id="employers-name">
+			</li>
+		</ul>
+	</li>
+	
+</ul>
+
+
+</fieldset>
+
+
+<div class="form-steps">
+	<a href="change.html" class="button secondary">Back</a>
+	<a href="details-employment-2.html" class="button" id="continue">Continue</a>
+</div><!-- / form steps -->
+
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+
+	$('#type-employment-yes').click(function(){
+		$(this).parents('ul li').next('.other-detail-yes').show();
+		$('.other-detail-no').hide();
+	});
+	$('#type-employment-no').click(function(){
+		$('.other-detail-no').show();
+		$(this).parents('ul li').next('.other-detail-yes').hide();	
+	});
+	
+	$('#started-job-yes').click(function(){
+		$(this).parents('ul li').next('.other-detail').show();
+		$('.past-present').text("did");
+		$('.yes').show();	
+	});
+	$('#started-job-no').click(function(){
+		$(this).parents('ul li').next('.other-detail').show();
+		$('.past-present').text("will");
+		$('.yes').hide();	
+		$('#continue').attr('href','details-employment-3.html');	
+	});
+
+	$('#finished-job-yes').click(function(){
+		$('#continue').attr('href','details-employment-2.html');
+	});
+	$('#finished-job-no').click(function(){
+		$('#continue').attr('href','details-employment-4.html');
+	});
+	
+});
+
+</script>

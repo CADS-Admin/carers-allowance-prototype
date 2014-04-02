@@ -1,0 +1,116 @@
+<style>
+.heading-temp {
+	font-size: 2.4rem!important;
+	font-weight: 600!important;;
+	line-height: 1.2em!important;;
+	padding: 0.12em 0 1em!important;;
+	position: relative!important;;
+	margin: 0!important;
+}
+</style>
+
+<h1>Report changes - employment</h1>     
+
+<fieldset class="form-elements">
+
+<!-- ///////// Scenario 2 - Employment NOT started  ///////// -->
+
+<ul>
+	<li class="currency"> 
+		<p class="heading-temp">How much do you expect to be paid?</p>
+		<input type="tel" id="9789e2b31b57de8cf1640840d6a218d5" name="9789e2b31b57de8cf1640840d6a218d5" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" title="The amount must be in the format 12 or 12.5 or 12.55" value="" maxlength="60" autocomplete="off">
+	</li>	
+	<li>
+		<p class="heading-temp">How often will you be paid?</p>
+		<select id="how-often-paid" name="how-often-paid" selectwithother="true">  
+	    	<option value="">Please select</option> 
+	    	<option value="weekly">Weekly</option>  
+	    	<option value="fortnightly">Fortnightly</option>   
+	    	<option value="fourWeekly">Four-weekly</option>
+	    	<option value="monthly">Monthly</option>
+	        <option value="other">Other</option>
+		</select>
+	</li>
+	<li class="grouped other-questions" style="display: none;">
+		<ul>
+			<li>
+				<p id="same-amount-label">Are you expecting to get the same amount each week?</p>
+				<ul class="radio" id="195e794e8cf852d4e6744b01a7b182d7cb2b348be899b163064a7c7e19d8a50a">
+					<li>
+					    <input type="radio" id="195e794e8cf852d4e6744b01a7b182d715823206cd78b8b2f2daebc27fad3cad" name="195e794e8cf852d4e6744b01a7b182d7cb2b348be899b163064a7c7e19d8a50a" value="yes">
+					    <label for="195e794e8cf852d4e6744b01a7b182d715823206cd78b8b2f2daebc27fad3cad">Yes</label>
+					</li>
+					
+					<li>
+					    <input type="radio" id="195e794e8cf852d4e6744b01a7b182d7ad275485ec9bc9b9292b8e5a6e967866" name="195e794e8cf852d4e6744b01a7b182d7cb2b348be899b163064a7c7e19d8a50a" value="no">
+					    <label for="195e794e8cf852d4e6744b01a7b182d7ad275485ec9bc9b9292b8e5a6e967866">No</label>
+					</li>
+				</ul>
+			</li>
+		    <!--<li>
+		    	<label for="when-get-paid">When do you get paid?</label>
+		    	<p id="when-helper" class="helper right">For example, every Friday</p>
+		        <input type="text" id="when-get-paid" name="when-get-paid" autocomplete="off" maxlength="60">   
+	        </li>-->	    
+		</ul>
+	</li>
+
+</ul>
+
+</fieldset>
+
+<fieldset class="form-elements">
+<legend>Do you need provide any additional information?</legend>
+<ul>
+	<%= partial "partials/ui_circs-tell-us-more" %>
+
+</ul>
+
+
+</fieldset>
+
+
+<div class="form-steps">
+	<a href="details-employment-1.html" class="button secondary">Back</a>
+	<a href="declaration.html" class="button" id="continue">Continue</a>
+</div><!-- / form steps -->
+
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+	$('#how-often-paid').change(function(){
+		$('.other-questions').hide();
+		
+		if ($(this).val() == 'other') {
+			$(this).parents().next('.other-detail').show('medium');	
+		}
+		if ($(this).val() == 'weekly') {
+			$('.other-questions').show('medium');
+			$('#same-amount-label').text("Are you expecting to be paid the same amount each week?");
+			//$('#when-helper').text("For example, every Friday");
+		}
+		if ($(this).val() == 'fortnightly') {
+			$('.other-questions').show('medium');
+			$('#same-amount-label').text("Are you expecting to be paid the same amount each fortnight?");
+			//$('#when-helper').text("For example, every second Thursday");
+		}
+		if ($(this).val() == 'fourWeekly') {
+			$('.other-questions').show('medium');
+			$('#same-amount-label').text("Are you expecting to be paid the same amount each time?");
+			//$('#when-helper').text("For example, every fourth Thursday");
+		}
+		if ($(this).val() == 'monthly') {
+			$('.other-questions').show('medium');
+			$('#same-amount-label').text("Are you expecting to be paid the same amount each month?");
+			//$('#when-helper').text("For example, the last day of the month");
+		}	
+	});
+	
+});
+
+</script>
+
+</script>
