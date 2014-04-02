@@ -26,7 +26,7 @@ header {
 		max-width: 980px;
 		#logo {
 			top: 3px;
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 1024px) 
 				left: 1em;
 			}
 		}

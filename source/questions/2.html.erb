@@ -1,6 +1,6 @@
 ---
 question:   2
-title:      What are your details?
+title:      Your details
 ---
 
 <%= partial "partials/page-title" %>
@@ -11,17 +11,21 @@ title:      What are your details?
 
 <!-- Name -->
 
-    <h2 class="section-heading">Name</h2>
+    <h2 class="section-heading">Full name</h2>
+    
+    <p class="form-hint">
+        Enter as shown on your birth certificate or passport    
+    </p>
 
     <%= partial 'partials/questions/text-field', :locals => { 
         :id => 'yourName',
-        :label => "Your full name, as shown on your birth certificate or passport"
+        :hideLabel  => true
     }%>
 
-    <%= partial 'partials/questions/text-field', :locals => { 
+    <!--<%= partial 'partials/questions/text-field', :locals => { 
         :id => 'yourOtherNames',
         :label => "Any other names you've had in the last 12 months"
-    }%>
+    }%>-->
 
 
 <!-- National Insurance number -->
@@ -45,9 +49,9 @@ title:      What are your details?
 
     <h2 class="section-heading">Date of birth</h2>
 
-    <p class="form-hint">For example 20 3 1976</p>
 
-    <%= partial 'partials/questions/date', :locals => { :id => 'yourDob'} %>
+
+    <%= partial 'partials/questions/date', :locals => { :id => 'yourDob', :hint => 'For Example, 20 03 1976'} %>
 
 
 

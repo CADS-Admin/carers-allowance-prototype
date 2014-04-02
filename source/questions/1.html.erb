@@ -7,15 +7,14 @@ noskip:		true
 <%= partial "partials/page-title" %>
 
 
-  <p>This is normally the date you became eligible for Carer's Allowance.</p>
-  <p>Note that Carer's Allowance can only be back-dated from up to 3 months before the date you submit this application.</p>
+  <p>Entitlement to Carer's Allowance can normally be backdated for up to 3 months but in some circumstances this can be longer. For further information, see the <a href="#">help guide</a>.</p>
 
 
 <form class="form" id="form" name="data">
 
         <h2 class="form-group-label">Claim date</h2>
 
-        <%= partial 'partials/questions/date', :locals => { :id => 'claimDate'} %>
+        <%= partial 'partials/questions/date', :locals => { :id => 'claimDate', :hint => 'For Example, 02 01 2014'} %>
 
         <%= partial "partials/next-question" %>
 
