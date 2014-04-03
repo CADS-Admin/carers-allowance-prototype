@@ -30,10 +30,18 @@
 		</ul>
 	</li>-->
 	<li class="currency"> 
-		<p class="heading-temp">How much are you usually paid?</p>
-		<p class="helper">If this is a new job, enter what you expect to be paid</p>
+		<p class="heading-temp">How much were you last paid?</p>
+		<!--<p class="helper">If this is a new job, enter what you expect to be paid</p>-->
 		<input type="tel" id="9789e2b31b57de8cf1640840d6a218d5" name="9789e2b31b57de8cf1640840d6a218d5" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" title="The amount must be in the format 12 or 12.5 or 12.55" value="" maxlength="60" autocomplete="off">
+		<p style="margin: 5px 0 10px 0;"><input type="checkbox" style="margin: 0 5px 0 0;" id="dont-know" name="dont-know" value="true" secondary="true">
+		<label style="font-size: 1.7rem; display: inline-block;" for="use-my-address">I haven't been paid yet</label></p>
+		<p class="helper" style="display: none;" id="dont-know-help">Tell us what you expect to be paid instead</p>
 	</li>	
+	<!--<li>
+		<p class="heading-temp">What is included in this pay? <em>(optional)</em></p>
+		<p class="helper"> For example, holiday pay, sick pay, or any redundancy payments</p>
+		<input name="e7ec1d87a0e6033787a1597e568eadac" id="e7ec1d87a0e6033787a1597e568eadac" type="text">
+	</li>-->
 	<li>
 		<p class="heading-temp">How often are you paid?</p>
 		<select id="how-often-paid" name="how-often-paid" selectwithother="true">  
@@ -68,6 +76,65 @@
 	        </li>-->	    
 		</ul>
 	</li>
+	
+</ul>
+
+</fieldset>
+
+<fieldset class="form-elements">
+
+<legend>Pensions and expenses</legend>
+
+<ul>
+	
+	<li>	
+		<ul>
+			<li>
+				<p>Do you pay into a pension or have any work related expenses?</p>	
+				<p class="helper right">For example, any work expenses you have have to pay for, or pension payments you make. Include how much you pay, and how often.</p>         
+				<ul id="additional" class="radio">
+			        <li>
+			            <input type="radio" name="additional-expenses" id="additional-expenses-yes">
+			            <label for="additional-expenses-yes">Yes</label>
+			        </li>
+			        <li>
+			            <input type="radio" name="additional-expenses" id="additional-expenses-no">
+			            <label for="additional-expenses-no">No</label>
+			        </li>
+				</ul>
+			</li>
+			<li style="display:none;" class="other-detail">
+				<label style="display:none;" for="additional-expenses-details">Details</label>
+				<textarea autocomplete="off" maxlength="2000" helper="1000 characters left" placeholder="Please specify…" name="additional-expenses-details" id="additional-expenses-details"></textarea>
+				<p class="helper right">1000 characters left</p>
+			</li>
+		</ul>		
+	</li>
+	<li>	
+		<ul>
+			<li>
+				<p>Do you have any care costs for this work?</p>	
+				<p class="helper right">For example, childcare costs or paying someone else to provide care</p>         
+				<ul id="additional-care" class="radio">
+			        <li>
+			            <input type="radio" name="additional-care" id="additional-care-yes">
+			            <label for="additional-care-yes">Yes</label>
+			        </li>
+			        <li>
+			            <input type="radio" name="additional" id="additional-care-no">
+			            <label for="additional-care-no">No</label>
+			        </li>
+				</ul>
+			</li>
+			<li style="display:none;" class="other-detail">
+				<label style="display:none;" for="additional-details">Detail</label>
+				<textarea autocomplete="off" maxlength="2000" helper="1000 characters left" placeholder="Please specify…" name="additional-details" id="additional-details"></textarea>
+				<p class="helper right">1000 characters left</p>
+			</li>
+		</ul>		
+	</li>
+	
+	
 
 </ul>
 
@@ -123,8 +190,14 @@ $(document).ready(function() {
 		}	
 	});
 	
+	$('#dont-know').click(function(){
+		$('#dont-know-help').show();
+	});
+	
+	// dont-know
+	// dont-know-helper
+	
 });
 
-</script>
 
 </script>
