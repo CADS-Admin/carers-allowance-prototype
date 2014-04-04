@@ -75,30 +75,32 @@ layout:  carers_wide_template
 </table>
 
 <table class="check-answers">    
-<h3 class="heading-24">Other Money</h3>
+<h3 class="heading-24">Statutory pay, benefits and payments</h3>
+	<%= partial 'partials/questions/answer', :locals => { q:  13, title: 'Have you received any Statutory Sick Pay (SSP) since your claim date?', type: 'yes-no', id: 'statutory' } %>
+	<%= partial 'partials/questions/answer', :locals => { q:  13, title: 'Have you received any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since your claim date?', type: 'yes-no', id: 'otherStatutory' } %>
+	<%= partial 'partials/questions/answer', :locals => { q:  13, title: 'Have you claimed or received any other benefits since your claim date?', type: 'yes-no', id: 'claimedBenefits' } %>
+	<%= partial 'partials/questions/answer', :locals => { q:  13, title: 'Have you received payments for the person you care for or any other person since your claim date?', type: 'yes-no', id: 'recievedPayments' } %>
+</table>
+<table class="check-answers">    
+<h3 class="heading-24">Pay details</h3>
+<!-- How would you like to get paid? -->
+<!-- How often do you want to get paid? -->
 
+</table>
+<table class="check-answers">    
+<h3 class="heading-24">Additional information</h3>
+	<%= partial 'partials/questions/answer', :locals => { q:  15, title: 'Do you want to tell us any additional information about your claim?', type: 'yes-no', id: 'additional' } %>
 </table>
 
 <div class="form-group">
 <br>
 <br>
 
-<!--
-
-<div class="submit-application">
-    <p>
-        By submitting your application you are confirming that the above information is true.
-    </p>
-
-    <a class="button" href="confirmation.html">Submit your application</a>
-</div>
--->
-
 <a class="continue button" href="">Continue with your application</a>
 
 
 <ul class="form-group">
-    <li><a href="1" class="cancel-application">Cancel this application</a></li>
+    <!--<li><a href="1" class="cancel-application">Cancel this application</a></li>-->
     <li><a href="#">Print this page</a></li>
     <li><a href="#">Email this page</a></li>
 </ul>

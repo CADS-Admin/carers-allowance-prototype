@@ -180,12 +180,12 @@ $(document).ready(function(){
 	// SUBMIT APPLICATION
 
 	if (answered.length == totalQuestions){
-		$('.submit-application').text('Now submit your application');
+		$('.submit-application').text('Your application');
 		$('.continue.button')
-			.text('Submit your application')
-			.attr("href", 'done')
-			.before('<p>By sumitting this application you are confirming that the above information is true.</p>');
-		$('.question-status p').text('Check your answers below before submitting your application.');
+			.text('Continue to consent and declaration')
+			.attr("href", 'consent')
+			.before('<p>Make sure you check all your information is correct before you continue.</p>');
+		$('.question-status p').text('Check your answers before completing your application.');
 		$('.continue.back').attr("href", totalQuestions);
 	}
 
