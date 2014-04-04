@@ -49,20 +49,34 @@ layout:  carers_wide_template
 
 <h3 class="heading-24">Details of the person you care for</h3>
 <table class="check-answers">
-   	<%= partial 'partials/questions/answer', :locals => { q:  18, title: 'Relationship to you', type: 'text-field', id: 'careRelationship'} %>
-    <%= partial 'partials/questions/answer', :locals => { q:  14, title: 'Name', type: 'text-field', id: 'careName' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  15, title: 'Date of birth', type: 'date', id: 'careDob' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  16, title: 'National insurance number', type: 'text-field', id: 'careNino' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  17, title: 'Contact details', type: 'address', id: 'careAddress' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  19, title: 'Do they get Armed Forces Independence Payment?', type: 'yes-no', id: 'afip'} %>
-    <%= partial 'partials/questions/answer', :locals => { q:  20, title: 'Do you spend more than 35 hours a week caring for them?', type: 'yes-no', id: 'hrs35' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  21, title: 'Date started care', type: 'date', id: 'careStartDate'} %>
+   	<%= partial 'partials/questions/answer', :locals => { q:  8, title: 'What is their relationship to you?', type: 'text-field', id: 'careRelationship'} %>
+    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'Name', type: 'text-field', id: 'careName' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'Date of birth', type: 'date', id: 'careDob' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'National insurance number', type: 'text-field', id: 'careNino' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'Contact details', type: 'address', id: 'careAddress' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'Do they get Armed Forces Independence Payment?', type: 'yes-no', id: 'afip'} %>
+</table>
+   
+<h3 class="heading-24">The care you provide</h3>
+<table class="check-answers">
+    <%= partial 'partials/questions/answer', :locals => { q:  9, title: 'Do you spend more than 35 hours a week caring?', type: 'yes-no', id: 'hrs35' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  9, title: 'When did you start caring for 35 hours a week or more?', type: 'date', id: 'careStartDate'} %>
+    <%= partial 'partials/questions/answer', :locals => { q:  10, title: 'Have you had any breaks from caring?', type: 'yes-no', id: 'breaks'} %>
 </table>   
     
 <table class="check-answers">    
-    <%= partial 'partials/questions/answer', :locals => { q:  22, title: 'In education since claim date?', type: 'education'} %>
-    <%= partial 'partials/questions/answer', :locals => { q:  23, title: 'Self employed since 18 December 2013?', type: 'self-employment' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  24, title: 'Employed since 25 June 2013?', type: 'employment' } %>
+<h3 class="heading-24">Education</h3>
+    <%= partial 'partials/questions/answer', :locals => { q:  11, title: 'Have you been on a course of education since your claim date?', type: 'education'} %>
+</table>
+<table class="check-answers">    
+<h3 class="heading-24">Employment</h3>
+    <%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Self employed since 18 December 2013?', type: 'self-employment' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Employed since 25 June 2013?', type: 'employment' } %>
+</table>
+
+<table class="check-answers">    
+<h3 class="heading-24">Other Money</h3>
+
 </table>
 
 <div class="form-group">

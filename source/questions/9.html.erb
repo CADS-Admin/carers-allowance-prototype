@@ -9,18 +9,18 @@ title: About the care you provide
 
 <!-- 35 hours a week -->
 
-	<h2 class="section-heading">Do you spend at least 35 hours a week caring for [ Name ]?</h2>
+	<h2 class="section-heading">Do you spend at least 35 hours a week caring for <br /><%= partial 'partials/questions/text-field-write', :locals => { id: 'careName' } %>?</h2>
 
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'hrs35'} %>
 
 <!-- When did you start caring -->
 
-	<h2 class="section-heading">When did you start caring for at least 35 hours a week?</h2>
+	<h2 class="section-heading" style="margin-bottom: 30px!important;">When did you start caring for 35 hours a week or more?</h2>
 
 	<div class="form-group form-radio">
 	  <label for="when1" class="block-label">
 	    <input id="when1" type="radio" name="when" value="" class="js-toggle" data-hide="#date">
-	    Claim date: 
+	    Claim date: <%= partial "partials/claim-date" %>
 	  </label>
 	</div>
 
@@ -32,7 +32,7 @@ title: About the care you provide
 	</div>
 
     <div class="js-hidden form-group-indent" id="date">
-    	<%= partial 'partials/questions/date', :locals => { :id => 'careDate'} %>
+    	<%= partial 'partials/questions/date', :locals => { :id => 'careStartDate'} %>
 	</div>
 	
 	
