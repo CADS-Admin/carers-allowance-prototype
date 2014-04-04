@@ -10,11 +10,11 @@ title: Employment
 
 <div class="form-group">
 
-	<h2 class="section-heading">Have you been self employed at any time since 18 December 2013?</h2>
+	<h2 class="section-heading">Have you been self employed at any time since <%= partial 'partials/questions/date-minus-6months-write', :locals => { id: 'claimDate' } %>?</h2>
 	
 	<div class="form-hint">
 	
-		<p>This includes:</p>
+		<p>This is 1 week before your claim date. Self employment includes:</p>
 		
 		<ul class="list-bullet">
 		    <li>working for yourself</li>
@@ -34,7 +34,7 @@ title: Employment
 	
 	<div class="form-hint">
 	
-		<p>This includes:</p>
+		<p>This is 6 months before your claim date. Employment includes:</p>
 		
 		<ul class="list-bullet">
 		    <li>full-time or part time work</li>
@@ -53,8 +53,6 @@ title: Employment
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'employed' } %>
 	
 </div>	
-			
-			
 
     <%= partial "partials/next-question" %>
 
