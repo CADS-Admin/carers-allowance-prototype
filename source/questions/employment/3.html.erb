@@ -1,0 +1,127 @@
+---
+question: 12
+title: Employment
+---
+
+<%= partial "partials/page-title" %>
+
+<fieldset class="form-elements">
+
+<legend>2. Your last wage</legend>
+
+<ul>
+	<li>
+		<p class="form-group-label">When were you last paid? <!--<em>(optional)--></em></p>
+		<p class="helper">For example, 30 January 2014</p>
+		<%= partial "partials/questions/date", :locals => { :id => "lastPaid" } %>
+	</li>
+	<li class="currency"> 
+		<label for="9789e2b31b57de8cf1640840d6a218d5" class="form-group-label">How much were you paid?</label>
+		<p class="helper">Enter your gross pay for this period</p>
+
+		<input type="tel" autocomplete="off" maxlength="60" value="" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="9789e2b31b57de8cf1640840d6a218d5" id="9789e2b31b57de8cf1640840d6a218d5">
+	</li>
+	<li>
+		<label for="e7ec1d87a0e6033787a1597e568eadac" class="form-group-label">What was included in this pay? <em>(optional)</em></label>
+
+		<p class="helper"> For example, holiday pay, sick pay, or any redundancy payments</p>
+
+		<input type="text" name="e7ec1d87a0e6033787a1597e568eadac" id="e7ec1d87a0e6033787a1597e568eadac">
+	</li>
+	<li>
+		<label for="how-often-paid" class="form-group-label">How often are you paid?</label>
+		<select selectwithother="true" name="how-often-paid" id="how-often-paid">  
+        	<option value="">Please select</option> 
+        	<option value="weekly">Weekly</option>  
+        	<option value="fortnightly">Fortnightly</option>   
+        	<option value="fourWeekly">Four-weekly</option>
+        	<option value="monthly">Monthly</option>
+            <option value="other">Other</option>
+		</select>
+	</li>
+	<li style="display: none;" class="other-detail">
+			<textarea autocomplete="off" maxlength="60" placeholder="Please specify..." name="how-often-paid-other" id="how-often-paid-other"></textarea>      
+	</li>
+	<li style="display:none;" class="grouped other-questions form-group-indent">
+		<ul>
+			<li>
+				<p id="same-amount-label" class="form-control-label">Do you usually get the same amount each time?</p>
+				<ul id="195e794e8cf852d4e6744b01a7b182d7cb2b348be899b163064a7c7e19d8a50a" class="radio">
+					<li>
+					    <input type="radio" value="yes"  name="195e794e8cf852d4e6744b01a7b182d7cb2b348be899b163064a7c7e19d8a50a" id="195e794e8cf852d4e6744b01a7b182d715823206cd78b8b2f2daebc27fad3cad">
+					    <label for="195e794e8cf852d4e6744b01a7b182d715823206cd78b8b2f2daebc27fad3cad">Yes</label>
+					</li>
+					
+					<li>
+					    <input type="radio" value="no"  name="195e794e8cf852d4e6744b01a7b182d7cb2b348be899b163064a7c7e19d8a50a" id="195e794e8cf852d4e6744b01a7b182d7ad275485ec9bc9b9292b8e5a6e967866">
+					    <label for="195e794e8cf852d4e6744b01a7b182d7ad275485ec9bc9b9292b8e5a6e967866">No</label>
+					</li>
+				</ul>
+			</li>
+		    <li>
+		    	<label for="when-get-paid" class="form-control-label">When do you get paid?</label>
+		    	<p class="helper right" id="when-helper"> the last day of the month</p>
+		        <input type="text" maxlength="60" autocomplete="off" name="when-get-paid" id="when-get-paid">   
+	        </li>
+        </ul>
+    </li><!-- /grouped-->
+     
+    <li>
+        <p class="form-group-label">Does your employer owe you any money?</p>
+        <ul id="owed-money" class="radio">
+        	<li>
+        	    <input type="radio" value="yes" name="owed-money" id="owed-money-yes">
+        	    <label for="owed-money-yes">Yes</label>
+        	</li>
+        	<li>
+        	    <input type="radio" value="no" name="owed-money" id="owed-money-no">
+        	    <label for="owed-money-no">No</label>
+        	</li>
+        </ul> 
+    </li>
+</ul>
+</fieldset><!-- / form elements -->			
+	
+<div class="form-steps">
+	<a href="2" class="button-link">Back</a>
+	<a href="4" class="button">Next</a>
+</div><!-- / form steps -->
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+$('#how-often-paid').change(function(){
+	$('.other-detail').hide();
+	$('.other-questions').hide();
+	
+	if ($(this).val() == 'other') {
+		$(this).parents().next('.other-detail').show();	
+	}
+	if ($(this).val() == 'weekly') {
+		$('.other-questions').show();
+		$('#same-amount-label').text("Do you usually get the same amount each week?");
+		$('#when-helper').text("For example, every Friday");
+	}
+	if ($(this).val() == 'fortnightly') {
+		$('.other-questions').show();
+		$('#same-amount-label').text("Do you usually get the same amount each fortnight?");
+		$('#when-helper').text("For example, every second Thursday");
+	}
+	if ($(this).val() == 'fourWeekly') {
+		$('.other-questions').show();
+		$('#same-amount-label').text("Do you usually get the same amount each time?");
+		$('#when-helper').text("For example, every fourth Thursday");
+	}
+	if ($(this).val() == 'monthly') {
+		$('.other-questions').show();
+		$('#same-amount-label').text("Do you usually get the same amount each month?");
+		$('#when-helper').text("For example, the last day of the month");
+	}
+	
+});
+
+});
+
+</script>

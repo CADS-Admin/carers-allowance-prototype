@@ -1,0 +1,75 @@
+---
+question: 12
+title: Self-employment
+---
+
+<%= partial "partials/page-title" %>
+
+<h2 class="section-heading">1. Employment details</h2>
+
+<ul>
+	<li>	
+		<p class="form-group-label">Are you self-employed now?</p>		
+		<ul id="self-employed-now" class="radio">
+	        <li>
+	            <input type="radio" value="yes" name="self-employed-now" id="self-employed-now-yes">
+	            <label for="self-employed-now-yes">Yes</label>
+	        </li>   
+	        <li>
+	            <input type="radio" value="no" name="self-employed-now" id="self-employed-now-no">
+	            <label for="self-employed-now-no">No</label>
+	        </li>
+		</ul>
+	</li>	
+	<li>
+		<p class="form-group-label">When did you start this self employed work?</p>	
+		<p class="form-hint">For example, 03 May 2013</p>		
+		<%= partial "partials/questions/date", :locals => { :id => "selfemployedStart" } %>
+	</li>              
+	<li style="display: none;" class="other-detail">
+		<ul>
+			<li>
+				<p class="form-group-label">When did you finish this self employed work?</p>
+		<p class="form-hint">For example, 03 May 2013</p>	
+				<%= partial "partials/questions/date", :locals => { :id => "selfemployedEnd" } %>				           
+			</li>                
+			<li>
+				<p class="form-group-label">Has your business ceased trading? <em>(optional)</em></p>
+				<ul id="f0a91a55e7721cc8b43b5f58f7f5db0ffd97fef32d82cc816e9098ade048a22a" class="radio">	    
+			        <li>
+			            <input type="radio" value="yes"  name="f0a91a55e7721cc8b43b5f58f7f5db0ffd97fef32d82cc816e9098ade048a22a" id="f0a91a55e7721cc8b43b5f58f7f5db0fac6ef4499aa3353874efc52c5d65466b">
+			            <label for="f0a91a55e7721cc8b43b5f58f7f5db0fac6ef4499aa3353874efc52c5d65466b">Yes</label>
+			        </li>   
+			        <li>
+			            <input type="radio" value="no"  name="f0a91a55e7721cc8b43b5f58f7f5db0ffd97fef32d82cc816e9098ade048a22a" id="f0a91a55e7721cc8b43b5f58f7f5db0f4e2bd43941f4010eaf03e59371678b2c">
+			            <label for="f0a91a55e7721cc8b43b5f58f7f5db0f4e2bd43941f4010eaf03e59371678b2c">No</label>
+			        </li>
+				</ul>
+			</li>
+		 </ul>
+	</li>
+	<li>
+		<label for="819a9061fb5fe0d7957705f5514f38cb088431fd8c8afc437b2464469ebf9dc8" class="form-group-label">What type of business is your self employed work?</label>
+		<input type="text" autocomplete="off" maxlength="60" value="" name="819a9061fb5fe0d7957705f5514f38cb088431fd8c8afc437b2464469ebf9dc8" id="819a9061fb5fe0d7957705f5514f38cb088431fd8c8afc437b2464469ebf9dc8">
+	</li>	
+</ul>
+			
+<div class="form-steps">
+	<a href="#" class="button-link">Back</a>
+	<a href="2" class="button">Next</a>
+</div><!-- / form steps -->
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+	$('#self-employed-now-no').click(function(){
+		$('.other-detail').show();
+	});
+	$('#self-employed-now-yes').click(function(){
+		$('.other-detail').hide();
+	});
+});
+
+</script>

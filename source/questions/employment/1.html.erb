@@ -1,0 +1,116 @@
+---
+question: 12
+title: Employment
+---
+
+<%= partial "partials/page-title" %>
+
+<input type="hidden" value="8d1c7066-6913-41c8-b4fc-1f26bd88a19d" name="jobID">
+
+<fieldset class="form-elements">
+<legend>1. Employment details</legend>
+
+
+<p class="form-group-label">Employer details</p>
+<p class="helper">This is used when contacting your employer</p>
+<ul>
+	<li>
+		<label for="employers-name" class="form-control-label">Name</label>	
+		<input type="text" autocomplete="off" maxlength="60" value="" name="employers-name" id="employers-name" class="form-control form-control-3-4">
+	</li>
+			<li>
+	<label for="6b3c442979a26ee0fa217015282f5c85" class="form-control-label">Phone number <em>(optional)</em></label>
+	<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="6b3c442979a26ee0fa217015282f5c85" id="6b3c442979a26ee0fa217015282f5c85">
+</li>
+	<li>
+		<label for="payroll-number" class="form-control-label">Payroll or employee number (optional)</label>
+		<input type="text" autocomplete="off" maxlength="16" value="" name="payroll-number" id="payroll-number">			
+	</li>
+	<li>		
+		<p class="form-group-label">When did you start this job?</p>
+	    <p class="helper">For example, 27 June 2013</p>
+		<%= partial "partials/questions/date", :locals => { :id => "jobStart" } %>
+
+	</li>
+	<li>
+		<p class="form-group-label">Have you finished this job?</p>
+		<ul id="finished-job" class="radio">
+	        <li>
+	            <input type="radio" value="yes" name="finished-job" id="finished-job-yes">
+	            <label for="finished-job-yes">Yes</label>
+	        </li>
+	        <li>
+	            <input type="radio" value="no"  name="finished-job" id="finished-job-no">
+	            <label for="finished-job-no">No</label>
+	        </li>
+		</ul>
+	</li>	
+	<li style="display: none;" class="other-detail form-group-indent">
+		<ul>
+			<li>
+	  			<p class="form-control-label">What date did you last work?</p>
+	    		<p class="helper">For example, 27 June 2013</p>
+	 			<%= partial "partials/questions/date", :locals => { :id => "jobEnd" } %>
+
+			</li>
+		</ul>
+	</li>
+	<li> 		
+		<label for="hours-worked" class="form-group-label">How many hours a week do you normally work?</label>
+		<input type="text" autocomplete="off" value="" name="hours-worked" id="hours-worked" class="short-field"> 
+	</li>
+</ul>
+</fieldset>
+
+<fieldset class="form-elements">
+	
+<ul>	
+<!--<li>
+	<p>Address</p>
+	<ul class="address-stack">
+		<li>
+		<label for="dbe131c2d91e863b0030a39db758f55a">address_lineOne <em>(optional)</em></label>
+		<input type="text" autocomplete="off" maxlength="35" value="" name="14fc08c32997feb3074d8caf4395c7ae" id="dbe131c2d91e863b0030a39db758f55a">
+		</li>
+		<li>
+		<label for="177f0f95c44886509d98fef82244fd0d">address_lineTwo <em>(optional)</em></label>
+		<input type="text" autocomplete="off" maxlength="35" value="" name="bcbe7563bad3ebcfe65e71700c1a06cd" id="177f0f95c44886509d98fef82244fd0d">
+		</li>
+		<li>
+		<label for="0854f6d4e791c61127c9d39bb4201ee97b39c9efd40878af5a2c618dc41d2aa0">address_lineThree <em>(optional)</em></label>
+		<input type="text" autocomplete="off" maxlength="35" value="" name="3f2d3ab59a1d3eb45a49febd13d38acc7b39c9efd40878af5a2c618dc41d2aa0" id="0854f6d4e791c61127c9d39bb4201ee97b39c9efd40878af5a2c618dc41d2aa0">
+		</li>
+	</ul>
+	
+</li>
+<li>
+	<label for="e231e15d6f02ea7dff1c365898b1af40">Postcode <em>(optional)</em></label>
+	<input type="text" maxlength="60" autocomplete="off" class="postcode" value="" name="e231e15d6f02ea7dff1c365898b1af40" id="e231e15d6f02ea7dff1c365898b1af40">
+</li>-->
+<!--#include virtual="../public/_includes/ui/address-multiple.shtml"-->
+
+
+</ul>
+</fieldset><!-- / form elements -->
+	
+<div class="form-steps">
+	<!--<a href="employment-guard.html" class="button-link">Back</a>-->
+	<a href="2" class="button">Next</a>
+</div><!-- / form steps -->
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+$('#finished-job-yes').click(function(){
+$(this).parents('ul li').next('.other-detail').show();
+$('.past-present').text("did you");
+});
+$('#finished-job-no').click(function(){
+$(this).parents('ul li').next('.other-detail').hide();
+$('.past-present').text("do you");
+});
+});
+
+</script>

@@ -1,0 +1,62 @@
+---
+question: 12
+title: Employment
+---
+
+<%= partial "partials/page-title" %>
+
+<fieldset class="form-elements">
+	<legend>Expenses related to the person you care for, while you are at work</legend>
+	<ul>
+		<li>
+			<label for="3ef4367a2d170c9abf61c41af1744de4">Name of the person/organisation you do pay</label>
+			<input type="text" maxlength="60" autocomplete="off" value="" name="3ef4367a2d170c9abf61c41af1744de4" id="3ef4367a2d170c9abf61c41af1744de4">
+		</li>
+		<li class="currency"> 
+			<label for="how-much" class="form-group-label">How much do you pay them?</label>
+		        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
+
+				<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
+			    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
+		            <option value="02">a week</option>
+		            <option value="03">a fortnight</option>
+		            <option value="04">every 4 weeks</option>
+		            <option value="05">a month</option>
+		            <option value="other">other</option> 
+		    	</select>
+		</li>
+		<li style="display: none;" class="other-detail">
+			<!--<label for="how-often-pay-care-other">How often did you pay them?</label>-->
+			<textarea autocomplete="off" maxlength="60" placeholder="Please specify..." name="how-often-pay-care-other" id="how-often-pay-care-other"></textarea> 
+			<!--<p class="helper right">60 characters left</p>-->        
+		</li>
+		<li>
+			<label for="f2ca4054d2f3ef555ab14dd4f577f1f2">What relation, if any, is the person/organisation to you?</label>
+			<%= partial "partials/questions/text-field", :locals => { :id => "expensesRelationship" } %>
+		</li>
+		<li>
+			<label for="c40724f335c804a6490299e854877dc278d760f8dd022a8d72afa67483273d36">What relation, if any, is this person/organisation to the person you care for?</label>
+			<%= partial "partials/questions/text-field", :locals => { :id => "expensesRelationship" } %>
+		</li>
+	</ul>
+</fieldset>
+
+<div class="form-steps">
+
+    <%= link_to 'Back', '6', :class => 'button-link' %>
+    <%= link_to 'Next', '/questions/13', :class => 'button' %>
+</div>
+
+<script>
+
+// Show & Hide Fields
+
+$(document).ready(function() {  
+	$('#how-often-pay-care').change(function(){
+		if ($(this).val() == 'other') {
+			$(this).parents().next('.other-detail').show();	
+		}
+	});
+});
+
+</script>
