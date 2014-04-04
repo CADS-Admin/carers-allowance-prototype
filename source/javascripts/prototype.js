@@ -138,7 +138,7 @@ $(document).ready(function(){
 
 		if (answered.indexOf(question) == -1){
 			if (skipped.indexOf(question) > -1){
-				$(this).find('.answer').addClass('skipped').text('You skipped this question');
+				$(this).find('.answer').addClass('skipped').text('You skipped this section');
 			} else {
 				$(this).remove();
 			}
@@ -163,15 +163,15 @@ $(document).ready(function(){
 			var skippedMessage = '.';
 			if (skipped.length > 0) {
 				skippedMessage = ', ' + skipped.length + ' skipped.'
-				$(this).prepend('<p class="skipped">Answer any skipped questions before submitting your application.</p>')
+				$(this).prepend('<p class="skipped">Answer any skipped sections before submitting your application.</p>')
 			}
-			$(this).prepend('<p>' + answered.length + ' question'+answeredPlural+' answered' + skippedMessage + '</p>');
+			$(this).prepend('<p>' + answered.length + ' section'+answeredPlural+' completed' + skippedMessage + '</p>');
 		} else {
 			// On question pages
 			if (skipped.length > 0) {
-				$(this).prepend('<li>' + skipped.length + ' question'+skippedPlural+' skipped</li>');
+				$(this).prepend('<li>' + skipped.length + ' section'+skippedPlural+' skipped</li>');
 			}
-			$(this).prepend('<li>' + answered.length + ' question'+answeredPlural+' answered</li>');
+			$(this).prepend('<li>' + answered.length + ' section'+answeredPlural+' completed</li>');
 		}
 	});
 
