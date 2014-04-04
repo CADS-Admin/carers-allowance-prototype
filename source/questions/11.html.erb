@@ -12,11 +12,11 @@ title:  Education
 
 	<h2 class="section-heading">Have you been on a course of education since your claim date?</h2>
 	
-	<p class="form-hint">Your claim date is <%= partial "partials/claim-date" %></p>
+	<p class="form-hint">Include any full-time, part-time, or other courses.<br/>Your claim date is <%= partial "partials/claim-date" %></p>
 
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'education', yesToggle: '#yesToggle'} %>
 
-    <div class="js-hidden form-group-indent" id="yesToggle">
+    <div class="js-hidden form-group" id="yesToggle">
         
         <%= partial 'partials/questions/education' %>
 
