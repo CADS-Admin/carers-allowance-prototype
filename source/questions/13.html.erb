@@ -1,6 +1,6 @@
 ---
 question:   13
-title:  Statutory pay, benefits and payments
+title:  Pay details
 ---
 
 <%= partial "partials/page-title" %>
@@ -8,123 +8,50 @@ title:  Statutory pay, benefits and payments
 
 <form class="form" id="form" name="data">
 
-	<div class="form-group">
+<ul>             
+	<li>
+	  	<p class="form-group-label">How would you like to get paid?</p>
+	  	<p class="form-hint">Select 'Other' if you want to be paid into an International Bank Account</p>
+		<ul id="233ab6c90b2e125818cc64e97587db12">
+			<li class="block-label">
+			    <input type="radio" id="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" name="233ab6c90b2e125818cc64e97587db12" value="bankBuildingAccount" helperbelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
+			    <label for="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" style="width: 400px">UK bank or building society account</label>
+			</li>
 			
-		<p class="form-group-label">Have you received any Statutory Sick Pay (SSP) since your claim date?</p>
-		<p class="form-hint">Your claim date is <%= partial "partials/claim-date" %></p>
-		<%= partial 'partials/questions/yes-no', :locals => { :id => 'statutory', :hideLabel => true, yesToggle: '#yesToggle2' } %>
+			<li class="block-label">
+			    <input type="radio" id="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" name="233ab6c90b2e125818cc64e97587db12" value="appliedForAccount" helperbelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
+			    <label for="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" style="width: 400px">You don't have an account but intend to open one</label>
+			</li>
 			
-		<div class="js-hidden form-group-indent" id="yesToggle2">
-		    <div class="form-group">   
-		       <label for="how-much" class="form-control-label">How much?</label>
-			        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
-		
-				<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
-			    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
-		            <option value="02">a week</option>
-		            <option value="03">a fortnight</option>
-		            <option value="04">every 4 weeks</option>
-		            <option value="05">a month</option>
-		            <option value="other">other</option> 
-		    	</select>
-		
-		     	<label for="employers-name" class="form-control-label">Employer's name</label>
-		     	<input type="text" id="employers-name" name="employers-name" value="" maxlength="60" autocomplete="off">
-		
-		     	<p class="form-control-label">Employer's address</p>
-		        <ul class="address-stack">
-					<li>         
-						<label for="employers-address-line1" class="visuallyhidden">employersAddress_lineOne <em>(optional)</em></label>
-						<input type="text" id="employers-address-line1" name="employers-address-line1" maxlength="35" autocomplete="off">
-					</li>
-					<li>         
-						<label for="employers-address-line2" class="visuallyhidden">employersAddress_lineTwo <em>(optional)</em></label>
-						<input type="text" id="employers-address-line2" name="employers-address-line2" maxlength="35" autocomplete="off">
-					</li>
-					<li>
-						<label for="employers-address-line3" class="visuallyhidden">employersAddress_lineThree <em>(optional)</em></label>
-						<input type="text" id="employers-address-line3" name="employers-address-line3" maxlength="35" autocomplete="off">
-					</li>
-		         </ul>
-		
-		     	<label for="employers-postcode" class="form-control-label">Postcode</label>
-		        <input type="text" id="employers-postcode" name="employers-postcode" class="postcode" autocomplete="off" maxlength="60">
-	        </div>    
-		</div><!-- /hidden -->
-		
-		<p class="form-group-label">Have you received any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since your claim date?</p>
-		<p class="form-hint">Your claim date is <%= partial "partials/claim-date" %></p>
-		<%= partial 'partials/questions/yes-no', :locals => { :id => 'otherStatutory', yesToggle: '#yesToggle3'} %>
-			
-		<div class="js-hidden form-group-indent" id="yesToggle3">
-		   <div class="form-group">    
-		       <label for="how-much" class="form-control-label">How much?</label>
-			        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
-		
-				<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
-			    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
-		            <option value="02">a week</option>
-		            <option value="03">a fortnight</option>
-		            <option value="04">every 4 weeks</option>
-		            <option value="05">a month</option>
-		            <option value="other">other</option> 
-		    	</select>
-		
-	         	<label for="employers-name" class="form-control-label">Employer's name</label>
-	         	<input type="text" id="employers-name" name="employers-name" value="" maxlength="60" autocomplete="off">
-	
-	         	<p class="form-control-label">Employer's address</p>
-		        <ul class="address-stack">
-					<li>         
-						<label for="employers-address-line1" class="visuallyhidden">employersAddress_lineOne <em>(optional)</em></label>
-						<input type="text" id="employers-address-line1" name="employers-address-line1" maxlength="35" autocomplete="off">
-					</li>
-					<li>         
-						<label for="employers-address-line2" class="visuallyhidden">employersAddress_lineTwo <em>(optional)</em></label>
-						<input type="text" id="employers-address-line2" name="employers-address-line2" maxlength="35" autocomplete="off">
-					</li>
-					<li>
-						<label for="employers-address-line3" class="visuallyhidden">employersAddress_lineThree <em>(optional)</em></label>
-						<input type="text" id="employers-address-line3" name="employers-address-line3" maxlength="35" autocomplete="off">
-					</li>
-		         </ul>
-	
-	         	<label for="employers-postcode" class="form-control-label">Postcode</label>
-	            <input type="text" id="employers-postcode" name="employers-postcode" class="postcode" autocomplete="off" maxlength="60">
+			<li class="block-label">
+			    <input type="radio" id="3f18d35ee6308a03059ee762dacddeac00443e1812b622dbf6d309e98117e5d5" name="233ab6c90b2e125818cc64e97587db12" value="notOpenAccount" helperbelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
+			    <label for="3f18d35ee6308a03059ee762dacddeac00443e1812b622dbf6d309e98117e5d5" style="width: 400px">Other - you would like more information</label>
+			</li>
+		</ul>
+	    
+	</li>
+	<li>
+		<label for="ffdfe7640ba21ea3e3598cc22cf2002752857dc244a0fbf78a670ef4d69ff177" class="form-group-label">How often do you want to get paid?</label>
+
+	    		<ul id="233ab6c90b2e125818cc64e97587db12">
+			<li>
+				<div class="block-label">
+			    <input type="radio" id="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23x" name="233ab6c90b2e125818cc64e97587db12x" value="bankBuildingAccount" helperbelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
+			    <label for="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23x" style="width: 400px">Every week</label>
 			</div>
-
-		</div><!-- /hidden -->
+			</li>
 			
-		<p class="form-group-label">Have you claimed or received any other benefits since your claim date?</p>
-		<p class="form-hint">Your claim date is <%= partial "partials/claim-date" %></p>
-		<%= partial 'partials/questions/yes-no', :locals => { :id => 'claimedBenefits', :hideLabel	=> true } %>
-
-		
-		<p class="form-group-label">Have you received payments for the person you care for or any other person since your claim date?</p>
-		<p class="form-hint">Your claim date is <%= partial "partials/claim-date" %></p>
-		<%= partial 'partials/questions/yes-no', :locals => { :id => 'recievedPayments', :hideLabel	=> true, yesToggle: '#yesToggle'} %>
-		
-		<div class="js-hidden form-group-indent" id="yesToggle">
-		
-			<div class="form-group">	
-				<label class="form-control-label" for="recievedPaymentsWho">Who pays you?</label>
-				<input type="text" id="recievedPaymentsWho" name="recievedPaymentsWho" value="" maxlength="35" autocomplete="off">
-		
-				<label class="form-control-label" for="recievedPaymentsHowMuch">How much?</label>
-				£ <input style="width: 100px" type="tel" id="recievedPaymentsHowMuch" name="recievedPaymentsHowMuch" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" title="The amount must be in the format 12 or 12.5 or 12.55" value="" maxlength="60" autocomplete="off">
-				<label class="form-control-label visuallyhidden" for="recievedPaymentsHowOften">How often? (optional)</label>
-				<select id="recievedPaymentsHowOften" name="recievedPaymentsHowOften">
-		    		<option value="weekly">a week</option>
-		    		<option value="fortnightly">every 2 weeks</option>
-		    		<option value="fourWeekly">every 4 weeks</option>
-		    		<option value="monthly">every month</option>
-		 		   <option value="other">other</option>
-			</select>
+			<li>
+				<div class="block-label">
+			    <input type="radio" id="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5fx" name="233ab6c90b2e125818cc64e97587db12x" value="appliedForAccount" helperbelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
+			    <label for="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5fx" style="width: 400px">Every 4 weeks</label>
 			</div>
+			</li>
 
-		</div><!-- hidden -->	
-		
-	</div>
+		</ul>
+	</li>
+</ul>
+
 
     <%= partial "partials/next-question" %>
 

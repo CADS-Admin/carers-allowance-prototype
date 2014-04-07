@@ -1,48 +1,26 @@
 ---
 question:   9
-title: About the care you provide
+title:  Breaks from caring    
 ---
 
 <%= partial "partials/page-title" %>
 
+<p>This is any times when you have spent less than 35 hours a week caring for <%= partial 'partials/questions/text-field-write', :locals => { id: 'careName' } %>. For example, if:</p>
+<ul class="list-bullet">
+	<li>they were in respite care, hospital or on holiday without you, <em>or</em></li>
+	<li>you were in hospital or on holiday without them.</li>
+</ul>
+
 <form class="form" id="form" name="data">
 
-<!-- 35 hours a week -->
-
-	<h2 class="section-heading">Do you spend at least 35 hours a week caring for <br /><%= partial 'partials/questions/text-field-write', :locals => { id: 'careName' } %>?</h2>
-
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'hrs35'} %>
-
-<!-- When did you start caring -->
-
-	<h2 class="section-heading" style="margin-bottom: 30px!important;">When did you start caring for 35 hours a week or more?</h2>
-
-	<div class="form-group form-radio">
-	  <label for="when1" class="block-label">
-	    <input id="when1" type="radio" name="when" value="" class="js-toggle" data-hide="#date">
-	    Claim date: <%= partial "partials/claim-date" %>
-	  </label>
-	</div>
-
-	<div class="form-group form-radio">
-	  <label for="when2" class="block-label">
-	    <input id="when2" type="radio" name="when" value="" class="js-toggle"  data-show="#date">
-	    From an earlier date
-	  </label>
-	</div>
-
-    <div class="js-hidden form-group-indent" id="date">
-    	<%= partial 'partials/questions/date', :locals => { :id => 'careStartDate'} %>
-	</div>
+	<h2 class="section-heading">Have you had any breaks from caring since 8 July 2013?</h2>
+	<p class="form-hint">This is six months before your claim date. If 'Yes', you'll need to provide details about these breaks</p>
 	
+	<%= partial 'partials/questions/yes-no', :locals => { :id => 'breaks'} %>
 	
 
+    <%= partial "partials/next-question" %>
 
-    <div class-"form-group">
+    <%= partial "partials/back-skip" %>
 
-        <%= partial "partials/next-question" %>
-
-        <%= partial "partials/back-skip" %>
-
-    </div>
 </form>

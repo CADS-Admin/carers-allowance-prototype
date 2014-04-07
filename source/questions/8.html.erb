@@ -1,80 +1,47 @@
 ---
 question:   8
-title: Details of the person you care for
+title: About the care you provide
 ---
 
 <%= partial "partials/page-title" %>
 
 <form class="form" id="form" name="data">
 
-<!-- Relationship -->
+<!-- 35 hours a week -->
 
-	<h2 class="section-heading">What is their relationship to you?</h2>
+	<h2 class="section-heading">Do you spend at least 35 hours a week caring for <br /><%= partial 'partials/questions/text-field-write', :locals => { id: 'careName' } %>?</h2>
+
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'hrs35'} %>
+
+<!-- When did you start caring -->
+
+	<h2 class="section-heading" style="margin-bottom: 30px!important;">When did you start caring for 35 hours a week or more?</h2>
+
+	<div class="form-group form-radio">
+	  <label for="when1" class="block-label">
+	    <input id="when1" type="radio" name="when" value="" class="js-toggle" data-hide="#date">
+	    Claim date: <%= partial "partials/claim-date" %>
+	  </label>
+	</div>
+
+	<div class="form-group form-radio">
+	  <label for="when2" class="block-label">
+	    <input id="when2" type="radio" name="when" value="" class="js-toggle"  data-show="#date">
+	    From an earlier date
+	  </label>
+	</div>
+
+    <div class="js-hidden form-group-indent" id="date">
+    	<%= partial 'partials/questions/date', :locals => { :id => 'careStartDate'} %>
+	</div>
 	
-	<p class="form-hint">
-		For example, mother, daughter, friend etc.
-	</p>
 	
-	<%= partial 'partials/questions/text-field', :locals => { 
-	    :id => 'careRelationship',
-	    :hideLabel  => true
-	}%>
 
-
-<!-- Name -->
-
-    <h2 class="section-heading">Full name</h2>
-    
-    <p class="form-hint">
-        Enter as shown on their birth certificate or passport    
-    </p>
-
-    <%= partial 'partials/questions/text-field', :locals => { 
-        :id => 'careName',
-        :hideLabel  => true
-    }%>
-    
-<!-- National Insurance number -->
-
-    <h2 class="section-heading">National Insurance number (optional)</h2>
-
-    <p class="form-hint">
-        For example, 'VO 12 34 56 D'
-    </p>
-
-    <%= partial "partials/questions/text-field", :locals => { 
-        :id         => "careNino",
-        :label      => "National Insurance number",
-        :hideLabel  => true,
-        :classes    => "form-control-1-2"
-    }%>   
- 
-<!-- Contact details -->
-
-	<h2 class="section-heading">Contact details</h2>
-	<p class="block"><input type="checkbox" secondary="true" value="true" name="use-my-address" id="use-my-address">
-	<label for="use-my-address" style="display: inline-block;">This person lives with me. Use my address</label></p>
-
-    <%= partial "partials/questions/address", :locals => { 
-        :id         => "careAddress",
-        :hideLabel  => true
-    }%>
-
-<!-- Armed forces -->
-
-    <h2 class="section-heading">Other claims</h2>
-
-    <p>Does this person get Armed Forces Independence Payment (AFIP)?</p>
-
-    <%= partial 'partials/questions/yes-no', :locals => { 
-    	:id => 'afip', 
-    	:hideLabel  => true 
-    } %>
-    
 
     <div class-"form-group">
 
         <%= partial "partials/next-question" %>
+
         <%= partial "partials/back-skip" %>
 
     </div>

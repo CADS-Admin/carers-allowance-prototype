@@ -1,60 +1,24 @@
 ---
 question:   14
-title:  Pay details
+title:  Additional information
 ---
-
-<%= partial "partials/page-title" %>
-
 
 <form class="form" id="form" name="data">
 
-<ul>             
-	<li>
-	  	<p class="form-group-label">How would you like to get paid?</p>
-	  	<p class="form-hint">Select 'Other' if you want to be paid into an International Bank Account</p>
-		<ul id="233ab6c90b2e125818cc64e97587db12">
-			<li class="block-label">
-			    <input type="radio" id="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" name="233ab6c90b2e125818cc64e97587db12" value="bankBuildingAccount" helperbelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
-			    <label for="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" style="width: 400px">UK bank or building society account</label>
-			</li>
-			
-			<li class="block-label">
-			    <input type="radio" id="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" name="233ab6c90b2e125818cc64e97587db12" value="appliedForAccount" helperbelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
-			    <label for="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" style="width: 400px">You don't have an account but intend to open one</label>
-			</li>
-			
-			<li class="block-label">
-			    <input type="radio" id="3f18d35ee6308a03059ee762dacddeac00443e1812b622dbf6d309e98117e5d5" name="233ab6c90b2e125818cc64e97587db12" value="notOpenAccount" helperbelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
-			    <label for="3f18d35ee6308a03059ee762dacddeac00443e1812b622dbf6d309e98117e5d5" style="width: 400px">Other - you would like more information</label>
-			</li>
-		</ul>
-	    
-	</li>
-	<li>
-		<label for="ffdfe7640ba21ea3e3598cc22cf2002752857dc244a0fbf78a670ef4d69ff177" class="form-group-label">How often do you want to get paid?</label>
+<%= partial "partials/page-title" %>
 
-	    		<ul id="233ab6c90b2e125818cc64e97587db12">
-			<li>
-				<div class="block-label">
-			    <input type="radio" id="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" name="233ab6c90b2e125818cc64e97587db12" value="bankBuildingAccount" helperbelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
-			    <label for="c611c093c8a2a8ff641710306033fe18fc80409c9b86ee95e8c3f4600ebd6b23" style="width: 400px">Every week</label>
-			</div>
-			</li>
-			
-			<li>
-				<div class="block-label">
-			    <input type="radio" id="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" name="233ab6c90b2e125818cc64e97587db12" value="appliedForAccount" helperbelow="Select other if you want to be paid into an International Bank Account and provide details in the additional information section.">
-			    <label for="0b0cce894d0e3ecaca7c660e1e393eb4ea0cd463232a139827b45179c68d1c5f" style="width: 400px">Every 4 weeks</label>
-			</div>
-			</li>
+<h2 class="section-heading">Do you want to tell us any additional information about your claim?</h2>	
+<p class="form-hint">There is no need to include any medical details</p>    
+     
+<%= partial 'partials/questions/yes-no', :locals => { :id => 'additional', yesToggle: '#yesToggle'} %>
 
-		</ul>
-	</li>
-</ul>
+<div class="js-hidden form-group" id="yesToggle">
 
+	<textarea id="additional-details" name="additional-details" placeholder="Please specify…" helper="1000 characters left" maxlength="2000" autocomplete="off"></textarea>
+	<p class="helper right">1000 characters left</p>
+	
+</div>
 
-    <%= partial "partials/next-question" %>
-
-    <%= partial "partials/back-skip" %>
+<%= partial "partials/next-question" %>
 
 </form>

@@ -1,11 +1,25 @@
 ---
 question:   7
-title: Your partners details
+title: Details of the person you care for
 ---
 
 <%= partial "partials/page-title" %>
 
 <form class="form" id="form" name="data">
+
+<!-- Relationship -->
+
+	<h2 class="section-heading">What is their relationship to you?</h2>
+	
+	<p class="form-hint">
+		For example, mother, daughter, friend etc.
+	</p>
+	
+	<%= partial 'partials/questions/text-field', :locals => { 
+	    :id => 'careRelationship',
+	    :hideLabel  => true
+	}%>
+
 
 <!-- Name -->
 
@@ -16,66 +30,51 @@ title: Your partners details
     </p>
 
     <%= partial 'partials/questions/text-field', :locals => { 
-        :id => 'partnerName',
+        :id => 'careName',
         :hideLabel  => true
     }%>
     
 <!-- National Insurance number -->
 
-    <h2 class="section-heading">National Insurance number</h2>
+    <h2 class="section-heading">National Insurance number (optional)</h2>
 
     <p class="form-hint">
         For example, 'VO 12 34 56 D'
     </p>
 
     <%= partial "partials/questions/text-field", :locals => { 
-        :id         => "partnerNino",
+        :id         => "careNino",
         :label      => "National Insurance number",
         :hideLabel  => true,
         :classes    => "form-control-1-2"
-    }%>
-    
-    
-<!-- Nationality -->
-
-    <h2 class="section-heading">Nationality</h2>
-
-	<p class="form-hint">If they have a current passport, enter as shown on their passport</p>
-
-    <%= partial "partials/questions/text-field", :locals => { 
-        :id 		=> "partnerNationality",
-        :label 		=> "Nationality",
-        :hideLabel	=> true
-    }%>
-   
+    }%>   
  
-<!-- Date of birth -->
+<!-- Contact details -->
 
-    <h2 class="section-heading">Date of birth</h2>
+	<h2 class="section-heading">Contact details</h2>
+	<p class="block"><input type="checkbox" secondary="true" value="true" name="use-my-address" id="use-my-address">
+	<label for="use-my-address" style="display: inline-block;">This person lives with me. Use my address</label></p>
 
-    <%= partial 'partials/questions/date', :locals => { :id => 'partnerDob', :hint => 'For Example, 20 03 1976'} %>
+    <%= partial "partials/questions/address", :locals => { 
+        :id         => "careAddress",
+        :hideLabel  => true
+    }%>
 
+<!-- Armed forces -->
 
-<!-- Living with partner? -->
+    <h2 class="section-heading">Other claims</h2>
 
-    <h2 class="section-heading">Have you separated since your claim date?</h2>
+    <p>Does this person get Armed Forces Independence Payment (AFIP)?</p>
 
-    <p class="form-hint">Your claim date is <%= partial "partials/claim-date" %>. If you have separated since then select 'Yes'.</p>
-
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'partnerSeparated'} %>
-
-
-<!-- State Pension -->
-
-    <h2 class="section-heading">Is this the person you are claiming Carer's Allowance for?</h2>
-
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'caringPartner'} %>
+    <%= partial 'partials/questions/yes-no', :locals => { 
+    	:id => 'afip', 
+    	:hideLabel  => true 
+    } %>
     
 
     <div class-"form-group">
 
         <%= partial "partials/next-question" %>
-
         <%= partial "partials/back-skip" %>
 
     </div>

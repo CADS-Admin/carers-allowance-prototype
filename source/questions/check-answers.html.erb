@@ -38,47 +38,47 @@ layout:  carers_wide_template
 
 <h3 class="heading-24">Your partners details</h3>
 <table class="check-answers">
-    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Name', type: 'text-field', id: 'partnerName' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'National Insurance number', type: 'text-field', id: 'partnerNino' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Nationality', type: 'text-field', id: 'partnerNationality' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Date of birth', type: 'date', id: 'partnerDob' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Have you separated since your claim date?', type: 'yes-no', id: 'partnerSeparated' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Is this the person you are claiming Carer\'s Allowance for?', type: 'yes-no', id: 'caringPartner' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Name', type: 'text-field', id: 'partnerName' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'National Insurance number', type: 'text-field', id: 'partnerNino' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Nationality', type: 'text-field', id: 'partnerNationality' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Date of birth', type: 'date', id: 'partnerDob' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Have you separated since your claim date?', type: 'yes-no', id: 'partnerSeparated' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Is this the person you are claiming Carer\'s Allowance for?', type: 'yes-no', id: 'caringPartner' } %>
 </table>
 
 <h3 class="heading-24">Details of the person you care for</h3>
 <table class="check-answers">
-   	<%= partial 'partials/questions/answer', :locals => { q:  8, title: 'What is their relationship to you?', type: 'text-field', id: 'careRelationship'} %>
-    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'Name', type: 'text-field', id: 'careName' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'Date of birth', type: 'date', id: 'careDob' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'National insurance number', type: 'text-field', id: 'careNino' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'Contact details', type: 'address', id: 'careAddress' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'Do they get Armed Forces Independence Payment?', type: 'yes-no', id: 'afip'} %>
+   	<%= partial 'partials/questions/answer', :locals => { q:  7, title: 'What is their relationship to you?', type: 'text-field', id: 'careRelationship'} %>
+    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Name', type: 'text-field', id: 'careName' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Date of birth', type: 'date', id: 'careDob' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'National insurance number', type: 'text-field', id: 'careNino' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Contact details', type: 'address', id: 'careAddress' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Do they get Armed Forces Independence Payment?', type: 'yes-no', id: 'afip'} %>
 </table>
    
 <h3 class="heading-24">The care you provide</h3>
 <table class="check-answers">
-    <%= partial 'partials/questions/answer', :locals => { q:  9, title: 'Do you spend more than 35 hours a week caring?', type: 'yes-no', id: 'hrs35' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  9, title: 'When did you start caring for 35 hours a week or more?', type: 'date', id: 'careStartDate'} %>
-    <%= partial 'partials/questions/answer', :locals => { q:  10, title: 'Have you had any breaks from caring?', type: 'yes-no', id: 'breaks'} %>
+    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'Do you spend more than 35 hours a week caring?', type: 'yes-no', id: 'hrs35' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'When did you start caring for 35 hours a week or more?', type: 'date', id: 'careStartDate'} %>
+    <%= partial 'partials/questions/answer', :locals => { q:  9, title: 'Have you had any breaks from caring?', type: 'yes-no', id: 'breaks'} %>
 </table>   
     
 <table class="check-answers">    
 <h3 class="heading-24">Education</h3>
-    <%= partial 'partials/questions/answer', :locals => { q:  11, title: 'Have you been on a course of education since your claim date?', type: 'education'} %>
+    <%= partial 'partials/questions/answer', :locals => { q:  10, title: 'Have you been on a course of education since your claim date?', type: 'education'} %>
 </table>
 <table class="check-answers">    
 <h3 class="heading-24">Employment</h3>
-    <%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Self employed since 18 December 2013?', type: 'self-employment' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Employed since 25 June 2013?', type: 'employment' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  11, title: 'Self employed since 18 December 2013?', type: 'self-employment' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  11, title: 'Employed since 25 June 2013?', type: 'employment' } %>
 </table>
 
 <table class="check-answers">    
 <h3 class="heading-24">Statutory pay, benefits and payments</h3>
-	<%= partial 'partials/questions/answer', :locals => { q:  13, title: 'Have you received any Statutory Sick Pay (SSP) since your claim date?', type: 'yes-no', id: 'statutory' } %>
-	<%= partial 'partials/questions/answer', :locals => { q:  13, title: 'Have you received any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since your claim date?', type: 'yes-no', id: 'otherStatutory' } %>
-	<%= partial 'partials/questions/answer', :locals => { q:  13, title: 'Have you claimed or received any other benefits since your claim date?', type: 'yes-no', id: 'claimedBenefits' } %>
-	<%= partial 'partials/questions/answer', :locals => { q:  13, title: 'Have you received payments for the person you care for or any other person since your claim date?', type: 'yes-no', id: 'recievedPayments' } %>
+	<%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Have you received any Statutory Sick Pay (SSP) since your claim date?', type: 'yes-no', id: 'statutory' } %>
+	<%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Have you received any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since your claim date?', type: 'yes-no', id: 'otherStatutory' } %>
+	<%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Have you claimed or received any other benefits since your claim date?', type: 'yes-no', id: 'claimedBenefits' } %>
+	<%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Have you received payments for the person you care for or any other person since your claim date?', type: 'yes-no', id: 'recievedPayments' } %>
 </table>
 <table class="check-answers">    
 <h3 class="heading-24">Pay details</h3>
@@ -88,7 +88,7 @@ layout:  carers_wide_template
 </table>
 <table class="check-answers">    
 <h3 class="heading-24">Additional information</h3>
-	<%= partial 'partials/questions/answer', :locals => { q:  15, title: 'Do you want to tell us any additional information about your claim?', type: 'yes-no', id: 'additional' } %>
+	<%= partial 'partials/questions/answer', :locals => { q:  14, title: 'Do you want to tell us any additional information about your claim?', type: 'yes-no', id: 'additional' } %>
 </table>
 
 <div class="form-group">
@@ -99,7 +99,7 @@ layout:  carers_wide_template
 
 
 <ul class="form-group">
-    <!--<li><a href="1" class="cancel-application">Cancel this application</a></li>-->
+    <li><a href="1" class="cancel-application">Cancel this application</a></li>
     <li><a href="#">Print this page</a></li>
     <li><a href="#">Email this page</a></li>
 </ul>
