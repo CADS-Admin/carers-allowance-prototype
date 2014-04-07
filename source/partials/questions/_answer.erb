@@ -9,7 +9,9 @@
     	<% elsif locals[:type] == 'address' %>
     		<%= partial 'partials/questions/address-write', :locals => { id: locals[:id] } %>    	
     	<% elsif locals[:type] == 'yes-no' %>
-    		<%= partial 'partials/questions/yes-no-write', :locals => { id: locals[:id] } %>    	
+    		<%= partial 'partials/questions/yes-no-write', :locals => { id: locals[:id] } %>          
+        <% elsif locals[:type] == 'radios' %>
+            <%= partial 'partials/questions/radios-write', :locals => { id: locals[:id] } %>    	
     	<% elsif locals[:type] == 'education' %>
     		<%= partial 'partials/questions/education-write' %>  
         <% elsif locals[:type] == 'self-employment' %>

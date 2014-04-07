@@ -38,23 +38,16 @@ $(document).ready(function(){
 	// Apply Select 2 to country selectors
 	$(".js-country").select2();
 
-	// Pretty-print dates
-	var printDate = function(day, month, year){
+  	// Form focus styles
+  	if ($('.form').length>0) {
 
-		var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-		var newDay = day.replace(/^[0]+/g,"");
-
-		if (! /^[0-9]+$/.test(month)) {
-			var newMonth = month;
-		} else {
-    		var monthNum = parseInt(month);
-    		var newMonth = months[monthNum-1];
-		}
-
-		var newYear = year;
-		return newDay + ' ' + newMonth + ' ' + newYear;
-
-	};
+      $(".block-label input").focus(function() {
+        $("label[for='" + this.id + "']").addClass("add-focus");
+      }).blur(function() {
+        $("label").removeClass("add-focus");
+      });
+      
+  	}
 
 
 
