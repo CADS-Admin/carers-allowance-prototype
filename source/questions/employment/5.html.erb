@@ -12,19 +12,8 @@ title: Employment
 <ul>
 	<li>
 		<p class="form-group-label">Do you pay for anything necessary to do your job?</p>
-		<ul id="necessary-expenses" class="radio">
-	        <li>
-	            <input type="radio" value="yes" name="necessary-expenses" id="necessary-expenses-yes">
-	            <label for="necessary-expenses-yes">Yes</label>
-	        </li>
-	        <li>
-	            <input type="radio" value="no" name="necessary-expenses" id="necessary-expenses-no">
-	            <label for="necessary-expenses-no">No</label>
-	        </li> 
-		</ul>
-
-	</li>
-	<li class="other-detail grouped" style="display: none;">
+		<%= partial 'partials/questions/yes-no', :locals => { :id => 'expenses', :yesToggle => '#yesToggle'} %>
+	<div class="form-group-indent js-hidden" id="yesToggle">
 		<ul>
 			<li>
 				<label for="39382e33b37155f49f1d9647e68e87f8" class="form-control-label">What is your job title?</label>
@@ -36,16 +25,20 @@ title: Employment
 			    <input type="text" maxlength="60" autocomplete="off" value="" name="5cf23bf18426070398bd5ab019be6882" id="5cf23bf18426070398bd5ab019be6882">
 			</li>
 		</ul>
-	</li>	
+	</div>	
 
+	</li>
+</ul>
 
-
+<!--
 		<details>
 			<summary>How are expenses taken into account?</summary>
 		<p>We may be able to take into account some other expenses, such as expenses you have to pay for your job. For example, tools or protective clothing.</p>
 		</details>
 
-	<li>
+	-->
+<ul>
+	<li class="form-group">
 		<p class="form-group-label">While at work, do you pay anyone to look after your children?</p>
 		<ul id="paid-childcare" class="radio">   
 	        <li>

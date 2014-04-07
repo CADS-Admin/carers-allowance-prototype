@@ -1,113 +1,57 @@
 ---
 question: 11
-title: Employment
+title: Pension Schemes
 ---
 
 <%= partial "partials/page-title" %>
 		
 <fieldset class="form-elements">
-<legend>3. Pension schemes</legend>
-		
-<ul>
-	<li>
-		<p>Do you pay towards an occupational pension scheme?</p>
-		<ul id="pay-occupational-pension" class="radio">
-	        <li>
-	            <input type="radio" value="yes" name="pay-occupational-pension" id="pay-occupational-pension-yes">
-	            <label for="pay-occupational-pension-yes">Yes</label>
-	        </li>
-	        <li>
-	            <input type="radio" value="no"  name="pay-occupational-pension" id="pay-occupational-pension-no">
-	            <label for="pay-occupational-pension-no">No</label>
-	        </li>
-		</ul>
-	</li>
-	
-	<li style="display: none;" class="other-detail grouped">
-		<ul>
-			<li class="currency"> 
-				<label for="how-much" class="form-control-label">How much do you pay?</label>
-		        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
 
-				<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
-			    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
-		            <option value="02">a week</option>
-		            <option value="03">a fortnight</option>
-		            <option value="04">every 4 weeks</option>
-		            <option value="05">a month</option>
-		            <option value="other">other</option> 
-		    	</select>
-		 	</li>
-		 </ul>
-	</li>
-	<!--<li style="display: none;" class="other-detail" id="howOftenPension_wrap">
-		<label for="how-often-pension-other">How often?</label>
-		<textarea autocomplete="off" maxlength="60" placeholder="If other please specify..." name="how-often-pension-other" id="how-often-pension-other"></textarea>
-		<p class="helper right">60 characters left</p>       
-	</li>-->	
-	<li>
-		<p>Do you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme?</p>
-		<ul id="pay-personal-pension" class="radio">
-			<li>
-		    	<input type="radio" value="yes" name="pay-personal-pension" id="pay-personal-pension-yes">
-				<label for="pay-personal-pension-yes">Yes</label>
-			</li>
-			<li>
-				<input type="radio" value="no"  name="pay-personal-pension" id="pay-personal-pension-no">
-				<label for="pay-personal-pension-no">No</label>
-			</li>
-		</ul>
-	</li>
-	
-	<li style="display: none;" class="other-detail grouped">
-		<ul>	           
-			<li class="currency"> 
-								<label for="how-much" class="form-control-label">How much do you pay?</label>
-		        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
+    <p class="form-group-label">Do you pay towards an occupational pension scheme?</p>
+        <%= partial 'partials/questions/yes-no', :locals => { :id => 'pensionScheme', :yesToggle => '#yesToggle'} %>
 
-				<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
-			    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
-		            <option value="02">a week</option>
-		            <option value="03">a fortnight</option>
-		            <option value="04">every 4 weeks</option>
-		            <option value="05">a month</option>
-		            <option value="other">other</option> 
-		    	</select>
-	    	</li>
-		</ul>
-	</li>
-		
-	<li style="display: none;" class="other-detail" id="howOftenPersonal_wrap">
-		<label for="f4f72885aa832e43f5b2b3a4580d79fbdbb8643ecc9960345333eef3a815fe52679d0b18d6402f06eb60c187c8dcce7f">How often?</label>
-		<textarea autocomplete="off" maxlength="60" placeholder="If other please specify..." name="f4f72885aa832e43f5b2b3a4580d79fbf5cdc83c14ae5d951eb69af9df76e8e3679d0b18d6402f06eb60c187c8dcce7f" id="f4f72885aa832e43f5b2b3a4580d79fbdbb8643ecc9960345333eef3a815fe52679d0b18d6402f06eb60c187c8dcce7f"></textarea>
-		<!--<p class="helper right">60 characters left</p>-->
-	</li>  
 
-</ul>
+    <div class="form-group-indent js-hidden" id="yesToggle">
+		<label for="how-much" class="form-control-label">How much?</label>
+	        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
+
+		<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
+	    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
+            <option value="02">a week</option>
+            <option value="03">a fortnight</option>
+            <option value="04">every 4 weeks</option>
+            <option value="05">a month</option>
+            <option value="other">other</option> 
+    	</select>
+    </div>
+
+    <p class="form-group-label">Do you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme?</p>
+        <%= partial 'partials/questions/yes-no', :locals => { :id => 'pensionScheme2', :yesToggle => '#yesToggle2'} %>
+
+
+    <div class="form-group-indent js-hidden" id="yesToggle2">
+		<label for="how-much" class="form-control-label">How much?</label>
+	        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
+
+		<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
+	    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
+            <option value="02">a week</option>
+            <option value="03">a fortnight</option>
+            <option value="04">every 4 weeks</option>
+            <option value="05">a month</option>
+            <option value="other">other</option> 
+    	</select>
+    </div>
+
 </fieldset><!-- / form elements -->
 			
-<div class="form-steps">
-	<a href="3" class="button-link">Back</a>
-	<a href="5" class="button">Next</a>
-</div><!-- / form steps -->
 
-<script>
+<div class="form-group">
+       <br><br>
+    <a class="next button" href="5">Next question</a>
+</div>
 
-// Show & Hide Fields
-
-$(document).ready(function() {  
-	$('#pay-occupational-pension-yes').click(function(){
-		$(this).parents('ul li').next('.other-detail').show();
-	});
-	$('#pay-occupational-pension-no').click(function(){
-		$(this).parents('ul li').next('.other-detail').hide();
-	});
-	$('#pay-personal-pension-yes').click(function(){
-		$(this).parents('ul li').next('.other-detail').show();
-	});
-	$('#pay-personal-pension-no').click(function(){
-		$(this).parents('ul li').next('.other-detail').hide();
-	});
-});
-
-</script>
+<ul class="form-group">
+    <li><a href="5" >Skip this section for now</a></li>
+    <li><a href="4">Back</a></li>        
+</ul>

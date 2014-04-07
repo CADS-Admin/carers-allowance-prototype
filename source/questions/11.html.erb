@@ -10,7 +10,7 @@ title: Employment
 
 <div class="form-group">
 
-	<h2 class="section-heading">Have you been self employed at any time since <%= partial 'partials/questions/date-minus-6months-write', :locals => { id: 'claimDate' } %>?</h2>
+	<h2 class="section-heading">Have you been self employed at any time since 8 July 2013?</h2>
 	
 	<div class="form-hint">
 	
@@ -24,7 +24,7 @@ title: Employment
 		</ul>
 	</div>
 
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'selfEmployed', yesToggle: '#yesToggle' } %>
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'selfEmployed' } %>
 
     <div class="js-hidden form-group" id="yesToggle">
     	<br>
@@ -35,7 +35,7 @@ title: Employment
 
 <div class="form-group">
 		
-	<h2 class="section-heading">Have you been employed at any time since 25 June 2013?</h2>	
+	<h2 class="section-heading">Have you been employed at any time since 1 April 2014</h2>	
 	
 	<div class="form-hint">
 	
@@ -55,7 +55,7 @@ title: Employment
 	
 	</div>	
 			
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'employed', yesToggle: '#yesToggle2' } %>
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'employed' } %>
 
     <div class="js-hidden form-group" id="yesToggle2">
     	<br>
