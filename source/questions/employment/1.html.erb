@@ -1,9 +1,48 @@
 ---
-question: 12
-title: Employment
+question: 11
+title: Employment details
 ---
 
 <%= partial "partials/page-title" %>
+
+
+<form class="form" id="form" name="data">
+
+    <h2 class="section-heading">Employer details</h2>
+
+    <%= partial 'partials/questions/text-field', :locals => { 
+        :id => 'employerName',
+        :label => 'Employer name'
+    }%>
+
+    <%= partial 'partials/questions/text-field', :locals => { 
+        :id => 'employerPhoneNo',
+        :label => 'Phone number (optional)'
+    }%>
+
+    <%= partial 'partials/questions/text-field', :locals => { 
+        :id => 'employerPayroll',
+        :label => 'Payroll or employee number (optional)'
+    }%>
+
+
+
+
+<div class="form-group">
+       <br><br>
+    <a class="next button" href="2"><%= buttonText %></a>
+</div>
+
+<ul class="form-group">
+    <li><a href="2" >Skip this section for now</a></li>
+    <li><a href="../11">Back</a></li>        
+</ul>
+
+
+</form>
+
+
+
 
 <input type="hidden" value="8d1c7066-6913-41c8-b4fc-1f26bd88a19d" name="jobID">
 

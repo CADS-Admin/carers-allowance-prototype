@@ -24,7 +24,12 @@ title: Employment
 		</ul>
 	</div>
 
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'selfEmployed' } %>
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'selfEmployed', yesToggle: '#yesToggle' } %>
+
+    <div class="js-hidden form-group" id="yesToggle">
+    	<br>
+        <p><a href="/questions/self-employment/1" class="button">Add self-employment details</a></p>
+	</div>
 		
 </div>	
 
@@ -50,7 +55,12 @@ title: Employment
 	
 	</div>	
 			
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'employed' } %>
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'employed', yesToggle: '#yesToggle2' } %>
+
+    <div class="js-hidden form-group" id="yesToggle2">
+    	<br>
+        <p><a href="/questions/employment/1" class="button">Add employment details</a></p>
+	</div>
 	
 </div>	
 
