@@ -38,6 +38,28 @@ $(document).ready(function(){
 	// Apply Select 2 to country selectors
 	$(".js-country").select2();
 
+	// Pretty-print dates
+	var printDate = function(day, month, year){
+
+		var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+		var newDay = day.replace(/^[0]+/g,"");
+
+		if (! /^[0-9]+$/.test(month)) {
+			var newMonth = month;
+		} else {
+    		var monthNum = parseInt(month);
+    		var newMonth = months[monthNum-1];
+		}
+
+		var newYear = year;
+		return newDay + ' ' + newMonth + ' ' + newYear;
+
+	};
+
+
+
+
+
 
 
 	// ------------------------------------------------------------------
@@ -86,6 +108,24 @@ $(document).ready(function(){
 		var id = $(this).data('from');
 		return localStorage.getItem('formdata' + id);
 	});
+
+	// Pretty print days
+	$('.date-day').text(function(i, text){
+		return text.replace(/^[0]+/g,"")
+	})
+	// Pretty print months
+	$('.date-month').text(function(i, text){
+		var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+		if (! /^[0-9]+$/.test(text)) {
+			var newMonth = text;
+		} else {
+    		var monthNum = parseInt(text);
+    		var newMonth = months[monthNum-1];
+		}
+
+		return newMonth;
+	})
 
 
 	// ------------------------------------------------------------------
