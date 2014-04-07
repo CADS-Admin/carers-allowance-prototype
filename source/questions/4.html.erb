@@ -1,6 +1,6 @@
 ---
 question:   4
-title:      Your nationality and residency
+title:      Nationality, Residency and time abroad
 ---
 
 <%= partial "partials/page-title" %>
@@ -34,6 +34,19 @@ title:      Your nationality and residency
 	</div>
 
 
+
+<!-- Time abroad -->
+
+	<h2 class="section-heading">Have you been away for more than 52 weeks in the 3 years before your claim date?</h2>
+	
+	<p class="form-hint">This could be one trip, or a number of trips adding up to 52 weeks.
+	Your claim date is <%= partial "partials/claim-date" %>. 
+	</p>
+
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'away52Weeks'} %>
+
+
+<!-- Next -->
 
     <%= partial "partials/next-question" %>
 
