@@ -297,7 +297,7 @@ textarea {
   margin-bottom: 10px;
   &:hover{
     cursor: pointer;
-    //background-color: $border-colour;
+    background-color: $border-colour;
   }
   &.add-focus{
     outline: 3px solid #FFBF47;
