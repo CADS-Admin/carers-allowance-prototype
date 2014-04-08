@@ -76,7 +76,9 @@ $(document).ready(function(){
 	// IF in edit mode AND current question has been previously answered 
 	// or skipped, THEN change button text and href
 
-	if (localStorage['edit'] == true && (answeredSkipped.indexOf(currentQuestion) > -1)){
+
+	if (localStorage['edit'] == 'true' && (answeredSkipped.indexOf(currentQuestion) > -1)){
+
 		$('.next.button')
 			.text('Update this answer')
 			.attr("href", 'check-answers')
