@@ -296,14 +296,23 @@ textarea {
   background: $grey-3;
   margin-bottom: 10px;
 
-  border: 1px solid white;
+  input{
+    //display: none;
+    &:hover{
+    cursor: pointer;
+    }
+  }
+
+  //border: 1px solid white;
   &:hover{
     cursor: pointer;
-    border: 1px solid black;
-    background-color: $border-colour;
+    //border: 1px solid black;
+    outline: 3px solid $grey-1;
+    background-color: $panel-colour;
   }
   &.selected{
-    border: 1px solid black;
+    //border: 1px solid black;
+    outline: 3px solid $grey-1;
   }
   &.add-focus{
     outline: 3px solid #FFBF47;
