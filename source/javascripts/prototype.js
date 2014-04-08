@@ -38,6 +38,12 @@ $(document).ready(function(){
 	// Apply Select 2 to country selectors
 	$(".js-country").select2();
 
+
+
+
+
+
+
   	// Form focus styles
   	if ($('.form').length>0) {
 
@@ -48,6 +54,14 @@ $(document).ready(function(){
       });
       
   	}
+
+
+  	$('.block-label input[type="radio"]').click(function () {
+		var group = $(this).attr('name');
+        $('input[name="'+group+'"]:not(:checked)').parent().removeClass("selected");
+        $('input[name="'+group+'"]:checked').parent().addClass("selected");
+    });
+    $('.block-label input[type="radio"]:checked').parent().addClass("selected");
 
 
 
