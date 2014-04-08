@@ -213,7 +213,7 @@ $(document).ready(function(){
 	// SUBMIT APPLICATION
 
 	if (answered.length == totalQuestions){
-		$('.submit-application').text('Your application');
+		$('.submit-application').text('Now submit your application');
 		$('.continue.button')
 			.text('Continue to consent and declaration')
 			.attr("href", 'consent')
