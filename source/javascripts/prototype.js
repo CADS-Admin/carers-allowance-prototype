@@ -55,7 +55,7 @@ $(document).ready(function(){
       
   	}
 
-
+  	// Selected button styles
   	$('.block-label input[type="radio"]').click(function () {
 		var group = $(this).attr('name');
         $('input[name="'+group+'"]:not(:checked)').parent().removeClass("selected");

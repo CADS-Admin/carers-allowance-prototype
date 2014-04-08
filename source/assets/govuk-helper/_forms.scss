@@ -295,9 +295,13 @@ textarea {
   padding: (18px $gutter $gutter-half $gutter-half);
   background: $grey-3;
   margin-bottom: 10px;
+  padding-left: 30px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid $grey-2;
 
   input{
-    //display: none;
+    position: absolute;
+    left: -9999px;
     &:hover{
     cursor: pointer;
     }
@@ -307,12 +311,17 @@ textarea {
   &:hover{
     cursor: pointer;
     //border: 1px solid black;
-    outline: 3px solid $grey-1;
-    background-color: $panel-colour;
+    //outline: 1px solid black;
+    background-color: $grey-2;
+    border-bottom: 2px solid $grey-1;
   }
   &.selected{
     //border: 1px solid black;
-    outline: 3px solid $grey-1;
+    //outline: 1px solid black;
+    background-color: white;
+    border: 2px solid $grey-1;
+    margin-left: -2px;
+    margin-right: -2px;
   }
   &.add-focus{
     outline: 3px solid #FFBF47;
