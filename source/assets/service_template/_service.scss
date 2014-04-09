@@ -168,6 +168,29 @@ p.skipped{
   float: left;
 }
 
+
+.timeout-message {
+  margin-top: 45px;
+  p,h3{
+    font-size: 16px;
+    max-width: 180px;
+    margin-bottom: 0;
+  }
+  .alert{
+    color: $mellow-red;
+  }
+
+}
+
+.prototype{
+  float: right;
+  text-transform: uppercase;
+  outline: 2px solid #FFF;
+  padding: 4px 8px 1px 8px;
+  margin-right: 2px;
+  line-height: 25px;
+}
+
 // NEW DARK FOOTER STYLES
 
 // We're overwriting the template styles here.
