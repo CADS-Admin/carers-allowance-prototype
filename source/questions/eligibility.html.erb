@@ -1,0 +1,173 @@
+---
+question: 1
+title:  Eligibility
+---
+		
+<h1 class="heading-36">Can you get Carer's Allowance?</h1>
+
+	<h2 class="section-heading">Do you spend 35 hours or more each week caring for someone?</h2>
+    <p class="form-hint">For example, cooking meals, or helping them with their shopping.</p>
+    
+    <%= partial 'partials/questions/yes-no', :locals => { :id => '35_hours'} %>
+    
+    <h2 class="section-heading">Does the person you care for get a qualifying benefit?</h2>
+    
+    <p class="form-hint">They should already be getting one of these benefits:</p>
+      
+
+      <div class="form-group-indent" style="margin-bottom: 5px">
+
+          <!--<p class="form-control-label">Is this one of these benefits?</p>-->
+          <ul>
+          	<li style="margin-top: 10px;"><strong>Personal Independence Payment</strong> (PIP) <br>at either the standard or enhanced rate of the Daily Living Component</li>
+            <li style="margin-top: 10px;"><strong>Disability Living Allowance</strong> (DLA) <br>at the middle or highest rate</li>
+			<li style="margin-top: 10px;"><strong>Attendance Allowance</strong> (AA)</li>
+			<li style="margin-top: 10px;"><strong>Constant Attendance Allowance</strong> (CAA) <br>at or above the normal maximum rate as an addition to Industrial Injuries Disablement Benefit (IIDB); or the basic, full day rate as an addition to War Disablement Pension (WDP)</li>
+          	<li style="margin-top: 10px;"><strong>Armed Forces Independence Payment</strong> (AFIP)</li>
+          </li>
+
+    </div><!-- form-group-indent -->
+    
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'benefit_type'} %>
+
+    <h2 class="section-heading">Are you aged 16 or over?</h2>
+    <%= partial 'partials/questions/yes-no', :locals => { :id => '16_over'} %>
+    
+    <h2 class="section-heading">Do you live in either England, Scotland or Wales?</h2>
+    <p class="form-hint">Answer 'Yes' if you are part of a family living overseas with HM forces. If you live in Northern Ireland go to <a href="#">NI Carers Allowance</a>.</p>
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'live_in'} %>
+    <!--
+    
+    	<p>If you live outside England, Scotland or Wales, but in the European Economic Area (EEA) or Switzerland, and you have answered Yes to the first three questions above, there are some exceptions to these conditions if you're living in another country.</p>
+    	
+   	-->
+
+<style>
+
+.prompt {
+	border: 3px solid #000;	
+    float: left;
+    clear: both;
+    position: relative;
+    margin: 3em 0 1em;
+}
+#failure.prompt {
+	background: none repeat scroll 0 0 #FEF7F7;
+	border: 3px solid #DF3034;	
+}
+
+.prompt p {
+    margin: 0.75em 0;
+    padding: 0 1em;
+    text-align: left;
+}
+#failure.prompt p {    
+	padding: 0 5em 0 1em;
+}
+
+.prompt span {
+    background: none repeat scroll 0 0 #990C1A;
+    border-radius: 100px;
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: 700;
+    height: 36px;
+    margin-top: -18px;
+    position: absolute;
+    right: 16px;
+    text-align: center;
+    top: 50%;
+    width: 36px;
+}
+
+</style>
+
+<div id="failure" class="prompt" >
+
+	<p style="font-size: 24px;"><strong>Based on your answers you may not be entitled</strong></p>
+	
+	<div class="feedback-q1">
+		<p>You can only get Carer's Allowance if you are caring for someone 35 hours or more each week.</p>
+	</div>
+	<div class="feedback-q2">
+		<p>If they have applied for one of the benefits above and are still waiting on a decision, please do not apply for Carer's Allowance until that decision has been made.</p>
+	</div>
+	<div class="feedback-q3">
+		<p>You can only get Carer's Allowance if you are aged 16 or over.</p>
+	</div>
+	<div class="feedback-q4">
+		<p>You can only get Carer's Allowance if you normally live in England, Scotland or Wales.</p>
+	</div>
+	<span>!</span>
+	
+	
+	<p>You are legally entitled to make an application even though you do not qualify and will not get Carer's Allowance.<p>
+
+</div>
+
+
+
+<div id="success" class="prompt">
+	<p style="font-size: 24px;"><strong>Based on your answers you may be entitled</strong></p>
+	
+	<section class="earnings">
+	    <p>If your income after tax, National Insurance and certain allowable expenses is more than &pound;100 a week you won't be entitled.</p>
+	</section>
+	
+	<section class="education">
+	    <p>If you're studying 21 hours a week or more you might not be entitled.</p>
+	</section>
+	
+	<section class="partner">
+	    <p>If you have a partner, any benefits they get can be affected if you get Carer's Allowance.</p>
+	</section>
+	
+</div>
+
+<!--
+If your circumstances change, you may be entitled to Carer's Allowance Find out more about Carer's Allowance.
+
+However, if you wish to continue, click the 'Next step' button below.
+
++ However, if you wish to continue, click the 'Next step' button below.
+-->
+
+<!--                 
+<h1>What you need to know before you claim...</h1>
+
+<section class="partner">
+	<h2>This could affect your partner's benefits</h2>
+    <p>Some benefits your partner might get can also be affected. You will need to enter their details so the Department for Work and Pensions can work out how much they're still entitled to.</p>
+</section>
+
+<section class="earnings">
+    <h2>You need to be earning less than &pound;100 a week net</h2>
+    <p>If your income after tax, National Insurance and certain allowable expenses is more than &pound;100 a week you won't be entitled to Carer's Allowance. Please see the <a href="/internal-claim-notes/en">claim notes</a> for allowable expenses. You will need to enter your employment details.</p>
+</section>
+
+<section class="education">
+    <h2>If you're in full time education you might not get Carer's Allowance</h2>
+    <p>If you're studying 21 hours a week or more you might not be entitled. You will need to enter details of any education courses you're studying for.</p>
+</section>
+-->
+    
+
+<div class="form-group">
+<br>
+<br>
+<a class="next button" href="1">Start application</a>
+</div>
+
+<script type="text/javascript">
+
+var form = $('form#passports');
+form.submit(function (e) {
+  event.preventDefault();
+  if ($('input.no_option:checked', form).length > 0) {
+    window.location = "/carers_allowance_yes"
+  }
+  else {
+    window.location = "http://frozen-harbor-2592.herokuapp.com/questions/1"
+  }
+});
+</script>
