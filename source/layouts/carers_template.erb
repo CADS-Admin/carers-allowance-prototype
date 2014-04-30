@@ -45,25 +45,49 @@
           <h2 class="heading-24">Get help</h2>
 
           <ul>
-            <li><a href="#">Read the guide</a></li>
-            <li><a href="#">Email feedback</a></li>
-            <li><a class="js-toggle" href="#get-help">Call the helpline</a></li>
-            <li id="get-help" class="js-hidden">
-              <strong>0845 601 8040</strong>
-              <p>
-                Mon to Fri: 08:00 am – 09:00 pm <br>
-                Weekends: 09:00am – 04:00pm <br>  
-                Closed on public and bank holidays <br> 
+          <li><a href="#">Read the guide</a></li>
+          <li><a href="#">Email feedback</a></li>
+          </ul>
+          <ul>            
+          <li>Call 0845 601 8040</li>
+            <li id="get-help">
+              <!--<p>
+                Mon to Fri: 8am – 9pm <br>
+                Weekends: 9am – 4pm <br>  
+                Closed on public and bank holidays<br> 
                 <a href="">Find out about call charges</a>
+              </p>-->
+              <!-- This can/should be dynamically tailored her -->
+              <p>
+              	Open today until 09:00pm.<br>
+              	Average wait is 15–20 seconds. <br> <a href="">Call charges</a>
+              	<!--You will speak to someone in 20 secs. <a href="">Call charges</a>-->
               </p>
+              
             </li>
           </ul>
 
 
           <div class="timeout-message">
             <h3>For your security</h3>
-            <p>Your data will be deleted after 1 hour of inactivity</p>
+            <!--<p>Your data will be deleted after 1 hour of inactivity</p>-->
             <!--<p class="alert">Deleting in <span>10 minutes</span>...</p>-->
+            <p>This application will time out if you leave it inactive for more than 1 hour.</p>
+            <!-- 
+            
+            Alternatives:
+            
+            Time out warning
+            <p>Your application will be deleted if you leave it for more than 1 hour.</p>
+            
+            Time inactive: [number] minutes
+            <p>If you leave your application inactive for more than 1 hour it will be deleted.</p>
+            
+            [message only appears after 30 mins of inactivity, number of mins goes up as time goes on]
+            You've left your application inactive for 30 minutes
+            You application will be deleted if you leave it for more than 1 hour. 
+            
+            -->
           </div>
 
         </div>
