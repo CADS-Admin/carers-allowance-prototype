@@ -5,7 +5,7 @@ title: European Economic Area states and Switzerland
 
 <%= partial "partials/page-title" %>
 
-<p>These questions relate to the following countries:</p>
+<p>These questions are about the following countries: </p>
 
 <div class="form-group-indent">
 	<p>Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden and Switzerland</p>
@@ -13,17 +13,25 @@ title: European Economic Area states and Switzerland
 
 <form class="form" id="form" name="data">
 
-	<h2 class="section-heading">Do you, or any member of your family, receive any benefits or pensions from the above countries?</h2>
+	<h2 class="section-heading" style="margin-bottom:25px!important">Do the following apply to you or anyone in <br>your family?</h2>
 
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'getBenefits'} %>
-    
-    <h2 class="section-heading">Have you, or a member of your family, made a claim for any benefits or pensions from the above countries?</h2>
+	<div class="form-group-indent">
 
-	<%= partial 'partials/questions/yes-no', :locals => { :id => 'claimBenefits'} %>
-
-    <h2 class="section-heading">Are you, or a member of your family, working in or paying insurance to one of the above countries?</h2>
-
-	<%= partial 'partials/questions/yes-no', :locals => { :id => 'workInsurance'} %>	
+		<div class="form-group">
+			<p class="form-control-label" style="margin-bottom: -5px">You get a pension from the countries above</p>
+		    <%= partial 'partials/questions/yes-no', :locals => { :id => 'getBenefits'} %>
+		</div>
+		
+		<div class="form-group">    
+	    	<p class="form-control-label" style="margin-bottom: -5px">You've claimed benefits from the countries above</p>	
+			<%= partial 'partials/questions/yes-no', :locals => { :id => 'claimBenefits'} %>
+		</div>
+		
+		<div class="form-group">
+	    	<p class="form-control-label" style="margin-bottom: -5px">You work or pay insurance in the countries above?</p>
+			<%= partial 'partials/questions/yes-no', :locals => { :id => 'workInsurance'} %>	
+		</div>	
+	</div>
 
     <div class-"form-group">
 

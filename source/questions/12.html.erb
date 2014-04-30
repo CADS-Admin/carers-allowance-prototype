@@ -5,12 +5,13 @@ title:  Statutory pay, benefits and payments
 
 <%= partial "partials/page-title" %>
 
+<p>Statutory pay is what your employer has to pay you by law.</p>
 
 <form class="form" id="form" name="data">
 
 	<div class="form-group">
 			
-		<p class="form-group-label">Have you received any Statutory Sick Pay (SSP) since your claim date?</p>
+		<p class="form-group-label">Did you get any Statutory Sick Pay since your claim date?</p>
 		<p class="form-hint">Your claim date is <%= partial "partials/claim-date" %></p>
 		<%= partial 'partials/questions/yes-no', :locals => { :id => 'statutory', :hideLabel => true, yesToggle: '#yesToggle2' } %>
 			
@@ -52,8 +53,12 @@ title:  Statutory pay, benefits and payments
 	        </div>    
 		</div><!-- /hidden -->
 		
-		<p class="form-group-label">Have you received any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since your claim date?</p>
-		<p class="form-hint">Your claim date is <%= partial "partials/claim-date" %></p>
+		<p class="form-group-label">Did you get any other statutory pay since your claim date?<p>
+		<ul style="display: block; float: left; clear: both; width: 100%; margin-bottom: 0;">
+			<li>- Maternity Pay<li>
+			<li>- Paternity Pay<li>
+			<li>- Adoption Pay<li>
+		</ul>
 		<%= partial 'partials/questions/yes-no', :locals => { :id => 'otherStatutory', yesToggle: '#yesToggle3'} %>
 			
 		<div class="js-hidden form-group-indent" id="yesToggle3">

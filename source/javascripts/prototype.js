@@ -234,7 +234,7 @@ $(document).ready(function(){
 			.text('Continue to consent and declaration')
 			.attr("href", 'consent')
 			.before('<p>Make sure you check all your information is correct before you continue.</p>');
-		$('.question-status p').text('Check your answers before completing your application.');
+		$('.question-status p').text('You can change anything that\'s not right before sending your application.');
 		$('.continue.back').attr("href", totalQuestions);
 	}
 

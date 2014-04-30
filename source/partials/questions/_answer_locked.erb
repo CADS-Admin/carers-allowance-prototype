@@ -1,0 +1,28 @@
+<tr>
+    <td class="visuallyhidden question"><%= locals[:q] %></td>
+    <td class="title"><%= locals[:title] %></td>
+    <td class="answer">
+    	<% if locals[:type] == 'date' %>
+    		<%= partial 'partials/questions/date-write', :locals => { id: locals[:id] } %>
+    	<% elsif locals[:type] == 'text-field' %>
+    		<%= partial 'partials/questions/text-field-write', :locals => { id: locals[:id] } %>
+    	<% elsif locals[:type] == 'address' %>
+    		<%= partial 'partials/questions/address-write', :locals => { id: locals[:id] } %>    	
+    	<% elsif locals[:type] == 'yes-no' %>
+    		<%= partial 'partials/questions/yes-no-write', :locals => { id: locals[:id] } %>          
+        <% elsif locals[:type] == 'radios' %>
+            <%= partial 'partials/questions/radios-write', :locals => { id: locals[:id] } %>    	
+    	<% elsif locals[:type] == 'education' %>
+    		<%= partial 'partials/questions/education-write' %>  
+        <% elsif locals[:type] == 'self-employment' %>
+            <%= partial 'partials/questions/self-employment-write' %>
+        <% elsif locals[:type] == 'employment' %>
+            <%= partial 'partials/questions/employment-write' %>
+    	<% else %>
+        <%= locals[:answer] %>
+        <% end %>
+    </td>
+    <td>
+        <a class="edit-link" href="<%= locals[:q] %>">View</a>
+    </td>
+</tr>
