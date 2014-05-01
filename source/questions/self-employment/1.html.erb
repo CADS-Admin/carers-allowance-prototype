@@ -6,25 +6,26 @@ title: Your employment details
 <%= partial "partials/page-title" %>
 	
 		<p class="form-group-label">Are you self-employed now?</p>		
-        <%= partial 'partials/questions/yes-no', :locals => { :id => 'self-employed-now', :hideLabel => true } %>
+        <%= partial 'partials/questions/yes-no', :locals => { :id => 'self-employed-now', noToggle: '#noToggle', :hideLabel => true } %>
 
-		<p class="form-group-label">When did you start this self employed work?</p>	
-		<p class="form-hint">For example, 03 May 2013</p>		
+		<p class="form-group-label">When did you start this self-employed work?</p>	
+		<p class="form-hint">For example, 03 05 2013</p>		
 		<%= partial "partials/questions/date", :locals => { :id => "selfemployedStart" } %>
        
 
-<!-- HIDDEN -->
-		<p class="form-group-label">When did you finish this self employed work?</p>
-		<p class="form-hint">For example, 03 May 2013</p>	
+	<div class="js-hidden" id="noToggle">
+	
+		<p class="form-group-label">When did you finish this self-employed work?</p>
+		<p class="form-hint">For example, 03 05 2013</p>	
 		<%= partial "partials/questions/date", :locals => { :id => "selfemployedEnd" } %>				           
 
 		<p class="form-group-label">Has your business ceased trading? (optional)</p>
 		<%= partial 'partials/questions/yes-no', :locals => { :id => 'ceasedTrading', :hideLabel => true } %>
+	
+	</div>		
 
 		<p class="form-group-label">What type of business is your self employed work?</p>
-		<%= partial 'partials/questions/text-field', :locals => { :id => 'businessType', :hideLabel => true } %>
-			
-
+		<%= partial 'partials/questions/text-field', :locals => { :id => 'businessType', :hideLabel => true } %>		
 
 <div class="form-group">
        <br><br>
