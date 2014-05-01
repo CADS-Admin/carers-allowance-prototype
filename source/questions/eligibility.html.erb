@@ -50,21 +50,30 @@ title:  Eligibility
     clear: both;
     position: relative;
     margin: 3em 0 1em;
+    display: none;
 }
 #failure.prompt {
 	background: none repeat scroll 0 0 #FEF7F7;
 	border: 3px solid #DF3034;	
 }
-
-.prompt p {
+.prompt ul {
+	list-style-image: url("https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px.gif");
+    list-style-type: circle;
+    list-style-position: inside;
+}
+.prompt p, .prompt li  {
     margin: 0.75em 0;
     padding: 0 1em;
     text-align: left;
 }
-#failure.prompt p {    
+#failure.prompt p, #failure.prompt li {    
 	padding: 0 5em 0 1em;
 }
-
+.prompt li {
+    line-height: 1.31579;
+    margin: 0.25em 0;
+    padding-left: 0.3em;
+}
 .prompt span {
     background: none repeat scroll 0 0 #990C1A;
     border-radius: 100px;
@@ -84,51 +93,36 @@ title:  Eligibility
 
 <div id="failure" class="prompt" >
 
-	<p style="font-size: 24px;"><strong>Based on your answers you may not be entitled</strong></p>
-	
-	<div class="feedback-q1">
-		<p>You can only get Carer's Allowance if you are caring for someone 35 hours or more each week.</p>
-	</div>
-	<div class="feedback-q2">
-		<p>If they have applied for one of the benefits above and are still waiting on a decision, please do not apply for Carer's Allowance until that decision has been made.</p>
-	</div>
-	<div class="feedback-q3">
-		<p>You can only get Carer's Allowance if you are aged 16 or over.</p>
-	</div>
-	<div class="feedback-q4">
-		<p>You can only get Carer's Allowance if you normally live in England, Scotland or Wales.</p>
-	</div>
+	<p style="font-size: 24px;"><strong>Based on your answers you are not entitled. <br>You can only get Carer's Allowance if:</strong></p>
+	<ul>
+		<li class="feedback-q1" style="display: none;">you are caring for someone 35 hours or more each week</li>
+		<li class="feedback-q2" style="display: none;">the person you care for gets a qualifying benefit. If they've applied for one of the benefits above, wait until that decision has been made before you apply for Carer's Allowance</li>
+		<li class="feedback-q3" style="display: none;">you are aged 16 or over</li>
+		<li class="feedback-q4" style="display: none;">you normally live in England, Scotland or Wales</li>
+	</ul>
 	<span>!</span>
 	
-	
-	<p>You are legally entitled to make an application even though you do not qualify and will not get Carer's Allowance.<p>
-
 </div>
 
-
-
 <div id="success" class="prompt">
-	<p style="font-size: 24px;"><strong>Based on your answers you may be entitled</strong></p>
-	
+	<p style="font-size: 24px;"><strong>Based on your answers you may be entitled:</strong></p>
+	<!-- change to <ul> -->
 	<section class="earnings">
-	    <p>If your income after tax, National Insurance and certain allowable expenses is more than &pound;100 a week you won't be entitled.</p>
+	    <p>if your income after tax, National Insurance and certain allowable expenses is more than &pound;100 a week you won't be entitled</p>
 	</section>
 	
 	<section class="education">
-	    <p>If you're studying 21 hours a week or more you might not be entitled.</p>
+	    <p>if you're studying 21 hours a week or more you might not be entitled</p>
 	</section>
 	
 	<section class="partner">
-	    <p>If you have a partner, any benefits they get can be affected if you get Carer's Allowance.</p>
+	    <p>if you have a partner, any benefits they get can be affected if you get Carer's Allowance.</p>
 	</section>
 	
 </div>
 
 <!--
 If your circumstances change, you may be entitled to Carer's Allowance Find out more about Carer's Allowance.
-
-However, if you wish to continue, click the 'Next step' button below.
-
 + However, if you wish to continue, click the 'Next step' button below.
 -->
 
@@ -153,21 +147,70 @@ However, if you wish to continue, click the 'Next step' button below.
     
 
 <div class="form-group">
+<p id="legal" style="display: none;" class="form-hint">You are legally entitled to make an application even though you do not qualify and will not get Carer's Allowance.<p>
 <br>
 <br>
 <a class="next button" href="1">Start application</a>
 </div>
 
-<script type="text/javascript">
 
-var form = $('form#passports');
-form.submit(function (e) {
-  event.preventDefault();
-  if ($('input.no_option:checked', form).length > 0) {
-    window.location = "/carers_allowance_yes"
-  }
-  else {
-    window.location = "http://frozen-harbor-2592.herokuapp.com/questions/1"
-  }
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+//
+
+$(document).ready(function() {  
+
+	function checkSuccess() {
+		if($('#live_inYes').is(':checked') && $('#16_overYes').is(':checked') && $('#benefit_typeYes').is(':checked') && $('#35_hoursYes').is(':checked')) { 
+		 	//alert('success');
+			$("#success").show();
+			$("#failure").add("#legal").hide();	
+		}
+		else {
+			$("#success").hide();
+		}
+	}
+
+	$('#35_hoursNo, #benefit_typeNo, #16_overNo, #live_inNo').click(function(){
+		$("#failure").add("#legal").show();	
+	});	
+	
+	$('#35_hoursNo').click(function(){
+		checkSuccess();
+		$("#failure .feedback-q1").show();
+	});
+	$('#benefit_typeNo').click(function(){
+		checkSuccess();
+		$("#failure .feedback-q2").show();
+	});
+	$('#16_overNo').click(function(){
+		checkSuccess();
+		$("#failure .feedback-q3").show();
+	});
+	$('#live_inNo').click(function(){
+		checkSuccess();
+		$("#failure .feedback-q4").show();
+	});	
+	$('#35_hoursYes').click(function(){
+		checkSuccess();
+		$("#failure .feedback-q1").hide();
+	});
+	$('#benefit_typeYes').click(function(){
+		checkSuccess();
+		$("#failure .feedback-q2").hide();
+	})
+	$('#16_overYes').click(function(){
+		checkSuccess();
+		$("#failure .feedback-q3").hide();
+	});
+	$('#live_inYes').click(function(){
+		checkSuccess();
+		$("#failure .feedback-q4").hide();
+	});
+
 });
+
 </script>
+
+
+
