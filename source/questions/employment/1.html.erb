@@ -8,28 +8,19 @@ title: Employment details
 
 <form class="form" id="form" name="data">
 
-    <h2 class="section-heading">Employer details</h2>
-
     <%= partial 'partials/questions/text-field', :locals => { 
-        :id => 'employerName',
-        :label => 'Employer name'
-    }%>
-
-    <%= partial 'partials/questions/text-field', :locals => { 
-        :id => 'employerPhoneNo',
-        :label => 'Phone number (optional)'
+        :id => 'jobTitle',
+        :label => 'Job title'
     }%>
 
     <%= partial 'partials/questions/text-field', :locals => { 
         :id => 'employerPayroll',
         :label => 'Payroll or employee number (optional)'
     }%>
-
     
     <h2 class="form-group-label">When did you start this job?</h2>
 
-    <%= partial 'partials/questions/date', :locals => { :id => 'jobStart', :hint => 'For example, 27 June 2013'} %>
-
+    <%= partial 'partials/questions/date-fuzzy', :locals => { :id => 'jobStart', :hint => 'For example, 27 June 2013', :label => 'Date started'} %>
 
     <h2 class="section-heading">Have you finished this job?</h2>
 
@@ -37,7 +28,7 @@ title: Employment details
 
 
     <div class="js-hidden form-group" id="yesToggle">
-    	<%= partial 'partials/questions/date', :locals => { :id => 'jobFinish'} %>
+    	<%= partial 'partials/questions/date-fuzzy', :locals => { :id => 'jobFinish', :hint => 'For example, 6 Jan 2014', :label => 'Enter the date you finished'} %>
 
 		<h2 class="section-heading">How many hours a week did you normally work?</h2>
 
@@ -45,7 +36,7 @@ title: Employment details
 	        :id         => "workHours",
 	        :label      => "Hours worked",
 	        :hideLabel  => true,
-	        :classes    => "form-control-1-4"
+	        :classes    => "form-control-1-8"
 	    }%>
 
 	</div>
@@ -58,7 +49,7 @@ title: Employment details
 	        :id         => "workHours",
 	        :label      => "Hours worked",
 	        :hideLabel  => true,
-	        :classes    => "form-control-1-4"
+	        :classes    => "form-control-dec-3"
 	    }%>
 
 	</div>

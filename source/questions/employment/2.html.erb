@@ -1,23 +1,25 @@
 ---
 question: 11
-title: Employer's contact details
+title: Your employer
 ---
 
 <%= partial "partials/page-title" %>
 
-<div class="form-group">
-	
-	<!-- Address -->
-	
-	    <%= partial "partials/questions/address", :locals => { 
-	        :id         => "employerAddress",
-	        :label      => "Address"
-	    }%>
-	
-	<label class="form-control-label" for="employerTelNo">Phone number (optional)</label>
-	<input type="tel" maxlength="60" autocomplete="off" value="" title="Must be numbers only" pattern="[0-9 \-]{1,20}" name="employerTelNo" id="employerTelNo">
 
-</div>
+    <%= partial 'partials/questions/text-field', :locals => { 
+        :id => 'employerName',
+        :label => 'Employer name'
+    }%>
+
+    <%= partial 'partials/questions/text-field', :locals => { 
+        :id => 'employerPhoneNo',
+        :label => 'Contact phone number (optional)'
+    }%>
+
+    <%= partial "partials/questions/address", :locals => { 
+    	:id         => "employerAddress",
+    	:label      => "Employer address"
+	}%>
 				
 <div class="form-group">
        <br><br>
