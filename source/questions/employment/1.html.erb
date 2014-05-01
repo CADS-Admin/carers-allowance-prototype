@@ -11,7 +11,7 @@ title: Employer details
 
     <%= partial 'partials/questions/text-field', :locals => { 
         :id => 'employerName',
-        :label => 'Name'
+        :label => 'Employer Name'
     }%>
     
     <%= partial 'partials/questions/text-field', :locals => { 
@@ -22,6 +22,11 @@ title: Employer details
     <%= partial 'partials/questions/text-field', :locals => { 
         :id => 'employerPayroll',
         :label => 'Payroll or employee number (optional)'
+    }%>
+    
+    <%= partial "partials/questions/address", :locals => { 
+    	:id         => "employerAddress",
+    	:label      => "Address"
     }%>
     
     <h2 class="form-group-label">When did you start this job?</h2>

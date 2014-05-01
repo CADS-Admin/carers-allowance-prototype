@@ -1,14 +1,43 @@
 ---
 question: 11
-title: Employer details
+title: Your wages
 ---
 
 <%= partial "partials/page-title" %>
 
-    <%= partial "partials/questions/address", :locals => { 
-    	:id         => "employerAddress",
-    	:label      => "Address"
-	}%>
+
+
+<div class="form-group">   
+   <label for="how-much" class="form-group-label">How much are you normally paid?</label>
+   
+   <p class="form-hint">Enter your gross pay. If your pay varies, enter what you were last paid</p>
+
+   £ <input name="how-much" id="how-much" class="form-control-dec-3">
+
+	<label for="how-often" class="visuallyhidden">Every</label>
+	<select selectwithother="true" name="how-often" id="how-often">
+	    <option value="02">a week</option>
+	    <option value="03">a fortnight</option>
+	    <option value="04">every 4 weeks</option>
+	    <option value="05">a month</option>
+	    <option value="other">other</option> 
+	</select>
+
+</div>
+
+<h2 class="form-group-label">When were you last paid?</h2>
+
+<%= partial 'partials/questions/date', :locals => { :id => 'lastPaid', :hint => 'For example, 27 June 2013'} %>
+
+
+<h2 class="form-group-label">What was included in this pay? (optional)</h2>
+<p class="form-hint">For example, holiday pay, sick pay, or any redundancy payments</p>
+<%= partial 'partials/questions/text-field', :locals => { :id => 'payIncluded'} %>
+
+<h2 class="form-group-label">Does your employer owe you any money?</h2>
+
+<%= partial 'partials/questions/yes-no', :locals => { :id => 'owedMoney'} %>
+
 				
 <div class="form-group">
        <br><br>
