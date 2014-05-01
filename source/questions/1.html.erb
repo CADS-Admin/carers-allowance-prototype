@@ -15,7 +15,9 @@ noskip:		true
         <%= partial 'partials/questions/date', :locals => { :id => 'claimDate', :hint => 'For example, 06 02 2014'} %>
 
         <%= partial "partials/next-question" %>
-
-        <%= partial "partials/back-skip" %>
+        
+        <ul class="form-group">
+            <li><a href="eligibility">Back</a></li>        
+        </ul>
 
 </form>
