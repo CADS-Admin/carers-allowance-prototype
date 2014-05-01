@@ -20,8 +20,6 @@ title:      Nationality, where you live and time abroad
         :hideLabel	=> true
     }%>
 
-
-
 <!-- Residency -->
 
 	<h2 class="section-heading">Do you normally live in England, Scotland or Wales?</h2>
@@ -33,18 +31,15 @@ title:      Nationality, where you live and time abroad
     	<input type="text" class="form-control" id="other-country">
 	</div>
 
-
-
 <!-- Time abroad -->
 
 	<h2 class="section-heading">Have you been away for more than 52 weeks in the 3 years before your claim date?</h2>
 	
-	<p class="form-hint">This could be 1 long trip or many shorter trips adding up to 52 weeks</p>
+	<p class="form-hint">This could be 1 long trip or many shorter trips adding up to 52 week. <br>
 	Your claim date is <%= partial "partials/claim-date" %>. 
 	</p>
 
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'away52Weeks'} %>
-
 
 <!-- Next -->
 

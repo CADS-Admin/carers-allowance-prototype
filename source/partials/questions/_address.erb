@@ -1,8 +1,10 @@
 <fieldset class="form-group">
 
+<% if locals[:hideLabel] != true %>
     <legend class="form-group-label">
         <%= locals[:label] %>
     </legend>
+<% end %>
 
     <label class="form-control-label" for="<%= locals[:id] %>Line-1">Building and street</label>
     <input type="text" class="form-control" id="<%= locals[:id] %>Line-1" name="<%= locals[:id] %>Line-1">
