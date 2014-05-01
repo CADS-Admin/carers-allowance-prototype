@@ -8,7 +8,9 @@ title: Your wages
 
 
 <div class="form-group">   
-   <label for="how-much" class="form-group-label">How much were you normally paid?</label>
+   <label for="how-much" class="form-group-label">How much are you normally paid?</label>
+   
+   <p class="form-hint">Enter your gross pay. If your pay varies, enter what you were last paid</p>
 
    £ <input name="how-much" id="how-much" class="form-control-dec-3">
 
@@ -23,10 +25,14 @@ title: Your wages
 
 </div>
 
-<h2 class="form-group-label">When where you last paid?</h2>
+<h2 class="form-group-label">When were you last paid?</h2>
 
 <%= partial 'partials/questions/date', :locals => { :id => 'lastPaid', :hint => 'For example, 27 June 2013'} %>
 
+
+<h2 class="form-group-label">What was included in this pay? (optional)</h2>
+<p class="form-hint">For example, holiday pay, sick pay, or any redundancy payments</p>
+<%= partial 'partials/questions/text-field', :locals => { :id => 'payIncluded'} %>
 
 <h2 class="form-group-label">Does your employer owe you any money?</h2>
 
@@ -35,10 +41,9 @@ title: Your wages
 				
 <div class="form-group">
        <br><br>
-    <a class="next button" href="4">Next question</a>
+    <a class="next button" href="4">Continue</a>
 </div>
 
 <ul class="form-group">
-    <li><a href="4" >Skip this section for now</a></li>
-    <li><a href="3">Back</a></li>        
+    <li><a href="2">Back</a></li>        
 </ul>

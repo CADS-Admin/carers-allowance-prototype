@@ -6,8 +6,8 @@ title: Expenses
 <%= partial "partials/page-title" %>
 
 
-<h2 class="form-group-label">Did you have any expenses on this job?</h2>
-<p class="form-hint">This is anything you had to pay for yourself, like tools or protective clothing</p>
+<h2 class="form-group-label">Do you have any expenses for this job?</h2>
+<p class="form-hint">We may be able to take into account some other expenses, such as expenses you have to pay for your job. For example, tools or protective clothing</p>
 
 <%= partial 'partials/questions/yes-no', :locals => { :id => 'expenses', :yesToggle => '#yesToggle'} %>
 
@@ -16,7 +16,7 @@ title: Expenses
 
 	<%= partial "partials/questions/text-field", :locals => { 
         :id 		=> "expensesDetails",
-        :label 		=> "Give details of the expenses"
+        :label 		=> "What are these expenses?"
     }%>
 
 </div>
@@ -103,10 +103,9 @@ title: Expenses
 
 <div class="form-group">
        <br><br>
-    <a class="next button" href="../11">Next question</a>
+    <a class="next button" href="../11">Continue</a>
 </div>
 
 <ul class="form-group">
-    <li><a href="../11" >Skip this section for now</a></li>
-    <li><a href="5">Back</a></li>        
+    <li><a href="4">Back</a></li>        
 </ul>

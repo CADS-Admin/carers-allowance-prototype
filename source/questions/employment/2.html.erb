@@ -1,32 +1,20 @@
 ---
 question: 11
-title: Your employer
+title: Employer details
 ---
 
 <%= partial "partials/page-title" %>
 
-
-    <%= partial 'partials/questions/text-field', :locals => { 
-        :id => 'employerName',
-        :label => 'Employer name'
-    }%>
-
-    <%= partial 'partials/questions/text-field', :locals => { 
-        :id => 'employerPhoneNo',
-        :label => 'Contact phone number (optional)'
-    }%>
-
     <%= partial "partials/questions/address", :locals => { 
     	:id         => "employerAddress",
-    	:label      => "Employer address"
+    	:label      => "Address"
 	}%>
 				
 <div class="form-group">
        <br><br>
-    <a class="next button" href="3">Next question</a>
+    <a class="next button" href="3">Continue</a>
 </div>
 
 <ul class="form-group">
-    <li><a href="3" >Skip this section for now</a></li>
-    <li><a href="2">Back</a></li>        
+    <li><a href="1">Back</a></li>        
 </ul>
