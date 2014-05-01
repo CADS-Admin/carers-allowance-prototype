@@ -2,6 +2,59 @@
 question: 1
 title:  Eligibility
 ---
+
+<style>
+
+.prompt {
+    display: none;
+    float: left;
+    clear: both;
+    position: relative;
+    margin: 3em 0 1em;
+    min-width: 620px;
+}
+#success.prompt {
+	border: 3px solid #000;	
+}
+#failure.prompt {
+	background: none repeat scroll 0 0 #FEF7F7;
+	border: 3px solid #DF3034;	
+}
+.prompt ul {
+	clear: both;
+	float: left;
+	list-style-image: url("https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px.gif");
+    list-style-type: circle;
+    list-style-position: inside;
+    text-indent: -.75em;
+    margin-top: 0;
+}
+.prompt p {
+    margin: 0.75em 0;
+    padding: 0 1em;
+}
+.prompt li {
+    line-height: 1.31579;
+    margin: 0.75em 0;
+    padding: 0 2em;
+    
+}
+.prompt span {
+    background: none repeat scroll 0 0 #990C1A;
+    border-radius: 100px;
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: 700;
+    height: 36px;
+    margin-top: -18px;
+    position: absolute;
+    right: 16px;
+    text-align: center;
+    top: 40px;
+    width: 36px;
+}
+
+</style>
 		
 <h1 class="heading-36">Can you get Carer's Allowance?</h1>
 
@@ -34,86 +87,29 @@ title:  Eligibility
     <h2 class="section-heading">Do you live in either England, Scotland or Wales?</h2>
     <p class="form-hint">Answer 'Yes' if you are part of a family living overseas with HM forces. If you live in Northern Ireland go to <a href="#">NI Carers Allowance</a>.</p>
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'live_in'} %>
-    <!--
-    
-    	<p>If you live outside England, Scotland or Wales, but in the European Economic Area (EEA) or Switzerland, and you have answered Yes to the first three questions above, there are some exceptions to these conditions if you're living in another country.</p>
-    	
-   	-->
 
-<style>
 
-.prompt {
-	border: 3px solid #000;	
-    float: left;
-    clear: both;
-    position: relative;
-    margin: 3em 0 1em;
-    display: none;
-}
-#failure.prompt {
-	background: none repeat scroll 0 0 #FEF7F7;
-	border: 3px solid #DF3034;	
-}
-.prompt ul {
-	list-style-image: url("https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px.gif");
-    list-style-type: circle;
-     list-style-position: inside;
-}
-.prompt p, .prompt li  {
-    margin: 0.75em 0;
-    padding: 0 1em;
-    text-align: left;
-}
-#failure.prompt p, .prompt li {    
-	padding: 0 5em 0 1em;
-}
-.prompt li {
-    line-height: 1.31579;
-    margin: 0.25em 0;
-}
-.prompt span {
-    background: none repeat scroll 0 0 #990C1A;
-    border-radius: 100px;
-    color: #FFFFFF;
-    font-size: 26px;
-    font-weight: 700;
-    height: 36px;
-    margin-top: -18px;
-    position: absolute;
-    right: 16px;
-    text-align: center;
-    top: 50%;
-    width: 36px;
-}
-
-</style>
-
-<div id="failure" class="prompt" >
-
-	<p style="font-size: 24px;"><strong>Based on your answers you are not entitled. <br>You can only get Carer's Allowance if:</strong></p>
-	<ul>
-		<li class="feedback-q1" style="display: none;">you are caring for someone 35 hours or more each week</li>
-		<li class="feedback-q2" style="display: none;">the person you care for gets a qualifying benefit. If they've applied for one of the benefits above, wait until that decision has been made before you apply for Carer's Allowance</li>
-		<li class="feedback-q3" style="display: none;">you are aged 16 or over</li>
-		<li class="feedback-q4" style="display: none;">you normally live in England, Scotland or Wales</li>
-	</ul>
-	<span>!</span>
+	<div id="failure" class="prompt" >
 	
-</div>
-
-<div id="success" class="prompt">
-	<p style="font-size: 24px;"><strong>Based on your answers you may be entitled to Carer's Allowance.</strong></p>
-	<ul>
-		<li class="earnings">If your income after tax, National Insurance and certain allowable expenses is more than &pound;100 a week you won't be entitled</li>
-		<li class="education">If you're studying 21 hours a week or more you might not be entitled</li>
-		<li class="partner">If you have a partner, any benefits they get can be affected if you get Carer's Allowance.</li>
-	</ul>
-</div>
-
-<!--
-If your circumstances change, you may be entitled to Carer's Allowance Find out more about Carer's Allowance.
-+ However, if you wish to continue, click the 'Next step' button below.
--->
+		<p style="font-size: 24px;"><strong>Based on your answers you are not entitled. <br>You can only get Carer's Allowance if:</strong></p>
+		<ul>
+			<li class="feedback-q1" style="display: none;">you are caring for someone 35 hours or more each week.</li>
+			<li class="feedback-q2" style="display: none;">the person you care for gets a qualifying benefit. If they've applied for one of the benefits above, wait until that decision has been made before you apply for Carer's Allowance.</li>
+			<li class="feedback-q3" style="display: none;">you are aged 16 or over.</li>
+			<li class="feedback-q4" style="display: none;">you normally live in England, Scotland or Wales. If you live in the European Economic Area (EEA) or Switzerland, and you have answered Yes to the other questions, there are some exceptions.</li>
+		</ul>
+		<span>!</span>
+		
+	</div>
+	
+	<div id="success" class="prompt">
+		<p style="font-size: 24px;"><strong>Based on your answers you may be entitled <br>to Carer's Allowance.</strong></p>
+		<ul>
+			<li class="earnings">If your income after tax, National Insurance and certain allowable expenses is more than &pound;100 a week you won't be entitled</li>
+			<li class="education">If you're studying 21 hours a week or more you might not be entitled</li>
+			<li class="partner">If you have a partner, any benefits they get can be affected if you get Carer's Allowance.</li>
+		</ul>
+	</div>
 
 <!--                 
 <h1>What you need to know before you claim...</h1>
@@ -153,17 +149,13 @@ $(document).ready(function() {
 		if($('#live_inYes').is(':checked') && $('#16_overYes').is(':checked') && $('#benefit_typeYes').is(':checked') && $('#35_hoursYes').is(':checked')) { 
 		 	//alert('success');
 			$("#success").show();
-			$("#failure").add("#legal").hide();	
+			$("#failure, #legal").hide();	
 		}
-		else {
+		else if($('#live_inNo').is(':checked') || $('#16_overNo').is(':checked') || $('#benefit_typeNo').is(':checked') || $('#35_hoursNo').is(':checked')) {
 			$("#success").hide();
+			$("#failure, #legal").show();
 		}
-	}
-
-	$('#35_hoursNo, #benefit_typeNo, #16_overNo, #live_inNo').click(function(){
-		$("#failure").add("#legal").show();	
-	});	
-	
+	}	
 	$('#35_hoursNo').click(function(){
 		checkSuccess();
 		$("#failure .feedback-q1").show();
