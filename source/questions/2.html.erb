@@ -49,15 +49,6 @@ title:      Your details
 
     <%= partial 'partials/questions/date', :locals => { :id => 'yourDob', :hint => 'For example, 20 03 1976'} %>
 
-<!-- Living with partner? -->
-
-    <h2 class="section-heading">Have you had a partner or spouse living with you since your claim date?</h2>
-
-    <p class="form-hint">Your claim date is <%= partial "partials/claim-date" %>. If you have separated since then select 'Yes'.</p>
-
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'partner'} %>
-
-
 <!-- State Pension -->
 
     <h2 class="section-heading">Do you get State Pension?</h2>
