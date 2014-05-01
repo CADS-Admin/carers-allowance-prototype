@@ -1,93 +1,112 @@
 ---
 question: 12
-title: Self-employment
+title: Pension Schemes
 ---
 
 <%= partial "partials/page-title" %>
+
+    <p class="form-group-label">Do you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme?</p>
+        <%= partial 'partials/questions/yes-no', :locals => { :id => 'pensionScheme2', :yesToggle => '#yesToggle1'} %>
+
+
+<div class="form-group-indent js-hidden" id="yesToggle1">
+	<label for="how-much" class="form-control-label">How much?</label>
+        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
+
+	<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
+    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
+        <option value="02">a week</option>
+        <option value="03">a fortnight</option>
+        <option value="04">every 4 weeks</option>
+        <option value="05">a month</option>
+        <option value="other">other</option> 
+	</select>
+</div>
+
+
+<h2 class="form-group-label">Do you pay anyone to look after your children whilst you're at work?</h2>
+
+<%= partial 'partials/questions/yes-no', :locals => { :id => 'childExpenses', :yesToggle => '#yesToggle2'} %>
+
+<div class="form-group-indent js-hidden" id="yesToggle2">
+
+	<%= partial "partials/questions/text-field", :locals => { 
+        :id 		=> "childCarer",
+        :label 		=> "Name of the person or organisation"
+    }%>
+
+    <div class="form-group">   
+	   	<label for="how-much" class="form-control-label">How much do you pay them?</label>
+
+	   £ <input name="how-much" id="how-much" class="form-control-dec-3">
+
+		<label for="how-often" class="visuallyhidden">Every</label>
+		<select selectwithother="true" name="how-often" id="how-often">
+		    <option value="02">a week</option>
+		    <option value="03">a fortnight</option>
+		    <option value="04">every 4 weeks</option>
+		    <option value="05">a month</option>
+		    <option value="other">other</option> 
+		</select>
+	</div>
+
+	<%= partial "partials/questions/text-field", :locals => { 
+        :id 		=> "relationship1",
+        :label 		=> "How are they related to you?"
+    }%>
+
+    <%= partial "partials/questions/text-field", :locals => { 
+        :id 		=> "relationship2",
+        :label 		=> "How are they related to the person you care for?"
+    }%>	
 		
-<h2 class="section-heading">3. Pensions and expenses</h2>
+</div>
 
-<ul>
-	<li>
-		<p class="form-group-label">Do you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme?</p>	
-		<ul id="self-employed-pension" class="radio">
-	        <li>
-	            <input type="radio" value="yes" name="self-employed-pension" id="self-employed-pension-yes">
-	            <label for="self-employed-pension-yes">Yes</label>
-	        </li>
-	        <li>
-	            <input type="radio" value="no" name="self-employed-pension" id="self-employed-pension-no">
-	            <label for="self-employed-pension-no">No</label>
-	        </li>
-		</ul>
-	</li>
-    <li style="display: none;" class="other-detail grouped">
-		<ul>
- 			<label for="how-much" class="form-control-label">How much do you pay?</label>
-		        £ <input type="tel" autocomplete="off" maxlength="60" title="The amount must be in the format 12 or 12.5 or 12.55" pattern="^[0-9]{1,12}(\.[0-9]{1,2})?$" name="how-much" id="how-much" style="width: 100px; margin-right: 10px">
 
-				<label for="how-often-pension" class="form-control-label visuallyhidden">How often?</label>
-			    <select selectwithother="true" name="how-often-pension" id="how-often-pension">
-		            <option value="02">a week</option>
-		            <option value="03">a fortnight</option>
-		            <option value="04">every 4 weeks</option>
-		            <option value="05">a month</option>
-		            <option value="other">other</option> 
-		    	</select>
-				<p class="helper right">60 characters left</p>-->
-    		</li>
-        </ul>
-    </li>
-	<li>
-		<p class="form-group-label">While at work, do you pay anyone to care for your children?</p>
-		<ul id="paid-childcare" class="radio">
-	        <li>
-	            <input type="radio" value="yes" name="paid-childcare" id="paid-childcare-yes">
-	            <label for="paid-childcare-yes">Yes</label>
-	        </li>
-	        <li>
-	            <input type="radio" value="no" name="paid-childcare" id="paid-childcare-no">
-	            <label for="paid-childcare-no">No</label>
-	        </li>
-		</ul>
-	</li>
-	<li>
-  		<p class="form-group-label">While at work, do you pay anyone to care for the person you care for?</p>
-		<ul id="f8388f9dbd1eb1c8ff03a9c9ac7f16b99ee1dcdd3eab6d97e563110af2c447c201276404b7ef0b78e19cdc5328484bfb" class="radio">
-	        <li>
-	            <input type="radio" value="yes"  name="f8388f9dbd1eb1c8ff03a9c9ac7f16b99ee1dcdd3eab6d97e563110af2c447c201276404b7ef0b78e19cdc5328484bfb" id="f8388f9dbd1eb1c8ff03a9c9ac7f16b99ee1dcdd3eab6d97e563110af2c447c201d4cf6268c2f019bcca11d553bdfb3c">
-	            <label for="f8388f9dbd1eb1c8ff03a9c9ac7f16b99ee1dcdd3eab6d97e563110af2c447c201d4cf6268c2f019bcca11d553bdfb3c">Yes</label>
-	        </li>
-	        <li>
-	            <input type="radio" value="no"  name="f8388f9dbd1eb1c8ff03a9c9ac7f16b99ee1dcdd3eab6d97e563110af2c447c201276404b7ef0b78e19cdc5328484bfb" id="f8388f9dbd1eb1c8ff03a9c9ac7f16b99ee1dcdd3eab6d97e563110af2c447c2296effe9ad65b82009b739da98918f8c">
-	            <label for="f8388f9dbd1eb1c8ff03a9c9ac7f16b99ee1dcdd3eab6d97e563110af2c447c2296effe9ad65b82009b739da98918f8c">No</label>
-	        </li>
-		</ul>
-	</li>
-</ul>
+<h2 class="form-group-label">Do you pay anyone to look after the person you care for whilst you're at work?</h2>
 
-<div class="form-steps">
-	<a href="2" class="button-link">Back</a>
-	<a href="/questions/13" class="button" id="continue">Next</a>
-</div>		    
+<%= partial 'partials/questions/yes-no', :locals => { :id => 'carerExpenses', :yesToggle => '#yesToggle3'} %>
 
-<script>
+<div class="form-group-indent js-hidden" id="yesToggle3">
 
-// Show & Hide Fields
+	<%= partial "partials/questions/text-field", :locals => { 
+        :id 		=> "careeCarer",
+        :label 		=> "Name of the person or organisation"
+    }%>
 
-$(document).ready(function() {  
-	$('#self-employed-pension-yes').click(function(){
-		$(this).parents('ul li').next('.other-detail').show();
-	});
-	$('#self-employed-pension-no').click(function(){
-		$(this).parents('ul li').next('.other-detail').hide();
-	});
-	$('#paid-childcare-yes').click(function(){
-		$('.form-steps .button').attr('href','employment6.html');
-	});
-	$('#paid-childcare-no').click(function(){
-		$('.form-steps .button').attr('href','/v1/8Other-Money/other-money1.html');
-	});
-});
+    <div class="form-group">   
+	   	<label for="how-much" class="form-control-label">How much do you pay them?</label>
 
-</script>
+	   £ <input name="how-much" id="how-much" class="form-control-dec-3">
+
+		<label for="how-often" class="visuallyhidden">Every</label>
+		<select selectwithother="true" name="how-often" id="how-often">
+		    <option value="02">a week</option>
+		    <option value="03">a fortnight</option>
+		    <option value="04">every 4 weeks</option>
+		    <option value="05">a month</option>
+		    <option value="other">other</option> 
+		</select>
+	</div>
+
+	<%= partial "partials/questions/text-field", :locals => { 
+        :id 		=> "relationship1",
+        :label 		=> "How are they related to you?"
+    }%>
+
+    <%= partial "partials/questions/text-field", :locals => { 
+        :id 		=> "relationship2",
+        :label 		=> "How are they related to the person you care for?"
+    }%>	
+		
+</div>
+
+<div class="form-group">
+       <br><br>
+    <a class="next button" href="../11">Continue</a>
+</div>
+
+<ul class="form-group">
+    <li><a href="2">Back</a></li>        
+</ul>    
+

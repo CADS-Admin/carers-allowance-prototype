@@ -1,25 +1,22 @@
 ---
 question: 12
-title: Self-employment
+title: Your accounts
 ---
 
 <%= partial "partials/page-title" %>
-		            
-<h2 class="section-heading">2. Your accounts</h2>
-		
-<ul>
-	<li> 
-		<p class="form-group-label">Is the income, outgoings and profit you are making now, similar to your last trading year?</p>
-		<%= partial 'partials/questions/yes-no', :locals => { :id => 'yourProfit', :hideLabel => true } %>
-	</li>	
-	<li>
-		<p class="form-group-label">When was your last year end date? <em>(optional)</em></p> <!-- We should only need one date? -->
-		<p class="form-hint">This is the date your trading or accounting year ended</p>
-		<%= partial "partials/questions/date", :locals => { :id => "yearEndDate" } %>		
-	</li>
-</ul>
-		        
-<div class="form-steps">
-	<a href="1" class="button-link">Back</a>
-	<a href="3" class="button">Next</a>
-</div><!-- / form steps -->
+
+	<p class="form-group-label">Is the income, outgoings and profit you are making now, similar to your last trading year?</p>
+	<%= partial 'partials/questions/yes-no', :locals => { :id => 'yourProfit', :hideLabel => true } %>
+
+	<p class="form-group-label">When was your last year end date? (optional)</p>
+	<p class="form-hint">This is the date your trading or accounting year ended</p>
+	<%= partial "partials/questions/date", :locals => { :id => "yearEndDate" } %>		
+
+<div class="form-group">
+       <br><br>
+    <a class="next button" href="3">Continue</a>
+</div>
+
+<ul class="form-group">
+    <li><a href="1">Back</a></li>        
+</ul>    
