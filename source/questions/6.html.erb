@@ -13,7 +13,9 @@ title: Your partner's details
 
     <p class="form-hint">Your claim date is <%= partial "partials/claim-date" %>. If you have separated since then select 'Yes'.</p>
 
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'partner'} %>
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'partner', yesToggle: '#yesToggle'} %>
+
+<div class="js-hidden form-group form-group-indent" id="yesToggle">
 
 <!-- Name -->
 
@@ -78,7 +80,8 @@ title: Your partner's details
     <h2 class="section-heading">Is this the person you are claiming Carer's Allowance for?</h2>
 
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'caringPartner'} %>
-    
+   
+</div> 
 
     <div class-"form-group">
 
