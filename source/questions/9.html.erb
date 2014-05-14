@@ -5,6 +5,10 @@ title:  Breaks from caring
 
 <%= partial "partials/page-title" %>
 
+<!-- Back, Skip -->    
+
+    <%= partial "partials/back-skip" %>
+
 <p>This is any times when you have spent less than 35 hours a week caring for <%= partial 'partials/questions/text-field-write', :locals => { id: 'careName' } %>. For example, if:</p>
 <ul class="list-bullet">
 	<li>they were in respite care, hospital or on holiday without you, <em>or</em></li>
@@ -20,7 +24,5 @@ title:  Breaks from caring
 	
 
     <%= partial "partials/next-question" %>
-
-    <%= partial "partials/back-skip" %>
 
 </form>

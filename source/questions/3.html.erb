@@ -9,7 +9,11 @@ title:      Your contact details
 
 <form class="form" id="form" name="data">
 
-    <!-- Phone number -->
+<!-- Back, Skip -->    
+
+    <%= partial "partials/back-skip" %>
+
+<!-- Phone number -->
 
     <div class="form-group">
         <label class="form-group-label" for="yourTelNo">Phone number</label>
@@ -23,7 +27,7 @@ title:      Your contact details
         </label>
     </div>
 
-    <!-- Address -->
+<!-- Address -->
 
     <%= partial "partials/questions/address", :locals => { 
         :id         => "yourAddress",
@@ -31,7 +35,5 @@ title:      Your contact details
     }%>
 
     <%= partial "partials/next-question" %>
-
-    <%= partial "partials/back-skip" %>
 
 </form>

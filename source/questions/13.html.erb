@@ -7,6 +7,10 @@ title:  Pay details
 
 <form class="form" id="form" name="data">
 
+<!-- Back, Skip -->    
+
+    <%= partial "partials/back-skip" %>
+
 	<h2 class="section-heading">How would you like to get paid?</h2>
 
 	<%= partial 'partials/questions/radios', :locals => { 
@@ -33,7 +37,5 @@ title:  Pay details
 
 
     <%= partial "partials/next-question" %>
-
-    <%= partial "partials/back-skip" %>
 
 </form>

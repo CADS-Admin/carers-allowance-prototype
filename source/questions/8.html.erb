@@ -7,6 +7,10 @@ title: About the care you provide
 
 <form class="form" id="form" name="data">
 
+<!-- Back, Skip -->    
+
+    <%= partial "partials/back-skip" %>
+
 <!-- 35 hours a week -->
 
 	<h2 class="section-heading">Do you spend at least 35 hours a week caring for <br /><%= partial 'partials/questions/text-field-write', :locals => { id: 'careName' } %>?</h2>
@@ -43,8 +47,6 @@ title: About the care you provide
     <div class-"form-group">
 
         <%= partial "partials/next-question" %>
-
-        <%= partial "partials/back-skip" %>
 
     </div>
 </form>

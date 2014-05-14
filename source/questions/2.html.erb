@@ -8,6 +8,10 @@ title:      Your details
 
 <form class="form" id="form" name="data">
 
+<!-- Back, Skip -->    
+
+    <%= partial "partials/back-skip" %>
+
 <!-- Name -->
 
     <h2 class="section-heading">Full name</h2>
@@ -42,7 +46,6 @@ title:      Your details
         :classes    => "form-control-1-2"
     }%>
 
-
 <!-- Date of birth -->
 
     <h2 class="section-heading">Date of birth</h2>
@@ -52,14 +55,13 @@ title:      Your details
 <!-- State Pension -->
 
     <h2 class="section-heading">Do you get State Pension?</h2>
+    
+    <p class="form-hint">State Pension changes how much Carer's Allowance you can be paid. If you get Pension Credit you might get extra money. <a href="#">How this works</a></p>
 
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'statePension'} %>
-
-
-<!-- Next, Back, Skip -->    
-
-    <%= partial "partials/next-question" %>
-
-    <%= partial "partials/back-skip" %>
+    
+    <!-- Next, Back, Skip -->    
+    
+        <%= partial "partials/next-question" %>
 
 </form>
