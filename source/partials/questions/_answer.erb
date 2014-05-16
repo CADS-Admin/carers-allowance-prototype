@@ -2,10 +2,14 @@
     <td class="visuallyhidden question"><%= locals[:q] %></td>
     <td class="title"><%= locals[:title] %></td>
     <td class="answer">
-    	<% if locals[:type] == 'date' %>
+    	<% if locals[:type] == 'nino' %>
+    		<%= partial 'partials/questions/nino-write', :locals => { id: locals[:id] } %>
+    	<% elsif locals[:type] == 'date' %>
     		<%= partial 'partials/questions/date-write', :locals => { id: locals[:id] } %>
     	<% elsif locals[:type] == 'text-field' %>
     		<%= partial 'partials/questions/text-field-write', :locals => { id: locals[:id] } %>
+    	<% elsif locals[:type] == 'full-name' %>
+    		<%= partial 'partials/questions/full-name-write', :locals => { id: locals[:id] } %>  
     	<% elsif locals[:type] == 'address' %>
     		<%= partial 'partials/questions/address-write', :locals => { id: locals[:id] } %>    	
     	<% elsif locals[:type] == 'yes-no' %>

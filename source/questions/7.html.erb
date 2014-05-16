@@ -46,11 +46,9 @@ title: Details of the person you care for
         For example, 'VO 12 34 56 D'
     </p>
 
-    <%= partial "partials/questions/text-field", :locals => { 
+    <%= partial "partials/questions/nino", :locals => { 
         :id         => "careNino",
-        :label      => "National Insurance number",
-        :hideLabel  => true,
-        :classes    => "form-control-1-2"
+        :label      => "National Insurance number"
     }%>   
  
 <!-- Contact details -->

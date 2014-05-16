@@ -42,11 +42,10 @@ title: Your partner's details
         For example, 'VO 12 34 56 D'
     </p>
 
-    <%= partial "partials/questions/text-field", :locals => { 
+    <%= partial "partials/questions/nino", :locals => { 
         :id         => "partnerNino",
         :label      => "National Insurance number",
-        :hideLabel  => true,
-        :classes    => "form-control-1-2"
+        :hideLabel  => true
     }%>
     
     

@@ -19,27 +19,21 @@ title:      Your details
     <p class="form-hint">
         Enter as shown on your birth certificate or passport    
     </p>
-
-    <%= partial 'partials/questions/text-field', :locals => { 
-        :id => 'yourName',
-        :hideLabel  => true
+	
+    <%= partial "partials/questions/full-name", :locals => { 
+        :id => "fullName"
     }%>
-
-    <!--<%= partial 'partials/questions/text-field', :locals => { 
-        :id => 'yourOtherNames',
-        :label => "Any other names you've had in the last 12 months"
-    }%>-->
-
+	
 <!-- National Insurance number -->
 
     <h2 class="section-heading">National Insurance number</h2>
 
     <p class="form-hint">
         It's on your National Insurance card, benefit letter, payslip or P60.<br>
-        For example, 'VO 12 34 56 D'.
+        For example, 'VO 12 34 56 D'
     </p>
 
-    <%= partial "partials/questions/text-field", :locals => { 
+    <%= partial "partials/questions/nino", :locals => { 
         :id         => "yourNino",
         :label      => "National Insurance number",
         :hideLabel  => true,

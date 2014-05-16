@@ -1,0 +1,43 @@
+<div class="form-group">
+
+	<label class="form-control-label" for="yourTitle">Title</label>
+	
+	<select id="fullNameTitle" name="fullNameTitle" style="margin-bottom: 1em;">
+		<option value="">Please select</option>      
+		<option value="Mr">Mr</option>
+		<option value="Mrs">Mrs</option>
+		<option value="Miss">Miss</option>
+		<option value="Ms">Ms</option>
+		<option value="Dr">Dr</option>
+		<option value="Rev">Rev</option>
+		<option value="Sir">Sir</option>
+		<option value="Lord">Lord</option>
+		<option value="Lady">Lady</option>
+		<option value="Dame">Dame</option>    
+	</select>
+
+</div>
+
+    <%= partial 'partials/questions/text-field', :locals => { 
+        :id => 'fullNameFirst',
+        :label => "First Name",
+        :classes    => "form-control-1-2"
+    }%>
+    
+    <%= partial 'partials/questions/text-field', :locals => { 
+        :id => 'fullNameMiddle',
+        :label => "Middle name (optional)",
+        :classes    => "form-control-1-2"
+    }%>
+    
+    <%= partial 'partials/questions/text-field', :locals => { 
+        :id => 'fullNameLast',
+        :label => "Last Name",
+        :classes    => "form-control-1-2"
+    }%>
+
+    <%= partial 'partials/questions/text-field', :locals => { 
+        :id => 'fullNameOther',
+        :label => "Any other names you've had in the last 12 months (optional)",
+        :classes => "form-control-1-2"
+    }%>

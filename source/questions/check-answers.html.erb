@@ -16,8 +16,8 @@ layout:  carers_wide_template
 </table>
 <h3 class="heading-24">Your details</h3>
 <table class="check-answers">
-    <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'Name', type: 'text-field', id: 'yourName' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'National Insurance number', type: 'text-field', id: 'yourNino' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'Full Name', type: 'full-name', id: 'fullName' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'National Insurance number', type: 'nino', id: 'yourNino' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'Date of birth', type: 'date', id: 'yourDob' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'Partner living with you since your claim date?', type: 'yes-no', id: 'partner' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'State pension', type: 'yes-no', id: 'statePension' } %>
@@ -39,7 +39,7 @@ layout:  carers_wide_template
 <h3 class="heading-24">Your partners details</h3>
 <table class="check-answers">
     <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Name', type: 'text-field', id: 'partnerName' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'National Insurance number', type: 'text-field', id: 'partnerNino' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'National Insurance number', type: 'nino', id: 'partnerNino' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Nationality', type: 'text-field', id: 'partnerNationality' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Date of birth', type: 'date', id: 'partnerDob' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  6, title: 'Have you separated since your claim date?', type: 'yes-no', id: 'partnerSeparated' } %>
@@ -51,7 +51,7 @@ layout:  carers_wide_template
    	<%= partial 'partials/questions/answer', :locals => { q:  7, title: 'What is their relationship to you?', type: 'text-field', id: 'careRelationship'} %>
     <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Name', type: 'text-field', id: 'careName' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Date of birth', type: 'date', id: 'careDob' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'National insurance number', type: 'text-field', id: 'careNino' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'National insurance number', type: 'nino', id: 'careNino' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Contact details', type: 'address', id: 'careAddress' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Do they get Armed Forces Independence Payment?', type: 'yes-no', id: 'afip'} %>
 </table>
