@@ -22,6 +22,14 @@ title: Your wages
 	    <option value="05">a month</option>
 	    <option value="other">other</option> 
 	</select>
+	
+	<div class="form-group" style="margin-top: 20px;">
+	
+	<label class="form-control-label">When do you get paid? (optional)</label>	
+	<p class="form-hint" style="margin-top: 0">For example, day of the month</p>
+	<%= partial 'partials/questions/text-field', :locals => { :id => 'payWhen'} %>
+	
+	</div>
 
 </div>
 
@@ -29,10 +37,13 @@ title: Your wages
 
 <%= partial 'partials/questions/date', :locals => { :id => 'lastPaid', :hint => 'For example, 27 June 2013'} %>
 
+<div class="form-group" style="margin-top: 20px;">
 
-<h2 class="form-group-label">What was included in this pay? (optional)</h2>
-<p class="form-hint">For example, holiday pay, sick pay, or any redundancy payments</p>
+<label class="form-control-label">What was included in this pay? (optional)</label>
+<p class="form-hint" style="margin-top: 0">For example, holiday pay, sick pay, or any redundancy payments</p>
 <%= partial 'partials/questions/text-field', :locals => { :id => 'payIncluded'} %>
+
+</div>
 
 <h2 class="form-group-label">Does your employer owe you any money?</h2>
 
