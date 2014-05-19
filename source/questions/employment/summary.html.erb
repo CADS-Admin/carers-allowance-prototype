@@ -1,0 +1,47 @@
+---
+question: 11
+title: Employment
+---
+
+
+<%= partial "partials/page-title" %>
+
+<ul class="form-group">
+    <li><a href="4">Back</a></li>        
+</ul>
+
+<table class="employment">
+    <caption>Your employment history</caption>
+    <thead>
+        <tr>
+            <th>Employer's Name</th>
+            <th class="desc">Start Date</th>
+            <th>Change</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>       
+		<tr id="fa95e3fb-10fd-4cd3-b7c5-d60cc81c26fe" class="fa95e3fb-10fd-4cd3-b7c5-d60cc81c26fe">
+		    <td><%= partial 'partials/questions/text-field-write', :locals => { id: 'employerName' } %></td>
+		    <td class="desc"><%= partial 'partials/questions/text-field-write', :locals => { id: 'jobStart' } %></td>
+		    <td><input type="button" class="button row secondary" id="changeButton" value="Change" aria-label="Change button"></td>
+		    <td><input type="button" class="button row warning" id="deleteButton" value="Delete" aria-label="Delete button"></td>
+		</tr>
+    </tbody>
+</table>
+    
+
+<form class="form" id="form" name="data">
+
+	<h2 class="section-heading">Have you had any other employments at any time since 21&nbsp;August 2013?</h2>
+  
+    <p class="form-hint">This is six months before your claim date</p>
+    
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'employed2' } %>
+ 
+	 <div class="form-group">
+	        <br><br>
+	     <a class="next button" href="../12">Continue</a>
+	 </div>
+	 
+</form>

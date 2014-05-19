@@ -5,7 +5,11 @@ title: Your wages
 
 <%= partial "partials/page-title-employer" %>
 
+<form class="form" id="form" name="data">
 
+<ul class="form-group">
+    <li><a href="1">Back</a></li>        
+</ul>
 
 <div class="form-group">   
    <label for="how-much" class="form-group-label">How much are you normally paid?</label>
@@ -48,13 +52,10 @@ title: Your wages
 <h2 class="form-group-label">Does your employer owe you any money?</h2>
 
 <%= partial 'partials/questions/yes-no', :locals => { :id => 'owedMoney'} %>
-
 				
 <div class="form-group">
        <br><br>
     <a class="next button" href="3">Continue</a>
 </div>
 
-<ul class="form-group">
-    <li><a href="1">Back</a></li>        
-</ul>
+</form>
