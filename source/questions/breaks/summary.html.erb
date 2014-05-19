@@ -1,0 +1,46 @@
+---
+question: 9
+title: Breaks from caring    
+---
+
+<%= partial "partials/page-title" %>
+
+<ul class="form-group">
+    <li><a href="1">Back</a></li>        
+</ul>
+
+<table class="employment">
+    <caption>Your breaks</caption>
+    <thead>
+        <tr>
+            <th>X</th>
+            <th class="desc">X</th>
+            <th>Change</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>       
+		<tr id="fa95e3fb-10fd-4cd3-b7c5-d60cc81c26fe" class="fa95e3fb-10fd-4cd3-b7c5-d60cc81c26fe">
+		    <td><%= partial 'partials/questions/text-field-write', :locals => { id: 'x' } %></td>
+		    <td class="desc"><%= partial 'partials/questions/text-field-write', :locals => { id: 'x ' } %></td>
+		    <td><input type="button" class="button row secondary" id="changeButton" value="Change" aria-label="Change button"></td>
+		    <td><input type="button" class="button row warning" id="deleteButton" value="Delete" aria-label="Delete button"></td>
+		</tr>
+    </tbody>
+</table>
+    
+
+<form class="form" id="form" name="data">
+
+	<h2 class="section-heading">[more breaks question]</h2>
+  
+    <p class="form-hint">[hint]</p>
+    
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'breaks2' } %>
+ 
+	 <div class="form-group">
+	        <br><br>
+	     <a class="next button" href="../10">Continue</a>
+	 </div>
+	 
+</form>

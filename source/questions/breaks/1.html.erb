@@ -1,0 +1,97 @@
+---
+question: 9
+title: About your break from caring
+---
+
+<%= partial "partials/page-title" %>
+
+<form class="form" id="form" name="data">
+
+<ul class="form-group">
+    <li><a href="../9">Back</a></li>        
+</ul>
+
+<p>We understand if you don't have exact details. Add as much information as possible to help us process your application and prevent any unnecessary delays. We may need to contact you for additional information.</p>
+
+    
+ <div class="form-group">
+    
+    <h2 class="section-heading">When did the break from caring start?</h2>
+
+    <%= partial 'partials/questions/date', :locals => { :id => 'breakStart', :hint => 'For example, 20 03 2014'} %>  
+
+ 	<div class="form-group" style="margin-top: 20px;">
+ 	
+		<label class="form-control-label">Start time? (optional)</label>
+		<p class="form-hint" style="margin-top: 0">For example, 10:00am</p>
+		<%= partial 'partials/questions/text-field', :locals => { :id => 'breakStartTime', :classes => "form-control-1-2"} %>
+		
+	</div>
+
+</div>
+
+<div class="form-group">
+
+	<h2 class="section-heading">When did the break from caring end?</h2>
+
+ 	<%= partial 'partials/questions/date', :locals => { :id => 'breakEnd', :hint => 'For example, 25 03 2014'} %>
+ 
+ 	<div class="form-group" style="margin-top: 20px;">
+ 
+ 		<label class="form-control-label">Break end time? (optional)</label>
+	 	<p class="form-hint" style="margin-top: 0">For example, 4:30pm</p>
+ 		<%= partial 'partials/questions/text-field', :locals => { :id => 'breakEndTime', :classes => "form-control-1-2"} %>
+ 	
+ 	</div>
+  
+ </div>    
+    
+ <div class="form-group">
+    
+    <h2 class="section-heading">Where was the person you care for?</h2>
+    
+    	<%= partial 'partials/questions/radios', :locals => { 
+    		:id => 'breaksDP', 
+    		:hint => "During this time, they were:",
+    		:options => [
+    			"in hospital",
+    			"in respite care",
+    			"at home",
+    			"somewhere else"
+    		]
+    
+    	} %>
+ 
+</div>
+   
+<div class="form-group">
+    
+    <h2 class="section-heading">Where were you?</h2>
+	
+	<%= partial 'partials/questions/radios', :locals => { 
+		:id => 'breaksYou', 
+		:hint => "During this time, I was:",
+		:options => [
+			"at home",
+			"on holiday",
+			"in hospital",
+			"somewhere else"
+		]
+
+	} %>
+      
+</div>
+
+<div class="form-group">  
+        
+     <h2 class="section-heading">Did you or the person you care for receive any medical treatment or professional care during the break?</h2>
+     <%= partial 'partials/questions/yes-no', :locals => { :id => 'breakMedical'} %>
+     
+</div>
+
+<div class="form-group">
+       <br><br>
+    <a class="next button" href="summary">Continue</a>
+</div>
+
+</form>	
