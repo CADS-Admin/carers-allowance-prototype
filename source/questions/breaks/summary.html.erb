@@ -10,19 +10,23 @@ title: Breaks from caring
 </ul>
 
 <table class="employment">
-    <caption>Your breaks</caption>
+    <caption>Breaks already added</caption>
     <thead>
         <tr>
-            <th>X</th>
-            <th class="desc">X</th>
+            <th>Break period</th>       
+            <th class="desc">Where was the person you care for during the break?</th>
+            <th class="desc">Where were you during the break?</th>	
+            <th class="desc">Medical treatment</th>
             <th>Change</th>
             <th>Delete</th>
         </tr>
     </thead>
     <tbody>       
-		<tr id="fa95e3fb-10fd-4cd3-b7c5-d60cc81c26fe" class="fa95e3fb-10fd-4cd3-b7c5-d60cc81c26fe">
-		    <td><%= partial 'partials/questions/text-field-write', :locals => { id: 'x' } %></td>
-		    <td class="desc"><%= partial 'partials/questions/text-field-write', :locals => { id: 'x ' } %></td>
+		<tr>
+		    <td><%= partial 'partials/questions/date-write', :locals => { id: 'breakStart' } %> - <%= partial 'partials/questions/date-write', :locals => { id: 'breakEnd' } %></td>
+		    <td>They were <%= partial 'partials/questions/text-field-write', :locals => { id: 'breaksDP' } %></td>
+		    <td>I was <%= partial 'partials/questions/text-field-write', :locals => { id: 'breaksYou' } %></td>
+		    <td><%= partial 'partials/questions/text-field-write', :locals => { id: 'breakMedical' } %></td>
 		    <td><input type="button" class="button row secondary" id="changeButton" value="Change" aria-label="Change button"></td>
 		    <td><input type="button" class="button row warning" id="deleteButton" value="Delete" aria-label="Delete button"></td>
 		</tr>
@@ -32,9 +36,8 @@ title: Breaks from caring
 
 <form class="form" id="form" name="data">
 
-	<h2 class="section-heading">[more breaks question]</h2>
-  
-    <p class="form-hint">[hint]</p>
+	<h2 class="section-heading">Have you had any more breaks in caring for this person since 21 August 2013?</h2>
+	<p class="form-hint">This is six months before your claim date. If 'Yes', you'll need to provide details</p>
     
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'breaks2' } %>
  
