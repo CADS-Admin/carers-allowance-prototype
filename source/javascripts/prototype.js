@@ -115,7 +115,12 @@ $(document).ready(function(){
 
 	$('[data-from]').text(function(){
 		var id = $(this).data('from');
-		return localStorage.getItem('formdata' + id);
+		var value = localStorage.getItem('formdata' + id);
+		if (value == null){
+			return '';
+		} else {
+			return value;
+		}
 	});
 
 	// Pretty print days
@@ -221,6 +226,16 @@ $(document).ready(function(){
 				$(this).prepend('<li>' + skipped.length + ' section'+skippedPlural+' skipped</li>');
 			}
 			$(this).prepend('<li class="heading-24">' + answered.length + ' section'+answeredPlural+' completed</li>');
+		}
+	});
+
+	// ------------------------------------------------------------------
+	// ONLY SHOW RELEVANT SECTION TITLES ON 'CHECK ANSWERS' PAGE
+
+	$('[data-question]').each(function(){
+		var question = $(this).data('question');
+		if(question > answeredSkipped[i]){
+			$(this).hide();
 		}
 	});
 
