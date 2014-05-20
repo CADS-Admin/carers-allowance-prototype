@@ -182,6 +182,17 @@ p.skipped{
 
 }
 
+.govuk .back-skip{
+  margin-top: -15px;
+  .back{
+
+  }
+  .skip{
+    float: right;
+  }
+}
+
+
 .prototype{
   float: right;
   text-transform: uppercase;

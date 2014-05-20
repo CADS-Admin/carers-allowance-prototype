@@ -2,15 +2,13 @@
 question:   2
 title:      Your details
 ---
+<!-- Back, Skip -->    
+<%= partial "partials/back-skip" %>
 
 <%= partial "partials/page-title" %>
 
 
 <form class="form" id="form" name="data">
-
-<!-- Back, Skip -->    
-
-    <%= partial "partials/back-skip" %>
 
 <!-- Name -->
 
@@ -44,7 +42,7 @@ title:      Your details
 
     <h2 class="section-heading">Date of birth</h2>
 
-    <%= partial 'partials/questions/date', :locals => { :id => 'yourDob', :hint => 'For example, 20 03 1976'} %>
+    <%= partial 'partials/questions/date', :locals => { :id => 'yourDob', :hint => "For example, '20 3 1976'"} %>
 
 <!-- State Pension -->
 

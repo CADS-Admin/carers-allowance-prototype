@@ -223,9 +223,9 @@ $(document).ready(function(){
 		} else {
 			// On question pages
 			if (skipped.length > 0) {
-				$(this).prepend('<li>' + skipped.length + ' section'+skippedPlural+' skipped</li>');
+				//$(this).prepend('<li>' + skipped.length + ' section'+skippedPlural+' skipped</li>');
 			}
-			$(this).prepend('<li class="heading-24">' + answered.length + ' section'+answeredPlural+' completed</li>');
+			//$(this).prepend('<li class="heading-24">' + answered.length + ' section'+answeredPlural+' completed</li>');
 		}
 	});
 
