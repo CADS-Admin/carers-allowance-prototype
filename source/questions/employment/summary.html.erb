@@ -1,17 +1,15 @@
 ---
 question: 11
-title: Employment
+title: Employment history
 ---
 
-
+<ul class="form-group back-skip">
+    <li class="skip"><a href="../12">Skip this section for now</a></li>
+    <li class="back"><a href="5">Back</a></li>        
+</ul>
 <%= partial "partials/page-title" %>
 
-<ul class="form-group">
-    <li><a href="4">Back</a></li>        
-</ul>
-
 <table class="employment">
-    <caption>Your employment history</caption>
     <thead>
         <tr>
             <th>Employer's Name</th>
@@ -21,11 +19,11 @@ title: Employment
         </tr>
     </thead>
     <tbody>       
-		<tr id="fa95e3fb-10fd-4cd3-b7c5-d60cc81c26fe" class="fa95e3fb-10fd-4cd3-b7c5-d60cc81c26fe">
+		<tr>
+            <td class="desc"><%= partial 'partials/questions/text-field-write', :locals => { id: 'jobStart' } %> to <%= partial 'partials/questions/text-field-write', :locals => { id: 'jobFinish' } %></td>
 		    <td><%= partial 'partials/questions/text-field-write', :locals => { id: 'employerName' } %></td>
-		    <td class="desc"><%= partial 'partials/questions/text-field-write', :locals => { id: 'jobStart' } %></td>
-		    <td><input type="button" class="button row secondary" id="changeButton" value="Change" aria-label="Change button"></td>
-		    <td><input type="button" class="button row warning" id="deleteButton" value="Delete" aria-label="Delete button"></td>
+		    <td><a href="#">Edit</a></td>
+            <td><a href="#">Delete</a></td>
 		</tr>
     </tbody>
 </table>

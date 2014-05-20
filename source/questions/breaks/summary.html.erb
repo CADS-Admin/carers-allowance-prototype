@@ -2,12 +2,12 @@
 question: 9
 title: Breaks from caring    
 ---
-
-<%= partial "partials/page-title" %>
-
-<ul class="form-group">
+<ul class="form-group back-skip">
     <li><a href="1">Back</a></li>        
 </ul>
+<%= partial "partials/page-title" %>
+
+
 
 <table class="employment">
     <caption>Breaks already added</caption>
@@ -26,9 +26,9 @@ title: Breaks from caring
 		    <td><%= partial 'partials/questions/date-write', :locals => { id: 'breakStart' } %> - <%= partial 'partials/questions/date-write', :locals => { id: 'breakEnd' } %></td>
 		    <td>They were <%= partial 'partials/questions/text-field-write', :locals => { id: 'breaksDP' } %></td>
 		    <td>I was <%= partial 'partials/questions/text-field-write', :locals => { id: 'breaksYou' } %></td>
-		    <td><%= partial 'partials/questions/text-field-write', :locals => { id: 'breakMedical' } %></td>
-		    <td><input type="button" class="button row secondary" id="changeButton" value="Change" aria-label="Change button"></td>
-		    <td><input type="button" class="button row warning" id="deleteButton" value="Delete" aria-label="Delete button"></td>
+		    <td><%= partial 'partials/questions/text-field-write', :locals => { id: 'breakMedical' } %></td>		    
+		    <td><a href="#">Edit</a></td>
+            <td><a href="#">Delete</a></td>
 		</tr>
     </tbody>
 </table>
