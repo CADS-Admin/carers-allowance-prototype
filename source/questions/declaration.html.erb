@@ -20,10 +20,15 @@ title:  Declaration
 
 <div class="group declare secondary">
 
-<div class="block-label">
-    <input type="checkbox" secondary="true" value="true" name="3ddac1d5549fe67a1dce56e0fc103c0e" id="3ddac1d5549fe67a1dce56e0fc103c0e">
-    <label for="3ddac1d5549fe67a1dce56e0fc103c0e">I confirm that I understand and make these declarations</label>
+<div class="form-group form-checkbox">
+    <label for="one" class="block-label">
+        <input type="checkbox" value="true" id="one" class="visible">
+        I confirm that I understand and make these declarations
+    </label>
 </div>
+
+
+
 </div>
 
 <h3 style="font-size: 19px; margin-top: 20px;">Or, if this application was completed by someone else</h3>
@@ -32,8 +37,10 @@ title:  Declaration
 
 <div class="group declare">
 	<div class="block-label">
-    	<input type="checkbox" value="true" name="declarationDeclare" id="declarationDeclare">
-    	<label for="declarationDeclare">I confirm that <b><%= partial 'partials/questions/full-name-write', :locals => { id: 'fullName' } %></b> understands and makes these declarations</label>
+    	<label for="declarationDeclare">
+
+        <input type="checkbox" value="true" name="declarationDeclare" id="declarationDeclare" class="visible">
+            I confirm that <b><%= partial 'partials/questions/full-name-write', :locals => { id: 'fullName' } %></b> understands and makes these declarations</label>
 	</div>
 </div>
 

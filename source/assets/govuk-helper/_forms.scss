@@ -307,6 +307,10 @@ textarea {
     &:hover{
     cursor: pointer;
     }
+    &.visible{
+      position: relative;
+      left: 0;
+    }
   }
 
   &:hover{

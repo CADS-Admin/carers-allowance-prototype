@@ -28,8 +28,11 @@ title:  Disclaimer
 
 <div class="group declare">
 	<div class="block-label">
-    	<input type="checkbox" value="" name="disclaimerDeclare" id="disclaimerDeclare">
-    	<label for="disclaimerDeclare">I declare that I understand and have/will make <b><%= partial 'partials/questions/text-field-write', :locals => { id: 'careName' } %></b> aware that there could be a change to their benefits</label>
+    	<label for="disclaimerDeclare">
+
+    	<input type="checkbox" value="" name="disclaimerDeclare" id="disclaimerDeclare" class="visible">
+
+    		I declare that I understand and have/will make <b><%= partial 'partials/questions/text-field-write', :locals => { id: 'careName' } %></b> aware that there could be a change to their benefits</label>
 	</div>
 </div>
 
