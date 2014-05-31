@@ -9,26 +9,12 @@ title: Details of the person you care for
 
 <form class="form" id="form" name="data">
 
-<!-- Relationship -->
-
-	<h2 class="section-heading">What is their relationship to you?</h2>
-	
-	<p class="form-hint">
-		For example, mother, daughter, friend etc.
-	</p>
-	
-	<%= partial 'partials/questions/text-field', :locals => { 
-	    :id => 'careRelationship',
-	    :hideLabel  => true
-	}%>
-
-
 <!-- Name -->
 
     <h2 class="section-heading">Full name</h2>
     
     <p class="form-hint">
-        Enter as shown on their birth certificate or passport    
+        As shown on their birth certificate or passport    
     </p>
 
     <%= partial 'partials/questions/text-field', :locals => { 
@@ -48,6 +34,19 @@ title: Details of the person you care for
         :id         => "careNino",
         :label      => "National Insurance number"
     }%>   
+    
+<!-- Relationship -->
+
+	<h2 class="section-heading">What is their relationship to you?</h2>
+	
+	<p class="form-hint">
+		For example, mother, daughter, friend etc.
+	</p>
+	
+	<%= partial 'partials/questions/text-field', :locals => { 
+	    :id => 'careRelationship',
+	    :hideLabel  => true
+	}%>
  
 <!-- Contact details -->
 

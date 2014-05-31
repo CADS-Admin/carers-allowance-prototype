@@ -57,48 +57,48 @@ title:  Eligibility
 </style>
 		
 <h1 class="heading-36">Can you get Carer's Allowance?</h1>
-
-	<h2 class="section-heading">Do you spend 35 hours or more each week caring for someone?</h2>
-    <p class="form-hint">For example, cooking meals, or helping them with their shopping.</p>
     
-    <%= partial 'partials/questions/yes-no', :locals => { :id => '35_hours'} %>
+    <h2 class="section-heading" style="margin-bottom: 15px!important">Does the person you care for get 1 of these benefits?</h2>
     
-    <h2 class="section-heading">Does the person you care for get a qualifying benefit?</h2>
-    
-    <p class="form-hint">They should already be getting one of these benefits:</p>
+    <!--<p class="form-hint">They should already be getting one of these benefits:</p>-->
       
 
-      <div class="form-group-indent" style="margin-bottom: 5px">
+      <div class="form-group-indent" style="margin-bottom: 0">
       <ul>
-      	<li style="margin-top: 10px;"><strong>Personal Independence Payment</strong> (PIP) <br>at either the standard or enhanced rate of the Daily Living Component</li>
-        <li style="margin-top: 10px;"><strong>Disability Living Allowance</strong> (DLA) <br>at the middle or highest rate</li>
-		<li style="margin-top: 10px;"><strong>Attendance Allowance</strong> (AA)</li>
-		<li style="margin-top: 10px;"><strong>Constant Attendance Allowance</strong> (CAA) <br>at or above the normal maximum rate as an addition to Industrial Injuries Disablement Benefit (IIDB); or the basic, full day rate as an addition to War Disablement Pension (WDP)</li>
-      	<li style="margin-top: 10px;"><strong>Armed Forces Independence Payment</strong> (AFIP)</li>
+      	<li style="margin-top: 10px;"><strong>Personal Independence Payment</strong> <br>Standard or enhanced rate of Daily Living Component</li>
+        <li style="margin-top: 10px;"><strong>Disability Living Allowance</strong><br>Middle or highest rate</li>
+		<li style="margin-top: 10px;"><strong>Attendance Allowance</strong></li>
+		<li style="margin-top: 10px;"><strong>Constant Attendance Allowance</strong> <br>Addition to Disablement Benefit at normal maximum rate or more, addition to War Disablement Pension at full rate</li>
+      	<li style="margin-top: 10px;"><strong>Armed Forces Independence Payment</strong></li>
       </ul>
 
     </div><!-- form-group-indent -->
     
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'benefit_type'} %>
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'benefit_type'} %>    
+    
+	<h2 class="section-heading">Do you spend 35 hours or more each week caring for someone?</h2>
+    <p class="form-hint">For example, cooking meals, or helping them with their shopping</p>
+    
+    <%= partial 'partials/questions/yes-no', :locals => { :id => '35_hours'} %>
 
     <h2 class="section-heading">Are you aged 16 or over?</h2>
     <%= partial 'partials/questions/yes-no', :locals => { :id => '16_over'} %>
     
-    <h2 class="section-heading">Do you live in either England, Scotland or Wales?</h2>
-    <p class="form-hint">Answer 'Yes' if you are part of a family living overseas with HM forces. If you live in Northern Ireland go to <a href="#">NI Carers Allowance</a>.</p>
+    <h2 class="section-heading">Do you live in England, Scotland or Wales?</h2>
+    <p class="form-hint">Families of HM Forces should answer ‘yes’ no matter where they live. <br>If you live in Northern Ireland go to <a href="#">NI Carers Allowance</a></p>
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'live_in'} %>
 
 
 	<div id="failure" class="prompt" >
 	
-		<p style="font-size: 24px;"><strong>Based on your answers you are not entitled. <br>You can only get Carer's Allowance if:</strong></p>
+		<p style="font-size: 24px;"><strong>Based on your answers you’re not entitled to Carer's&nbsp;Allowance. You can only get it if:</strong></p>
 		<ul>
 			<li class="feedback-q1" style="display: none;">you are caring for someone 35 hours or more each week.</li>
 			<li class="feedback-q2" style="display: none;">the person you care for gets a qualifying benefit. If they've applied for one of the benefits above, wait until that decision has been made before you apply for Carer's Allowance.</li>
 			<li class="feedback-q3" style="display: none;">you are aged 16 or over.</li>
 			<li class="feedback-q4" style="display: none;">you normally live in England, Scotland or Wales. If you live in the European Economic Area (EEA) or Switzerland, and you have answered Yes to the other questions, there are some exceptions.</li>
 		</ul>
-		<p>Read the full <a href="#">claim notes</a> before applying.</p>
+		<!--<p><a href="help-guide" target="blank">Read the guide</a> for more information.</p>-->
 		<span>!</span>
 		
 	</div>
@@ -110,34 +110,15 @@ title:  Eligibility
 			<li class="education">If you're studying 21 hours a week or more you might not be entitled</li>
 			<li class="partner">If you have a partner, any benefits they get can be affected if you get Carer's Allowance.</li>
 		</ul>
-		<p>Read the full <a href="#">claim notes</a> before applying.</p>
+		<p>For more information, <a href="help-guide" target="blank">read the guide</a> before applying.</p>
 	</div>
-
-<!--                 
-<h1>What you need to know before you claim...</h1>
-
-<section class="partner">
-	<h2>This could affect your partner's benefits</h2>
-    <p>Some benefits your partner might get can also be affected. You will need to enter their details so the Department for Work and Pensions can work out how much they're still entitled to.</p>
-</section>
-
-<section class="earnings">
-    <h2>You need to be earning less than &pound;100 a week net</h2>
-    <p>If your income after tax, National Insurance and certain allowable expenses is more than &pound;100 a week you won't be entitled to Carer's Allowance. Please see the <a href="/help-guide">claim notes</a> for allowable expenses. You will need to enter your employment details.</p>
-</section>
-
-<section class="education">
-    <h2>If you're in full time education you might not get Carer's Allowance</h2>
-    <p>If you're studying 21 hours a week or more you might not be entitled. You will need to enter details of any education courses you're studying for.</p>
-</section>
--->
     
 
 <div class="form-group">
-<p id="legal" style="display: none;" class="form-hint">You are legally entitled to make an application even though you do not qualify and will not get Carer's Allowance.<p>
+<p id="legal" style="display: none;" class="form-hint">You are legally entitled to <a href="1">make an application</a> even though you do not qualify and will not get Carer's Allowance.<p>
 <br>
 <br>
-<a class="next button" href="1">Start application</a>
+<a class="next button" href="1" style="display: none">Start application</a>
 </div>
 
 
@@ -150,10 +131,12 @@ $(document).ready(function() {
 	function checkSuccess() {
 		if($('#live_inYes').is(':checked') && $('#16_overYes').is(':checked') && $('#benefit_typeYes').is(':checked') && $('#35_hoursYes').is(':checked')) { 
 		 	//alert('success');
+			$("a.next.button").show();
 			$("#success").show();
 			$("#failure, #legal").hide();	
 		}
 		else if($('#live_inNo').is(':checked') || $('#16_overNo').is(':checked') || $('#benefit_typeNo').is(':checked') || $('#35_hoursNo').is(':checked')) {
+			$("a.next.button").hide();
 			$("#success").hide();
 			$("#failure, #legal").show();
 		}

@@ -25,7 +25,7 @@ title: Breaks from caring
 		<tr>
 		    <td><%= partial 'partials/questions/date-write', :locals => { id: 'breakStart' } %> - <%= partial 'partials/questions/date-write', :locals => { id: 'breakEnd' } %></td>
 		    <td>They were <%= partial 'partials/questions/text-field-write', :locals => { id: 'breaksDP' } %></td>
-		    <td>I was <%= partial 'partials/questions/text-field-write', :locals => { id: 'breaksYou' } %></td>
+		    <td>You were <%= partial 'partials/questions/text-field-write', :locals => { id: 'breaksYou' } %></td>
 		    <td><%= partial 'partials/questions/text-field-write', :locals => { id: 'breakMedical' } %></td>		    
 		    <td><a href="#">Edit</a></td>
             <td><a href="#">Delete</a></td>
@@ -36,7 +36,7 @@ title: Breaks from caring
 
 <form class="form" id="form" name="data">
 
-	<h2 class="section-heading">Have you had any more breaks in caring for this person since 21 August 2013?</h2>
+	<h2 class="section-heading">Have you had any more breaks since 21 August 2013?</h2>
 	<p class="form-hint">This is six months before your claim date. If 'Yes', you'll need to provide details</p>
     
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'breaks2' } %>

@@ -244,11 +244,11 @@ $(document).ready(function(){
 	// SUBMIT APPLICATION
 
 	if (answered.length == totalQuestions){
-		$('.submit-application').text('Now submit your application');
+		$('.submit-application').text('Check your answers');
 		$('.continue.button')
 			.text('Continue to consent and declaration')
 			.attr("href", 'consent')
-			.before('<p>Make sure you check all your information is correct before you continue.</p>');
+			.before('<p>You can change anything that\'s not right before sending your application.</p>');
 		$('.question-status p').text('You can change anything that\'s not right before sending your application.');
 		$('.continue.back').attr("href", totalQuestions);
 	}
