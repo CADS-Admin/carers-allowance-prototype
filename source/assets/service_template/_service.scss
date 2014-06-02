@@ -199,13 +199,30 @@ p.skipped{
 .save-message{
 
   font-size: 16px;
-
-  background: $yellow;
-  padding: 5px 10px;
+  //font-weight: bold;
+  color: $green;
+  padding-top: 15px;
+  margin-bottom: 0;
+  position: relative;
+  padding-left: 20px;
   margin: 0;
 
   -webkit-animation: fade 3s;
   -webkit-animation-fill-mode: both;
+
+  &:before{
+    content: " ";
+    position: absolute;
+    left: 5px;
+    top: 16px;
+    width: 5px;
+    height: 10px;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    border-color: #006435;
+    -webkit-transform: rotate(45deg);
+  }
+
 }
 
 

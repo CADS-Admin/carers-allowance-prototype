@@ -3,11 +3,11 @@
 if current_page.data.question == data.claim.totalQuestions
 	# User is on the last question
 	# buttonText = 'Check your answers'
-	buttonText = 'Continue'
+	buttonText = 'Save and continue'
 	href = 'check-answers'
 
 else
-	buttonText = 'Continue'
+	buttonText = 'Save and continue'
 	href = (current_page.data.question + 1).to_s
 
 end
