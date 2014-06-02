@@ -110,15 +110,16 @@ title:  Eligibility
 			<li class="education">If you're studying 21 hours a week or more you might not be entitled</li>
 			<li class="partner">If you have a partner, any benefits they get can be affected if you get Carer's Allowance.</li>
 		</ul>
-		<p>For more information, <a href="help-guide" target="blank">read the guide</a> before applying.</p>
+		<p>For more information, <a href="help-guide" target="blank">read the guide</a>.</p>
 	</div>
-    
+
+<p id="legal" style="display: none;" class="form-hint">You are legally entitled to <a href="disclaimer">make an application</a> even though you do not qualify and will not get Carer's Allowance.<p>    
 
 <div class="form-group">
-<p id="legal" style="display: none;" class="form-hint">You are legally entitled to <a href="1">make an application</a> even though you do not qualify and will not get Carer's Allowance.<p>
 <br>
 <br>
-<a class="next button" href="1" style="display: none">Start application</a>
+<a class="next button" href="disclaimer" style="display: none">Continue</a>
+<a class="finish button" href="https://www.gov.uk/done/apply-carers-allowance" style="display: none">Finish</a>
 </div>
 
 
@@ -132,11 +133,13 @@ $(document).ready(function() {
 		if($('#live_inYes').is(':checked') && $('#16_overYes').is(':checked') && $('#benefit_typeYes').is(':checked') && $('#35_hoursYes').is(':checked')) { 
 		 	//alert('success');
 			$("a.next.button").show();
+			$("a.finish.button").hide();
 			$("#success").show();
 			$("#failure, #legal").hide();	
 		}
 		else if($('#live_inNo').is(':checked') || $('#16_overNo').is(':checked') || $('#benefit_typeNo').is(':checked') || $('#35_hoursNo').is(':checked')) {
 			$("a.next.button").hide();
+			$("a.finish.button").show();
 			$("#success").hide();
 			$("#failure, #legal").show();
 		}

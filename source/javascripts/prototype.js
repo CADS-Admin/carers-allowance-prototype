@@ -246,8 +246,8 @@ $(document).ready(function(){
 	if (answered.length == totalQuestions){
 		$('.submit-application').text('Check your answers');
 		$('.continue.button')
-			.text('Continue to consent and declaration')
-			.attr("href", 'consent')
+			.text('Continue to declaration and consent')
+			.attr("href", 'declaration')
 			.before('<p>You can change anything that\'s not right before sending your application.</p>');
 		$('.question-status p').text('You can change anything that\'s not right before sending your application.');
 		$('.continue.back').attr("href", totalQuestions);
