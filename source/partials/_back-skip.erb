@@ -1,7 +1,10 @@
+
+<!--<p class="save-message">Form saved for the next hour.</p>-->
+
 <ul class="form-group back-skip">
 	<% if current_page.data.noskip != true %>
     <li class="skip"><a href="<%= current_page.data.question + 1 %>" data-skip="<%= current_page.data.question %>">Skip this section for now</a></li>
     <% end %>
     <li class="back"><a href="<%= current_page.data.question - 1 %>">Back</a></li>  
-    <li><a href="#">Summary</a></li>       
+    <li><a href="/questions/check-answers">Summary</a></li>       
 </ul>
