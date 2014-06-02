@@ -182,8 +182,38 @@ p.skipped{
 
 }
 
+@-webkit-keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+.save-message{
+
+  font-size: 16px;
+
+  background: $yellow;
+  padding: 5px 10px;
+  margin: 0;
+
+  -webkit-animation: fade 3s;
+  -webkit-animation-fill-mode: both;
+}
+
+
+
+
 .govuk .back-skip{
-  margin-top: -15px;
+  @extend %contain-floats;
+  //margin-top: -15px;
   .back{
     padding-right: 10px;
     border-right: 1px solid $border-colour;
