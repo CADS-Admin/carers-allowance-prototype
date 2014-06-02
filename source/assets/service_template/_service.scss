@@ -185,10 +185,16 @@ p.skipped{
 .govuk .back-skip{
   margin-top: -15px;
   .back{
-
+    padding-right: 10px;
+    border-right: 1px solid $border-colour;
+    margin-right: 10px;
   }
   .skip{
     float: right;
+    display: none;
+  }
+  li{
+    float: left;
   }
 }
 
