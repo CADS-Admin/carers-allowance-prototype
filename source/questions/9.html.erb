@@ -19,14 +19,20 @@ title:  Breaks from caring
 	<h2 class="section-heading">Have you had any breaks from caring since 3 September 2013?</h2>
 	<p class="form-hint">This is six months before your claim date. If 'Yes', you'll need to provide details</p>
 	
-	<%= partial 'partials/questions/yes-no', :locals => { :id => 'breaks'} %>
+	<%= partial 'partials/questions/yes-no', :locals => { :id => 'breaks', yesToggle: '#yesToggle', noToggle: '#noToggle'} %>
 	
 
     <!--<%= partial "partials/next-question" %>-->
     
-    <div class="form-group">
+    <div class="form-group js-hidden" id="yesToggle">
            <br><br>
         <a class="next button" href="breaks/1" data-answer="9">Save and continue</a>
+    </div>
+
+
+    <div class="form-group" id="noToggle">
+           <br><br>
+        <a class="next button" href="10" data-answer="9">Save and continue</a>
     </div>
 
 </form>
