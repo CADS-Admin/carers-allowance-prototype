@@ -15,33 +15,6 @@ title: About the care you provide
 
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'hrs35', yesToggle: '#yesToggle'} %>
 
-<div class="js-hidden form-group form-group-indent" id="yesToggle">    
-
-<!-- When did you start caring -->
-
-	<h2 class="form-control-label" style="margin-bottom: 30px!important;">When did you start caring 35 hours or more each week?</h2>
-
-	<div class="form-group form-radio">
-	  <label for="when1" class="block-label">
-	    <input id="when1" type="radio" name="when" value="" class="js-toggle" data-hide="#date">
-	    From the claim date (<%= partial "partials/claim-date" %>)
-	  </label>
-	</div>
-
-	<div class="form-group form-radio">
-	  <label for="when2" class="block-label">
-	    <input id="when2" type="radio" name="when" value="" class="js-toggle"  data-show="#date">
-	    From an earlier date
-	  </label>
-	</div>
-
-    <div class="js-hidden form-group-indent" id="date">
-    	<%= partial 'partials/questions/date', :locals => { :id => 'careStartDate'} %>
-	</div>
-	
-</div>	
-
-
     <div class-"form-group">
 
         <%= partial "partials/next-question" %>
