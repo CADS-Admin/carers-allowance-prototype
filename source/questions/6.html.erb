@@ -1,6 +1,6 @@
 ---
 question:   6
-title: 		Your partner's details
+title: 		About your partner
 ---
 
 <!-- Back, Skip -->    
@@ -13,9 +13,18 @@ title: 		Your partner's details
 
 <!-- Living with partner? -->
 
-    <h2 class="section-heading">Have you had a partner or spouse living with you since your claim date?</h2>
+    <h2 class="section-heading">Have you lived with a partner at any time since your claim&nbsp;date?</h2>
+	<div class="form-hint"
+    <p>Your claim date is <%= partial "partials/claim-date" %>. By partner we mean:</p>
+		
+		<ul class="list-bullet">
+		    <li>a person you are married to or live with as if you are married</li>
+		    <li>a civil partner or a person you live with as if you are civil partners</li>
+		  </ul>
+		  
+		   <p>If you have separated since your claim date answer 'Yes'.</p>
+	</div>
 
-    <p class="form-hint">Your claim date is <%= partial "partials/claim-date" %>. If you have separated since then select 'Yes'.</p>
 
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'partner', yesToggle: '#yesToggle'} %>
 
