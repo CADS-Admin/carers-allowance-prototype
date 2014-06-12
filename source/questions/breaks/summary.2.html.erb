@@ -1,0 +1,50 @@
+---
+question: 9
+title: Breaks from caring    
+---
+<p class="save-message fadeout">Application saved for 1 hour</p>
+<ul class="form-group back-skip">
+    <li class="back"><a href="1">Back</a></li>    
+    <li><a href="/questions/check-answers">Summary</a></li>         
+</ul>
+<%= partial "partials/page-title" %>
+
+<p>Breaks already added:</p>
+
+<ul class="break-summary">
+    <li>
+        <h3>23 Jan to 5 Feb 2014</h3>
+        <p><span>You:</span> Home</p>
+        <p><span>Them:</span> Hospital</p>
+        <p class="delete-link"><a href="#">Delete break</a></p>
+        <p class="edit-link"><a href="#">Change break details</a></p>
+    </li>
+    <li>
+        <h3>6 Mar 2014</h3>
+        <p><span>You:</span> Home</p>
+        <p><span>Them:</span> Hospital</p>
+        <p class="delete-link"><a href="#">Delete break</a></p>
+        <p class="edit-link"><a href="#">Change break details</a></p>
+    </li>
+    <li>
+        <h3>7 May, 10:00 to 17:00</h3>
+        <p><span>You:</span> Home</p>
+        <p><span>Them:</span> Hospital</p>
+        <p class="delete-link"><a href="#">Delete break</a></p>
+        <p class="edit-link"><a href="#">Change break details</a></p>
+    </li>         
+</ul>
+
+<form class="form" id="form" name="data">
+
+	<h2 class="section-heading">Have you had any more breaks since 21 August 2013?</h2>
+	<p class="form-hint">This is six months before your claim date. If 'Yes', you'll need to provide details</p>
+    
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'breaks2' } %>
+ 
+	 <div class="form-group">
+	        <br><br>
+	     <a class="next button" href="../10">Save and continue</a>
+	 </div>
+	 
+</form>

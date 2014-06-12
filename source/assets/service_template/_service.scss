@@ -281,6 +281,33 @@ p.skipped{
   }
 }
 
+
+.break-summary{
+  li{
+    padding: 20px 0;
+    border-top: 1px solid $border-colour;
+  }
+  h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  p{
+    font-size: 16px;
+    margin: 0;
+    span{
+      display: inline-block;
+      width: 50px;
+    }
+  }
+  .edit-link{
+    padding-top: 10px;
+  }
+  .delete-link{
+    padding-top: 10px;
+    float: right;
+  }
+}
+
 // NEW DARK FOOTER STYLES
 
 // We're overwriting the template styles here.
