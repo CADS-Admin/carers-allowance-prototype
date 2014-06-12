@@ -319,9 +319,8 @@ textarea {
     border-bottom: 2px solid $grey-1;
   }
   &.selected{
-    background-color: white;
-    outline: 2px solid $grey-1;
-    border-bottom: 0 solid;
+    border: 2px solid $black;
+    padding: 8px 28px 5px 28px;
     
     /*
     input:after{
