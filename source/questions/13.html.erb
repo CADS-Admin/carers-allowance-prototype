@@ -9,15 +9,15 @@ title:  Pay details
 
 <form class="form" id="form" name="data">
 
+	<p>Carer's Allowance is paid every week or 4 weeks, normally on Monday. <a href="help-guide#8">Accounts you can use to get paid</a></p>
+
 	<h2 class="section-heading">How would you like to get paid?</h2>
 
 	<%= partial 'partials/questions/radios', :locals => { 
-		:id => 'payMethod', 
-		:hint => "Select 'Other' if you want to be paid into an International Bank Account",
+		:id => 'payMethod',
 		:options => [
 			"UK bank or building society account",
-			"You don't have an account but intend to open one",
-			"Other - you would like more information"
+			"You don't have an account but intend to open one"
 		]
 
 	} %>
