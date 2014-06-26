@@ -162,7 +162,11 @@ p.skipped{
 
 
 .section-heading{
-  @extend .heading-24;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
   margin-top: 45px;
   width: 100%;
   float: left;

@@ -28,7 +28,8 @@ layout:  carers_wide_template
     <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'Date of birth', type: 'date', id: 'yourDob' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'Partner living with you since your claim date?', type: 'yes-no', id: 'partner' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  2, title: 'State pension', type: 'yes-no', id: 'statePension' } %>
-    <%= partial 'partials/questions/answer', :locals => { q:  3, title: 'Contact details', type: 'address', id: 'yourAddress' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  3, title: 'Address', type: 'address', id: 'yourAddress' } %>
+    <%= partial 'partials/questions/answer', :locals => { q:  3, title: 'Email', type: 'text-field', id: 'yourEmail' } %>
 </table>
 </div>
 <div data-question="4">
@@ -69,30 +70,30 @@ layout:  carers_wide_template
     <%= partial 'partials/questions/answer', :locals => { q:  7, title: 'Do they get Armed Forces Independence Payment?', type: 'yes-no', id: 'afip'} %>
 </table>
 </div>
-<div data-question="8">   
+<div data-question="8">
 <h3 class="heading-24">The care you provide</h3>
 <table class="check-answers">
     <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'Do you spend more than 35 hours a week caring?', type: 'yes-no', id: 'hrs35' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  8, title: 'When did you start caring for 35 hours a week or more?', type: 'date', id: 'careStartDate'} %>
     <%= partial 'partials/questions/answer', :locals => { q:  9, title: 'Have you had any breaks from caring?', type: 'yes-no', id: 'breaks'} %>
-</table>   
+</table>
 </div>
-<div data-question="10">    
+<div data-question="10">
 <h3 class="heading-24">Education</h3>
-<table class="check-answers">    
+<table class="check-answers">
     <%= partial 'partials/questions/answer', :locals => { q:  10, title: 'Have you been on a course of education since your claim date?', type: 'education'} %>
 </table>
 </div>
 <div data-question="11">
 <h3 class="heading-24">Employment</h3>
-<table class="check-answers">    
+<table class="check-answers">
     <%= partial 'partials/questions/answer', :locals => { q:  11, title: 'Self employed since 27 May 2014?', type: 'self-employment' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  11, title: 'Employed since 3 September 2013?', type: 'employment' } %>
 </table>
 </div>
 <div data-question="12">
 <h3 class="heading-24">Statutory pay, benefits and payments</h3>
-<table class="check-answers">    
+<table class="check-answers">
 	<%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Have you received any Statutory Sick Pay (SSP) since your claim date?', type: 'yes-no', id: 'statutory' } %>
 	<%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Have you received any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since your claim date?', type: 'yes-no', id: 'otherStatutory' } %>
 	<%= partial 'partials/questions/answer', :locals => { q:  12, title: 'Have you claimed or received any other benefits since your claim date?', type: 'yes-no', id: 'claimedBenefits' } %>
@@ -101,7 +102,7 @@ layout:  carers_wide_template
 </div>
 <div data-question="13">
 <h3 class="heading-24">Pay details</h3>
-<table class="check-answers">    
+<table class="check-answers">
     <%= partial 'partials/questions/answer', :locals => { q:  13, title: 'How would you like to get paid?', type: 'radios', id: 'payMethod' } %>
     <%= partial 'partials/questions/answer', :locals => { q:  13, title: 'How often would you like to get paid?', type: 'radios', id: 'payPeriod' } %>
 
@@ -109,7 +110,7 @@ layout:  carers_wide_template
 </div>
 <div data-question="14">
 <h3 class="heading-24">Additional information</h3>
-<table class="check-answers">    
+<table class="check-answers">
 	<%= partial 'partials/questions/answer', :locals => { q:  14, title: 'Do you want to tell us any additional information about your claim?', type: 'yes-no', id: 'additional' } %>
 </table>
 </div>

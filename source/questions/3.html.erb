@@ -3,7 +3,7 @@ question:   3
 title:      Your contact details
 ---
 
-<!-- Back, Skip -->    
+<!-- Back, Skip -->
 <%= partial "partials/back-skip" %>
 <%= partial "partials/page-title" %>
 
@@ -16,18 +16,27 @@ title:      Your contact details
     <div class="form-group">
         <label class="form-group-label" for="yourTelNo">Phone number</label>
         <div class="form-hint">Mobile or landline number</div>
-        
+
         <input type="text" class="form-control form-control-1-2" id="yourTelNo" name="yourTelNo">
 
         <label for="useTextPhone" class="form-radio">
-            <input type="checkbox" id="useTextPhone" name="useTextPhone"> 
+            <input type="checkbox" id="useTextPhone" name="useTextPhone">
             I have difficulties hearing and use a textphone
         </label>
     </div>
 
+    <!-- Email -->
+
+    <div class="form-group">
+        <label class="form-group-label" for="yourTelNo">Email address</label>
+        <div class="form-hint">Optional. We'll only use it to send you a confirmation email</div>
+
+        <input type="text" class="form-control form-control-1-2" id="yourEmail" name="yourEmail">
+    </div>
+
 <!-- Address -->
 
-    <%= partial "partials/questions/address", :locals => { 
+    <%= partial "partials/questions/address", :locals => {
         :id         => "yourAddress",
         :label      => "Address"
     }%>
