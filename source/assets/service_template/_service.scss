@@ -15,7 +15,7 @@ hr {
   margin-top: $gutter;
   margin-bottom: $gutter;
   background: $border-colour;
-  height: 1px; 
+  height: 1px;
   border: 0;
   float: left;
   width: 100%;
@@ -173,7 +173,7 @@ p.skipped{
   margin-top: 45px;
   p,h3{
     font-size: 16px;
-    max-width: 180px;
+    max-width: 210px;
     margin-bottom: 0;
   }
   .alert{
@@ -190,7 +190,7 @@ p.skipped{
     60% {
         opacity: 1;
     }
-    
+
     100% {
         opacity: 0;
     }
@@ -230,10 +230,9 @@ p.skipped{
 
 .govuk .back-skip{
   @extend %contain-floats;
-  //margin-top: -15px;
+  margin-bottom: 5px;
   .back{
     padding-right: 10px;
-    border-right: 1px solid $border-colour;
     margin-right: 10px;
   }
   .skip{
@@ -308,41 +307,35 @@ p.skipped{
   }
 }
 
-// NEW DARK FOOTER STYLES
-
-// We're overwriting the template styles here.
-
-/*
-#footer{
-  border: 0;
-  background: $black;
-  p, a{
-    color: $white;
-    :hover{
-      color: $white;
-      text-decoration: none;
-    }
-  }
-  .footer-meta {
-    .copyright a{
-      background: rgba(0, 0, 0, 0) url(../assets/service_template/govuk-crest-inverse.png) no-repeat 100% 0;
-    }  
-    .footer-meta-inner .open-government-licence {
-      h2 a{
-        background: url(../assets/service_template/open-government-licence_2x-inverse.png) no-repeat;
-        background-size: contain;
-        img{
-          display: none;
-        }
-      }
-      p a{
-        font-size: 16px;
-      }
-    }
-  }
+.list-number {
+  list-style-type: decimal;
+  margin-left: 25px;
 }
-*/
 
+.list-bullet {
+  list-style-type: disc;
+  margin-left: 20px;
+}
 
+p.help-back{
+}
 
+.sticky{
+  position: fixed;
+}
 
+hr{
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+// Trick, so when you link to page anchors the content is pushed slightly down the page
+// Makes it easier to read, aligned with the 'Back' link and you can see there's content above
+
+h2:before {
+  display: block;
+  content: " ";
+  margin-top: -42px;
+  height: 42px;
+  visibility: hidden;
+}

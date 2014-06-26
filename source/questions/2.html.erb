@@ -2,7 +2,7 @@
 question:   2
 title:      Your details
 ---
-<!-- Back, Skip -->    
+<!-- Back, Skip -->
 <%= partial "partials/back-skip" %>
 
 <%= partial "partials/page-title" %>
@@ -13,15 +13,15 @@ title:      Your details
 <!-- Name -->
 
     <h2 class="section-heading">Full name</h2>
-    
+
     <p class="form-hint">
-        As shown on your birth certificate or passport    
+        As shown on your birth certificate or passport
     </p>
-	
-    <%= partial "partials/questions/full-name", :locals => { 
+
+    <%= partial "partials/questions/full-name", :locals => {
         :id => "fullName"
     }%>
-	
+
 <!-- National Insurance number -->
 
     <h2 class="section-heading">National Insurance number</h2>
@@ -31,7 +31,7 @@ title:      Your details
         For example, 'VO 12 34 56 D'
     </p>
 
-    <%= partial "partials/questions/nino", :locals => { 
+    <%= partial "partials/questions/nino", :locals => {
         :id         => "yourNino",
         :label      => "National Insurance number",
         :hideLabel  => true,
@@ -47,13 +47,13 @@ title:      Your details
 <!-- State Pension -->
 
     <h2 class="section-heading">Do you get State Pension?</h2>
-    
-    <p class="form-hint">State Pension changes how much Carer's Allowance you can be paid. <br><a href="help-guide#4" target="blank">How this works</a></p>
+
+    <p class="form-hint">State Pension changes how much Carer's Allowance you can be paid. <br><a href="help#4">How this works</a></p>
 
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'statePension'} %>
-    
-    <!-- Next, Back, Skip -->    
-    
+
+    <!-- Next, Back, Skip -->
+
         <%= partial "partials/next-question" %>
 
 </form>

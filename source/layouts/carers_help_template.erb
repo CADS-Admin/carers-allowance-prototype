@@ -43,14 +43,13 @@
 
           <% end %>
 
-          <h2 class="heading-24" style="margin-top: 45px">Get help</h2>
+          <div class="sticky">
 
-          <ul>
-            <li><a href="/questions/help" class="read-guide" data-current="<%= current_page.data.question %>">Read the guide</a></li>
-            <!--<li><a href="#">Email feedback</a></li>-->
-          </ul>
+            <ul style="margin-top: 47px">
+              <li><a href="/questions/help" class="help-back">< Back to your application</a></li>
+            </ul>
 
-          <div class="help-message">
+            <div class="help-message">
               <h3>Helpline: 0345 601 8040</h3>
 
               <p>Mon to Fri, 8am to 6pm. <br>
@@ -59,33 +58,42 @@
                  Your call will be answered within 5 minutes.<br>
                  <a href="https://www.gov.uk/call-charges" target="_blank">Find out about call charges</a>
               </p>
+            </div>
+
+            <div class="help-message">
+              <!--
+              <h3>No time limit</h3>
+              <p>For your security, this application will reset if inactive for more than 1 hour.</p>
+              -->
+
+              <h3>No time limit</h3>
+              <p>But, for your security, if you leave a page for more than an hour then your application will be deleted.</p>
+
+              <!--
+
+              Alternatives:
+
+              Latest from Hinrick (round 7) - This application times out if you don’t use it for 1 hour.
+
+              Time out warning
+              <p>Your application will be deleted if you leave it for more than 1 hour.</p>
+
+              Time inactive: [number] minutes
+              <p>If you leave your application inactive for more than 1 hour it will be deleted.</p>
+
+              [message only appears after 30 mins of inactivity, number of mins goes up as time goes on]
+              You've left your application inactive for 30 minutes
+              You application will be deleted if you leave it for more than 1 hour.
+
+              -->
+            </div>
+
           </div>
 
-          <div class="help-message">
-            <h3>No time limit</h3>
-            <!--<p>Your data will be deleted after 1 hour of inactivity</p>-->
-            <!--<p class="alert">Deleting in <span>10 minutes</span>...</p>-->
-            <p>For your security, this application will reset if inactive for more than 1 hour.</p>
-            <!--
-
-            Alternatives:
-
-            Latest from Hinrick (round 7) - This application times out if you don’t use it for 1 hour.
-
-            Time out warning
-            <p>Your application will be deleted if you leave it for more than 1 hour.</p>
-
-            Time inactive: [number] minutes
-            <p>If you leave your application inactive for more than 1 hour it will be deleted.</p>
-
-            [message only appears after 30 mins of inactivity, number of mins goes up as time goes on]
-            You've left your application inactive for 30 minutes
-            You application will be deleted if you leave it for more than 1 hour.
-
-            -->
-          </div>
+          &nbsp;
 
         </div>
+
       </div>
 
 
@@ -116,19 +124,7 @@
     <script src="https://preview.carersallowance.service.gov.uk/assets/javascripts/plugins.min.js"></script>
     <script>
         // Nino auto jump
-    	$('.ni-number input').autotab_magic();
-
-        // smooth scroll
-        $('a[href^="#"]').bind('click.smoothscroll', function (e) {
-            e.preventDefault();
-            var target = this.hash,
-                $target = $(target);
-            $('html, body').animate({
-                scrollTop: $(target).offset().top - 40
-            }, 750, 'swing', function () {
-                window.location.hash = target;
-            });
-        });
+      $('.ni-number input').autotab_magic();
     </script>
 
   <% end %>

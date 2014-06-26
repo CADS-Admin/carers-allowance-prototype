@@ -1,5 +1,5 @@
 $(document).ready(function() {
-   // Eligibility / 
+   // Eligibility /
    $('#yes').click(function(){
         $('#answerNoMessageWrap').hide('medium');
     });
@@ -31,10 +31,11 @@ $(document).ready(function() {
        {
        $(this).text('Close');
        }
-    }); 
+    });
 
-	 
-// smooth scroll    
+
+// smooth scroll
+/*
 $('a[href^="#"]').bind('click.smoothscroll',function (e) {
     e.preventDefault();
     var target = this.hash,
@@ -44,8 +45,8 @@ $('a[href^="#"]').bind('click.smoothscroll',function (e) {
     }, 750, 'swing', function () {
         window.location.hash = target;
     });
-}); 
-
+});
+*/
 
 
 //$.extend($.datepicker, {
@@ -53,7 +54,7 @@ $('a[href^="#"]').bind('click.smoothscroll',function (e) {
              //  console.log("test");
          //}
     //});
-    
+
 
 //$("#start-date, #end-date").datepicker({
 		//dateFormat: 'dd/mm/yy',
@@ -66,9 +67,9 @@ $('a[href^="#"]').bind('click.smoothscroll',function (e) {
            // }
        // }
    // });
- 
+
  // auto jump
- 
+
 $('#ni-1, #ni-2, #ni-3, #ni-4, #ni-5').autotab_magic();
- 
+
 });

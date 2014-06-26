@@ -19,12 +19,17 @@ $(document).ready(function(){
 		localStorage["answered"] = JSON.stringify([]);
     }
 
+    if (!localStorage["current"] ) {
+		localStorage["current"] = JSON.stringify([]);
+    }
+
     if (!localStorage["edit"] ) {
 		localStorage["edit"] = false;
-    } 
+    }
 
 	var answered = JSON.parse(localStorage['answered']);
 	var skipped = JSON.parse(localStorage['skipped']);
+	var current = JSON.parse(localStorage['current']);
 	var edit = JSON.parse(localStorage['edit']);
 
 
@@ -39,8 +44,14 @@ $(document).ready(function(){
 	$(".js-country").select2();
 
 
+	// If user clicks 'Read guide' store the current question
+	$('.read-guide').click(function(){
+		localStorage['current'] = $(this).data('current');
+	});
 
-
+	// 'Back to application' button in the help guide
+	var current = "/questions/" + localStorage['current'];
+	$('.help-back').attr('href', current);
 
 
 
@@ -52,7 +63,7 @@ $(document).ready(function(){
       }).blur(function() {
         $("label").removeClass("add-focus");
       });
-      
+
   	}
 
   	// Selected button styles
@@ -72,7 +83,7 @@ $(document).ready(function(){
 	// ------------------------------------------------------------------
 	// 'CONTINUE WITH APPLICATION' LINK
 
-	// The right page is the question after the highest answered 
+	// The right page is the question after the highest answered
 	// or skipped question
 
 	answeredSkipped = answered.concat(skipped)
@@ -87,7 +98,7 @@ $(document).ready(function(){
 
 	var currentQuestion = $('[data-answer]').data('answer');
 
-	// IF in edit mode AND current question has been previously answered 
+	// IF in edit mode AND current question has been previously answered
 	// or skipped, THEN change button text and href
 
 
@@ -105,12 +116,12 @@ $(document).ready(function(){
 	// ------------------------------------------------------------------
 	// STORING AND RETREIVING FORM VALUES
 
-	// Apply Sisyphus to all forms. 
+	// Apply Sisyphus to all forms.
 	// Sisyphus uses local storage to store form field values.
 
 	$("form").sisyphus();
 
-	// Set the text node of element with a 'data-from' attribute to a value 
+	// Set the text node of element with a 'data-from' attribute to a value
 	// in local storage. The key is specified in the attribute
 
 	$('[data-from]').text(function(){
@@ -145,7 +156,7 @@ $(document).ready(function(){
 	// ------------------------------------------------------------------
 	// STORING SKIPPED AND ANSERED QUESTIONS
 
-	// If a question is skipped, add the question number to the 'skipped' 
+	// If a question is skipped, add the question number to the 'skipped'
 	// array in local storage.
 	$('[data-skip]').click(function(){
 		var question = $(this).data('skip');
@@ -156,7 +167,7 @@ $(document).ready(function(){
 		}
 	});
 
-	// If a question is answered, add the question number to the 'answered' 
+	// If a question is answered, add the question number to the 'answered'
 	// array in local storage.
 	$('[data-answer]').click(function(){
 		var answer = $(this).data('answer');
@@ -184,7 +195,7 @@ $(document).ready(function(){
 	// ------------------------------------------------------------------
 	// HIGHLIGHTING SKIPPED QUESTIONS
 
-	// Iterate over questions on the 'check answers' page and highlight 
+	// Iterate over questions on the 'check answers' page and highlight
 	// the ones that have been skipped.
 
 	$('.check-answers tr').each(function(){

@@ -14,11 +14,11 @@ title:  Eligibility
     min-width: 620px;
 }
 #success.prompt {
-	border: 3px solid #000;	
+	border: 3px solid #000;
 }
 #failure.prompt {
 	background: none repeat scroll 0 0 #FEF7F7;
-	border: 3px solid #DF3034;	
+	border: 3px solid #DF3034;
 }
 .prompt ul {
 	clear: both;
@@ -37,7 +37,7 @@ title:  Eligibility
     line-height: 1.31579;
     margin: 0.75em 0;
     padding: 0 2em;
-    
+
 }
 .prompt span {
     background: none repeat scroll 0 0 #990C1A;
@@ -55,7 +55,7 @@ title:  Eligibility
 }
 
 </style>
-		
+
 <h1 class="heading-36">Can you get Carer's Allowance?</h1>
 
 <p>The person you care for must already get 1 of these benefits: </p>
@@ -70,28 +70,28 @@ title:  Eligibility
       </ul>
 
     </div><!-- form-group-indent -->
-    
-    <h2 class="section-heading">Does the person you care for get 1 of these benefits?</h2>
-    
 
-    
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'benefit_type'} %>    
-    
+    <h2 class="section-heading">Does the person you care for get 1 of these benefits?</h2>
+
+
+
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'benefit_type'} %>
+
 	<h2 class="section-heading">Do you spend 35 hours or more each week caring for someone?</h2>
     <p class="form-hint">For example, cooking meals, or helping them with their shopping</p>
-    
+
     <%= partial 'partials/questions/yes-no', :locals => { :id => '35_hours'} %>
 
     <h2 class="section-heading">Are you aged 16 or over?</h2>
     <%= partial 'partials/questions/yes-no', :locals => { :id => '16_over'} %>
-    
+
     <h2 class="section-heading">Do you live in England, Scotland or Wales?</h2>
     <p class="form-hint">Families of HM Forces should answer ‘yes’ no matter where they live. <br>If you live in Northern Ireland go to <a href="#">NI Carers Allowance</a></p>
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'live_in'} %>
 
 
 	<div id="failure" class="prompt" >
-	
+
 		<p style="font-size: 24px;"><strong>Based on your answers you’re not entitled to Carer's&nbsp;Allowance. You can only get it if:</strong></p>
 		<ul>
 			<li class="feedback-q1" style="display: none;">you are caring for someone 35 hours or more each week.</li>
@@ -99,11 +99,11 @@ title:  Eligibility
 			<li class="feedback-q3" style="display: none;">you are aged 16 or over.</li>
 			<li class="feedback-q4" style="display: none;">you normally live in England, Scotland or Wales. If you live in the European Economic Area (EEA) or Switzerland, and you have answered Yes to the other questions, there are some exceptions.</li>
 		</ul>
-		<!--<p><a href="help-guide" target="blank">Read the guide</a> for more information.</p>-->
+		<!--<p><a href="help">Read the guide</a> for more information.</p>-->
 		<span>!</span>
-		
+
 	</div>
-	
+
 	<div id="success" class="prompt">
 		<p style="font-size: 24px;"><strong>Based on your answers you may be entitled <br>to Carer's Allowance.</strong></p>
 		<ul>
@@ -111,15 +111,15 @@ title:  Eligibility
 			<li class="education">If you're studying 21 hours a week or more you might not be entitled</li>
 			<li class="partner">If you have a partner, any benefits they get can be affected if you get Carer's Allowance.</li>
 		</ul>
-		<p>For more information, <a href="help-guide" target="blank">read the guide</a>.</p>
-	</div>   
+		<p>For more information, <a href="help">read the guide</a>.</p>
+	</div>
 
 <div class="form-group" style="display:none;" id="legal">
-	
+
 	<h2 class="section-heading">Do you still want to make an application?</h2>
-	<p class="form-hint">You are legally entitled to claim even though you do not qualify and will not get Carer's Allowance<p> 
+	<p class="form-hint">You are legally entitled to claim even though you do not qualify and will not get Carer's Allowance<p>
 	<%= partial 'partials/questions/yes-no', :locals => { :id => 'no_continue'} %>
-	
+
 </div>
 
 <div class="form-group">
@@ -136,20 +136,20 @@ title:  Eligibility
 <script type="text/javascript">
 //
 
-$(document).ready(function() {  
+$(document).ready(function() {
 
 	function checkSuccess() {
-		if($('#live_inYes').is(':checked') && $('#16_overYes').is(':checked') && $('#benefit_typeYes').is(':checked') && $('#35_hoursYes').is(':checked')) { 
+		if($('#live_inYes').is(':checked') && $('#16_overYes').is(':checked') && $('#benefit_typeYes').is(':checked') && $('#35_hoursYes').is(':checked')) {
 		 	//alert('success');
 			$("#success").show();
-			$("#failure, #legal").hide();	
+			$("#failure, #legal").hide();
 		}
 		else if($('#live_inNo').is(':checked') || $('#16_overNo').is(':checked') || $('#benefit_typeNo').is(':checked') || $('#35_hoursNo').is(':checked')) {
 			//$("a.next.button").hide();
 			$("#success").hide();
 			$("#failure, #legal").show();
 		}
-	}	
+	}
 	$('#35_hoursNo').click(function(){
 		checkSuccess();
 		$("#failure .feedback-q1").show();
@@ -165,7 +165,7 @@ $(document).ready(function() {
 	$('#live_inNo').click(function(){
 		checkSuccess();
 		$("#failure .feedback-q4").show();
-	});	
+	});
 	$('#35_hoursYes').click(function(){
 		checkSuccess();
 		$("#failure .feedback-q1").hide();

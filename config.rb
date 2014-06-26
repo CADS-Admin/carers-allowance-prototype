@@ -22,6 +22,7 @@
 page "index.html", :layout => :blank_template
 page "/questions/*", :layout => :carers_template
 page "/govuk-carers/*", :layout => :govuk_carers_template
+page "/questions/help.html", :layout => :carers_help_template
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
