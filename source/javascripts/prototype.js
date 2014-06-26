@@ -44,9 +44,9 @@ $(document).ready(function(){
 	$(".js-country").select2();
 
 
-	// If user clicks 'Read guide' store the current question
+	// If user clicks a link to the guide, store the current question
 	$('.read-guide').click(function(){
-		localStorage['current'] = $(this).data('current');
+		localStorage['current'] = $('#read-guide').data('current');
 	});
 
 	// 'Back to application' button in the help guide
