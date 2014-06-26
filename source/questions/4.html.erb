@@ -3,7 +3,7 @@ question:   4
 title:      Nationality, where you live and time abroad
 ---
 
-<!-- Back, Skip -->    
+<!-- Back, Skip -->
 <%= partial "partials/back-skip" %>
 <%= partial "partials/page-title" %>
 
@@ -15,11 +15,26 @@ title:      Nationality, where you live and time abroad
 
 	<p class="form-hint">As shown on your current passport</p>
 
-    <%= partial "partials/questions/text-field", :locals => { 
-        :id 		=> "yourNationality",
-        :label 		=> "Nationality",
-        :hideLabel	=> true
-    }%>
+    <div class="form-group form-radio">
+      <label for="payMethod0" class="block-label">
+        <input id="payMethod0" type="radio" name="payMethod" value="British" class="js-toggle" data-hide="#nationalityToggle">
+        British
+      </label>
+    </div>
+    <div class="form-group form-radio">
+      <label for="payMethod1" class="block-label">
+        <input id="payMethod1" type="radio" name="payMethod" value="Another country" class="js-toggle" data-show="#nationalityToggle">
+        Another country
+      </label>
+    </div>
+
+    <div class="js-hidden form-group form-group-indent" id="nationalityToggle">
+        <label class="form-control-label" for="yourNationality">Enter your nationality</label>
+        <input type="text" class="form-control" id="yourNationality">
+
+        <label class="form-control-label" for="yourMaritalStatus">Enter your marital status</label>
+        <input type="text" class="form-control" id="yourMaritalStatus">
+    </div>
 
 <!-- Residency -->
 
@@ -35,9 +50,9 @@ title:      Nationality, where you live and time abroad
 <!-- Time abroad -->
 
 	<h2 class="section-heading">Have you been away for more than 52 weeks in the 3 years before your claim date?</h2>
-	
+
 	<p class="form-hint">This could be 1 long trip or many shorter trips adding up to 52 weeks. <br>
-	Your claim date is <%= partial "partials/claim-date" %>. 
+	Your claim date is <%= partial "partials/claim-date" %>.
 	</p>
 
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'away52Weeks'} %>
