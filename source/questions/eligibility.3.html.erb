@@ -1,0 +1,200 @@
+---
+question: 1
+title:  Eligibility
+---
+
+<style>
+
+h3{
+  margin: 45px 0 20px 0;
+}
+
+hr{
+  margin-top: 0;
+}
+
+.prompt {
+    display: none;
+    float: left;
+    clear: both;
+    position: relative;
+    margin: 3em 0 1em;
+    min-width: 620px;
+}
+#success.prompt {
+  border: 3px solid #000;
+}
+#failure.prompt {
+  background: none repeat scroll 0 0 #FEF7F7;
+  border: 3px solid #DF3034;
+}
+.prompt ul {
+  clear: both;
+  float: left;
+  list-style-image: url("https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px.gif");
+    list-style-type: circle;
+    list-style-position: inside;
+    text-indent: -.75em;
+    margin-top: 0;
+}
+.prompt p {
+    margin: 0.75em 0;
+    padding: 0 1em;
+}
+.prompt li {
+    line-height: 1.31579;
+    margin: 0.75em 0;
+    padding: 0 2em;
+
+}
+.prompt span {
+    background: none repeat scroll 0 0 #990C1A;
+    border-radius: 100px;
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: 700;
+    height: 36px;
+    margin-top: -18px;
+    position: absolute;
+    right: 16px;
+    text-align: center;
+    top: 40px;
+    width: 36px;
+}
+
+.govuk .form-group{
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+
+</style>
+
+<h1 class="heading-36">Can you get Carer's Allowance?</h1>
+
+<p>You must meet these requirements before you can get Carer's Allowance:<p>
+
+
+<ol class="steps">
+  <li><p>You are aged 16 or over</p></li>
+
+  <li><p>You live in England, Scotland, Wales or <span id="these-countries" class="js-toggle link-style" data-hide="#these-countries" data-show=".country-toggle">these countries</span><span class="js-hidden country-toggle">these countries:</span>
+
+      <ul class="country-toggle js-hidden list-bullet" style="margin-top: 10px">
+        <li>if you live in Northern Ireland go to <a href="#">NI Carers Allowance</a></li>
+        <li>families of HM Forces can apply from any country</li>
+        <li>if you live in the European Economic Area (EEA) or Switzerland you may still qualify</li>
+      </ul>
+
+      </p>
+  </li>
+<!--
+  <li><p>You live in England, Scotland, Wales or if:</span>
+
+      <ul class="list-bullet" style="margin-top: 10px">
+        <li>you live in Northern Ireland - go to <a href="#">NI Carers Allowance</a></li>
+        <li>you're family of HM Forces you can apply from any country</li>
+        <li>you live in the European Economic Area (EEA) or Switzerland you may still qualify</li>
+      </ul>
+
+      </p>
+  </li>
+-->
+  <li><p>You care for someone for 35 hours a week or more - for example, cooking meals, or helping them with their shopping</p>
+</li>
+  <li><p>The person you care for gets one of these disability benefits:</p>
+
+    <div class="benefit-list">
+      <ul class="list-bullet">
+        <li><strong>Personal Independence Payment</strong> &mdash; the standard or enhanced rate of the Daily Living Component
+        </li>
+        <li><strong>Disability Living Allowance</strong> &mdash; the middle or highest rate</li>
+    <li><strong>Attendance Allowance</strong></li>
+    <li><strong>Constant Attendance Allowance</strong> &mdash; the Addition to Disablement Benefit at normal maximum rate or more, or the Addition to War Disablement Pension at full rate</li>
+        <li><strong>Armed Forces Independence Payment</strong></li>
+      </ul>
+
+    </div></li>
+</ol>
+
+<hr>
+
+  <h3>Do you meet all of the above requirements?</h3>
+
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'meet_eligibility', noToggle: '#noToggle', yesToggle: '#yesToggle'} %>
+
+    <div class="js-hidden form-group-indent" id="yesToggle">
+      <p><strong>You may be entitled to Carer's Allowance, if:</strong></p>
+      <ul class="list-bullet">
+        <li>you earn less than &pound;100 a week from income after tax, National Insurance and certain allowable expenses</li>
+        <li>you don't study for 21 hours a week or more</li>
+      </ul>
+
+      <p>If you have a partner, any benefits they get can be affected if you get Carer's Allowance.
+        For more information, <a href="help">read the guide</a>.</p>
+
+      <p><a class="next button" href="disclaimer">Apply for Carer's Allowance</a></p>
+    </div>
+
+    <div class="js-hidden form-group-indent" id="noToggle">
+      <p><strong>You are not entitled to Carer's Allowance</strong></p>
+      <p>Even though you do not qualify and will not get Carer's Allowance, you are legally entitled to <a href="disclaimer">make a claim</a>.<p>
+    </div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+//
+
+$(document).ready(function() {
+
+  function checkSuccess() {
+    if($('#live_inYes').is(':checked') && $('#16_overYes').is(':checked') && $('#benefit_typeYes').is(':checked') && $('#35_hoursYes').is(':checked')) {
+      //alert('success');
+      $("#success").show();
+      $("#failure, #legal").hide();
+    }
+    else if($('#live_inNo').is(':checked') || $('#16_overNo').is(':checked') || $('#benefit_typeNo').is(':checked') || $('#35_hoursNo').is(':checked')) {
+      //$("a.next.button").hide();
+      $("#success").hide();
+      $("#failure, #legal").show();
+    }
+  }
+  $('#35_hoursNo').click(function(){
+    checkSuccess();
+    $("#failure .feedback-q1").show();
+  });
+  $('#benefit_typeNo').click(function(){
+    checkSuccess();
+    $("#failure .feedback-q2").show();
+  });
+  $('#16_overNo').click(function(){
+    checkSuccess();
+    $("#failure .feedback-q3").show();
+  });
+  $('#live_inNo').click(function(){
+    checkSuccess();
+    $("#failure .feedback-q4").show();
+  });
+  $('#35_hoursYes').click(function(){
+    checkSuccess();
+    $("#failure .feedback-q1").hide();
+  });
+  $('#benefit_typeYes').click(function(){
+    checkSuccess();
+    $("#failure .feedback-q2").hide();
+  })
+  $('#16_overYes').click(function(){
+    checkSuccess();
+    $("#failure .feedback-q3").hide();
+  });
+  $('#live_inYes').click(function(){
+    checkSuccess();
+    $("#failure .feedback-q4").hide();
+  });
+
+});
+
+</script>
+
+
+

@@ -353,3 +353,73 @@ h2:before {
   height: 42px;
   visibility: hidden;
 }
+
+
+.disability-table{
+  margin: 45px 0;
+  td{
+    width: 50%;
+    vertical-align: top;
+  }
+  td:last-child{
+    color: $secondary-text-colour;
+  }
+}
+
+.benefit-list{
+  //margin-bottom: 30px;
+  ul{
+    margin-top: 25px;
+  }
+  ul li{
+    margin-bottom: 10px;
+  }
+  li strong{
+    //display: block;
+  }
+}
+
+
+ol.steps{
+  padding-left: 0;
+  margin-left: 0;
+  overflow: hidden;
+  > li{
+    background-position: 0 0.87em;
+    background-repeat: no-repeat;
+    list-style-type: decimal;
+    margin-left: 0;
+    padding: 0.75em 0 0.75em 2.2em;
+
+    &:nth-child(1) {
+      background-image: url(/assets/govuk_frontend_toolkit/images/icon-steps/icon-step-1.png);
+    }
+    &:nth-child(2) {
+      background-image: url(/assets/govuk_frontend_toolkit/images/icon-steps/icon-step-2.png);
+    }
+    &:nth-child(3) {
+      background-image: url(/assets/govuk_frontend_toolkit/images/icon-steps/icon-step-3.png);
+    }
+    &:nth-child(4) {
+      background-image: url(/assets/govuk_frontend_toolkit/images/icon-steps/icon-step-4.png);
+    }
+  }
+  p{
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+
+}
+
+
+.link-style {
+  display: inline;
+  color: #005ea5;
+  text-decoration: underline;
+}
+.link-style:hover {
+  color: #2e8aca;
+  cursor: pointer;
+}
+
+
