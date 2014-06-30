@@ -3,7 +3,7 @@ question:   7
 title: Details of the person you care for
 ---
 
-<!-- Back, Skip -->    
+<!-- Back, Skip -->
 <%= partial "partials/back-skip" %>
 <%= partial "partials/page-title" %>
 
@@ -12,49 +12,49 @@ title: Details of the person you care for
 <!-- Name -->
 
     <h2 class="section-heading">Full name</h2>
-    
+
     <p class="form-hint">
-        As shown on their birth certificate or passport    
+        As shown on their birth certificate or passport
     </p>
 
-    <%= partial 'partials/questions/text-field', :locals => { 
+    <%= partial 'partials/questions/text-field', :locals => {
         :id => 'careName',
         :hideLabel  => true
     }%>
-    
+
 <!-- National Insurance number -->
 
-    <h2 class="section-heading">National Insurance number (optional)</h2>
+    <h2 class="section-heading">National Insurance number</h2>
 
     <p class="form-hint">
-        For example, 'VO 12 34 56 D'
+        Optional. For example, 'VO 12 34 56 D'
     </p>
 
-    <%= partial "partials/questions/nino", :locals => { 
+    <%= partial "partials/questions/nino", :locals => {
         :id         => "careNino",
         :label      => "National Insurance number"
-    }%>   
-    
+    }%>
+
 <!-- Relationship -->
 
 	<h2 class="section-heading">What is their relationship to you?</h2>
-	
+
 	<p class="form-hint">
 		For example, mother, daughter, friend etc.
 	</p>
-	
-	<%= partial 'partials/questions/text-field', :locals => { 
+
+	<%= partial 'partials/questions/text-field', :locals => {
 	    :id => 'careRelationship',
 	    :hideLabel  => true
 	}%>
- 
+
 <!-- Contact details -->
 
 	<h2 class="section-heading">Contact details</h2>
 	<p class="block"><input type="checkbox" secondary="true" value="true" name="use-my-address" id="use-my-address">
 	<label for="use-my-address" style="display: inline-block;">This person lives with me. Use my address</label></p>
 
-    <%= partial "partials/questions/address", :locals => { 
+    <%= partial "partials/questions/address", :locals => {
         :id         => "careAddress",
         :hideLabel  => true
     }%>
@@ -65,11 +65,11 @@ title: Details of the person you care for
 
     <p>Does this person get Armed Forces Independence Payment (AFIP)?</p>
 
-    <%= partial 'partials/questions/yes-no', :locals => { 
-    	:id => 'afip', 
-    	:hideLabel  => true 
+    <%= partial 'partials/questions/yes-no', :locals => {
+    	:id => 'afip',
+    	:hideLabel  => true
     } %>
-    
+
 
     <div class-"form-group">
 
