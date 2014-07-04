@@ -1,0 +1,100 @@
+<% wrap_layout :govuk_template do %>
+
+  <% content_for :body_classes do %>v2<% end %>
+
+  <% content_for :page_title do %>Apply for Carer's Allowance<% end %>
+
+  <% content_for :head do %>
+
+  <!--[if gt IE 8]><!--><link href="<%= asset_path(:css, "/stylesheets/base.css") %>" rel="stylesheet" type="text/css" /><!--<![endif]-->
+  <!--[if IE 6]><link href="<%= asset_path(:css, "/stylesheets/base-ie6.css") %>" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if IE 7]><link href="<%= asset_path(:css, "/stylesheets/base-ie7.css") %>" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if IE 8]><link href="<%= asset_path(:css, "/stylesheets/base-ie8.css") %>" rel="stylesheet" type="text/css" /><![endif]-->
+
+  <% end %>
+
+  <% content_for :header_class do %> class="with-proposition"<% end %>
+  <% content_for :proposition_header do %>
+    <%= partial "partials/proposition-header" %>
+  <% end %>
+
+  <% content_for :after_header do %>
+    <div class="colour-strip"></div>
+  <% end %>
+
+  <main class="main govuk">
+    <div class="grid-wrapper">
+
+      <div class="grid grid-1-3" id="section-nav">
+        <div class="inner-block">
+
+          <%
+            percentage = ((current_page.data.question - 1) * 100 / data.claim.totalQuestions).round()
+          %>
+
+          <% if current_page.data.question > 1 %>
+
+          <!--<h2 class="heading-24"><span class="percentage-complete"><%= percentage %></span>% complete</h2>-->
+<!--
+          <ul class="question-status" style="margin-top: 30px;">
+            <li><a href="/questions/check-answers">View summary</a></li>
+          </ul>
+        -->
+
+          <% end %>
+
+          <div>
+
+            <div class="help-message">
+              <h3>Helpline: <br>0345 601 8040</h3>
+
+              <p>Mon to Fri, 8am to 6pm. <br>
+                 Weekends, 9am - 4pm.<br>
+                 Closed on public and bank holidays.
+                 Your call will be answered within 5 minutes.<br>
+                 <a href="https://www.gov.uk/call-charges" target="_blank">Find out about call charges</a>
+              </p>
+            </div>
+
+          </div>
+
+          &nbsp;
+
+        </div>
+
+      </div>
+
+
+      <div class="grid grid-2-3" id="section-content" >
+        <div class="inner-block">
+          <%= yield %>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <% content_for :footer_support_links do %>
+    <div class="made-by">
+        <p>Made in Preston by Department for Work &amp; Pensions</p>
+    </div>
+  <% end %>
+
+  <% content_for :body_end do %>
+    <script src="<%= asset_path(:js, "/javascripts/jquery.min.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/vendor/select2-3.4.5/select2.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/vendor/sisyphus/sisyphus.min.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/vendor/jquery.details.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/toggle.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/prototype.js") %>"></script>
+
+    <script src="https://preview.carersallowance.service.gov.uk/assets/javascripts/plugins.min.js"></script>
+    <script>
+        // Nino auto jump
+      $('.ni-number input').autotab_magic();
+    </script>
+
+  <% end %>
+
+<% end %>
