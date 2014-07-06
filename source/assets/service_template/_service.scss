@@ -336,6 +336,7 @@ p.skipped{
 
 .sticky{
   position: fixed;
+  width: 260px;
 }
 
 hr{
@@ -432,4 +433,36 @@ ol.steps{
   h2{
     margin: 0.5em 0;
   }
+}
+
+.fa{
+  width: 20px;
+}
+
+.govuk .help-call{
+  padding: 10px 0 10px 19px;
+  font-size: 16px;
+  p{
+    color: $secondary-text-colour;
+    margin: 0;
+  }
+  .js-toggle{
+    text-decoration: underline;
+  }
+}
+
+.govuk .chat-window{
+  height: 200px;
+  padding: 10px;
+  background-color: #FFF;
+  border: 1px solid #BFC1C3;
+  margin: 10px 0;
+  .form-control{
+    width: 100%;
+  }
+}
+
+
+.message-them{
+  font-size: 16px;
 }

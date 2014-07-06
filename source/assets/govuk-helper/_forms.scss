@@ -158,6 +158,13 @@ textarea {
 
 // Form control widths
 
+.form-control-full {
+  width: 100%;
+  @include media(tablet) {
+    width: 100%;
+  }
+}
+
 .form-control-3-4 {
   width: 100%;
   @include media(tablet) {

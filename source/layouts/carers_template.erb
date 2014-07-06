@@ -11,6 +11,8 @@
   <!--[if IE 7]><link href="<%= asset_path(:css, "/stylesheets/base-ie7.css") %>" rel="stylesheet" type="text/css" /><![endif]-->
   <!--[if IE 8]><link href="<%= asset_path(:css, "/stylesheets/base-ie8.css") %>" rel="stylesheet" type="text/css" /><![endif]-->
 
+  <link href="<%= asset_path(:css, "/stylesheets/font-awesome.min.css") %>" rel="stylesheet" type="text/css" />
+
   <% end %>
 
   <% content_for :header_class do %> class="with-proposition"<% end %>
@@ -43,47 +45,43 @@
 
           <% end %>
 
+          <div class="sticky">
+
           <h2 class="heading-24" style="margin-top: 45px">Get help</h2>
 
           <ul>
-            <li><a href="/questions/help" id="read-guide" class="read-guide" data-current="<%= current_page.data.question %>">Read the guide</a></li>
-            <!--<li><a href="#">Email feedback</a></li>-->
+            <li><i class="fa fa-question-circle"></i> <a href="/questions/help" id="read-guide" class="read-guide" data-current="<%= current_page.data.question %>">Read the guide</a></li>
+            <li><i class="fa fa-phone"></i> <span data-toggle="#help-call" class="js-toggle link-style">Call the helpline</span>
+
+              <div class="js-hidden form-group-indent help-call" id="help-call">
+              <h3>Tel 0345 601 8040</h3>
+
+              <p>Lines open now <br>Max waiting time is 5 minutes</p>
+              <!--<p><span data-toggle="#call-charges" class="js-toggle">Call charges apply</span>.</p>-->
+              <p class="xjs-hidden" id="call-charges">
+                Landline, 2p to 10p per minute
+                Mobile, 10p to 40p per minute
+              </p>
+              </div>
+
+            </li>
+            <li><i class="fa fa-comment-o"></i> <span data-toggle="#help-chat" class="js-toggle link-style">Online chat</span>
+
+              <div class="js-hidden help-chat" id="help-chat">
+                <div class="chat-window">
+                  <div class="message-them">
+                    <p><i class="fa fa-user"></i>Hi, my name is Tony, how can I help you today?</p>
+                  </div>
+
+                </div>
+                <input type="text" class="form-control form-control-full" placeholder="Type here">
+              </div>
+            </li>
           </ul>
 
-          <div class="help-message">
-              <h3>Helpline: <br>0345 601 8040</h3>
-
-              <p>Mon to Fri, 8am to 6pm. <br>
-                 Weekends, 9am - 4pm.<br>
-                 Closed on public and bank holidays.
-                 Your call will be answered within 5 minutes.<br>
-                 <a href="https://www.gov.uk/call-charges" target="_blank">Find out about call charges</a>
-              </p>
           </div>
 
-          <div class="help-message">
-            <h3>No time limit</h3>
-            <!--<p>Your data will be deleted after 1 hour of inactivity</p>-->
-            <!--<p class="alert">Deleting in <span>10 minutes</span>...</p>-->
-            <p>But, for your security, this application will reset if it's inactive for more than 1 hour.</p>
-            <!--
-
-            Alternatives:
-
-            Latest from Hinrick (round 7) - This application times out if you don’t use it for 1 hour.
-
-            Time out warning
-            <p>Your application will be deleted if you leave it for more than 1 hour.</p>
-
-            Time inactive: [number] minutes
-            <p>If you leave your application inactive for more than 1 hour it will be deleted.</p>
-
-            [message only appears after 30 mins of inactivity, number of mins goes up as time goes on]
-            You've left your application inactive for 30 minutes
-            You application will be deleted if you leave it for more than 1 hour.
-
-            -->
-          </div>
+          &nbsp;
 
         </div>
       </div>
@@ -94,6 +92,7 @@
           <%= yield %>
         </div>
       </div>
+
 
     </div>
 
