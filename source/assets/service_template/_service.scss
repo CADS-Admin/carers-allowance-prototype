@@ -462,6 +462,14 @@ ol.steps{
   }
 }
 
+#chat-close{
+  float: right;
+  color: $secondary-text-colour;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
 
 .message-them{
   font-size: 16px;

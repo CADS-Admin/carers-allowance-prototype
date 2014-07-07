@@ -56,7 +56,7 @@
               <div class="js-hidden form-group-indent help-call" id="help-call">
               <h3>Tel 0345 601 8040</h3>
 
-              <p>Lines open now <br>Max waiting time is 5 minutes</p>
+              <p>Lines open until 6pm <br>Max waiting time is 5 minutes</p>
               <!--<p><span data-toggle="#call-charges" class="js-toggle">Call charges apply</span>.</p>-->
               <p class="xjs-hidden" id="call-charges">
                 Landline, 2p to 10p per minute
@@ -65,12 +65,14 @@
               </div>
 
             </li>
-            <li><i class="fa fa-comment-o"></i> <span data-toggle="#help-chat" class="js-toggle link-style">Online chat</span>
+            <li>
+              <span class="js-hidden js-toggle" id="chat-close" data-hide="#help-chat, #chat-close">✕</span>
+              <i class="fa fa-comment-o"></i> <span data-toggle="#help-chat, #chat-close" class="js-toggle link-style">Online chat</span>
 
               <div class="js-hidden help-chat" id="help-chat">
                 <div class="chat-window">
                   <div class="message-them">
-                    <p><i class="fa fa-user"></i>Hi, my name is Tony, how can I help you today?</p>
+                    <p><i class="fa fa-user"></i>Hi, my name is Tony. How can I help you today?</p>
                   </div>
 
                 </div>
@@ -79,7 +81,7 @@
             </li>
           </ul>
 
-          <p class="security"><i class="fa fa-lock"></i>Your information will be deleted if you leave this screen for more than 1 hour.</p>
+          <p class="security"><i class="fa fa-lock"></i>You have 60 minutes to complete this page. After this, your data will be securely deleted.</p>
 
           </div>
 
