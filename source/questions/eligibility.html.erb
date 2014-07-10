@@ -71,13 +71,21 @@ title:  Eligibility
 
     </div><!-- form-group-indent -->
 
-    <h2 class="section-heading">Does the person you care for get 1 of these benefits?</h2>
+    <h2 class="section-heading">Which benefit does the person you care for get?</h2>
+    
+    	<%= partial 'partials/questions/radios', :locals => {
+    		:id => 'benefit_type',
+    		:options => [
+    			"Personal Independence Payment",
+    			"Disability Living Allowance",
+    			"Attendance Allowance",
+    			"Constant Attendance Allowance",
+    			"Armed Forces Independence Payment"
+    		]
+    
+    	} %>
 
-
-
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'benefit_type'} %>
-
-	<h2 class="section-heading">Do you spend 35 hours or more each week caring for someone?</h2>
+	<h2 class="section-heading">Do you spend at least 35 hours a week caring for them?</h2>
     <p class="form-hint">For example, cooking meals, or helping them with their shopping</p>
 
     <%= partial 'partials/questions/yes-no', :locals => { :id => '35_hours'} %>
@@ -139,12 +147,12 @@ title:  Eligibility
 $(document).ready(function() {
 
 	function checkSuccess() {
-		if($('#live_inYes').is(':checked') && $('#16_overYes').is(':checked') && $('#benefit_typeYes').is(':checked') && $('#35_hoursYes').is(':checked')) {
+		if($('#live_inYes').is(':checked') && $('#16_overYes').is(':checked') && $('#35_hoursYes').is(':checked')) {
 		 	//alert('success');
 			$("#success").show();
 			$("#failure, #legal").hide();
 		}
-		else if($('#live_inNo').is(':checked') || $('#16_overNo').is(':checked') || $('#benefit_typeNo').is(':checked') || $('#35_hoursNo').is(':checked')) {
+		else if($('#live_inNo').is(':checked') || $('#16_overNo').is(':checked') || $('#35_hoursNo').is(':checked')) {
 			//$("a.next.button").hide();
 			$("#success").hide();
 			$("#failure, #legal").show();
@@ -153,10 +161,6 @@ $(document).ready(function() {
 	$('#35_hoursNo').click(function(){
 		checkSuccess();
 		$("#failure .feedback-q1").show();
-	});
-	$('#benefit_typeNo').click(function(){
-		checkSuccess();
-		$("#failure .feedback-q2").show();
 	});
 	$('#16_overNo').click(function(){
 		checkSuccess();
@@ -170,10 +174,6 @@ $(document).ready(function() {
 		checkSuccess();
 		$("#failure .feedback-q1").hide();
 	});
-	$('#benefit_typeYes').click(function(){
-		checkSuccess();
-		$("#failure .feedback-q2").hide();
-	})
 	$('#16_overYes').click(function(){
 		checkSuccess();
 		$("#failure .feedback-q3").hide();
