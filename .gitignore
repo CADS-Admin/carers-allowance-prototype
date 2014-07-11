@@ -20,3 +20,13 @@
 *.espressostorage
 
 /.cache
+
+source/fonts/fontawesome-webfont.eot
+
+source/fonts/fontawesome-webfont.svg
+
+source/fonts/fontawesome-webfont.ttf
+
+source/fonts/fontawesome-webfont.woff
+
+source/fonts/FontAwesome.otf
