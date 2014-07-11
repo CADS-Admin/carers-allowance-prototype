@@ -1,0 +1,139 @@
+<% wrap_layout :govuk_template do %>
+
+  <% content_for :body_classes do %>v2<% end %>
+
+  <% content_for :page_title do %>Apply for Carer's Allowance<% end %>
+
+  <% content_for :head do %>
+
+  <!--[if gt IE 8]><!--><link href="<%= asset_path(:css, "/stylesheets/base.css") %>" rel="stylesheet" type="text/css" /><!--<![endif]-->
+  <!--[if IE 6]><link href="<%= asset_path(:css, "/stylesheets/base-ie6.css") %>" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if IE 7]><link href="<%= asset_path(:css, "/stylesheets/base-ie7.css") %>" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if IE 8]><link href="<%= asset_path(:css, "/stylesheets/base-ie8.css") %>" rel="stylesheet" type="text/css" /><![endif]-->
+
+  <link href="<%= asset_path(:css, "/stylesheets/font-awesome.min.css") %>" rel="stylesheet" type="text/css" />
+
+  <% end %>
+
+  <% content_for :header_class do %> class="with-proposition"<% end %>
+  <% content_for :proposition_header do %>
+    <%= partial "partials/proposition-header" %>
+  <% end %>
+
+  <% content_for :after_header do %>
+    <div class="colour-strip"></div>
+  <% end %>
+
+  <main class="main govuk">
+    <div class="grid-wrapper">
+
+      <div class="grid grid-1-3" id="section-nav">
+        <div class="inner-block">
+
+          <%
+            percentage = ((current_page.data.question - 1) * 100 / data.claim.totalQuestions).round()
+          %>
+
+          <% if current_page.data.question > 1 %>
+
+          <!--<h2 class="heading-24"><span class="percentage-complete"><%= percentage %></span>% complete</h2>-->
+<!--
+          <ul class="question-status" style="margin-top: 30px;">
+            <li><a href="/questions/check-answers">View summary</a></li>
+          </ul>
+        -->
+
+          <% end %>
+
+          <div class="sticky">
+
+          <h2 class="heading-24" style="margin-top: 45px">Get help</h2>
+
+          <ul>
+            <li><i class="fa fa-question-circle"></i> <a href="/questions/help" id="read-guide" class="read-guide" data-current="<%= current_page.data.question %>">Read the guide</a></li>
+            <li><i class="fa fa-phone"></i> <span data-toggle="#help-call" class="js-toggle link-style">Call the helpline</span>
+
+              <div class="js-hidden form-group-indent help-call" id="help-call">
+              <h3>Tel 0345 601 8040</h3>
+
+              <p>Lines open until 6pm <br>Max waiting time is 5 minutes</p>
+              <!--<p><span data-toggle="#call-charges" class="js-toggle">Call charges apply</span>.</p>-->
+              <p class="xjs-hidden" id="call-charges">
+                Landline, 2p to 10p per minute
+                Mobile, 10p to 40p per minute
+              </p>
+              </div>
+
+            </li>
+            <li>
+              <span class="js-hidden js-toggle" id="chat-close" data-hide="#help-chat, #chat-close">✕</span>
+              <i class="fa fa-comment-o"></i> <span data-toggle="#help-chat, #chat-close" class="js-toggle link-style">Online chat</span>
+
+              <div class="js-hidden help-chat" id="help-chat">
+                <div class="chat-window">
+                  <div class="message-them">
+                    <p><i class="fa fa-user"></i>Hi, my name is Tony. How can I help you today?</p>
+                  </div>
+
+                </div>
+                <input type="text" class="form-control form-control-full" placeholder="Type here">
+              </div>
+            </li>
+          </ul>
+
+          <p class="security"><i class="fa fa-lock"></i>You have 60 minutes to complete this page. After this, your data will be securely deleted.</p>
+
+          </div>
+
+          &nbsp;
+
+        </div>
+      </div>
+
+
+      <div class="grid grid-2-3" id="section-content" >
+        <div class="inner-block">
+          <%= yield %>
+        </div>
+      </div>
+
+
+    </div>
+
+  </main>
+
+  <% content_for :footer_support_links do %>
+    <div class="made-by">
+        <p>Made in Preston by Department for Work &amp; Pensions</p>
+    </div>
+  <% end %>
+
+  <% content_for :body_end do %>
+    <script src="<%= asset_path(:js, "/javascripts/jquery.min.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/vendor/select2-3.4.5/select2.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/vendor/sisyphus/sisyphus.min.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/vendor/jquery.details.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/toggle.js") %>"></script>
+    <script src="<%= asset_path(:js, "/javascripts/prototype.js") %>"></script>
+
+    <script src="https://preview.carersallowance.service.gov.uk/assets/javascripts/plugins.min.js"></script>
+    <script>
+        // Nino auto jump
+    	$('.ni-number input').autotab_magic();
+
+        // smooth scroll
+        $('a[href^="#"]').bind('click.smoothscroll', function (e) {
+            e.preventDefault();
+            var target = this.hash,
+                $target = $(target);
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - 40
+            }, 750, 'swing', function () {
+                window.location.hash = target;
+            });
+        });
+    </script>
+
+  <% end %>
+
+<% end %>

@@ -20,7 +20,3 @@
 *.espressostorage
 
 /.cache
-
-source/stylesheets/font-awesome.min.css
-
-source/layouts/carers_template.erb
