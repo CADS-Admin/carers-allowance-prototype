@@ -49,18 +49,19 @@
 
           <h2 class="heading-24" style="margin-top: 45px">Get help</h2>
 
-          <ul class="help-links">
+          <ul>
             <li><i class="fa fa-question-circle"></i> <a href="/questions/help" id="read-guide" class="read-guide" data-current="<%= current_page.data.question %>">Read the guide</a></li>
             <li><i class="fa fa-phone"></i> <span data-toggle="#help-call" class="js-toggle link-style">Call the helpline</span>
 
               <div class="js-hidden form-group-indent help-call" id="help-call">
-              <h3>Tel 0345 608 4321</h3>
-              <p>Lines open until 5pm <br>Max waiting time is 5 minutes</p>
-              <p id="call-charges">
+              <h3>Tel 0345 601 8040</h3>
+
+              <p>Lines open until 6pm <br>Max waiting time is 5 minutes</p>
+              <!--<p><span data-toggle="#call-charges" class="js-toggle">Call charges apply</span>.</p>-->
+              <p class="xjs-hidden" id="call-charges">
                 Landline, 2p to 10p per minute
                 Mobile, 10p to 40p per minute
               </p>
-              <p style="margin: .2em 0 0;"><a href="/questions/help">Need technical help?</a></p>
               </div>
 
             </li>
@@ -79,6 +80,12 @@
               </div>
             </li>
           </ul>
+
+          <p class="security">
+            <i class="fa fa-clock-o"></i> <strong>You have 10 minutes left to complete this page</strong>.
+            After this, we'll delete your data and you'll need to start again.
+          </p>
+
           </div>
 
           &nbsp;

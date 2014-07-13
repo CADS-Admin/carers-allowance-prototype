@@ -3,7 +3,9 @@ question:   1
 title:      When do you want Carer's Allowance to start?
 noskip:		true
 ---
-
+<ul class="form-group back-skip">
+    <li class="back"><a href="eligibility"><i class="fa fa-caret-left"></i>Back</a></li>
+</ul>
 <%= partial "partials/page-title" %>
 
   <p>Most claims for Carer’s Allowance can be backdated 3 months. You should claim from the date you began caring for the person for 35 hours a week or more. <a href="help#1" class="read-guide">Find out more</a></p>
@@ -15,9 +17,5 @@ noskip:		true
         <%= partial 'partials/questions/date', :locals => { :id => 'claimDate', :hint => 'For example, 03 03 2014'} %>
 
         <%= partial "partials/next-question" %>
-
-        <ul class="form-group">
-            <li><a href="eligibility">Back</a></li>
-        </ul>
 
 </form>

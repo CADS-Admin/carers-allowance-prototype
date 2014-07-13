@@ -3,11 +3,11 @@ question: 11
 title: Employment history
 ---
 
-<p class="save-message fadeout">Application saved for 1 hour</p>
+
 <ul class="form-group back-skip">
     <li class="skip"><a href="../12">Skip this section for now</a></li>
-    <li class="back"><a href="3">Back</a></li>  
-    <li><a href="/questions/check-answers">Summary</a></li>           
+    <li class="back"><a href="3">Back</a></li>
+    <li><a href="/questions/check-answers">Summary</a></li>
 </ul>
 <%= partial "partials/page-title" %>
 
@@ -20,7 +20,7 @@ title: Employment history
             <th>Delete</th>
         </tr>
     </thead>
-    <tbody>       
+    <tbody>
 		<tr>
             <td class="desc"><%= partial 'partials/questions/text-field-write', :locals => { id: 'jobStart' } %> to <%= partial 'partials/questions/text-field-write', :locals => { id: 'jobFinish' } %></td>
 		    <td><%= partial 'partials/questions/text-field-write', :locals => { id: 'employerName' } %></td>
@@ -29,19 +29,19 @@ title: Employment history
 		</tr>
     </tbody>
 </table>
-    
+
 
 <form class="form" id="form" name="data">
 
 	<h2 class="section-heading">Have you had any other employments at any time since 21&nbsp;August 2013?</h2>
-  
+
     <p class="form-hint">This is six months before your claim date</p>
-    
+
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'employed2' } %>
- 
+
 	 <div class="form-group">
 	        <br><br>
 	     <a class="next button" href="../12">Save and continue</a>
 	 </div>
-	 
+
 </form>

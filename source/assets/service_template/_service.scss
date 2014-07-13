@@ -435,8 +435,13 @@ ol.steps{
   }
 }
 
-.fa{
+.help-links .fa{
   width: 20px;
+}
+
+.back .fa{
+  width: 15px;
+  margin-left: -15px;
 }
 
 .govuk .help-call{
@@ -478,6 +483,6 @@ ol.steps{
 .security{
   padding-top: 30px;
   font-size: 16px;
-  color: $secondary-text-colour;
+  color: $mellow-red;
   margin-right: 30px;
 }

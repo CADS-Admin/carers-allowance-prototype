@@ -3,11 +3,11 @@ question: 11
 title: Employer details
 ---
 
-<p class="save-message fadeout">Application saved for 1 hour</p>
+
 <ul class="form-group back-skip">
     <li class="skip"><a href="2">Skip this section for now</a></li>
-    <li class="back"><a href="../11">Back</a></li>   
-    <li><a href="/questions/check-answers">Summary</a></li>          
+    <li class="back"><a href="../11">Back</a></li>
+    <li><a href="/questions/check-answers">Summary</a></li>
 </ul>
 
 <%= partial "partials/page-title" %>
@@ -18,26 +18,26 @@ title: Employer details
 
 <form class="form" id="form" name="data">
 
-    <%= partial 'partials/questions/text-field', :locals => { 
+    <%= partial 'partials/questions/text-field', :locals => {
         :id => 'employerName',
         :label => 'Employer Name'
     }%>
-    
-    <%= partial 'partials/questions/text-field', :locals => { 
+
+    <%= partial 'partials/questions/text-field', :locals => {
         :id => 'phoneNumber',
     	:label => 'Phone number (optional)'
     }%>
 
-    <%= partial 'partials/questions/text-field', :locals => { 
+    <%= partial 'partials/questions/text-field', :locals => {
         :id => 'employerPayroll',
         :label => 'Payroll or employee number (optional)'
     }%>
-    
-    <%= partial "partials/questions/address", :locals => { 
+
+    <%= partial "partials/questions/address", :locals => {
     	:id         => "employerAddress",
     	:label      => "Address"
     }%>
-    
+
     <h2 class="form-group-label">When did you start this job?</h2>
 
     <%= partial 'partials/questions/date-fuzzy', :locals => { :id => 'jobStart', :hint => 'For example, 27 06 2013', :label => 'Date started'} %>
@@ -50,7 +50,7 @@ title: Employer details
     <div class="js-hidden form-group-indent" id="yesToggle">
     	<%= partial 'partials/questions/date-fuzzy', :locals => { :id => 'jobFinish', :hint => 'For example, 21 01 2014', :label => 'Enter the date you finished'} %>
 
-	    <%= partial "partials/questions/text-field", :locals => { 
+	    <%= partial "partials/questions/text-field", :locals => {
 	        :id         => "workHours",
 	        :label      => "How many hours a week did you normally work?",
 	        :classes    => "form-control-1-8"
@@ -60,7 +60,7 @@ title: Employer details
 
 	<div class="js-hidden form-group-indent" id="noToggle">
 
-	    <%= partial "partials/questions/text-field", :locals => { 
+	    <%= partial "partials/questions/text-field", :locals => {
 	        :id         => "workHours",
 	        :label      => "How many hours a week do you normally work?",
 	        :classes    => "form-control-dec-3"

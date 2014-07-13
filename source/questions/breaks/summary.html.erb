@@ -1,11 +1,11 @@
 ---
 question: 9
-title: Breaks from caring    
+title: Breaks from caring
 ---
-<p class="save-message fadeout">Application saved for 1 hour</p>
+
 <ul class="form-group back-skip">
-    <li class="back"><a href="1">Back</a></li>    
-    <li><a href="/questions/check-answers">Summary</a></li>         
+    <li class="back"><a href="1">Back</a></li>
+    <li><a href="/questions/check-answers">Summary</a></li>
 </ul>
 <%= partial "partials/page-title" %>
 
@@ -15,37 +15,37 @@ title: Breaks from caring
     <caption>Breaks already added</caption>
     <thead>
         <tr>
-            <th>Break period</th>       
+            <th>Break period</th>
             <th class="desc">Where was the person you care for during the break?</th>
-            <th class="desc">Where were you during the break?</th>	
+            <th class="desc">Where were you during the break?</th>
             <th class="desc">Medical treatment</th>
             <th>Change</th>
             <th>Delete</th>
         </tr>
     </thead>
-    <tbody>       
+    <tbody>
 		<tr>
 		    <td><%= partial 'partials/questions/date-write', :locals => { id: 'breakStart' } %> - <%= partial 'partials/questions/date-write', :locals => { id: 'breakEnd' } %></td>
 		    <td>They were <%= partial 'partials/questions/text-field-write', :locals => { id: 'breaksDP' } %></td>
 		    <td>You were <%= partial 'partials/questions/text-field-write', :locals => { id: 'breaksYou' } %></td>
-		    <td><%= partial 'partials/questions/text-field-write', :locals => { id: 'breakMedical' } %></td>		    
+		    <td><%= partial 'partials/questions/text-field-write', :locals => { id: 'breakMedical' } %></td>
 		    <td><a href="#">Edit</a></td>
             <td><a href="#">Delete</a></td>
 		</tr>
     </tbody>
 </table>
-    
+
 
 <form class="form" id="form" name="data">
 
 	<h2 class="section-heading">Have you had any more breaks since 21 August 2013?</h2>
 	<p class="form-hint">This is six months before your claim date. If 'Yes', you'll need to provide details</p>
-    
+
     <%= partial 'partials/questions/yes-no', :locals => { :id => 'breaks2' } %>
- 
+
 	 <div class="form-group">
 	        <br><br>
 	     <a class="next button" href="../10">Save and continue</a>
 	 </div>
-	 
+
 </form>

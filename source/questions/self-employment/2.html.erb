@@ -2,11 +2,11 @@
 question: 12
 title: Your accounts
 ---
-<p class="save-message fadeout">Application saved for 1 hour</p>
+
 <ul class="form-group back-skip">
-    <li class="back"><a href="1">Back</a></li>    
-    <li><a href="/questions/check-answers">Summary</a></li>           
-</ul>  
+    <li class="back"><a href="1">Back</a></li>
+    <li><a href="/questions/check-answers">Summary</a></li>
+</ul>
 <%= partial "partials/page-title" %>
 
 	<p class="form-group-label">Is the income, outgoings and profit you are making now, similar to your last trading year?</p>
@@ -14,9 +14,9 @@ title: Your accounts
 
 	<p class="form-group-label">When was your last year end date? (optional)</p>
 	<p class="form-hint">This is the date your trading or accounting year ended</p>
-	<%= partial "partials/questions/date", :locals => { :id => "yearEndDate" } %>		
+	<%= partial "partials/questions/date", :locals => { :id => "yearEndDate" } %>
 
 <div class="form-group">
        <br><br>
     <a class="next button" href="3">Save and continue</a>
-</div> 
+</div>

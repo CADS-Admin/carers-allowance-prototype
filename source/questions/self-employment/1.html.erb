@@ -2,38 +2,37 @@
 question: 12
 title: Your employment details
 ---
-<p class="save-message fadeout">Application saved for 1 hour</p>
+
 <ul class="form-group back-skip">
-    <li class="back"><a href="../11">Back</a></li>    
-    <li><a href="/questions/check-answers">Summary</a></li>           
-</ul>  
+    <li class="back"><a href="../11">Back</a></li>
+    <li><a href="/questions/check-answers">Summary</a></li>
+</ul>
 <%= partial "partials/page-title" %>
-	
-		<p class="form-group-label">Are you self-employed now?</p>		
+
+		<p class="form-group-label">Are you self-employed now?</p>
         <%= partial 'partials/questions/yes-no', :locals => { :id => 'self-employed-now', noToggle: '#noToggle', :hideLabel => true } %>
 
-		<p class="form-group-label">When did you start this self-employed work?</p>	
-		<p class="form-hint">For example, 03 05 2013</p>		
+		<p class="form-group-label">When did you start this self-employed work?</p>
+		<p class="form-hint">For example, 03 05 2013</p>
 		<%= partial "partials/questions/date", :locals => { :id => "selfemployedStart" } %>
-       
+
 
 	<div class="js-hidden" id="noToggle">
-	
+
 		<p class="form-group-label">When did you finish this self-employed work?</p>
-		<p class="form-hint">For example, 03 05 2014</p>	
-		<%= partial "partials/questions/date", :locals => { :id => "selfemployedEnd" } %>				           
+		<p class="form-hint">For example, 03 05 2014</p>
+		<%= partial "partials/questions/date", :locals => { :id => "selfemployedEnd" } %>
 
 		<p class="form-group-label">Has your business ceased trading? (optional)</p>
 		<%= partial 'partials/questions/yes-no', :locals => { :id => 'ceasedTrading', :hideLabel => true } %>
-	
-	</div>		
+
+	</div>
 
 		<p class="form-group-label">What type of business is your self employed work?</p>
-		<%= partial 'partials/questions/text-field', :locals => { :id => 'businessType', :hideLabel => true } %>		
+		<%= partial 'partials/questions/text-field', :locals => { :id => 'businessType', :hideLabel => true } %>
 
 <div class="form-group">
        <br><br>
     <a class="next button" href="2">Save and continue</a>
 </div>
 
-  

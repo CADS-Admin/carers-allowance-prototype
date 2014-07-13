@@ -1,0 +1,103 @@
+---
+question:   6
+title: 		About your partner
+layout:     carers_template-timeout
+---
+
+<!-- Back, Skip -->
+<%= partial "partials/back-skip" %>
+<%= partial "partials/page-title" %>
+
+<form class="form" id="form" name="data">
+
+<p>We look at any money your partner gets from benefits when we work out if you can get Carer's Allowance. <a href="help#5" class="read-guide">Find out more</a></p>
+<!-- Living with partner? -->
+
+    <h2 class="section-heading">Have you lived with a partner at any time since your claim&nbsp;date?</h2>
+	<div class="form-hint"
+    <p>Your claim date is <%= partial "partials/claim-date" %>. By partner we mean:</p>
+
+		<ul class="list-bullet">
+		    <li>a person you are married to or live with as if you are married</li>
+		    <li>a civil partner or a person you live with as if you are civil partners</li>
+		  </ul>
+
+		   <p>If you have separated since your claim date answer 'Yes'.</p>
+	</div>
+
+
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'partner', yesToggle: '#yesToggle'} %>
+
+<div class="js-hidden form-group form-group-indent" id="yesToggle">
+
+<!-- Name -->
+
+    <h2 class="section-heading">Full name</h2>
+
+    <p class="form-hint">
+        As shown on their birth certificate or passport
+    </p>
+
+    <%= partial 'partials/questions/text-field', :locals => {
+        :id => 'partnerName',
+        :hideLabel  => true
+    }%>
+
+<!-- National Insurance number -->
+
+    <h2 class="section-heading">National Insurance number</h2>
+
+    <p class="form-hint">
+        For example, 'VO 12 34 56 D'
+    </p>
+
+    <%= partial "partials/questions/nino", :locals => {
+        :id         => "partnerNino",
+        :label      => "National Insurance number",
+        :hideLabel  => true
+    }%>
+
+
+<!-- Nationality -->
+
+    <h2 class="section-heading">Nationality</h2>
+
+	<p class="form-hint">If they have a current passport, enter as shown on their passport</p>
+
+    <%= partial "partials/questions/text-field", :locals => {
+        :id 		=> "partnerNationality",
+        :label 		=> "Nationality",
+        :hideLabel	=> true
+    }%>
+
+
+<!-- Date of birth -->
+
+    <h2 class="section-heading">Date of birth</h2>
+
+    <%= partial 'partials/questions/date', :locals => { :id => 'partnerDob', :hint => 'For example, 20 03 1976'} %>
+
+
+<!-- Living with partner? -->
+
+    <h2 class="section-heading">Have you separated since your claim date?</h2>
+
+    <p class="form-hint">Your claim date is <%= partial "partials/claim-date" %>. If you have separated since then select 'Yes'.</p>
+
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'partnerSeparated'} %>
+
+
+<!-- State Pension -->
+
+    <h2 class="section-heading">Is this the person you are claiming Carer's Allowance for?</h2>
+
+    <%= partial 'partials/questions/yes-no', :locals => { :id => 'caringPartner'} %>
+
+</div>
+
+    <div class-"form-group">
+
+        <%= partial "partials/next-question" %>
+
+    </div>
+</form>

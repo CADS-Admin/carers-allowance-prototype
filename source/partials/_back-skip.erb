@@ -2,6 +2,6 @@
 	<% if current_page.data.noskip != true %>
     <li class="skip"><a href="<%= current_page.data.question + 1 %>" data-skip="<%= current_page.data.question %>">Skip this section for now</a></li>
     <% end %>
-    <li class="back"><a href="<%= current_page.data.question - 1 %>">Back</a></li>
+    <li class="back"><a href="<%= current_page.data.question - 1 %>"><i class="fa fa-caret-left"></i>Back</a></li>
     <!--<li class="back"><a href="/questions/check-answers">Back</a></li>-->
 </ul>

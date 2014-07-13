@@ -2,11 +2,11 @@
 question: 9
 title: About your break from caring
 ---
-<p class="save-message fadeout">Application saved for 1 hour</p>
+
 <ul class="form-group back-skip">
     <li class="skip"><a href="summary">Skip this section for now</a></li>
-    <li class="back"><a href="../9">Back</a></li>  
-    <li><a href="/questions/check-answers">Summary</a></li>          
+    <li class="back"><a href="../9">Back</a></li>
+    <li><a href="/questions/check-answers">Summary</a></li>
 </ul>
 <%= partial "partials/page-title" %>
 
@@ -14,29 +14,29 @@ title: About your break from caring
 
 <p>Give as much information as you can. We might have to contact you if we have questions so your application won’t be delayed.</p>
 
- 
+
  <div class="form-group">
  <!-- When did you start caring -->
- 
+
  	<h2 class="section-heading">When did you start caring 35 hours or more each week?</h2>
- 
+
      <div class="form-group" id="date">
      	<%= partial 'partials/questions/date', :locals => { :id => 'careStartDate'} %>
- 	</div> 
-</div>  
-    
+ 	</div>
+</div>
+
  <div class="form-group">
-    
+
     <h2 class="section-heading">When did the break from caring start?</h2>
 
-    <%= partial 'partials/questions/date', :locals => { :id => 'breakStart', :hint => 'For example, 20 03 2014'} %>  
+    <%= partial 'partials/questions/date', :locals => { :id => 'breakStart', :hint => 'For example, 20 03 2014'} %>
 
  	<div class="form-group" style="margin-top: 20px;">
- 	
+
 		<label class="form-control-label">Start time? (optional)</label>
 		<p class="form-hint" style="margin-top: 0">For example, 10:00am</p>
 		<%= partial 'partials/questions/text-field', :locals => { :id => 'breakStartTime', :classes => "form-control-1-2"} %>
-		
+
 	</div>
 
 </div>
@@ -46,23 +46,23 @@ title: About your break from caring
 	<h2 class="section-heading">When did the break from caring end?</h2>
 
  	<%= partial 'partials/questions/date', :locals => { :id => 'breakEnd', :hint => 'For example, 25 03 2014'} %>
- 
+
  	<div class="form-group" style="margin-top: 20px;">
- 
+
  		<label class="form-control-label">Break end time? (optional)</label>
 	 	<p class="form-hint" style="margin-top: 0">For example, 4:30pm</p>
  		<%= partial 'partials/questions/text-field', :locals => { :id => 'breakEndTime', :classes => "form-control-1-2"} %>
- 	
+
  	</div>
-  
- </div>    
-    
+
+ </div>
+
  <div class="form-group">
-    
+
     <h2 class="section-heading">Where was the person you care for?</h2>
-    
-    	<%= partial 'partials/questions/radios', :locals => { 
-    		:id => 'breaksDP', 
+
+    	<%= partial 'partials/questions/radios', :locals => {
+    		:id => 'breaksDP',
     		:hint => "During this time, they were:",
     		:options => [
     			"in hospital",
@@ -70,17 +70,17 @@ title: About your break from caring
     			"at home",
     			"somewhere else"
     		]
-    
+
     	} %>
- 
+
 </div>
-   
+
 <div class="form-group">
-    
+
     <h2 class="section-heading">Where were you?</h2>
-	
-	<%= partial 'partials/questions/radios', :locals => { 
-		:id => 'breaksYou', 
+
+	<%= partial 'partials/questions/radios', :locals => {
+		:id => 'breaksYou',
 		:hint => "During this time, I was:",
 		:options => [
 			"at home",
@@ -90,14 +90,14 @@ title: About your break from caring
 		]
 
 	} %>
-      
+
 </div>
 
-<div class="form-group">  
-        
+<div class="form-group">
+
      <h2 class="section-heading">Did you or the person you care for receive any medical treatment or professional care during the break?</h2>
      <%= partial 'partials/questions/yes-no', :locals => { :id => 'breakMedical'} %>
-     
+
 </div>
 
 <div class="form-group">
@@ -105,4 +105,4 @@ title: About your break from caring
     <a class="next button" href="summary">Save and continue</a>
 </div>
 
-</form>	
+</form>
