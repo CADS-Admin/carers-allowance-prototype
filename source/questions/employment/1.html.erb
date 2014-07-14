@@ -38,9 +38,17 @@ title: Employer details
     	:label      => "Address"
     }%>
 
-    <h2 class="form-group-label">When did you start this job?</h2>
+    <h2 class="form-group-label">Did you start this job before 3 March 2014?</h2>
+    <p class="form-hint">This is your claim date</p> 
 
-    <%= partial 'partials/questions/date-fuzzy', :locals => { :id => 'jobStart', :hint => 'For example, 27 06 2013', :label => 'Date started'} %>
+    <%= partial 'partials/questions/yes-no', :locals => { 
+    	:id => 'jobStart', 
+    	noToggle: '#startDateToggle'
+    	} %>
+    	
+    <div class="js-hidden form-group-indent" id="startDateToggle">
+    	<%= partial 'partials/questions/date', :locals => { :id => 'jobStart', :hint => 'For example, 21 01 2014', :label => 'Enter the date you started'} %>
+	</div>
 
     <h2 class="section-heading">Have you finished this job?</h2>
 
@@ -48,7 +56,7 @@ title: Employer details
 
 
     <div class="js-hidden form-group-indent" id="yesToggle">
-    	<%= partial 'partials/questions/date-fuzzy', :locals => { :id => 'jobFinish', :hint => 'For example, 21 01 2014', :label => 'Enter the date you finished'} %>
+    	<%= partial 'partials/questions/date', :locals => { :id => 'jobFinish', :hint => 'For example, 21 01 2014', :label => 'Enter the date you finished'} %>
 
 	    <%= partial "partials/questions/text-field", :locals => {
 	        :id         => "workHours",
