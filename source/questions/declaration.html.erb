@@ -17,6 +17,7 @@ title:  Declaration and consent
 </ul>
 </article>
 
+
 <div class="group declare secondary">
 
 <div class="form-group form-checkbox">
@@ -26,22 +27,33 @@ title:  Declaration and consent
     </label>
 </div>
 
-<!--!If you don’t report changes you might be prosecuted and get a penalty.!-->
 
 </article>
-
-
-<!--<p class="form-control-label" style="margin-bottom: -5px";">Has this application been completed for someone else?</p>-->
-<h2 class="section-heading">Was this application completed by someone else?</h2>
-<p class="form-hint" style="margin-bottom: -5px">If the carer did not complete the application themselves select 'Yes'</p>
-<%= partial 'partials/questions/yes-no', :locals => { :id => 'assisted'} %>
     
 <h2 class="section-heading">Do you agree to us getting information from any current or previous employer you have told us about?</h2>
 <%= partial 'partials/questions/yes-no', :locals => { :id => 'employmentConsent' } %>
 
 <h2 class="section-heading">Do you agree to us getting information from any other person or organisation you have told us about on this form?</h2>
+<p class="form-hint">We will write to the person being cared for to let them know that this application for Carer's Allowance has been made</p>
 <%= partial 'partials/questions/yes-no', :locals => { :id => 'consent' } %> 
     
+    <h2 class="section-heading">Who has completed this application?</h2>
+    
+    	<%= partial 'partials/questions/radios', :locals => {
+    		:id => 'assisted',
+    		:options => [
+    			"The person claiming Carer's Allowance",
+    			"Someone else",
+    		],
+    		adToggle: '#adToggle'
+    
+    	} %>
+    	
+        <div class="js-hidden form-group-indent" id="adToggle">
+    
+    	<!-- AD content - name / organisation -->
+    
+    	</div>
 
 <br>
 
