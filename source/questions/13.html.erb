@@ -1,0 +1,27 @@
+---
+question:   13
+title:  Additional information
+---
+
+<!-- Back, Skip -->    
+<%= partial "partials/back-skip" %>
+<%= partial "partials/page-title" %>
+
+<form class="form" id="form" name="data">
+
+<h2 class="section-heading">Do you want to tell us any additional information about your claim?</h2>	
+<p class="form-hint">There is no need to include any medical details</p>    
+     
+<%= partial 'partials/questions/yes-no', :locals => { :id => 'additional', yesToggle: '#yesToggle'} %>
+
+<div class="js-hidden form-group" id="yesToggle">
+
+	<label for="additional-details">Enter details</label>
+	<textarea id="additional-details" style="width: 100%" name="additional-details" helper="1000 characters left" maxlength="2000" autocomplete="off"></textarea>
+	<p class="helper right">1000 characters left</p>
+	
+</div>
+
+<%= partial "partials/next-question" %>
+
+</form>
