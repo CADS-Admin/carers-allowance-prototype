@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 	// ------------------------------------------------------------------
 	// GLOBAL VARIABLES
-	var totalQuestions = 14;
+	var totalQuestions = 13;
 
 	if (!localStorage["skipped"] ) {
 		localStorage["skipped"] = JSON.stringify([]);
