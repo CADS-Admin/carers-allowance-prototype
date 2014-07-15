@@ -47,14 +47,14 @@ title: Details of the person you care for
         :id         => "careNino",
         :label      => "National Insurance number"
     }%>
-    
+
     <label for="noNINO" class="form-radio"><input type="checkbox" id="noNINO" name="noNINO">I don't have this information</label>
-    
+
 <!-- Date of birth -->
 
     <h2 class="form-group-label">Date of birth</h2>
 
-    <%= partial 'partials/questions/date', :locals => { :id => 'yourDob', :hint => "For example, '20 3 1976'"} %>
+    <%= partial 'partials/questions/date', :locals => { :id => 'careDob', :hint => "For example, '20 3 1976'"} %>
 
 
 <!-- Contact details -->
@@ -78,7 +78,7 @@ title: Details of the person you care for
     	:id => 'afip',
     	:hideLabel  => true
     } %>
-    
+
 <!-- 35 hours a week -->
 
 	<h2 class="section-heading">Do you spend 35 hours or more each week caring for this person?</h2>
