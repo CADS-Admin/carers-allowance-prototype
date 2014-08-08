@@ -1,5 +1,7 @@
 <div class="form-group date-of-birth">
 
+	<label class="form-control-label<% if locals[:hideLabel] == true %> visuallyhidden<% end %>" for="<%= locals[:id] %>"><%= locals[:label] %></label>
+
 	<p class="form-hint"><%= locals[:hint] %></p>
 
 	<div class="form-group-inline form-group-day">

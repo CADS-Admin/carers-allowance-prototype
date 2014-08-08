@@ -3,13 +3,8 @@ question: 11
 title: Employer details
 ---
 
-
-<ul class="form-group back-skip">
-    <li class="skip"><a href="2">Skip this section for now</a></li>
-    <li class="back"><a href="../11">Back</a></li>
-    <li><a href="/questions/check-answers">Summary</a></li>
-</ul>
-
+<!-- Back, Skip -->    
+<%= partial "partials/back-skip" %>
 <%= partial "partials/page-title" %>
 
 <form class="form" id="form" name="data">
@@ -18,19 +13,14 @@ title: Employer details
 
 <form class="form" id="form" name="data">
 
+	<h2 class="section-heading">Employer name</h2>
     <%= partial 'partials/questions/text-field', :locals => {
-        :id => 'employerName',
-        :label => 'Employer Name'
+        :id => 'employerName'
     }%>
 
+	<h2 class="section-heading">Phone number</h2>
     <%= partial 'partials/questions/text-field', :locals => {
-        :id => 'phoneNumber',
-    	:label => 'Phone number (optional)'
-    }%>
-
-    <%= partial 'partials/questions/text-field', :locals => {
-        :id => 'employerPayroll',
-        :label => 'Payroll or employee number (optional)'
+        :id => 'phoneNumber'
     }%>
 
     <%= partial "partials/questions/address", :locals => {
@@ -38,11 +28,12 @@ title: Employer details
     	:label      => "Address"
     }%>
 
-    <h2 class="form-group-label">Did you start this job before 3 March 2014?</h2>
-    <p class="form-hint">This is your claim date</p> 
+    <h2 class="form-group-label">Did you start this job before 3 February 2014?</h2>
+    <p class="form-hint">This is 1 month before your claim date</p> 
 
     <%= partial 'partials/questions/yes-no', :locals => { 
-    	:id => 'jobStart', 
+    	:id 		=> 'jobStart', 
+    	:label      => "Start date",
     	noToggle: '#startDateToggle'
     	} %>
     	
@@ -56,7 +47,11 @@ title: Employer details
 
 
     <div class="js-hidden form-group-indent" id="yesToggle">
-    	<%= partial 'partials/questions/date', :locals => { :id => 'jobFinish', :hint => 'For example, 21 01 2014', :label => 'Enter the date you finished'} %>
+    	<%= partial 'partials/questions/date', :locals => { 
+    		:id 	=> 'jobFinish', 
+    		:hint 	=> 'For example, 21 01 2014', 
+    		:label 	=> 'What date did you last work?'
+    	} %>
 
 	    <%= partial "partials/questions/text-field", :locals => {
 	        :id         => "workHours",

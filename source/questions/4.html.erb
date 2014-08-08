@@ -31,7 +31,6 @@ title:      Nationality, where you live and time abroad
     <div class="js-hidden form-group form-group-indent" id="nationalityToggle">
         <label class="form-control-label" for="yourNationality">Enter your nationality</label>
         <input type="text" class="form-control" id="yourNationality">
-
         <label class="form-control-label" for="yourMaritalStatus">Enter your marital status</label>
         <input type="text" class="form-control" id="yourMaritalStatus">
     </div>
@@ -49,13 +48,21 @@ title:      Nationality, where you live and time abroad
 
 <!-- Time abroad -->
 
-	<h2 class="section-heading">Have you been away for more than 52 weeks in the 3 years before your claim date?</h2>
-
+	<h2 class="section-heading">Have you been away from England, Scotland or Wales for more than 52 weeks in the 3 years before your claim date?</h2>
 	<p class="form-hint">This could be 1 long trip or many shorter trips adding up to 52 weeks. <br>
 	Your claim date is <%= partial "partials/claim-date" %>.
 	</p>
 
-    <%= partial 'partials/questions/yes-no', :locals => { :id => 'away52Weeks'} %>
+    <%= partial 'partials/questions/yes-no', :locals => { 
+    	:id => 'away52Weeks',
+    	yesToggle: '#startDateToggle'
+    } %>
+    
+    <div class="js-hidden form-group form-group-indent" id="startDateToggle">
+    	<label for="additional-details">Tell us about this time away. Include the dates you left and returned and details of where you've been.</label>
+    	<textarea id="additional-details" style="width: 100%" name="additional-details" helper="1000 characters left" maxlength="2000" autocomplete="off"></textarea>
+    	<p class="helper right">1000 characters left</p>	
+    </div>
 
 <!-- Next -->
 

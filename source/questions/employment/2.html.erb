@@ -3,58 +3,50 @@ question: 11
 title: Your wages
 ---
 
-
-<ul class="form-group back-skip">
-    <li class="skip"><a href="3">Skip this section for now</a></li>
-    <li class="back"><a href="1">Back</a></li>
-    <li><a href="/questions/check-answers">Summary</a></li>
-</ul>
-
-<%= partial "partials/page-title-employer" %>
+<!-- Back, Skip -->    
+<%= partial "partials/back-skip" %>
+<%= partial "partials/page-title" %>
 
 <form class="form" id="form" name="data">
 
-<div class="form-group">
-   <label for="how-much" class="form-group-label">How much are you normally paid?</label>
 
-   <p class="form-hint">Enter your gross pay. If your pay varies, enter what you were last paid</p>
+	<h2 class="form-group-label">How often are you paid?</h2>
 
-   £ <input name="how-much" id="how-much" class="form-control-dec-3">
+	<%= partial 'partials/questions/radios', :locals => {
+		:id => 'payFrequency',
+		:options => [
+			"Weekly",
+			"Fortnightly",		
+			"Every 4 weeks",
+			"Monthly",
+			"Other"
+		]
+	} %>
 
-	<label for="how-often" class="visuallyhidden">Every</label>
-	<select selectwithother="true" name="how-often" id="how-often">
-	    <option value="02">a week</option>
-	    <option value="03">a fortnight</option>
-	    <option value="04">every 4 weeks</option>
-	    <option value="05">a month</option>
-	    <option value="other">other</option>
-	</select>
-
-	<div class="form-group" style="margin-top: 20px;">
-
-	<label class="form-control-label">When do you get paid? (optional)</label>
-	<p class="form-hint" style="margin-top: 0">For example, day of the month</p>
+	<h2 class="form-group-label">When do you get paid?</h2>
+	<p class="form-hint" style="margin-top: 0">For example, the day of the month</p>
 	<%= partial 'partials/questions/text-field', :locals => { :id => 'payWhen'} %>
+	
+	<h2 class="form-group-label">When were you last paid?</h2>
+	
+	<%= partial 'partials/questions/date', :locals => { :id => 'lastPaid', :hint => 'For example, 27 June 2013'} %>
 
-	</div>
 
-</div>
+   <h2 class="form-group-label">What were you last paid?</h2>
 
-<h2 class="form-group-label">When were you last paid?</h2>
+   <p class="form-hint">This is the gross pay from your last wage slip.</p>
 
-<%= partial 'partials/questions/date', :locals => { :id => 'lastPaid', :hint => 'For example, 27 June 2013'} %>
-
-<div class="form-group" style="margin-top: 20px;">
-
-<label class="form-control-label">What was included in this pay? (optional)</label>
-<p class="form-hint" style="margin-top: 0">For example, holiday pay, sick pay, or any redundancy payments</p>
-<%= partial 'partials/questions/text-field', :locals => { :id => 'payIncluded'} %>
-
-</div>
-
-<h2 class="form-group-label">Does your employer owe you any money?</h2>
-
-<%= partial 'partials/questions/yes-no', :locals => { :id => 'owedMoney'} %>
+   <input name="payAmount" id="payAmount" class="form-control-dec-3">
+   
+   <!--<h2 class="form-group-label">What was included in this pay?</h2>
+   <p class="form-hint" style="margin-top: 0">For example, holiday pay, sick pay, or any redundancy payments</p>
+   <%= partial 'partials/questions/text-field', :locals => { :id => 'payIncluded'} %>-->
+  
+   
+   <h2 class="form-group-label">Do you always get the same amount?</h2>
+   
+   <%= partial 'partials/questions/yes-no', :locals => { :id => 'payVary'} %>
+   
 
 <div class="form-group">
        <br><br>
