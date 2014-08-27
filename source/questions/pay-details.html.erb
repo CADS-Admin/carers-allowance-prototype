@@ -1,0 +1,65 @@
+---
+question: 13
+title:  Declaration and consent
+---
+
+<h1 class="heading-36">
+    Declaration and consent
+</h1>
+
+<article class="dec">
+<h2>I declare that:</h2>
+<br>
+<ul class="list-bullet">
+    <li>as far as I know the information in this application is correct</li> 
+    <li>I understand that I must report any changes to my situation or the situation of the person I care for</li>
+    <li>I have read the <a target="_blank" href="/claim-notes">terms and conditions</a>.</li>  
+</ul>
+</article>
+
+
+<div class="group declare secondary">
+
+<div class="form-group form-checkbox">
+    <label for="one" class="block-label">
+        <input type="checkbox" value="true" id="one" class="visible">
+        I agree
+    </label>
+</div>
+
+
+</article>
+    
+<h2 class="section-heading">Do you agree to us getting information from any current or previous employer you have told us about?</h2>
+<%= partial 'partials/questions/yes-no', :locals => { :id => 'employmentConsent' } %>
+
+<h2 class="section-heading">Do you agree to us getting information from any other person or organisation you have told us about on this form?</h2>
+<p class="form-hint">We will write to the person being cared for to let them know that this application for Carer's Allowance has been made</p>
+<%= partial 'partials/questions/yes-no', :locals => { :id => 'consent' } %> 
+    
+    <h2 class="section-heading">Who has completed this application?</h2>
+    
+    	<%= partial 'partials/questions/radios', :locals => {
+    		:id => 'assisted',
+    		:options => [
+    			"The person claiming Carer's Allowance",
+    			"Someone else",
+    		],
+    		adToggle: '#adToggle'
+    
+    	} %>
+    	
+        <div class="js-hidden form-group-indent" id="adToggle">
+    
+    	<!-- AD content - name / organisation -->
+    
+    	</div>
+
+<br>
+
+
+<div class="form-group">
+<br>
+<br>
+<a class="next button" href="./done">Send application</a>
+</div>
