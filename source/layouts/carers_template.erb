@@ -30,55 +30,46 @@
       <div class="grid grid-1-3" id="section-nav">
         <div class="inner-block">
 
-          <%
-            percentage = ((current_page.data.question - 1) * 100 / data.claim.totalQuestions).round()
-          %>
+	          <%
+	            percentage = ((current_page.data.question - 1) * 100 / data.claim.totalQuestions).round()
+	          %>
+	
+	          <% if current_page.data.question > 1 %>
+	
+	          <% end %>
 
-          <% if current_page.data.question > 1 %>
-
-          <!--<h2 class="heading-24"><span class="percentage-complete"><%= percentage %></span>% complete</h2>-->
-<!--
-          <ul class="question-status" style="margin-top: 30px;">
-            <li><a href="/questions/check-answers">View summary</a></li>
-          </ul>
-        -->
-
-          <% end %>
-
-          <div class="sticky">
+          <div>
 
           <h2 class="heading-24" style="margin-top: 45px">Get help</h2>
-
-          <ul class="help-links">
-            <li><i class="fa fa-question-circle"></i> <a href="/questions/help" id="read-guide" class="read-guide" data-current="<%= current_page.data.question %>">Read the guide</a></li>
-            <li><i class="fa fa-phone"></i> <span data-toggle="#help-call" class="js-toggle link-style">Call the helpline</span>
-
-              <div class="js-hidden form-group-indent help-call" id="help-call">
-              <h3>Tel 0345 608 4321</h3>
-              <p>Lines open until 5pm <br>Max waiting time is 5 minutes</p>
-              <p id="call-charges">
-                Landline, 2p to 10p per minute
-                Mobile, 10p to 40p per minute
-              </p>
-              <p style="margin: .2em 0 0;"><a href="/questions/help">Need technical help?</a></p>
-              </div>
-
-            </li>
-            <li>
-              <span class="js-hidden js-toggle" id="chat-close" data-hide="#help-chat, #chat-close">✕</span>
-              <i class="fa fa-comment-o"></i> <span data-toggle="#help-chat, #chat-close" class="js-toggle link-style">Online chat</span>
-
-              <div class="js-hidden help-chat" id="help-chat">
-                <div class="chat-window">
-                  <div class="message-them">
-                    <p><i class="fa fa-user"></i>Hi, my name is Tony. How can I help you today?</p>
-                  </div>
-
-                </div>
-                <input type="text" class="form-control form-control-full" placeholder="Type here">
-              </div>
-            </li>
-          </ul>
+          
+          <p style="font-size: 16px; margin-bottom: 0.75em 0 0"><a href="/questions/help" id="read-guide" class="read-guide" data-current="<%= current_page.data.question %>">Read the guide</a></p>
+                  
+          		<h3 style="font-size: 19px; margin: 2.2em 0 0.5em!important;">Helpline 0345 608 4321</h3>
+          		<p style="font-size: 16px; margin: 0.75em 0 0">Mon to Thurs: 8:30am - 5pm.</p>
+                  <p class="grouped" style="font-size: 16px; margin-top: 0">Friday: 8:30am - 4:30pm.</p>
+                  <p style="font-size: 16px; margin: 0.75em 0 0">Closed at weekends and on <br>public and bank holidays.</p>
+                  <p style="font-size: 16px; margin: 0.75em 0 0">Your call will be answered <br>within 5 minutes. <a href="https://www.gov.uk/call-charges" target="_blank">Call charges</a></p>
+                  <p style="font-size: 16px; margin: 0.75em 0 0"><a href="/claim-help#help">Need technical help?</a></p>
+		  			
+		  		<br>	
+		  		
+		          <ul class="help-links">
+		            <li>
+		              <span class="js-hidden js-toggle" id="chat-close" data-hide="#help-chat, #chat-close">✕</span>
+		              <i class="fa fa-comment-o"></i> <span data-toggle="#help-chat, #chat-close" class="js-toggle link-style">Online chat</span>
+		
+		              <div class="js-hidden help-chat" id="help-chat">
+		                <div class="chat-window">
+		                  <div class="message-them">
+		                    <p><i class="fa fa-user"></i>Hi, my name is Tony. How can I help you today?</p>
+		                  </div>
+		
+		                </div>
+		                <input type="text" class="form-control form-control-full" placeholder="Type here">
+		              </div>
+		            </li>
+		          </ul>      
+		          
           </div>
 
           &nbsp;
