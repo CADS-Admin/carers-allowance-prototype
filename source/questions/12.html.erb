@@ -4,25 +4,65 @@ title:  Pay details
 ---
 
 <!-- Back, Skip -->
-<%= partial "partials/back-skip" %>
 <%= partial "partials/page-title" %>
 
 <form class="form" id="form" name="data">
 
-	<p>Carer's Allowance is paid every week or 4 weeks, normally on Monday. <a href="help#8">Accounts you can use to get paid</a></p>
-
-	<h2 class="section-heading">How would you like to get paid?</h2>
+	<p>Carer's Allowance is paid every week or 4 weeks, normally on Monday. <a href="help#8">Accounts you can use to get paid</a>.</p> <p>You can provide these details later if you don't have a bank account but intend to open one.</p>
 	
-	<p class="form-hint">You can provide these details later if you don't have a bank account but intend to open one</p>
-
-	<%= partial 'partials/questions/radios', :locals => {
-		:id => 'payMethod',
-		:options => [
-			"UK bank or building society account",
-			"I don't want to provide bank details now"
-		]
-
-	} %>
+	<!-- banking fields-->
+	<div>
+	
+	<h2 class="section-heading">UK bank or building society account</h2>
+	
+	
+	<div class="form-group">
+	<label for="useTextPhone" class="form-radio">
+	    <input type="checkbox" id="useTextPhone" name="useTextPhone">
+	    I don't want to provide bank details now
+	</label>
+	<br>
+	</div>
+	
+	
+	
+		<div class="form-group">
+		<label class="form-control-label">Name of account holder</label>
+		<%= partial 'partials/questions/text-field', :locals => {
+		    :id => 'accountName'
+		}%>
+		</div>
+		
+		<div class="form-group">
+		<label class="form-control-label">Full name of bank or building society</label>
+		<%= partial 'partials/questions/text-field', :locals => {
+		    :id => 'bankName'
+		}%>
+		</div>
+		
+		<div class="form-group">
+		<label class="form-control-label">Sort code</label>
+		<%= partial 'partials/questions/text-field', :locals => {
+		    :id => 'sortCode'
+		}%>
+		</div>
+		
+		<div class="form-group">
+		<label class="form-control-label">Account number</label>
+		<%= partial 'partials/questions/text-field', :locals => {
+		    :id => 'accountNumber'
+		}%>
+		</div>
+		
+		<div class="form-group">
+		<label class="form-control-label">Building society roll or reference number (optional)</label>
+		<%= partial 'partials/questions/text-field', :locals => {
+		    :id => 'accountNumber2'
+		}%>
+		</div>
+		
+			
+	</div>
 
 	<h2 class="section-heading">How often do you want to get paid?</h2>
 
@@ -37,5 +77,6 @@ title:  Pay details
 
 
     <%= partial "partials/next-question" %>
+    <%= partial "partials/back-skip" %>
 
 </form>

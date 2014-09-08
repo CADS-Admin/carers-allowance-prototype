@@ -3,7 +3,7 @@
 <% locals[:options].each_with_index do |option, index| %>
 <div class="form-group form-radio">
   <label for="<%= locals[:id] %><%= index %>" class="block-label">
-    <input id="<%= locals[:id] %><%= index %>" type="radio" name="<%= locals[:id] %>" value="<%= option %>">
+    <input id="<%= locals[:id] %><%= index %>" type="radio" name="<%= locals[:id] %>" value="<%= option %>" >
     <%= option %>
   </label>
 </div>
